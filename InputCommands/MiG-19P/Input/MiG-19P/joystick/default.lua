@@ -10,8 +10,11 @@ return {
 		{down = finst_commands.GMeter_Reset, up = finst_commands.GMeter_Reset, cockpit_device_id = devices.FLIGHT_INST, value_down = 1.0, value_up = 0.0, name = _('AM-10 Accelerometer Min/Max G Reset Button'), category = _('Instrument Panel')},
 		{down = ldg_commands.Gear_Lights_test_SW, up = ldg_commands.Gear_Lights_test_SW, cockpit_device_id = devices.WACLTS_INST, value_down = 1.0, value_up = 0.0, name = _('PPS-2 Landing Gear Lights Test Button'), category = _('Instrument Panel')},
 
-		{down = intlts_commands.Inst_Panel_LtMode_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 0.0, name = _('Instruments Lamps Day/Night Mode Switch 0'), category = _('Instrument Panel')},
-		{down = intlts_commands.Inst_Panel_LtMode_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 1.0, name = _('Instruments Lamps Day/Night Mode Switch 1'), category = _('Instrument Panel')},
+		{down = finst_commands.ADI_Cage_Lever, down = finst_commands.ADI_Cage_Lever, cockpit_device_id = devices.FLIGHT_INST, value_down= 1.0, value_up= 0.0, name = _('AGI-1 Artificial Horizon Cage else Uncage'), category = _('Instrument Panel')},
+
+		{down = intlts_commands.Inst_Panel_LtMode_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 0.0, name = _('Instruments Lamps Day/Night Mode Switch Night'), category = _('Instrument Panel')},
+		{down = intlts_commands.Inst_Panel_LtMode_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 1.0, name = _('Instruments Lamps Day/Night Mode Switch Day'), category = _('Instrument Panel')},
+		{down = intlts_commands.Inst_Panel_LtMode_SW, up = intlts_commands.Inst_Panel_LtMode_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Instruments Lamps Day/Night Mode Switch Day else Night'), category = _('Instrument Panel')},
 
 		{down = fuelp_commands.Tank_1_FuelPump, cockpit_device_id = devices.ENGDEV_CONTROLS, value_down = 0.0, name = _('Tank 1 Fuel Pump Off'), category = _('Left Wall, Switches')},
 		{down = fuelp_commands.Tank_1_FuelPump, cockpit_device_id = devices.ENGDEV_CONTROLS, value_down = 1.0, name = _('Tank 1 Fuel Pump On'), category = _('Left Wall, Switches')},
@@ -189,5 +192,90 @@ return {
 		{down = finst_commands.Pitot_Selector, cockpit_device_id = devices.FLIGHT_INST, value_down = 0.0, name = _('Pitot Tube Selector Main'), category = _('Left Wall')},
 		{down = finst_commands.Pitot_Selector, cockpit_device_id = devices.FLIGHT_INST, value_down = 1.0, name = _('Pitot Tube Selector Emergency'), category = _('Left Wall')},
 		{down = finst_commands.Pitot_Selector, up = finst_commands.Pitot_Selector, cockpit_device_id = devices.FLIGHT_INST, value_down = 1.0, value_up = 0.0, name = _('Pitot Tube Selector Main else Emergency'), category = _('Left Wall')},
+
+		{down = misc_commands.Environment_Ctrl_SW, up = misc_commands.Environment_Ctrl_SW, cockpit_device_id = devices.ENVMNT_CONTROL, value_down= -1.0, value_up = 0.0, name = _('Cockpit Temperature Select - HOT else AUTO'), category = _('Systems')},
+        {down = misc_commands.Environment_Ctrl_SW, up = misc_commands.Environment_Ctrl_SW, cockpit_device_id = devices.ENVMNT_CONTROL, value_down= 1.0, value_up = 0.0, name = _('Cockpit Temperature Select - COLD else AUTO'), category = _('Systems')},
+
+		{down = misc_commands.Cpt_Ventilation_Lvr, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 0.0, name = _('Cockpit Pressurization Lever Off'), category = _('Systems')},
+		{down = misc_commands.Cpt_Ventilation_Lvr, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, name = _('Cockpit Pressurization Lever On'), category = _('Systems')},
+		{down = misc_commands.Cpt_Ventilation_Lvr, up = misc_commands.Cpt_Ventilation_Lvr, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, value_up = 0.0, name = _('Cockpit Pressurization Lever On else Off'), category = _('Systems')},
+
+		{down = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 0.0, name = _('Canopy Lock Lever L Off'), category = _('Systems')},
+		{down = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, name = _('Canopy Lock Lever L On'), category = _('Systems')},
+		{down = misc_commands.Canopy_Lock_Lever_L, up = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Canopy Lock Lever L On else Off'), category = _('Systems')},
+
+		{down = misc_commands.Canopy_Lock_Lever_R, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 0.0, name = _('Canopy Lock Lever R Off'), category = _('Systems')},
+		{down = misc_commands.Canopy_Lock_Lever_R, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, name = _('Canopy Lock Lever R On'), category = _('Systems')},
+		{down = misc_commands.Canopy_Lock_Lever_R, up = misc_commands.Canopy_Lock_Lever_R, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Canopy Lock Lever R On else Off'), category = _('Systems')},
+
+		{down = misc_commands.Canopy_Press_Switch, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 0.0, name = _('Canopy Pressurization Switch Off'), category = _('Systems')},
+		{down = misc_commands.Canopy_Press_Switch, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, name = _('Canopy Pressurization Switch On'), category = _('Systems')},
+		{down = misc_commands.Canopy_Press_Switch, up = misc_commands.Canopy_Press_Switch, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Canopy Pressurization Switch On else Off'), category = _('Systems')},
+
+		{down = misc_commands.Canopy_Emerg_Rel_Lever, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 0.0, name = _('Emergency Canopy Release Lever Off'), category = _('Systems')},
+		{down = misc_commands.Canopy_Emerg_Rel_Lever, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, name = _('Emergency Canopy Release Lever On'), category = _('Systems')},
+		{down = misc_commands.Canopy_Emerg_Rel_Lever, up = misc_commands.Canopy_Emerg_Rel_Lever, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Emergency Canopy Release Lever On else Off'), category = _('Systems')},
+
+		{down = elecpwr_commands.CB_BoxCover_Lock, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Circuit Breakers Panel Lock Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BoxCover_Lock, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Circuit Breakers Panel Lock On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BoxCover_Lock, up = elecpwr_commands.CB_BoxCover_Lock, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Circuit Breakers Panel Lock On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_AircraftLights, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Aircraft External Lights Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_AircraftLights, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Aircraft External Lights Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_AircraftLights, up = elecpwr_commands.CB_AircraftLights, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Aircraft External Lights Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_ARU2V, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('ARU-2V Flight Control System Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_ARU2V, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('ARU-2V Flight Control System Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_ARU2V, up = elecpwr_commands.CB_ARU2V, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('ARU-2V Flight Control System Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Bomb Fuzing System Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Bomb Fuzing System Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Bomb Fuzing System Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombRelease, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Bomb Release System Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombRelease, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Bomb Release System Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombRelease, up = elecpwr_commands.CB_BombRelease, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Bomb Release System Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombJettison, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Bomb, Drop Tank and Rocket Emergency Jettison System Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombJettison, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Bomb, Drop Tank and Rocket Emergency Jettison System Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombJettison, up = elecpwr_commands.CB_BombJettison, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Bomb, Drop Tank and Rocket Emergency Jettison System Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('ARK-5 Radio Navigation System Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('ARK-5 Radio Navigation System Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('ARK-5 Radio Navigation System Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Landing Gear, Airbrake and Flaps Annunciator Lights Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Landing Gear, Airbrake and Flaps Annunciator Lights Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Landing Gear, Airbrake and Flaps Annunciator Lights Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Landing Gear, Airbrake and Flaps Systems Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Landing Gear, Airbrake and Flaps Systems Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Landing Gear, Airbrake and Flaps Systems Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('BU-13M Aileron and BU-14M Stabilizer Hydraulic Booster Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('BU-13M Aileron and BU-14M Stabilizer Hydraulic Booster Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('BU-13M Aileron and BU-14M Stabilizer Hydraulic Booster Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 0.0, name = _('Rocket Pods Circuit Breaker Off'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, name = _('Rocket Pods Circuit Breaker On'), category = _('Right Wall, Rear Switches')},
+		{down = elecpwr_commands.CB_BombFuse, up = elecpwr_commands.CB_BombFuse, cockpit_device_id = devices.PWRGEN_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Rocket Pods Circuit Breaker On else Off'), category = _('Right Wall, Rear Switches')},
+
+		{down = sensors_commands.iff_sdst_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 0.0, name = _('SRO-2 IFF Self-destruct Button Cover Closed'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_sdst_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, name = _('SRO-2 IFF Self-destruct Button Cover Open'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_sdst_sw_cover, up = sensors_commands.iff_sdst_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, value_up = 0.0, name = _('SRO-2 IFF Self-destruct Button Cover Open else Closed'), category = _('Right Wall, SRO-2')},
+
+		{down = sensors_commands.iff_sdst_sw, up = sensors_commands.iff_sdst_sw, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, value_up = 0.0, name = _('SRO-2 IFF Self-destruct Button'), category = _('Right Wall, SRO-2')},
+
+		{down = sensors_commands.iff_pwr_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 0.0, name = _('SRO-2 IFF Power Switch Cover Closed'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_pwr_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, name = _('SRO-2 IFF Power Switch Cover Open'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_pwr_sw_cover, up = sensors_commands.iff_pwr_sw_cover, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, value_up = 0.0, name = _('SRO-2 IFF Power Switch Cover Open else Closed'), category = _('Right Wall, SRO-2')},
+
+		{down = sensors_commands.iff_pwr_sw, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 0.0, name = _('SRO-2 IFF Power Switch Off'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_pwr_sw, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, name = _('SRO-2 IFF Power Switch On'), category = _('Right Wall, SRO-2')},
+		{down = sensors_commands.iff_pwr_sw, up = sensors_commands.iff_pwr_sw, cockpit_device_id = devices.SENSORS_CONTROL, value_down = 1.0, value_up = 0.0, name = _('SRO-2 IFF Power Switch On else Off'), category = _('Right Wall, SRO-2')},
+
+		{down = intlts_commands.Right_Flood_Lights_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 0.0, name = _('Right Side Flood Lamp Switch Off'), category = _('Right Wall')},
+		{down = intlts_commands.Right_Flood_Lights_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 1.0, name = _('Right Side Flood Lamp Switch On'), category = _('Right Wall')},
+		{down = intlts_commands.Right_Flood_Lights_SW, up = intlts_commands.Right_Flood_Lights_SW, cockpit_device_id = devices.INTLTS_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Right Side Flood Lamp Switch On else Off'), category = _('Right Wall')},
 	}
 }
