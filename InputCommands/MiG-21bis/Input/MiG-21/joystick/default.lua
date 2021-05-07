@@ -23,7 +23,7 @@ return {
 		{down=device_commands.NosegearBrake,up=device_commands.NosegearBrake,cockpit_device_id=devices.GEAR_BRAKES,value_down=1.0,value_up=0.0,name='Nosegear Brake On (2-Pos Toggle Switch)',category='Gears, brakes and chute'},
 
 		--Alternate APU
-		{down=device_commands.Zazig,up=device_commands.Zazig,cockpit_device_id=devices.ENGINE_START_DEVICE,value_down=1.0,value_up=0.0,name='Alternate APU On (2-Pos Toggle Switch)',category='Engine'},
+		{down=device_commands.Zazig,up=device_commands.Zazig,cockpit_device_id=devices.ENGINE_START_DEVICE,value_down=1.0,value_up=0.0,name='APU On (2-Pos Toggle Switch)',category='Engine'},
 
 		--Alternate Weapon Master Mode
 		{down=device_commands.ASPvozduhZemlja,up=device_commands.ASPvozduhZemlja,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name='Master Mode - Air (2-Pos Toggle Switch)',category='Weapons / Master control'},
