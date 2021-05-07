@@ -13,7 +13,7 @@ return {
 		{down=device_commands.GearHandleFixator,up=device_commands.GearHandleFixator,cockpit_device_id=devices.GEARS,value_down=1.0,value_up=0.0,name='Gears Handle Lock released (2-Pos Toggle Switch)',category='Gears, brakes and chute'},
 
 		--Alternate Afterburner
-		{down=device_commands.ForsMax,up=device_commands.ForsMax,cockpit_device_id=devices.ENGINE,value_down=1.0,value_up=0.0,name='Afterburner/Maximum On (2-Pos Toggle Switch',category='Engine'},
+		{down=device_commands.ForsMax,up=device_commands.ForsMax,cockpit_device_id=devices.ENGINE,value_down=1.0,value_up=0.0,name='Afterburner/Maximum On (2-Pos Toggle Switch)',category='Engine'},
 		{down=device_commands.Chr,up=device_commands.Chr,cockpit_device_id=devices.ENGINE,value_down=1.0,value_up=0.0,name='Emergency Afterburner On (2-Pos Toggle Switch)',category='Engine'},
 
 		--Alternate Air Start
