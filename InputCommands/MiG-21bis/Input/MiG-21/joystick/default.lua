@@ -220,7 +220,7 @@ return {
         {down = device_commands.ASPpipperLight_mouse, cockpit_device_id = devices.ASP, value_down = 0.33, name = _('Pipper light 33%'), category = _('Weapons / ASP')},
         {down = device_commands.ASPpipperLight_mouse, cockpit_device_id = devices.ASP, value_down = 0.0, name = _('Pipper light 0%'), category = _('Weapons / ASP')},
 
-        {down = device_commands.ASPmissileGunSelect_2pos, up = device_commands.ASPmissileGunSelect_2pos, cockpit_device_id = devices.ASP, value_down = 1.0, value_up = 0.0, name = _('ASP Mode - Gun/Launch (2-Pos Toggle Switch)'), category = _('Weapons / ASP')},
+        {down = device_commands.ASPmissileGunSelect_2pos, up = device_commands.ASPmissileGunSelect_2pos, cockpit_device_id = devices.ASP, value_down = 1.0, value_up = 0.0, name = _('ASP Mode - Gun/Missiles-Rockets (2-Pos Toggle Switch)'), category = _('Weapons / ASP')},
         {down = device_commands.ASPbombStrelbSelect_2pos, up = device_commands.ASPbombStrelbSelect_2pos, cockpit_device_id = devices.ASP, value_down = 1.0, value_up = 0.0, name = _('ASP Mode - Shooting/Bombardment (2-Pos Toggle Switch)'), category = _('Weapons / ASP')},
         {down = device_commands.ASPmanAutoSelect_2pos, up = device_commands.ASPmanAutoSelect_2pos, cockpit_device_id = devices.ASP, value_down = 1.0, value_up = 0.0, name = _('ASP Main Mode - Auto/Manual (2-Pos Toggle Switch)'), category = _('Weapons / ASP')},
         {down = device_commands.ASPssGiroSelect_2pos, up = device_commands.ASPssGiroSelect_2pos, cockpit_device_id = devices.ASP, value_down = 0.0, value_up = 1.0, name = _('ASP Mode - Giro/Missiles (2-Pos Toggle Switch)'), category = _('Weapons / ASP')},
