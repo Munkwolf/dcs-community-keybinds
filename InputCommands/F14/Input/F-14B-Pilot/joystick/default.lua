@@ -67,9 +67,11 @@ return {
 		{down = device_commands.ENGINE_Throttle_Mode,     up = device_commands.ENGINE_Throttle_Mode, value_down = -1, value_up = 0, cockpit_device_id = devices.ENGINE, name = _('Throttle Mode MAN else BOOST'), category = _('Throttle')},
 		{down = device_commands.ENGINE_Throttle_Mode,     up = device_commands.ENGINE_Throttle_Mode, value_down = 1, value_up = 0, cockpit_device_id = devices.ENGINE, name = _('Throttle Mode AUTO else BOOST'), category = _('Throttle')},
 
-		{down = device_commands.ENGINE_Throttle_Temp, 		cockpit_device_id = devices.ENGINE, value_down = -1, name = _('Throttle Temp COLD'), category = { _('Throttle')}},
-		{down = device_commands.ENGINE_Throttle_Temp, 		cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Throttle Temp NORM'), category = { _('Throttle')}},
-		{down = device_commands.ENGINE_Throttle_Temp, 		cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Throttle Temp HOT'), category = { _('Throttle')}},
+		{down = device_commands.ENGINE_Throttle_Temp, cockpit_device_id = devices.ENGINE, value_down = -1, name = _('Throttle Temp COLD'), category = { _('Throttle')}},
+		{down = device_commands.ENGINE_Throttle_Temp, up = device_commands.ENGINE_Throttle_Temp, cockpit_device_id = devices.ENGINE, value_down = -1, value_up = 0, name = _('Throttle Temp COLD else NORM'), category = { _('Throttle')}},
+		{down = device_commands.ENGINE_Throttle_Temp, cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Throttle Temp NORM'), category = { _('Throttle')}},
+		{down = device_commands.ENGINE_Throttle_Temp, cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Throttle Temp HOT'), category = { _('Throttle')}},
+		{down = device_commands.ENGINE_Throttle_Temp, up = device_commands.ENGINE_Throttle_Temp, cockpit_device_id = devices.ENGINE, value_down = 1, value_up = 0, name = _('Throttle Temp HOT else NORM'), category = { _('Throttle')}},
 
 		{down = device_commands.ENGINE_Asym_LimiterCover, 		cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Asymmetric Thrust Limiter Cover CLOSE'), category = { _('Engine Control Panel')}},
 		{down = device_commands.ENGINE_Asym_LimiterCover, 		cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Asymmetric Thrust Limiter Cover OPEN'), category = { _('Engine Control Panel')}},
@@ -78,13 +80,19 @@ return {
 		{down = device_commands.ENGINE_Asym_Limiter, 		cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Asymmetric Thrust Limiter OFF'), category = { _('Engine Control Panel')}},
 		{down = device_commands.ENGINE_Asym_Limiter,     up = device_commands.ENGINE_Asym_Limiter, value_down = 1, value_up = 0, cockpit_device_id = devices.ENGINE, name = _('Asymmetric Thrust Limiter OFF else ON'), category = _('Engine Control Panel')},
 
-		{down = device_commands.INLET_RAMPS_LeftSwitch, 		cockpit_device_id = devices.AICS, value_down = 0, name = _('Stow Inlet Ramps Left Switch AUTO'), category = { _('Engine Control Panel')}},
-		{down = device_commands.INLET_RAMPS_LeftSwitch, 		cockpit_device_id = devices.AICS, value_down = 1, name = _('Stow Inlet Ramps Left Switch STOW'), category = { _('Engine Control Panel')}},
-		{down = device_commands.INLET_RAMPS_RightSwitch, 		cockpit_device_id = devices.AICS, value_down = 0, name = _('Stow Inlet Ramps Right Switch AUTO'), category = { _('Engine Control Panel')}},
-		{down = device_commands.INLET_RAMPS_RightSwitch, 		cockpit_device_id = devices.AICS, value_down = 1, name = _('Stow Inlet Ramps Right Switch STOW'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_LeftSwitch,	cockpit_device_id = devices.AICS, value_down = 0, name = _('Stow Inlet Ramps Left Switch AUTO'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_LeftSwitch,	cockpit_device_id = devices.AICS, value_down = 1, name = _('Stow Inlet Ramps Left Switch STOW'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_LeftSwitch,	up = device_commands.INLET_RAMPS_LeftSwitch, cockpit_device_id = devices.AICS, value_down = 1, value_up = 0, name = _('Stow Inlet Ramps Left Switch STOW else AUTO'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_LeftSwitch,	up = device_commands.INLET_RAMPS_LeftSwitch, cockpit_device_id = devices.AICS, value_down = 0, value_up = 1, name = _('Stow Inlet Ramps Left Switch AUTO else STOW'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_RightSwitch, cockpit_device_id = devices.AICS, value_down = 0, name = _('Stow Inlet Ramps Right Switch AUTO'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_RightSwitch, cockpit_device_id = devices.AICS, value_down = 1, name = _('Stow Inlet Ramps Right Switch STOW'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_RightSwitch, up = device_commands.INLET_RAMPS_RightSwitch, cockpit_device_id = devices.AICS, value_down = 0, value_up = 1, name = _('Stow Inlet Ramps Right Switch AUTO else STOW'), category = { _('Engine Control Panel')}},
+		{down = device_commands.INLET_RAMPS_RightSwitch, up = device_commands.INLET_RAMPS_RightSwitch, cockpit_device_id = devices.AICS, value_down = 1, value_up = 0, name = _('Stow Inlet Ramps Right Switch STOW else AUTO'), category = { _('Engine Control Panel')}},
 
-		{down = device_commands.ENGINE_Air_Start, 		cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Engine Airstart NORM'), category = { _('Engine Control Panel')}},
-		{down = device_commands.ENGINE_Air_Start, 		cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Engine Airstart ON'), category = { _('Engine Control Panel')}},
+		{down = device_commands.ENGINE_Air_Start, cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Engine Airstart NORM'), category = { _('Engine Control Panel')}},
+		{down = device_commands.ENGINE_Air_Start, cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Engine Airstart ON'), category = { _('Engine Control Panel')}},
+		{down = device_commands.ENGINE_Air_Start, up = device_commands.ENGINE_Air_Start, cockpit_device_id = devices.ENGINE, value_down = 1, value_up = 0, name = _('Engine Airstart ON else NORM'), category = { _('Engine Control Panel')}},
+
 		{down = device_commands.ENGINE_Crank, 			cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Crank Engine MIDDLE'), category = { _('Engine Control Panel')}},
 		{down = device_commands.ENGINE_Left_Mode, 		cockpit_device_id = devices.ENGINE, value_down = 0, name = _('Left Engine Mode PRI'), category = { _('Engine Control Panel')}},
 		{down = device_commands.ENGINE_Left_Mode, 		cockpit_device_id = devices.ENGINE, value_down = 1, name = _('Left Engine Mode SEC'), category = { _('Engine Control Panel')}},
@@ -136,6 +144,18 @@ return {
 
 		{down = device_commands.HUD_ShowHide, 		cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1, name = _('HUD camera Hide'), category = { _('ACM Panel')}},
 		{down = device_commands.HUD_ShowHide, 		cockpit_device_id = devices.COCKPITMECHANICS, value_down = 0, name = _('HUD camera Show'), category = { _('ACM Panel')}},
+
+		{down = device_commands.FUELSYSTEM_Shutoff_R, cockpit_device_id = devices.FUELSYSTEM, value_down = 0, name = _('Fuel Shutoff Right On'), category = { _('ACM Panel')}},
+		{down = device_commands.FUELSYSTEM_Shutoff_R, cockpit_device_id = devices.FUELSYSTEM, value_down = 1, name = _('Fuel Shutoff Right Off'), category = { _('ACM Panel')}},
+		{down = device_commands.FUELSYSTEM_Shutoff_R, up = device_commands.FUELSYSTEM_Shutoff_R, value_down = 1, value_up = 0, cockpit_device_id = devices.FUELSYSTEM, name = _('Fuel Shutoff Right On else Off'), category = _('ACM Panel')},
+
+		{down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 0, name = _('Fuel Shutoff Left On'), category = { _('ACM Panel')}},
+		{down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 1, name = _('Fuel Shutoff Left Off'), category = { _('ACM Panel')}},
+		{down = device_commands.FUELSYSTEM_Shutoff_L, up = device_commands.FUELSYSTEM_Shutoff_L, value_down = 1, value_up = 0, cockpit_device_id = devices.FUELSYSTEM, name = _('Fuel Shutoff Left On else Off'), category = _('ACM Panel')},
+
+		{pressed = device_commands.CANOPY_Open, cockpit_device_id=devices.COCKPITMECHANICS, value_pressed = 1, name = _('Canopy Open'), category = _('Cockpit Mechanics')},
+		{pressed = device_commands.CANOPY_Open, cockpit_device_id=devices.COCKPITMECHANICS, value_pressed = -1, name = _('Canopy Close'), category = _('Cockpit Mechanics')},
+		{down = device_commands.CANOPY_Drop, up = device_commands.CANOPY_Drop, value_down = 1, value_up = 0, cockpit_device_id = devices.COCKPITMECHANICS, name = _('Canopy Jettison'), category = _('Cockpit Mechanics')},
 
 		{down = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down = -1, name = _('Altimeter Mode Switch Standby'), category = { _('Instrument Panel')}},
 		{down = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down = 0, name = _('Altimeter Mode Switch Neutral'), category = { _('Instrument Panel')}},
@@ -209,12 +229,12 @@ return {
 		{down = device_commands.WEAP_Gun_Ammo_adjust, 		cockpit_device_id = devices.WEAPONS, value_down = -0.1, name = _('Gun Ammunition Counter Adjustment Decrease'), category = { _('PDCP')}},
 		{down = device_commands.WEAP_Gun_Ammo_adjust, 		cockpit_device_id = devices.WEAPONS, value_down = 0.1, name = _('Gun Ammunition Counter Adjustment Increase'), category = { _('PDCP')}},
 
-		{down = device_commands.WEAP_Gun_Ammo_adjust, 		cockpit_device_id = devices.WEAPONS, value_down = 0.5, name = _('Gun Elevation Lead Adjustment Decrease'), category = { _('PDCP')}},
-		{down = device_commands.WEAP_Gun_Ammo_adjust, 		cockpit_device_id = devices.WEAPONS, value_down = 1.0, name = _('Gun Elevation Lead Adjustment Increase'), category = { _('PDCP')}},
+		{down = device_commands.WEAP_Gun_Elevation, 		cockpit_device_id = devices.WEAPONS, value_down = 0.5, name = _('Gun Elevation Lead Adjustment Decrease'), category = { _('PDCP')}},
+		{down = device_commands.WEAP_Gun_Elevation, 		cockpit_device_id = devices.WEAPONS, value_down = 1.0, name = _('Gun Elevation Lead Adjustment Increase'), category = { _('PDCP')}},
 
 		{down = device_commands.TID_VideoExportToggle, cockpit_device_id = devices.TID, value_down = 1, name = _('Video Export Toggle'), category = _('Other')},	
 	},
-	axiscommands = {
+	axisCommands = {
 		{action=device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id=devices.WINGSWEEP, name=_('Emergency Wing Sweep')},
 	}
 }

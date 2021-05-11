@@ -97,6 +97,10 @@ return {
         {down = device_commands.AirConditioningSelect, cockpit_device_id = devices.HELMET_VISOR, value_down = 0.66, name = _('Cockpit Air Condition Auto'), category = _('Life support')},
         {down = device_commands.AirConditioningSelect, cockpit_device_id = devices.HELMET_VISOR, value_down = 1.0, name = _('Cockpit Air Condition Warm'), category = _('Life support')},
 
+		{down = device_commands.CanopyVentSystem, cockpit_device_id = devices.CANOPY, value_down = 0.0, name=_('Canopy Ventilation System Off'), category=_('Life support')},
+		{down = device_commands.CanopyVentSystem, cockpit_device_id = devices.CANOPY, value_down = 1.0, name=_('Canopy Ventilation System On'), category=_('Life support')},
+		{down = device_commands.CanopyVentSystem, up = device_commands.CanopyVentSystem, cockpit_device_id = devices.CANOPY, value_down = 1.0, value_up = 0.0, name = _('Canopy Ventilation System (2-Pos Toggle Switch)'), category = _('Life support')},
+
         -- LIGHTS
 
         {down = device_commands.CheckWarningLights20, up = device_commands.CheckWarningLights20, cockpit_device_id = devices.LIGHTS_WARNING, value_down = 1.0, value_up = 0.0, name = _('Check Warning Lights T10'), category = _('Lights')},
