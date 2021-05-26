@@ -8,6 +8,6 @@ In this repository are two folders. You'll only need one of them.
 
 * __InputCommands__ has all the keybinds currently available for all modules in the project. Once you have Quaggles' mod going, put the InputCommands folder from this download in your _\<User\>\Saved Games\DCS_ folder.
   
-* __InputCommands_Skeleton__ is a blank structure covering all modules for you to put your own keybinds in. Rename it to __InputCommands__ (remove the _Skeleton part) and place it in your _\<User\>\Saved Games\DCS_ folder.
+* __InputCommands_Skeleton__ is a blank structure covering all modules for you to put your own keybinds in. Rename it to _InputCommands_ (remove the _Skeleton part) and place it in your _\<User\>\Saved Games\DCS_ folder.
   
 __If you are interested in contributing...__ first of all, thank you. Second, please create pull requests against the development branch so we can keep the main branch stable for a period of time. If you'd like to follow the patterns in place, that's great, if not, that's okay too. Right now the main objective is get better coverage.
