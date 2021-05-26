@@ -2,7 +2,7 @@
 A collection of keybinds for DCS. For use with Quaggles' DCS Input Command Injector:
 https://github.com/Quaggles/dcs-input-command-injector
 
-Using Quaggles' mod allows you to put custom keybinds in your _<user>\Saved Games\DCS_ folder, so you don't have to worry about redo-ing them when DCS updates are released.
+Using Quaggles' mod allows you to put custom keybinds in your _<user>\Saved Games\DCS_ folder, so you don't have to worry about redoing them when DCS updates are released.
 
 In this repository are two folders. You'll only need one of them.
 
