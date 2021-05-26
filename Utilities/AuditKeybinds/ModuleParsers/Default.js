@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 exports.ParseClickableData = parseClickableData;
-exports.ParseInputBaseFile = parseInputBaseFile;
+exports.ParseInputBase = parseInputBase;
 
 function parseClickableData(clickableDataBody) {
 	var parsedClickableData = {
@@ -100,25 +100,141 @@ function parseClickableData(clickableDataBody) {
 					}
 		
 					parsedClickableData.Devices[device][parsedClickableData.Devices[device].length] = {
-						ControlId: controlId,
+						Id: controlId,
 						Control: control,
-						ControlGroup: controlGroup,
-						ControlLabel: controlLabel,
+						Group: controlGroup,
+						Label: controlLabel,
 						Handler: functionName
 					}
 				}
 			}
-		} catch(exception) {
-			var testing = 'test';
-		}
+		} catch(exception) { }
 	}
 
 	return parsedClickableData;
 }
 
-function parseInputBaseFile(inputBaseFile) {
+function parseInputBase(inputBaseBody) {
+	var parsedInputBaseData = {
+		Devices: {},
+	};
 
-var testing = 'test';
+	for (var parsedStatementKey in inputBaseBody) {
+		var parsedStatement = inputBaseBody[parsedStatementKey];
 
-	return {};
+		try {
+			if (parsedStatement.type == 'CallStatement' && parsedStatement.expression.arguments[0].base && parsedStatement.expression.arguments[0].base.name == 'res') {
+				for (var inputFieldKey in parsedStatement.expression.arguments[1].fields) {
+					var inputField = parsedStatement.expression.arguments[1].fields[inputFieldKey];
+					parseInputFieldsIntoDevicesObject(inputField.value.fields, parsedInputBaseData.Devices);
+				}				
+			} else if (parsedStatement.type == 'ReturnStatement') {
+				for (var inputTypeGroupKey in parsedStatement.arguments[0].fields) {
+					var inputTypeGroup = parsedStatement.arguments[0].fields[inputTypeGroupKey];
+					var inputType = inputTypeGroup.key.name;
+					if (inputType == 'keyCommands' || inputType == 'axisCommands') {
+						for (var inputFieldKey in inputTypeGroup.value.fields) {
+							var inputField = inputTypeGroup.value.fields[inputFieldKey];
+							parseInputFieldsIntoDevicesObject(inputField.value.fields, parsedInputBaseData.Devices);
+						}
+					}
+				}
+			}
+		} catch (exception) {
+			var testing = 'test';
+		}
+	}
+
+	return parsedInputBaseData;
+}
+
+function parseInputFieldsIntoDevicesObject(inputFields, devicesObject) {
+	var device = '';
+	var controlLabel = '';
+	var controlActions = {};
+	var controlCategories = [];
+
+	try {
+		for (var inputFieldAttributeKey in inputFields) {
+			var inputFieldAttribute = inputFields[inputFieldAttributeKey];
+
+			if (inputFieldAttribute.key) {
+				switch (inputFieldAttribute.key.name) {
+					case 'cockpit_device_id':
+						device = inputFieldAttribute.value.raw;
+						if (inputFieldAttribute.value.type == 'MemberExpression') {
+							device = inputFieldAttribute.value.identifier.name;
+						} else {
+							device = inputFieldAttribute.value.raw;
+						}
+						break;
+
+					case 'name':
+						if (inputFieldAttribute.value.type == 'StringLiteral') {
+							controlLabel = inputFieldAttribute.value.raw;
+						} else {
+							controlLabel = inputFieldAttribute.value.arguments[0].raw;
+						}
+						break;
+
+					case 'category':
+						if (inputFieldAttribute.value.type == 'TableConstructorExpression') {
+							for (var inputFieldCategoryKey in inputFieldAttribute.value.fields) {
+								var inputFieldCategory = inputFieldAttribute.value.fields[inputFieldCategoryKey];
+								controlCategories[controlCategories.length] = inputFieldCategory.raw;
+							}
+						} else {
+							for (var inputFieldCategoryKey in inputFieldAttribute.value.arguments) {
+								var inputFieldCategory = inputFieldAttribute.value.arguments[inputFieldCategoryKey];
+								controlCategories[controlCategories.length] = inputFieldCategory.raw;
+							}
+						}
+						break;
+
+					case 'up':
+					case 'down':
+					case 'pressed':
+						if (!controlActions[inputFieldAttribute.key.name]) {
+							controlActions[inputFieldAttribute.key.name] = {};
+						}
+						if (inputFieldAttribute.value.type == 'MemberExpression') {
+							controlActions[inputFieldAttribute.key.name].Control = inputFieldAttribute.value.identifier.name;
+							controlActions[inputFieldAttribute.key.name].ControlGroup = inputFieldAttribute.value.base.name;
+						} else if (inputFieldAttribute.value.type == 'NumericLiteral') {
+							controlActions[inputFieldAttribute.key.name].Control = inputFieldAttribute.value.raw;
+						} else {
+							controlActions[inputFieldAttribute.key.name].Control = inputFieldAttribute.value.name;
+						}
+						break;
+
+					case 'value_up':
+					case 'value_down':
+					case 'value_pressed':
+						var actionName = inputFieldAttribute.key.name.replace('value_', '', /g/);
+						if (!controlActions[actionName]) {
+							controlActions[actionName] = {};
+						}
+						controlActions[actionName].Value = inputFieldAttribute.value.raw;
+						break;
+				}
+			}
+		}
+	} catch (exception) {
+		var testing = 'test';
+	}
+
+	if (!device) {
+		device = 'TODO_HANDLE_ICOMMAND_DEFS';
+	}
+
+	var deviceObject;
+	if (!devicesObject[device]) {
+		devicesObject[device] = [];
+	}
+	deviceObject = devicesObject[device];
+
+	deviceObject[deviceObject.length] = {
+		Actions: controlActions,
+		Categories: controlCategories
+	}
 }

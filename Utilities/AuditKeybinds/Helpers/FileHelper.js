@@ -47,7 +47,7 @@ function parseClickableDataFilewithModuleParser(clickableDataFilePath, modulePar
 	var clickableDataRaw = clickableDataFile.toString();
 
 	try {
-		var parsedClickableDataRaw = LuaParser.parse(clickableDataRaw);		
+		var parsedClickableDataRaw = LuaParser.parse(clickableDataRaw);
 		parsedClickableData = moduleParser.ParseClickableData(parsedClickableDataRaw.body);
 	} catch(exception) { }
 
@@ -55,7 +55,7 @@ function parseClickableDataFilewithModuleParser(clickableDataFilePath, modulePar
 }
 
 function parseInputBaseFileswithModuleParser(inputBaseFiles, moduleParser) {
-	var parsedInputBase;
+	var parsedInputBase = {};
 
 	for (var inputBaseDeviceKey in inputBaseFiles) {
 		var inputBaseDevices = inputBaseFiles[inputBaseDeviceKey];
@@ -66,7 +66,12 @@ function parseInputBaseFileswithModuleParser(inputBaseFiles, moduleParser) {
 			var inputBaseFileRaw = inputBaseFile.toString();
 		
 			try {
-				parsedInputBaseFile = moduleParser.ParseInputBaseFile(inputBaseFileRaw.body);
+				var parsedInputBaseFileRaw = LuaParser.parse(inputBaseFileRaw);
+				if (!parsedInputBase[inputBaseDeviceKey]) {
+					parsedInputBase[inputBaseDeviceKey] = {};
+				}
+
+				parsedInputBase[inputBaseDeviceKey] = Object.assign({}, moduleParser.ParseInputBase(parsedInputBaseFileRaw.body), parsedInputBase[inputBaseDeviceKey]);
 			} catch(exception) { }
 		}
 	}

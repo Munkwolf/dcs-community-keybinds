@@ -8,11 +8,11 @@ const FileHelper = require('.\\Helpers\\FileHelper');
 var ModuleParsers = {};
 
 fs.readdirSync(DcsAircraftModulesFolderPath).forEach(aircraftModuleId => {
-	//if (aircraftModuleId == 'I-16') {
+//	if (aircraftModuleId == 'AJS37') {
 		var aircraftModule = gather(aircraftModuleId);
 		process(aircraftModule);
 		report(aircraftModule);
-	//}
+//	}
 });
 
 //--------------------------------
@@ -55,11 +55,10 @@ function process(aircraftModule) {
 		try {
 			aircraftModule.Data[subModule] = {
 				ClickableData: FileHelper.ParseClickableDataFilewithModuleParser(clickableDataFilePath, moduleParser),
-				InputBaseFiles: FileHelper.ParseInputBaseFileswithModuleParser(aircraftModule.Files.InputBaseFiles, moduleParser)
+				InputBases: FileHelper.ParseInputBaseFileswithModuleParser(aircraftModule.Files.InputBaseFiles, moduleParser),
+				InputCommands: FileHelper.ParseInputBaseFileswithModuleParser(aircraftModule.Files.InputCommandFiles, moduleParser)
 			}
-		} catch(exception) {
-			var test = 'test';
-		}
+		} catch(exception) { }
 	}
 }
 
@@ -83,20 +82,20 @@ function report(aircraftModule) {
 				reportHtml += '<table>';
 				reportHtml += '<thead><tr>';
 				reportHtml += '<td>ID</td>';
-				reportHtml += '<td>Command Group</td>';
+				reportHtml += '<td>Group</td>';
 				reportHtml += '<td>Command</td>';
 				reportHtml += '<td>Label</td>';
-				reportHtml += '<td>Function Handler</td>';
+				reportHtml += '<td>Handler</td>';
 				reportHtml += '</tr></thead>';
 				var deviceControls = aircraftModule.Data[aircraftModuleDataKey].ClickableData.Devices[deviceKey];
 				for (var controlKey in deviceControls) {
 					var control = deviceControls[controlKey];
 
 					reportHtml += '<tr>';
-					reportHtml += '<td>' + control.ControlId + '</td>';
-					reportHtml += '<td>' + control.ControlGroup + '</td>';
+					reportHtml += '<td>' + control.Id + '</td>';
+					reportHtml += '<td>' + control.Group + '</td>';
 					reportHtml += '<td>' + control.Control + '</td>';
-					reportHtml += '<td>' + control.ControlLabel + '</td>';
+					reportHtml += '<td>' + control.Label + '</td>';
 					reportHtml += '<td>' + control.Handler + '</td>';
 					reportHtml += '</tr>';
 				}
