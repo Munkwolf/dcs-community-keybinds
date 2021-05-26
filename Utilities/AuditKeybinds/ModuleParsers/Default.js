@@ -11,11 +11,13 @@ function parseClickableData(clickableDataBody) {
 
 	for (var parsedStatementKey in clickableDataBody) {
 		var parsedStatement = clickableDataBody[parsedStatementKey];
-		var functionName = '';
+		var controlId = '';
 		var device = '';
 		var control = '';
 		var controlGroup = '';
 		var controlLabel = '';
+		var functionName = '';
+
 		try {
 			if (parsedStatement.type == 'AssignmentStatement' && parsedStatement.variables[0] && parsedStatement.variables[0].base && parsedStatement.variables[0].base.name == 'elements') {
 				if (parsedStatement.init[0].type == 'TableConstructorExpression' && parsedStatement.init[0].fields) {
@@ -69,9 +71,13 @@ function parseClickableData(clickableDataBody) {
 				} else if (parsedStatement.init[0].type == 'CallExpression') {
 					functionName = parsedStatement.init[0].base.name;
 					
+					if (parsedStatement.variables[0].index.type == 'StringLiteral') {
+						controlId = parsedStatement.variables[0].index.raw;
+					}
+
 					if (parsedStatement.init[0].arguments[0].type == 'CallExpression') {
 						controlLabel = parsedStatement.init[0].arguments[0].arguments[0].raw;
-					} else if (parsedStatement.init[0].arguments[0].type == 'StringLiteral') {
+					} else  if (parsedStatement.init[0].arguments[0].type == 'StringLiteral') {
 						controlLabel = parsedStatement.init[0].arguments[0].raw;
 					}
 					
@@ -94,6 +100,7 @@ function parseClickableData(clickableDataBody) {
 					}
 		
 					parsedClickableData.Devices[device][parsedClickableData.Devices[device].length] = {
+						ControlId: controlId,
 						Control: control,
 						ControlGroup: controlGroup,
 						ControlLabel: controlLabel,

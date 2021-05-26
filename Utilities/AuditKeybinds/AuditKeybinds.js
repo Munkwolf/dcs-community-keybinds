@@ -80,12 +80,27 @@ function report(aircraftModule) {
 			for (var deviceKey in aircraftModule.Data[aircraftModuleDataKey].ClickableData.Devices) {
 				reportHtml += '<h1>' + deviceKey + '</h1>';
 
+				reportHtml += '<table>';
+				reportHtml += '<thead><tr>';
+				reportHtml += '<td>ID</td>';
+				reportHtml += '<td>Command Group</td>';
+				reportHtml += '<td>Command</td>';
+				reportHtml += '<td>Label</td>';
+				reportHtml += '<td>Function Handler</td>';
+				reportHtml += '</tr></thead>';
 				var deviceControls = aircraftModule.Data[aircraftModuleDataKey].ClickableData.Devices[deviceKey];
 				for (var controlKey in deviceControls) {
 					var control = deviceControls[controlKey];
 
-					reportHtml += '<div>' + control.ControlLabel + '</div>';
+					reportHtml += '<tr>';
+					reportHtml += '<td>' + control.ControlId + '</td>';
+					reportHtml += '<td>' + control.ControlGroup + '</td>';
+					reportHtml += '<td>' + control.Control + '</td>';
+					reportHtml += '<td>' + control.ControlLabel + '</td>';
+					reportHtml += '<td>' + control.Handler + '</td>';
+					reportHtml += '</tr>';
 				}
+				reportHtml += '</table>';
 			}
 
 			fs.writeFileSync(ReportFolderPath + aircraftModuleDataKey + '.html', reportHtml);
