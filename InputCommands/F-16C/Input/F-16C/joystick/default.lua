@@ -13,5 +13,8 @@ return {
 		{down = fuel_commands.AirRefuelSw, up = fuel_commands.AirRefuelSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('AIR REFUEL Switch - OPEN else Close'), category = {_('Left Console'), _('Custom Binds')}},
 		{down = fuel_commands.AirRefuelSw, up = fuel_commands.AirRefuelSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down = 0.0, value_up = 1.0, name = _('AIR REFUEL Switch - CLOSE else OPEN'), category = {_('Left Console'), _('Custom Binds')}},
 		
+	-- Landing Gear Handle Toggle
+		{   down = iCommandPlaneGearDown, up = iCommandPlaneGearUp, name = _('Landing Gear Toggle'), category = {_('bones custom')}},
+		
 	}
 }
