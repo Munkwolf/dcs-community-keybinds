@@ -200,6 +200,10 @@ return {
 		{down = misc_commands.Cpt_Ventilation_Lvr, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, name = _('Cockpit Pressurization Lever On'), category = _('Systems')},
 		{down = misc_commands.Cpt_Ventilation_Lvr, up = misc_commands.Cpt_Ventilation_Lvr, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, value_up = 0.0, name = _('Cockpit Pressurization Lever On else Off'), category = _('Systems')},
 
+		{down = misc_commands.ENVMNT_CONTROL, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 0.0, name = _('Cockpit Ventilation Switch Off'), category = _('Systems')},
+		{down = misc_commands.ENVMNT_CONTROL, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, name = _('Cockpit Ventilation Switch On'), category = _('Systems')},
+		{down = misc_commands.ENVMNT_CONTROL, up = misc_commands.ENVMNT_CONTROL, cockpit_device_id = devices.ENVMNT_CONTROL, value_down = 1.0, value_up = 0.0, name = _('Cockpit Ventilation Switch On else Off'), category = _('Systems')},
+
 		{down = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 0.0, name = _('Canopy Lock Lever L Off'), category = _('Systems')},
 		{down = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, name = _('Canopy Lock Lever L On'), category = _('Systems')},
 		{down = misc_commands.Canopy_Lock_Lever_L, up = misc_commands.Canopy_Lock_Lever_L, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Canopy Lock Lever L On else Off'), category = _('Systems')},
