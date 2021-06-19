@@ -220,6 +220,11 @@ return {
 		{down = fire_commands.SensorControl, up = fire_commands.SensorControl, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Extinguisher Control Switch, EXING/CNTRL (2-way Switch)'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 		{down = fire_commands.SensorControl, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0, name = _('Extinguisher Control Switch, CNTRL'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 
+		{down = fire_commands.SensorGroup, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = -0.1, name = _('Fire Extinguisher Sensor Cnannel, OFF'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.SensorGroup, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0.1, name = _('Fire Extinguisher Sensor Cnannel, 1'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.SensorGroup, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0.2, name = _('Fire Extinguisher Sensor Cnannel, 2'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.SensorGroup, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0.3, name = _('Fire Extinguisher Sensor Cnannel, 3'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+
 		{down = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, name = _('Fire Extinguisher Power, ON'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 		{down = fire_commands.Power, up = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Fire Extinguisher Power, ON/OFF (2-way Switch)'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 		{down = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0, name = _('Fire Extinguisher Power, OFF'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
@@ -230,6 +235,41 @@ return {
 		{down = fire_commands.DisableAlarm, up = fire_commands.DisableAlarm, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Turn Off Fire Signal Button'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 
 --elements["FIRE-SENSOR-CHANNEL-PTR1"]	= triple_switch(_("Fire Extinguisher Sensor Cnannel OFF/1/2/3"),	devices.FIRE_EXTING_INTERFACE,	fire_commands.SensorGroup, 484)
+
+		-- R-863 Radio
+
+		{down = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Power, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.Power, up = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Power, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Power, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = r863_commands.EMERG_RCV, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Emergency Receiver, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.EMERG_RCV, up = r863_commands.EMERG_RCV, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Emergency Receiver, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.EMERG_RCV, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Emergency Receiver, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = r863_commands.AM_FM, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Modulation, FM'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.AM_FM, up = r863_commands.AM_FM, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Modulation, FM/AM (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.AM_FM, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Modulation, AM'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = r863_commands.ARC, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 ARC-UD, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.ARC, up = r863_commands.ARC, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 ARC-UD, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.ARC, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 ARC-UD, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = r863_commands.SQUELCH, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Squelch, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.SQUELCH, up = r863_commands.SQUELCH, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Squelch, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.SQUELCH, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Squelch, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = r863_commands.CHANNEL_SEL_ITER, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Channel Select, Right'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.CHANNEL_SEL_ITER, cockpit_device_id = devices.R_863, value_down = -1, name = _('R-863 Channel Select, Left'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+
+--elements["R863-VOLUME-KNOB-PTR"]	= default_axis(				_("R-863 Volume"),						devices.R_863,	r863_commands.VOLUME,		511,	0,	0.05,	false,	false,	false)
+
+		{down = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = engine_commands.ANTIDUST_On_COVER, up = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Antidust Switch Cover, OPEN/CLOSED (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Antidust Switch Cover, CLOSED'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch, ON'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = engine_commands.ANTIDUST_On, up = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Antidust Switch, ON/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Antidust Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 
 		-- DISS
 
@@ -259,13 +299,13 @@ return {
 		{down = engine_commands.IA6_COLD, up = engine_commands.IA6_COLD, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, COLD'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.IA6_HOT, up = engine_commands.IA6_HOT, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, HOT'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0/6, value_up = 0, name = _('Select Tank for Fuel Meter, TOTAL'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 2/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 3/6, value_up = 0, name = _('Select Tank for Fuel Meter, 3'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 4/6, value_up = 0, name = _('Select Tank for Fuel Meter, 4 + 5'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 5/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1 AUX'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 6/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2 AUX'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0/6, value_up = 0, name = _('Select Tank for Fuel Meter, TOTAL'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 2/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 3/6, value_up = 0, name = _('Select Tank for Fuel Meter, 3'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 4/6, value_up = 0, name = _('Select Tank for Fuel Meter, 4 + 5'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 5/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 6/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 
 		-- External Cargo
 
