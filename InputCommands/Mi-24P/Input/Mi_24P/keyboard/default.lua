@@ -127,21 +127,54 @@ return {
 		
 		-- SPUU
 
-		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU Power, ON'), category = {_('SPUU'), _('Custom')}},
-		{down = spuu_commands.On_Off, up = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU Power, ON/OFF (2-way Switch)'), category = {_('SPUU'), _('Custom')}},
-		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU Power, OFF'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU Power, ON'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.On_Off, up = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU Power, ON/OFF (2-way Switch)'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU Power, OFF'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
 
-		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU OFF, PRESSED'), category = {_('SPUU'), _('Custom')}},
-		{down = spuu_commands.button_off, up = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU OFF, PRESSED/RELEASED (2-way Switch)'), category = {_('SPUU'), _('Custom')}},
-		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU OFF, RELEASED'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU OFF, PRESSED'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.button_off, up = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU OFF, PRESSED/RELEASED (2-way Switch)'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU OFF, RELEASED'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = spuu_commands.switchUp, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU Control Switch, T'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.switchUp, up = spuu_commands.switchUp, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU Control Switch, T/NONE (2-way Switch)'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.switchDown, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU Control Switch, NONE'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.switchUp, up = spuu_commands.switchUp, cockpit_device_id = devices.SPUU_52, value_down = -1, value_up = 0, name = _('SPUU Control Switch, P/NONE (2-way Switch)'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = spuu_commands.switchDown, cockpit_device_id = devices.SPUU_52, value_down = -1, name = _('SPUU Control Switch, P'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
 
 --elements["SPUU-CONTROL-PTR"]		= springloaded_3_pos_tumb(_("SPUU Control Switch P/NONE/T"),	devices.SPUU_52,	spuu_commands.switchDown,	spuu_commands.switchUp,	277,	nil,	nil,	nil,	nil)
+
+
+--elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth - SPUU Knob"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
+
+		{down = hydraulic_commands.DisableAuxiliaryHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, name = _('Auxiliary Disable Button Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.DisableAuxiliaryHydroCover, up = hydraulic_commands.DisableAuxiliaryHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, value_up = 0, name = _('Auxiliary Disable Button Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.DisableAuxiliaryHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 0, name = _('Auxiliary Disable Button Cover, CLOSE'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = hydraulic_commands.MainHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, name = _('Main/Auxiliary Hydraulic Switch Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.MainHydroCover, up = hydraulic_commands.MainHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, value_up = 0, name = _('Main/Auxiliary Hydraulic Switch Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.MainHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 0, name = _('Main/Auxiliary Hydraulic Switch Cover, CLOSE'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = hydraulic_commands.GearHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, name = _('Main/Reserve Gear Hydraulic Switch Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.GearHydroCover, up = hydraulic_commands.GearHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, value_up = 0, name = _('Main/Reserve Gear Hydraulic Switch Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = hydraulic_commands.GearHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 0, name = _('Main/Reserve Gear Hydraulic Switch Cover, CLOSE'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff_Cover, cockpit_device_id = devices.CPT_MECH, value_down = 1, name = _('Gear Indication Lights Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff_Cover, up = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff_Cover, cockpit_device_id = devices.CPT_MECH, value_down = 1, value_up = 0, name = _('Gear Indication Lights Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff_Cover, cockpit_device_id = devices.CPT_MECH, value_down = 0, name = _('Gear Indication Lights Cover, CLOSE'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff, cockpit_device_id = devices.CPT_MECH, value_down = 1, name = _('Gear Indication Lights, ON'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff, up = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff, cockpit_device_id = devices.CPT_MECH, value_down = 1, value_up = 0, name = _('Gear Indication Lights, ON/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_Gear_Pilot_LightsOff, cockpit_device_id = devices.CPT_MECH, value_down = 0, name = _('Gear Indication Lights, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		-- Lights
+
+--		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 1, name = _('LND LT Control-Off-Retract Switch, CONTROL'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+--		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 0, name = _('LND LT Control-Off-Retract Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+--		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = -1, name = _('LND LT Control-Off-Retract Switch, RETRACT'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 
 		-- Autopilot
 
 		{down = autopilot_commands.ControlDown, up = autopilot_commands.ControlUp, cockpit_device_id = devices.AUTOPILOT, value_down = -1, value_up = 1, name = _('Autopilot Altitude Control'), category = {_('Autopilot'), _('Custom')}},
-
---elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
 
 		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.05, name = _('Autopilot H Channel Delta Correction, Down (Slow)'), category = {_('Autopilot'), _('Custom')}},
 		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.1, name = _('Autopilot H Channel Delta Correction, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
@@ -181,6 +214,79 @@ return {
 
 --elements["SAU-AZ-PTR"]					= default_axis(_("Autopilot Route Azimuth"),	devices.AUTOPILOT,	autopilot_commands.RouteAngle,	262, 1, 0.2 * 5 / 6, true, false, true)
 
---elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
+		-- Fire Extinguishers
+
+		{down = fire_commands.SensorControl, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, name = _('Extinguisher Control Switch, EXING'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.SensorControl, up = fire_commands.SensorControl, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Extinguisher Control Switch, EXING/CNTRL (2-way Switch)'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.SensorControl, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0, name = _('Extinguisher Control Switch, CNTRL'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, name = _('Fire Extinguisher Power, ON'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.Power, up = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Fire Extinguisher Power, ON/OFF (2-way Switch)'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.Power, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 0, name = _('Fire Extinguisher Power, OFF'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = fire_commands.Pyro1, up = fire_commands.Pyro1, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = -1, value_up = 0, name = _('Fire Extinguisher Squib Control, 1'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = fire_commands.Pyro2, up = fire_commands.Pyro2, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Fire Extinguisher Squib Control, 2'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+
+		{down = fire_commands.DisableAlarm, up = fire_commands.DisableAlarm, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Turn Off Fire Signal Button'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
+
+--elements["FIRE-SENSOR-CHANNEL-PTR1"]	= triple_switch(_("Fire Extinguisher Sensor Cnannel OFF/1/2/3"),	devices.FIRE_EXTING_INTERFACE,	fire_commands.SensorGroup, 484)
+
+		-- DISS
+
+		{down = diss_commands.COORD_DEC_MAP_ANGLE, up = diss_commands.COORD_DEC_MAP_ANGLE, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Decrease Map Angle'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.COORD_INC_MAP_ANGLE, up = diss_commands.COORD_INC_MAP_ANGLE, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Increase Map Angle'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = diss_commands.COORD_DEC_PATH_KM, up = diss_commands.COORD_DEC_PATH_KM, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Decrease Path'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.COORD_INC_PATH_KM, up = diss_commands.COORD_INC_PATH_KM, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Increase Path'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = diss_commands.COORD_DEC_DEVIATION_KM, up = diss_commands.COORD_DEC_DEVIATION_KM, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Decrease Deviation'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.COORD_INC_DEVIATION_KM, up = diss_commands.COORD_INC_DEVIATION_KM, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Increase Deviation'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = diss_commands.COORD_OFF, up = diss_commands.COORD_OFF, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Coordinates OFF'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.COORD_ON, up = diss_commands.COORD_ON, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Coordinates ON'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.0, value_up = 0, name = _('DISS Select Mode, FORWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.1, value_up = 0, name = _('DISS Select Mode, UPWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.2, value_up = 0, name = _('DISS Select Mode, SPEED DRIFT'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.3, value_up = 0, name = _('DISS Select Mode, MEMORY'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.4, value_up = 0, name = _('DISS Select Mode, OPER'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+--elements["DISS-ON-OFF-PTR"]			= default_2_position_tumb(_("DISS-15D ON/OFF"),						devices.DISS_15,	diss_commands.POWER,					371)
+--elements["DVS-DISS-PTR"]			= default_2_position_tumb(_("Airspeed to DISS ON/OFF"),				devices.DISS_15,	diss_commands.DVS,						370)
+
+		{down = ext_cargo_equipment_commands.Transformer36vDIMMainBackup, up = ext_cargo_equipment_commands.Transformer36vDIMMainBackup, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DIM Transformer Switch, MAIN/BACKUP (2-way Switch)'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = engine_commands.IA6_COLD, up = engine_commands.IA6_COLD, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, COLD'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = engine_commands.IA6_HOT, up = engine_commands.IA6_HOT, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, HOT'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0/6, value_up = 0, name = _('Select Tank for Fuel Meter, TOTAL'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 2/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 3/6, value_up = 0, name = _('Select Tank for Fuel Meter, 3'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 4/6, value_up = 0, name = _('Select Tank for Fuel Meter, 4 + 5'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 5/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1 AUX'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 6/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2 AUX'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		-- External Cargo
+
+		{down = ext_cargo_equipment_commands.CMD_AutoReleaseSw, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, name = _('External Cargo Automatic Dropping, ON'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = ext_cargo_equipment_commands.CMD_AutoReleaseSw, up = ext_cargo_equipment_commands.CMD_AutoReleaseSw, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0, name = _('External Cargo Automatic Dropping, ON/OFF (2-way Switch)'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = ext_cargo_equipment_commands.CMD_AutoReleaseSw, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 0, name = _('External Cargo Automatic Dropping, OFF'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		{down = ext_cargo_equipment_commands.CMD_RemoveRelease, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, name = _('External Cargo Remove Release, ON'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = ext_cargo_equipment_commands.CMD_RemoveRelease, up = ext_cargo_equipment_commands.CMD_RemoveRelease, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0, name = _('External Cargo Remove Release, ON/OFF (2-way Switch)'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = ext_cargo_equipment_commands.CMD_RemoveRelease, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 0, name = _('External Cargo Remove Release, OFF'), category = {_('External Cargo'), _('Right Front Instrument Panel'), _('Custom')}},
+
+		-- Weapons
+
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0, name = _('Select Weapon Pilot 1 OFF MSL'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.1, name = _('Select Weapon Pilot 2 GM-30'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.2, name = _('Select Weapon Pilot 3 FXD MG7.62+12.7'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.3, name = _('Select Weapon Pilot 4 FXD MG-12.7'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.4, name = _('Select Weapon Pilot 5 FXD MG-7.62'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.5, name = _('Select Weapon Pilot 6 FXD MG-30'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.6, name = _('Select Weapon Pilot 7 ROCKET'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.7, name = _('Select Weapon Pilot 8 BOMB'), category = {_('Weapon'), _('Custom')}},
+
 	}
 }
