@@ -45,12 +45,12 @@ return {
 		{pressed = asp_commands.Brightness_PM_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.05, name = _('Sight Crosshair Brightness Adjustment, Down (Default)'), category = {_('ASP-17V'), _('Custom')}},
 		{pressed = asp_commands.Brightness_PM_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.1, name = _('Sight Crosshair Brightness Adjustment, Down (Fast)'), category = {_('ASP-17V'), _('Custom')}},
 
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.025, name = _('Sight Crosshair Horizontal Adjustment, Up (Slow)'), category = {_('ASP-17V'), _('Custom')}},
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.05, name = _('Sight Crosshair Horizontal Adjustment, Up (Default)'), category = {_('ASP-17V'), _('Custom')}},
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.1, name = _('Sight Crosshair Horizontal Adjustment, Up (Fast)'), category = {_('ASP-17V'), _('Custom')}},
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.025, name = _('Sight Crosshair Horizontal Adjustment, Down (Slow)'), category = {_('ASP-17V'), _('Custom')}},
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.05, name = _('Sight Crosshair Horizontal Adjustment, Down (Default)'), category = {_('ASP-17V'), _('Custom')}},
-		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.1, name = _('Sight Crosshair Horizontal Adjustment, Down (Fast)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.025, name = _('Sight Crosshair Horizontal Adjustment, Right (Slow)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.05, name = _('Sight Crosshair Horizontal Adjustment, Right (Default)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.1, name = _('Sight Crosshair Horizontal Adjustment, Right (Fast)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.025, name = _('Sight Crosshair Horizontal Adjustment, Left (Slow)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.05, name = _('Sight Crosshair Horizontal Adjustment, Left (Default)'), category = {_('ASP-17V'), _('Custom')}},
+		{pressed = asp_commands.Azimuth_Delta_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.1, name = _('Sight Crosshair Horizontal Adjustment, Left (Fast)'), category = {_('ASP-17V'), _('Custom')}},
 
 		{pressed = asp_commands.Brightness_NS_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.025, name = _('Sight Grid Brightness Adjustment, Up (Slow)'), category = {_('ASP-17V'), _('Custom')}},
 		{pressed = asp_commands.Brightness_NS_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = 0.05, name = _('Sight Grid Brightness Adjustment, Up (Default)'), category = {_('ASP-17V'), _('Custom')}},
@@ -59,10 +59,12 @@ return {
 		{pressed = asp_commands.Brightness_NS_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.05, name = _('Sight Grid Brightness Adjustment, Down (Default)'), category = {_('ASP-17V'), _('Custom')}},
 		{pressed = asp_commands.Brightness_NS_AXIS, cockpit_device_id = devices.ASP_17V, value_pressed = -0.1, name = _('Sight Grid Brightness Adjustment, Down (Fast)'), category = {_('ASP-17V'), _('Custom')}},
 
+		{down = asp_commands.Range_Auto_Manual_ITER, cockpit_device_id = devices.ASP_17V, value_down = 1, name = _('Sight distance, AUTO/MANUAL (Toggle)'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Range_Auto_Manual, cockpit_device_id = devices.ASP_17V, value_down = 1, name = _('Sight distance, AUTO'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Range_Auto_Manual, up = asp_commands.Range_Auto_Manual, cockpit_device_id = devices.ASP_17V, value_down = 1, value_up = 0, name = _('Sight distance, AUTO/MANUAL (2-way Switch)'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Range_Auto_Manual, cockpit_device_id = devices.ASP_17V, value_down = 0, name = _('Sight distance, MANUAL'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 
+		{down = asp_commands.Power_ITER, cockpit_device_id = devices.ASP_17V, value_down = 1, name = _('Sight Power, ON/OFF (Toggle)'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Power, cockpit_device_id = devices.ASP_17V, value_down = 1, name = _('Sight Power, ON'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Power, up = asp_commands.Power, cockpit_device_id = devices.ASP_17V, value_down = 1, value_up = 0, name = _('Sight Power, ON/OFF (2-way Switch)'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
 		{down = asp_commands.Power, cockpit_device_id = devices.ASP_17V, value_down = 0, name = _('Sight Power, OFF'), category = {_('ASP-17V'), _('Weapon'), _('Custom')}},
@@ -306,10 +308,12 @@ return {
 		{pressed = r863_commands.VOLUME_ITER, cockpit_device_id = devices.R_863, value_pressed = -1, name = _('R-863 Volume, Down (Default)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
 		{pressed = r863_commands.VOLUME_ITER, cockpit_device_id = devices.R_863, value_pressed = -2, name = _('R-863 Volume, Down (Fast)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
 
+		{down = engine_commands.ANTIDUST_On_COVER_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch Cover, OPEN/CLOSED (Toggle)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On_COVER, up = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Antidust Switch Cover, OPEN/CLOSED (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On_COVER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Antidust Switch Cover, CLOSED'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 
+		{down = engine_commands.ANTIDUST_On_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch, ON/OFF (Toggle)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch, ON'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On, up = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Antidust Switch, ON/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Antidust Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
@@ -328,11 +332,13 @@ return {
 		{down = diss_commands.COORD_OFF, up = diss_commands.COORD_OFF, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Coordinates OFF'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
 		{down = diss_commands.COORD_ON, up = diss_commands.COORD_ON, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Coordinates ON'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
 
-		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.0, value_up = 0, name = _('DISS Select Mode, FORWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.1, value_up = 0, name = _('DISS Select Mode, UPWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.2, value_up = 0, name = _('DISS Select Mode, SPEED DRIFT'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.3, value_up = 0, name = _('DISS Select Mode, MEMORY'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
-		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.4, value_up = 0, name = _('DISS Select Mode, OPER'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH_ITER, cockpit_device_id = devices.DISS_15, value_down = 1, name = _('DISS Select Mode, (Up)'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH_ITER, cockpit_device_id = devices.DISS_15, value_down = -1, name = _('DISS Select Mode, (Down)'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.0, name = _('DISS Select Mode, FORWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.1, name = _('DISS Select Mode, UPWARD'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.2, name = _('DISS Select Mode, SPEED DRIFT'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.3, name = _('DISS Select Mode, MEMORY'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
+		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.4, name = _('DISS Select Mode, OPER'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
 
 --elements["DISS-ON-OFF-PTR"]			= default_2_position_tumb(_("DISS-15D ON/OFF"),						devices.DISS_15,	diss_commands.POWER,					371)
 --elements["DVS-DISS-PTR"]			= default_2_position_tumb(_("Airspeed to DISS ON/OFF"),				devices.DISS_15,	diss_commands.DVS,						370)
@@ -342,13 +348,15 @@ return {
 		{down = engine_commands.IA6_COLD, up = engine_commands.IA6_COLD, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, COLD'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.IA6_HOT, up = engine_commands.IA6_HOT, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Termometer Control, HOT'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0/6, value_up = 0, name = _('Select Tank for Fuel Meter, TOTAL'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 2/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 3/6, value_up = 0, name = _('Select Tank for Fuel Meter, 3'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 4/6, value_up = 0, name = _('Select Tank for Fuel Meter, 4 + 5'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 5/6, value_up = 0, name = _('Select Tank for Fuel Meter, 1 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
-		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 6/6, value_up = 0, name = _('Select Tank for Fuel Meter, 2 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeterITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Select Tank for Fuel Meter, (Up)'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeterITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = -1, name = _('Select Tank for Fuel Meter, (Down)'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0/6, name = _('Select Tank for Fuel Meter, TOTAL'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1/6, name = _('Select Tank for Fuel Meter, 1'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 2/6, name = _('Select Tank for Fuel Meter, 2'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 3/6, name = _('Select Tank for Fuel Meter, 3'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 4/6, name = _('Select Tank for Fuel Meter, 4 + 5'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 5/6, name = _('Select Tank for Fuel Meter, 1 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
+		{down = fuel_commands.FuelMeter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 6/6, name = _('Select Tank for Fuel Meter, 2 AUX'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 
 		-- External Cargo
 
