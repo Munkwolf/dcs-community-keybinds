@@ -124,5 +124,63 @@ return {
 
 		{down = fuel_commands.FuelMeterButtonH, up = fuel_commands.FuelMeterButtonH, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Meter Test, Low'), category = {_('Instrument Panel'), _('Custom')}},
 		{down = fuel_commands.FuelMeterButtonP, up = fuel_commands.FuelMeterButtonP, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Meter Test, High'), category = {_('Instrument Panel'), _('Custom')}},
+		
+		-- SPUU
+
+		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU Power, ON'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.On_Off, up = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU Power, ON/OFF (2-way Switch)'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.On_Off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU Power, OFF'), category = {_('SPUU'), _('Custom')}},
+
+		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, name = _('SPUU OFF, PRESSED'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.button_off, up = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 1, value_up = 0, name = _('SPUU OFF, PRESSED/RELEASED (2-way Switch)'), category = {_('SPUU'), _('Custom')}},
+		{down = spuu_commands.button_off, cockpit_device_id = devices.SPUU_52, value_down = 0, name = _('SPUU OFF, RELEASED'), category = {_('SPUU'), _('Custom')}},
+
+--elements["SPUU-CONTROL-PTR"]		= springloaded_3_pos_tumb(_("SPUU Control Switch P/NONE/T"),	devices.SPUU_52,	spuu_commands.switchDown,	spuu_commands.switchUp,	277,	nil,	nil,	nil,	nil)
+
+		-- Autopilot
+
+		{down = autopilot_commands.ControlDown, up = autopilot_commands.ControlUp, cockpit_device_id = devices.AUTOPILOT, value_down = -1, value_up = 1, name = _('Autopilot Altitude Control'), category = {_('Autopilot'), _('Custom')}},
+
+--elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
+
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.05, name = _('Autopilot H Channel Delta Correction, Down (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.1, name = _('Autopilot H Channel Delta Correction, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.2, name = _('Autopilot H Channel Delta Correction, Down (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.05, name = _('Autopilot H Channel Delta Correction, Up (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.1, name = _('Autopilot H Channel Delta Correction, Up (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaH, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.2, name = _('Autopilot H Channel Delta Correction, Up (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.05, name = _('Autopilot K Channel Delta Correction, Down (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.1, name = _('Autopilot K Channel Delta Correction, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.2, name = _('Autopilot K Channel Delta Correction, Down (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.05, name = _('Autopilot K Channel Delta Correction, Up (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.1, name = _('Autopilot K Channel Delta Correction, Up (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaK, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.2, name = _('Autopilot K Channel Delta Correction, Up (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.05, name = _('Autopilot T Channel Delta Correction, Down (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.1, name = _('Autopilot T Channel Delta Correction, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.2, name = _('Autopilot T Channel Delta Correction, Down (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.05, name = _('Autopilot T Channel Delta Correction, Up (Slow)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.1, name = _('Autopilot T Channel Delta Correction, Up (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.DeltaT, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.2, name = _('Autopilot T Channel Delta Correction, Up (Fast)'), category = {_('Autopilot'), _('Custom')}},
+
+		{down = autopilot_commands.SpeedOn, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('Autopilot Speed Stabilization ON, PRESSED'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.SpeedOn, up = autopilot_commands.SpeedOn, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('Autopilot Speed Stabilization ON, PRESSED/RELEASED (2-way Switch)'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.SpeedOn, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('Autopilot Speed Stabilization ON, RELEASED'), category = {_('Autopilot'), _('Custom')}},
+
+		{down = autopilot_commands.SpeedOff, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('Autopilot Speed Stabilization OFF, PRESSED'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.SpeedOff, up = autopilot_commands.SpeedOff, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('Autopilot Speed Stabilization OFF, PRESSED/RELEASED (2-way Switch)'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.SpeedOff, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('Autopilot Speed Stabilization OFF, RELEASED'), category = {_('Autopilot'), _('Custom')}},
+
+		{down = autopilot_commands.Lighting, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('Buttons Lighting, BRIGHT'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.Lighting, up = autopilot_commands.Lighting, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('Buttons Lighting, BRIGHT/DIM (2-way Switch)'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.Lighting, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('Buttons Lighting, DIM'), category = {_('Autopilot'), _('Custom')}},
+
+--elements["SAU-AZ-PTR"]					= default_axis(_("Autopilot Route Azimuth"),	devices.AUTOPILOT,	autopilot_commands.RouteAngle,	262, 1, 0.2 * 5 / 6, true, false, true)
+
+--elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
 	}
 }
