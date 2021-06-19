@@ -182,5 +182,15 @@ return {
 --elements["SAU-AZ-PTR"]					= default_axis(_("Autopilot Route Azimuth"),	devices.AUTOPILOT,	autopilot_commands.RouteAngle,	262, 1, 0.2 * 5 / 6, true, false, true)
 
 --elements["SPUU-KNOB-PTR"]			= default_axis(_("Autopilot Route Azimuth"),	devices.SPUU_52,	spuu_commands.control,	276, 1, 0.2 * 5 / 6, true, false, false)
+		
+		-- Weapon hotkeys
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0,		name = _('Select Weapon Pilot 1 OFF MSL'),			category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.1,	name = _('Select Weapon Pilot 2 GM-30'),			category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.2,	name = _('Select Weapon Pilot 3 FXD MG7.62+12.7'),	category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.3,	name = _('Select Weapon Pilot 4 FXD MG-12.7'),		category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.4,	name = _('Select Weapon Pilot 5 FXD MG-7.62'),		category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.5,	name = _('Select Weapon Pilot 6 FXD MG-30'),		category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.6,	name = _('Select Weapon Pilot 7 ROCKET'),			category = {_('Weapon')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.7,	name = _('Select Weapon Pilot 8 BOMB'),				category = {_('Weapon')}},
 	}
 }
