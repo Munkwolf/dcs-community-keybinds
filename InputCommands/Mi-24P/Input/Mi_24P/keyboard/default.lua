@@ -276,6 +276,18 @@ return {
 
 		{down = fire_commands.DisableAlarm, up = fire_commands.DisableAlarm, cockpit_device_id = devices.FIRE_EXTING_INTERFACE, value_down = 1, value_up = 0, name = _('Turn Off Fire Signal Button'), category = {_('Fire Extinguisher Control Panel'), _('Left Front Instrument Panel'), _('Custom')}},
 
+		-- R-852 Radio
+
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = 0.025, name = _('R-852 Volume, Up (Slow)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = 0.05, name = _('R-852 Volume, Up (Default)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = 0.1, name = _('R-852 Volume, Up (Fast)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = -0.025, name = _('R-852 Volume, Down (Slow)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = -0.05, name = _('R-852 Volume, Down (Default)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{pressed = r852_commands.VOLUME_AXIS, cockpit_device_id = devices.R_852, value_pressed = -0.1, name = _('R-852 Volume, Down (Fast)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+
+		{down = r852_commands.CHANNEL_ITER, cockpit_device_id = devices.R_852, value_down = 1, name = _('R-852 Channel Select, (Up)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+		{down = r852_commands.CHANNEL_ITER, cockpit_device_id = devices.R_852, value_down = -1, name = _('R-852 Channel Select, (Down)'), category = {_('R-852'), _('Left Side Panel'), _('Custom')}},
+
 		-- R-863 Radio
 
 		{down = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Power, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
@@ -317,6 +329,31 @@ return {
 		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Antidust Switch, ON'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On, up = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Antidust Switch, ON/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = engine_commands.ANTIDUST_On, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Antidust Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+
+		-- SPU-8, Pilot
+
+--elements["SPU8-NET-PTR"] = default_2_position_tumb(_("Network 1/2 Switch (N/F)"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, 452)
+
+--elements["SPU8-CV-PTR"]	= default_button(_("Circular Call Button (N/F)"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_CIRC_FLOW, 454)
+
+--elements["SPU8-EXT-PTR"] = default_2_position_tumb(	_("Radio/ICS Switch"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, 456)
+
+
+--elements["SPU8-1-ON-OFF-PTR"] = default_2_position_tumb(_("Switch SPU-8 NET-1 ON/OFF"),	devices.SPU_8,	SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1,	376)
+--elements["SPU8-2-ON-OFF-PTR"] = default_2_position_tumb(_("Switch SPU-8 NET-2 ON/OFF"),	devices.SPU_8,	SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2,	377)
+
+		-- Left Side Panel
+
+		{down = fmproxy_commands.STATIC_SYS_MODE_ITER, cockpit_device_id = devices.FM_PROXY, value_down = -1, name = _('Static Valve Sensor Select, (Left)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE_ITER, cockpit_device_id = devices.FM_PROXY, value_down = 1, name = _('Static Valve Sensor Select, (Right)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE, cockpit_device_id = devices.FM_PROXY, value_down = -1, name = _('Static Valve Sensor Select, LEFT'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE, up = fmproxy_commands.STATIC_SYS_MODE, cockpit_device_id = devices.FM_PROXY, value_down = -1, value_up = 0, name = _('Static Valve Sensor Select, LEFT/BOTH (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE, cockpit_device_id = devices.FM_PROXY, value_down = 0, name = _('Static Valve Sensor Select, BOTH'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE, up = fmproxy_commands.STATIC_SYS_MODE, cockpit_device_id = devices.FM_PROXY, value_down = 1, value_up = 0, name = _('Static Valve Sensor Select, RIGHT/BOTH (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = fmproxy_commands.STATIC_SYS_MODE, cockpit_device_id = devices.FM_PROXY, value_down = 1, name = _('Static Valve Sensor Select, RIGHT'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{pressed = ecs_commands.Sealing_valve, cockpit_device_id = devices.ECS_INTERFACE, value_pressed = 1, name = _('Sealing, CLOSED'), category = {_('Left Side Panel'), _('Custom')}},
+		{pressed = ecs_commands.Sealing_valve, cockpit_device_id = devices.ECS_INTERFACE, value_pressed = 0, name = _('Sealing, OPEN'), category = {_('Left Side Panel'), _('Custom')}},
 
 		-- DISS
 
@@ -422,8 +459,71 @@ return {
 		{down = elec_commands.ACGangSwitcherITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('AC Voltmeter Knob, (Up)'), category = {_('Electrical Control Panel'), _('AC Panel'), _('Custom')}},
 		{down = elec_commands.ACGangSwitcherITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = -1, name = _('AC Voltmeter Knob, (Down)'), category = {_('Electrical Control Panel'), _('AC Panel'), _('Custom')}},
 
-		-- Weapons
+		{down = elec_commands.DCGroundPower, up = elec_commands.DCGroundPower, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Ground Power Switch, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.DCGroundPowerITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Ground Power Switch, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
 
+		{down = elec_commands.BatteryLeft, up = elec_commands.BatteryLeft, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Left Battery Switch, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.BatteryLeftITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Left Battery Switch, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		{down = elec_commands.BatteryRight, up = elec_commands.BatteryRight, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Right Battery Switch, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.BatteryRightITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Right Battery Switch, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		{down = elec_commands.RectifierLeft, up = elec_commands.BatteryLeft, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Left Rectifier Switch, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.RectifierLeftITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Left Rectifier Switch, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		{down = elec_commands.RectifierRight, up = elec_commands.RectifierRight, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Right Rectifier Switch, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.RectifierRightITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Right Rectifier Switch, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		{down = elec_commands.DCGenerator, up = elec_commands.DCGenerator, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DC Starter-Generator, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.DCGeneratorITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('DC Starter-Generator, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		{down = elec_commands.BatteryHeating, up = elec_commands.BatteryHeating, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Battery Heating, ON/OFF (2-way Switch)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+		{down = elec_commands.BatteryHeatingITER, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('Battery Heating, ON/OFF (Toggle)'), category = {_('Electrical Control Panel'), _('DC Panel'), _('Custom')}},
+
+		-- Anti-Ice
+
+		{down = AntiIceSys_commands.ANTIICE_Ammeter_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Anti-Ice Knob, (Up)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_Ammeter_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Anti-Ice Knob, (Down)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+
+		{down = AntiIceSys_commands.ANTIICE_ManAuto_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Anti-Ice, AUTO/MANUAL (Toggle)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_ManAuto, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Anti-Ice, MANUAL'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_ManAuto, up = AntiIceSys_commands.ANTIICE_ManAuto, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = 0, name = _('Anti-Ice, AUTO/MANUAL (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_ManAuto, up = AntiIceSys_commands.ANTIICE_ManAuto, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, value_up = 0, name = _('Anti-Ice, MANUAL/AUTO (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_ManAuto, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Anti-Ice, AUTO'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		{down = AntiIceSys_commands.ANTIICE_LeftEng_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Left Engine Anti-Ice, ON/OFF (Toggle)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_LeftEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Left Engine Anti-Ice, ON'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_LeftEng, up = AntiIceSys_commands.ANTIICE_LeftEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = 0, name = _('Left Engine Anti-Ice, ON/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_LeftEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Left Engine Anti-Ice, OFF'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		{down = AntiIceSys_commands.ANTIICE_RightEng_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Right Engine Anti-Ice, ON/OFF (Toggle)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_RightEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Right Engine Anti-Ice, ON'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_RightEng, up = AntiIceSys_commands.ANTIICE_RightEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = 0, name = _('Right Engine Anti-Ice, ON/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_RightEng, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Right Engine Anti-Ice, OFF'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		{down = AntiIceSys_commands.ANTIICE_Off_EXT, up = AntiIceSys_commands.ANTIICE_Off_EXT, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = -1, name = _('Anti-Ice OFF (fixed)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Windshield Anti-Ice, Pilot, LOW/OFF/HIGH (Up)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Windshield Anti-Ice, Pilot, LOW/OFF/HIGH (Down)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Windshield Anti-Ice, Pilot, LOW'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P, up = AntiIceSys_commands.ANTIICE_GLAZING_P, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = 0, name = _('Windshield Anti-Ice, Pilot, LOW/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P, up = AntiIceSys_commands.ANTIICE_GLAZING_P, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, value_up = 0, name = _('Windshield Anti-Ice, Pilot, HIGH/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Windshield Anti-Ice, Pilot, OFF'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_P, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Windshield Anti-Ice, Pilot, HIGH'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Windshield Anti-Ice, Operator, LOW/OFF/HIGH (Up)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O_ITER, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Windshield Anti-Ice, Operator, LOW/OFF/HIGH (Down)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, name = _('Windshield Anti-Ice, Operator, LOW'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, up = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 1, value_up = 0, name = _('Windshield Anti-Ice, Operator, LOW/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, up = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, value_up = 0, name = _('Windshield Anti-Ice, Operator, HIGH/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Windshield Anti-Ice, Operator, OFF'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Windshield Anti-Ice, Operator, HIGH'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
+
+		--elements["AC-HEATER2-MODE-PTR"]	= multiposition_switch(_("Automatic Hot Cold Switch, OFF/COLD/HOT/AUTO"),					devices.ECS_INTERFACE,				ecs_commands.AutomaticHotCold,		145,	4,	0.1,	false,	0.0,	anim_speed_default,	false)
+
+		-- Weapons
+ 
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0, name = _('Select Weapon Pilot 1 OFF MSL'), category = {_('Weapon'), _('Custom')}},
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.1, name = _('Select Weapon Pilot 2 GM-30'), category = {_('Weapon'), _('Custom')}},
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.2, name = _('Select Weapon Pilot 3 FXD MG7.62+12.7'), category = {_('Weapon'), _('Custom')}},
