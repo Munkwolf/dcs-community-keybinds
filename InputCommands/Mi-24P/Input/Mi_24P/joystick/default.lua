@@ -332,15 +332,111 @@ return {
 
 		-- SPU-8, Pilot
 
---elements["SPU8-NET-PTR"] = default_2_position_tumb(_("Network 1/2 Switch (N/F)"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, 452)
+		{down = SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, cockpit_device_id = devices.SPU_8, value_down = 1, name = _('SPU-8 Network 1/2 Switch, 1'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, up = SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, cockpit_device_id = devices.SPU_8, value_down = 1, value_up = 0, name = _('SPU-8 Network 1/2 Switch, 1 (2-way Switch)'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_P_NETWORK, cockpit_device_id = devices.SPU_8, value_down = 0, name = _('SPU-8 Network 1/2 Switch, 2'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
 
---elements["SPU8-CV-PTR"]	= default_button(_("Circular Call Button (N/F)"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_CIRC_FLOW, 454)
+		{down = SPU_8_Mi24_commands.CMD_SPU8_P_CIRC_FLOW, up = SPU_8_Mi24_commands.CMD_SPU8_P_CIRC_FLOW, cockpit_device_id = devices.SPU_8, value_down = 1, value_up = 0, name = _('Circular Call Button (N/F)'), category = {_('SPU-8 Intercom Panels'), _('Left Front Instrument Panel'), _('Custom')}},
 
---elements["SPU8-EXT-PTR"] = default_2_position_tumb(	_("Radio/ICS Switch"), devices.SPU_8, SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, 456)
+		{down = SPU_8_Mi24_commands.CMD_SPU8_ICS_RADIO_EXT, cockpit_device_id = devices.SPU_8, value_down = 1, name = _('Radio/ICS Switch, Test'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
 
+		-- ARC-15
 
---elements["SPU8-1-ON-OFF-PTR"] = default_2_position_tumb(_("Switch SPU-8 NET-1 ON/OFF"),	devices.SPU_8,	SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1,	376)
---elements["SPU8-2-ON-OFF-PTR"] = default_2_position_tumb(_("Switch SPU-8 NET-2 ON/OFF"),	devices.SPU_8,	SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2,	377)
+--elements["ARC-VOLUME-PTR"]				= default_axis(				_("ARC-15 Volume"),						devices.ARC_15_PANEL_P,	arc15_commands.VOLUME,			459,	0,	0.05,	false,	false,	false)
+
+		{down = arc15_commands.TLF_TLG, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, name = _('ARC-15 TLF/TLG, TLF'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.TLF_TLG, up = arc15_commands.TLF_TLG, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = -1, name = _('ARC-15 TLF/TLG (2-way Switch)'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.TLF_TLG, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -1, name = _('ARC-15 TLF/TLG, TLG'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0, name = _('ARC-15 Mode, OFF'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.115, name = _('ARC-15 Mode, COMPASS'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.230, name = _('ARC-15 Mode, ANT'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.345, name = _('ARC-15 Mode, LOOP'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+--elements["ARC-MODE-PTR"]				= multiposition_switch(		_("ARC-15 mode OFF/COMPASS/ANT/FRAME"),	devices.ARC_15_PANEL_P,	arc15_commands.MODE,			463,	4,	0.115)
+--elements["ARC-CH2-OUT-KNOB"]			= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_100KHz,	464,	18,	1/17)
+--elements["ARC-CH2-CENTER-PTR"]			= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_10KHz,	465,	10,	1/9)
+--elements["ARC-CH2-IN-PTR"]				= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_1KHz,		466,	20,	1/20)
+--elements["ARC-CH1-OUT-KNOB"]			= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_100KHz,	467,	18,	1/17)
+--elements["ARC-CH1-CENTER-PTR"]			= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_10KHz,	468,	10,	1/9)
+--elements["ARC-CH1-IN-PTR"]				= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_1KHz,	469,	20,	1/20)
+--elements["ARC-CHANNEL-PTR"]				= default_2_position_small_tumb(	_("ARC-15 1/2"),				devices.ARC_15_PANEL_P,	arc15_commands.DIAL_SELECT,		462)
+
+		{down = arc15_commands.CONTROL, up = arc15_commands.CONTROL, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = 0, name = _('ARC-15 Control Button'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.LOOP, up = arc15_commands.LOOP, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = 0, name = _('ARC-15 Loop Button'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+		-- Jadro 1I
+
+		{down = jadro_commands.POWER_ITER, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Power, ON/OFF (Toggle)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.POWER, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Power, ON'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.POWER, up = jadro_commands.POWER, cockpit_device_id = devices.JADRO_1I, value_down = 1, value_up = 0, name = _('Jadro-1I Power, ON/OFF (2-way Switch)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.POWER, cockpit_device_id = devices.JADRO_1I, value_down = 0, name = _('Jadro-1I Power, OFF'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.MODE_ITER, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Mode, (Up)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.MODE_ITER, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Mode, (Down)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.MODE_ITER, cockpit_device_id = devices.JADRO_1I, value_down = 0, name = _('Jadro-1I Mode, OFF'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.MODE_ITER, cockpit_device_id = devices.JADRO_1I, value_down = 0.1, name = _('Jadro-1I Mode, AM'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.MODE_ITER, cockpit_device_id = devices.JADRO_1I, value_down = 0.2, name = _('Jadro-1I Mode, OM'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 0.5, name = _('Jadro-1I Volume, Up (Slow)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 1, name = _('Jadro-1I Volume, Up (Default)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 2, name = _('Jadro-1I Volume, Up (Fast)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -0.5, name = _('Jadro-1I Volume, Down (Slow)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -1, name = _('Jadro-1I Volume, Down (Default)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.VOLUME_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -2, name = _('Jadro-1I Volume, Down (Fast)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 0.5, name = _('Jadro-1I Squelch, Up (Slow)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 1, name = _('Jadro-1I Squelch, Up (Default)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = 2, name = _('Jadro-1I Squelch, Up (Fast)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -0.5, name = _('Jadro-1I Squelch, Down (Slow)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -1, name = _('Jadro-1I Squelch, Down (Default)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{pressed = jadro_commands.SQUELCH_ITER, cockpit_device_id = devices.JADRO_1I, value_pressed = -2, name = _('Jadro-1I Squelch, Down (Fast)'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.CTL, up = jadro_commands.CTL, cockpit_device_id = devices.JADRO_1I, value_down = 1, value_up = 0, name = _('Jadro-1I Test'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 1MHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 1MHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 100KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 100KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 10KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 10KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 1KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 1KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		{down = jadro_commands.FREQ_100HZ_EXT, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 100HZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_100HZ_EXT, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 100HZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+
+		-- Greben
+
+		{down = greben_commands.POWER_ITER, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Power, ON/OFF (Toggle)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.POWER, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Power, ON'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.POWER, up = greben_commands.POWER, cockpit_device_id = devices.GREBEN, value_down = 1, value_up = 0, name = _('Greben Power, ON/OFF (2-way Switch)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.POWER, cockpit_device_id = devices.GREBEN, value_down = 0, name = _('Greben Power, OFF'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+
+		{down = greben_commands.SETUP_OPER_ITER, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Mode, SETUP/OPER (Toggle)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.SETUP_OPER, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Mode, SETUP'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.SETUP_OPER, up = greben_commands.SETUP_OPER, cockpit_device_id = devices.GREBEN, value_down = 1, value_up = 0, name = _('Greben Mode, SETUP/OPER (2-way Switch)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.SETUP_OPER, cockpit_device_id = devices.GREBEN, value_down = 0, name = _('Greben Mode, OPER'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+
+		{down = greben_commands.MODE_ITER, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Mode, ZK/GPK/MK (Down)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE_ITER, cockpit_device_id = devices.GREBEN, value_down = -1, name = _('Greben Mode, ZK/GPK/MK (Up)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE, cockpit_device_id = devices.GREBEN, value_down = 1, name = _('Greben Mode, ZK'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE, up = greben_commands.MODE, cockpit_device_id = devices.GREBEN, value_down = 1, value_up = 0, name = _('Greben Mode, ZK/GPK (2-way Switch)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE, up = greben_commands.MODE, cockpit_device_id = devices.GREBEN, value_down = -1, value_up = 0, name = _('Greben Mode, MK/GPK (2-way Switch)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE, cockpit_device_id = devices.GREBEN, value_down = 0, name = _('Greben Mode, GPK'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{down = greben_commands.MODE, cockpit_device_id = devices.GREBEN, value_down = -1, name = _('Greben Mode, MK'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = 0.025, name = _('Greben Set Latitude, Down (Slow)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = 0.05, name = _('Greben Set Latitude, Down (Default)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = 0.1, name = _('Greben Set Latitude, Down (Fast)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = -0.025, name = _('Greben Set Latitude, Up (Slow)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = -0.05, name = _('Greben Set Latitude, Up (Default)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+		{pressed = greben_commands.LATITUDE_EXT, cockpit_device_id = devices.GREBEN, value_pressed = -0.10, name = _('Greben Set Latitude, Up (Fast)'), category = {_('Greben'), _('Left Side Panel'), _('Custom')}},
+
+--elements["GREBEN-MATCH-PTR"]	= default_button(_("Greben Match"),							devices.GREBEN,	greben_commands.MATCH,		450)
 
 		-- Left Side Panel
 
@@ -354,6 +450,82 @@ return {
 
 		{pressed = ecs_commands.Sealing_valve, cockpit_device_id = devices.ECS_INTERFACE, value_pressed = 1, name = _('Sealing, CLOSED'), category = {_('Left Side Panel'), _('Custom')}},
 		{pressed = ecs_commands.Sealing_valve, cockpit_device_id = devices.ECS_INTERFACE, value_pressed = 0, name = _('Sealing, OPEN'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.Tank4PumpITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Fuel Pump 4, ON/OFF (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.Tank4Pump, up = fuel_commands.Tank4Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Pump 4, ON/OFF (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.Tank5PumpITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Fuel Pump 5, ON/OFF (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.Tank5Pump, up = fuel_commands.Tank5Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Pump 5, ON/OFF (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.Tank1PumpITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Fuel Pump 1, ON/OFF (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.Tank1Pump, up = fuel_commands.Tank1Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Pump 1, ON/OFF (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.Tank2PumpITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Fuel Pump 2, ON/OFF (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.Tank2Pump, up = fuel_commands.Tank2Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Pump 2, ON/OFF (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveDelimiterITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Fuel Delimiter Valve, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveDelimiter, up = fuel_commands.ValveDelimiter, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Fuel Delimiter Valve, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ExtTankITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('External Tanks, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ExtTank, up = fuel_commands.ExtTank, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('External Tanks, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveTank1ITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Feed Tank 1 Valve Switch, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveTank1, up = fuel_commands.ValveTank1, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Feed Tank 1 Valve Switch, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveTank2ITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Feed Tank 2 Valve Switch, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveTank2, up = fuel_commands.ValveTank2, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Feed Tank 2 Valve Switch, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.Tank1Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = -1, name = _('Pump 1 tank OFF (Fixed)'), category = {_('Fuel Control Panel')}},
+		{down = fuel_commands.Tank2Pump, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = -1, name = _('Pump 2 tank OFF (Fixed)'), category = {_('Fuel Control Panel')}},
+
+		{down = fuel_commands.ValveLeftEngineCoverITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Left Engine Fire Valve Cover, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveLeftEngineCover, up = fuel_commands.ValveLeftEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Left Engine Fire Valve Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveLeftEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Left Engine Fire Valve Cover, OPEN'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveLeftEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0, name = _('Left Engine Fire Valve Cover, CLOSE'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveLeftEngineITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Left Engine Fire Valve, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveLeftEngine, up = fuel_commands.ValveLeftEngine, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Left Engine Fire Valve, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveRightEngineCoverITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Right Engine Fire Valve Cover, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveRightEngineCover, up = fuel_commands.ValveRightEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Right Engine Fire Valve Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveRightEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Right Engine Fire Valve Cover, OPEN'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveRightEngineCover, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 0, name = _('Right Engine Fire Valve Cover, CLOSE'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = fuel_commands.ValveRightEngineITER, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, name = _('Right Engine Fire Valve, OPEN/CLOSE (Toggle)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+		{down = fuel_commands.ValveRightEngine, up = fuel_commands.ValveRightEngine, cockpit_device_id = devices.FUELSYS_INTERFACE, value_down = 1, value_up = 0, name = _('Right Engine Fire Valve, OPEN/CLOSE (2-way Switch)'), category = {_('Fuel Control Panel'), _('Left Side Panel'), _('Custom')}},
+
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_FAN_PILOT_EXT, cockpit_device_id = devices.CPT_MECH, value_down = 1, name = _('Pilot Fan, ON/OFF (Toggle)'), category = {_('Fan'), _('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_FAN_PILOT, cockpit_device_id = devices.CPT_MECH, value_down = 1, name = _('Pilot Fan, ON'), category = {_('Fan'), _('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_FAN_PILOT, cockpit_device_id = devices.CPT_MECH, value_down = 0, name = _('Pilot Fan, OFF'), category = {_('Fan'), _('Left Side Panel'), _('Custom')}},
+
+		-- APU
+
+		{down = engine_commands.STARTUP_APU_StartUp, up = engine_commands.STARTUP_APU_StartUp, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('APU Start'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_APU_Stop, up = engine_commands.STARTUP_APU_Stop, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('APU Stop'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_StartUp, up = engine_commands.STARTUP_Engine_StartUp, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Start'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_InterruptStartUp, up = engine_commands.STARTUP_Engine_InterruptStartUp, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Interrupt Start'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+
+		{down = engine_commands.STARTUP_APU_Launch_Method_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Launch Method, (Up)'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_APU_Launch_Method_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = -1, name = _('APU Launch Method, (Down)'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_APU_Launch_Method, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('APU Launch Method, START'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_APU_Launch_Method, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Launch Method, CRANK'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_APU_Launch_Method, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 2, name = _('APU Launch Method, FALSE'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+
+		{down = engine_commands.STARTUP_Engine_Select_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Engine Select, RIGHT/LEFT (Toggle)'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_Select, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Engine Select, LEFT'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_Select, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('APU Engine Select, RIGHT'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+
+		{down = engine_commands.STARTUP_Engine_Select_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Engine Launch Method, START/CRANK (Toggle)'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_Launch_Method, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('APU Engine Launch Method, CRANK'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.STARTUP_Engine_Launch_Method, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('APU Engine Launch Method, START'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
+
+		-- Windshield Wiper
+
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0, name = _('Windscreen Wiper Control Switch, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.05, name = _('Windscreen Wiper Control Switch, START'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.35, name = _('Windscreen Wiper Control Switch, RESET'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.15, name = _('Windscreen Wiper Control Switch, SPEED 1'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.25, name = _('Windscreen Wiper Control Switch, SPEED 2'), category = {_('Left Side Panel'), _('Custom')}},
 
 		-- DISS
 
@@ -519,8 +691,6 @@ return {
 		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, up = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, value_up = 0, name = _('Windshield Anti-Ice, Operator, HIGH/OFF (2-way Switch)'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
 		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = 0, name = _('Windshield Anti-Ice, Operator, OFF'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
 		{down = AntiIceSys_commands.ANTIICE_GLAZING_O, cockpit_device_id = devices.ANTI_ICE_INTERFACE, value_down = -1, name = _('Windshield Anti-Ice, Operator, HIGH'), category = {_('Anti-Ice Panel'), _('Right Side Panel'), _('Custom')}},
-
-		--elements["AC-HEATER2-MODE-PTR"]	= multiposition_switch(_("Automatic Hot Cold Switch, OFF/COLD/HOT/AUTO"),					devices.ECS_INTERFACE,				ecs_commands.AutomaticHotCold,		145,	4,	0.1,	false,	0.0,	anim_speed_default,	false)
 
 		-- Weapons
  
