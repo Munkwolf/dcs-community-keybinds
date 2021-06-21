@@ -107,9 +107,10 @@ return {
 
 		-- Instrument Panel, Pilot
 
-		{down = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, name = _('Radar Altimeter, OFF'), category = {_('Instrument Panel'), _('Custom')}},
-		{down = ralt_commands.POWER, up = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, value_up = 0, name = _('Radar Altimeter, ON/OFF (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
-		{down = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 0, name = _('Radar Altimeter, ON'), category = {_('Instrument Panel'), _('Custom')}},
+		{down = ralt_commands.POWER_ITER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, name = _('RV-5 Radar Altimeter Power, ON/OFF (Toggle)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, name = _('RV-5 Radar Altimeter Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = ralt_commands.POWER, up = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, value_up = 0, name = _('RV-5 Radar Altimeter Power, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = ralt_commands.POWER, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 0, name = _('RV-5 Radar Altimeter Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
 
 		{down = ralt_commands.TEST, up = ralt_commands.TEST, cockpit_device_id = devices.RADAR_ALTIMETER, value_down = 1, value_up = 0, name = _('Radar Altimeter, Test'), category = {_('Instrument Panel'), _('Custom')}},
 		{pressed = ralt_commands.ROTARY, cockpit_device_id = devices.RADAR_ALTIMETER, value_pressed = 0.025, name = _('Radar altimeter, Down (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
@@ -206,9 +207,11 @@ return {
 
 		-- Lights
 
---		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 1, name = _('LND LT Control-Off-Retract Switch, CONTROL'), category = {_('Left Front Instrument Panel'), _('Custom')}},
---		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 0, name = _('LND LT Control-Off-Retract Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
---		{down = ext_lights_commands.HeadLightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = -1, name = _('LND LT Control-Off-Retract Switch, RETRACT'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = ext_lights_commands.HeadlightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 1, name = _('LND LT Control-Off-Retract Switch, CONTROL'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = ext_lights_commands.HeadlightControl, up = ext_lights_commands.HeadlightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 1, value_up = 0, name = _('LND LT Control-Off-Retract Switch, CONTROL/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = ext_lights_commands.HeadlightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = 0, name = _('LND LT Control-Off-Retract Switch, OFF'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = ext_lights_commands.HeadlightControl, up = ext_lights_commands.HeadlightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = -1, value_up = 0, name = _('LND LT Control-Off-Retract Switch, RETRACT/OFF (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
+		{down = ext_lights_commands.HeadlightControl, cockpit_device_id = devices.EXT_LIGHTS_SYSTEM, value_down = -1, name = _('LND LT Control-Off-Retract Switch, RETRACT'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 
 		-- Autopilot
 
@@ -290,9 +293,10 @@ return {
 
 		-- R-863 Radio
 
-		{down = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Power, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
-		{down = r863_commands.Power, up = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Power, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
-		{down = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Power, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.POWER_ITER, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Power, ON/OFF (Toggle)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.POWER, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Power, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.POWER, up = r863_commands.Power, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Power, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
+		{down = r863_commands.POWER, cockpit_device_id = devices.R_863, value_down = 0, name = _('R-863 Power, OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
 
 		{down = r863_commands.EMERG_RCV, cockpit_device_id = devices.R_863, value_down = 1, name = _('R-863 Emergency Receiver, ON'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
 		{down = r863_commands.EMERG_RCV, up = r863_commands.EMERG_RCV, cockpit_device_id = devices.R_863, value_down = 1, value_up = 0, name = _('R-863 Emergency Receiver, ON/OFF (2-way Switch)'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
@@ -340,9 +344,17 @@ return {
 
 		{down = SPU_8_Mi24_commands.CMD_SPU8_ICS_RADIO_EXT, cockpit_device_id = devices.SPU_8, value_down = 1, name = _('Radio/ICS Switch, Test'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
 
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1, cockpit_device_id = devices.SPU_8, value_down = 1, name = _('Switch SPU-8 NET-1 ON'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1, up = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1, cockpit_device_id = devices.SPU_8, value_down = 1, value_up = 0, name = _('Switch SPU-8 NET-1 ON/OFF (2-way Switch)'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_1, cockpit_device_id = devices.SPU_8, value_down = 0, name = _('Switch SPU-8 NET-1 OFF'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2, cockpit_device_id = devices.SPU_8, value_down = 1, name = _('Switch SPU-8 NET-2 ON'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2, up = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2, cockpit_device_id = devices.SPU_8, value_down = 1, value_up = 0, name = _('Switch SPU-8 NET-2 ON/OFF (2-way Switch)'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+		{down = SPU_8_Mi24_commands.CMD_SPU8_NETWORK_2, cockpit_device_id = devices.SPU_8, value_down = 0, name = _('Switch SPU-8 NET-2 OFF'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
+
 		-- ARC-15
 
---elements["ARC-VOLUME-PTR"]				= default_axis(				_("ARC-15 Volume"),						devices.ARC_15_PANEL_P,	arc15_commands.VOLUME,			459,	0,	0.05,	false,	false,	false)
+--	elements["ARC-VOLUME-PTR"]				= default_axis(				_("ARC-15 Volume"),						devices.ARC_15_PANEL_P,	arc15_commands.VOLUME,			459,	0,	0.05,	false,	false,	false)
 
 		{down = arc15_commands.TLF_TLG, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, name = _('ARC-15 TLF/TLG, TLF'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 		{down = arc15_commands.TLF_TLG, up = arc15_commands.TLF_TLG, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = -1, name = _('ARC-15 TLF/TLG (2-way Switch)'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
@@ -353,15 +365,28 @@ return {
 		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.230, name = _('ARC-15 Mode, ANT'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 		{down = arc15_commands.MODE, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.345, name = _('ARC-15 Mode, LOOP'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 
---elements["ARC-MODE-PTR"]				= multiposition_switch(		_("ARC-15 mode OFF/COMPASS/ANT/FRAME"),	devices.ARC_15_PANEL_P,	arc15_commands.MODE,			463,	4,	0.115)
---elements["ARC-CH2-OUT-KNOB"]			= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_100KHz,	464,	18,	1/17)
---elements["ARC-CH2-CENTER-PTR"]			= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_10KHz,	465,	10,	1/9)
---elements["ARC-CH2-IN-PTR"]				= multiposition_switch(		_("ARC-15 Left Frequency"),				devices.ARC_15_PANEL_P,	arc15_commands.BACKUP_1KHz,		466,	20,	1/20)
---elements["ARC-CH1-OUT-KNOB"]			= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_100KHz,	467,	18,	1/17)
---elements["ARC-CH1-CENTER-PTR"]			= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_10KHz,	468,	10,	1/9)
---elements["ARC-CH1-IN-PTR"]				= multiposition_switch(		_("ARC-15 Right Frequency"),			devices.ARC_15_PANEL_P,	arc15_commands.PRIMARY_1KHz,	469,	20,	1/20)
---elements["ARC-CHANNEL-PTR"]				= default_2_position_small_tumb(	_("ARC-15 1/2"),				devices.ARC_15_PANEL_P,	arc15_commands.DIAL_SELECT,		462)
+--		{down = arc15_commands.BACKUP_100KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, name = _('ARC-15 Left 100KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.BACKUP_100KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -1, name = _('ARC-15 Left 100KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 
+--		{down = arc15_commands.BACKUP_10KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1/9, name = _('ARC-15 Left 10KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.BACKUP_10KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -1, name = _('ARC-15 Left 10KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+--		{down = arc15_commands.BACKUP_1KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.05, name = _('ARC-15 Left 1KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.BACKUP_1KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -0.05, name = _('ARC-15 Left 1KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+--		{down = arc15_commands.PRIMARY_100KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, name = _('ARC-15 Right 100KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.PRIMARY_100KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -1, name = _('ARC-15 Right 100KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+--		{down = arc15_commands.PRIMARY_10KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1/9, name = _('ARC-15 Right 10KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.PRIMARY_10KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -1, name = _('ARC-15 Right 10KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+--		{down = arc15_commands.PRIMARY_1KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0.05, name = _('ARC-15 Right 1KHz, Up'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+--		{down = arc15_commands.PRIMARY_1KHz, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = -0.05, name = _('ARC-15 Right 1KHz, Down'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+
+		{down = arc15_commands.DIAL_SELECT, up = arc15_commands.DIAL_SELECT, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0, value_up = 1, name = _('ARC-15 Dial Select, 1/2 (2-way Switch)'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.DIAL_SELECT, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 0, name = _('ARC-15 Dial Select, 1'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		{down = arc15_commands.DIAL_SELECT, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, name = _('ARC-15 Dial Select, 2'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
+		
 		{down = arc15_commands.CONTROL, up = arc15_commands.CONTROL, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = 0, name = _('ARC-15 Control Button'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 		{down = arc15_commands.LOOP, up = arc15_commands.LOOP, cockpit_device_id = devices.ARC_15_PANEL_P, value_down = 1, value_up = 0, name = _('ARC-15 Loop Button'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 
@@ -394,17 +419,17 @@ return {
 
 		{down = jadro_commands.CTL, up = jadro_commands.CTL, cockpit_device_id = devices.JADRO_1I, value_down = 1, value_up = 0, name = _('Jadro-1I Test'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 
-		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 1MHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
-		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 1MHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = 0.1, name = _('Jadro-1I Frequency 1MHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1MHZ, cockpit_device_id = devices.JADRO_1I, value_down = -0.1, name = _('Jadro-1I Frequency 1MHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 
-		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 100KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
-		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 100KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 0.1, name = _('Jadro-1I Frequency 100KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_100KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -0.1, name = _('Jadro-1I Frequency 100KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 
-		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 10KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
-		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 10KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 0.1, name = _('Jadro-1I Frequency 10KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_10KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -0.1, name = _('Jadro-1I Frequency 10KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 
-		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 1KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
-		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 1KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = 0.1, name = _('Jadro-1I Frequency 1KHZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
+		{down = jadro_commands.FREQ_1KHZ, cockpit_device_id = devices.JADRO_1I, value_down = -0.1, name = _('Jadro-1I Frequency 1KHZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 
 		{down = jadro_commands.FREQ_100HZ_EXT, cockpit_device_id = devices.JADRO_1I, value_down = 1, name = _('Jadro-1I Frequency 100HZ, Up'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
 		{down = jadro_commands.FREQ_100HZ_EXT, cockpit_device_id = devices.JADRO_1I, value_down = -1, name = _('Jadro-1I Frequency 100HZ, Down'), category = {_('Jadro-1I'), _('Left Side Panel'), _('Custom')}},
@@ -498,6 +523,57 @@ return {
 		{down = cockpit_mechanics_commands.Command_CPT_MECH_FAN_PILOT, cockpit_device_id = devices.CPT_MECH, value_down = 1, name = _('Pilot Fan, ON'), category = {_('Fan'), _('Left Side Panel'), _('Custom')}},
 		{down = cockpit_mechanics_commands.Command_CPT_MECH_FAN_PILOT, cockpit_device_id = devices.CPT_MECH, value_down = 0, name = _('Pilot Fan, OFF'), category = {_('Fan'), _('Left Side Panel'), _('Custom')}},
 
+		{down = SARPP_commands.CMD_Mode, up = SARPP_commands.CMD_Mode, cockpit_device_id = devices.SARPP12I1, value_down = 1, value_up = 0, name = _('SARPP-12 Mode Switch, MANUAL/AUTO (2-way Switch)'), category = {_('SARPP-12'), _('Left Side Panel'), _('Custom')}},
+		{down = SARPP_commands.CMD_Mode, cockpit_device_id = devices.SARPP12I1, value_down = 1, name = _('SARPP-12 Mode Switch, MANUAL'), category = {_('SARPP-12'), _('Left Side Panel'), _('Custom')}},
+		{down = SARPP_commands.CMD_Mode, cockpit_device_id = devices.SARPP12I1, value_down = 0, name = _('SARPP-12 Mode Switch, AUTO'), category = {_('SARPP-12'), _('Left Side Panel'), _('Custom')}},
+
+		{down = SPO_commands.Command_SPO_SIGNAL_Ext, up = SPO_commands.Command_SPO_SIGNAL_Ext, cockpit_device_id = devices.SPO_10, value_down = 1, value_up = 0, name = _('RWR Signal, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = SPO_commands.Command_SPO_SIGNAL_Ext, cockpit_device_id = devices.SPO_10, value_down = 1, name = _('RWR Signal, ON'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = SPO_commands.Command_SPO_SIGNAL_Ext, cockpit_device_id = devices.SPO_10, value_down = 0, name = _('RWR Signal, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{down = SPO_commands.Command_SPO_POWER_Ext, up = SPO_commands.Command_SPO_POWER_Ext, cockpit_device_id = devices.SPO_10, value_down = 1, value_up = 0, name = _('RWR Power, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = SPO_commands.Command_SPO_POWER_Ext, cockpit_device_id = devices.SPO_10, value_down = 1, name = _('RWR Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = SPO_commands.Command_SPO_POWER_Ext, cockpit_device_id = devices.SPO_10, value_down = 0, name = _('RWR Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{down = mgv1su_commands.POWER_ITER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, name = _('Gyro 1 Power, ON/OFF (Toggle)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, up = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, value_up = 0, name = _('Gyro 1 Power, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, name = _('Gyro 1 Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_1, value_down = 0, name = _('Gyro 1 Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{down = mgv1su_commands.POWER_ITER, cockpit_device_id = devices.MGV1SU_2, value_down = 1, name = _('Gyro 2 Power, ON/OFF (Toggle)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, up = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_2, value_down = 1, value_up = 0, name = _('Gyro 2 Power, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_2, value_down = 1, name = _('Gyro 2 Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_2, value_down = 0, name = _('Gyro 2 Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+
+		-- Interior Lights
+
+		{down = int_lights_commands.CabinLightingWhiteRed_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Pilot Cabin Lighting Switch, WHITE/OFF/RED (Up)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CabinLightingWhiteRed_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = -1, name = _('Pilot Cabin Lighting Switch, WHITE/OFF/RED (Down)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.PilotCabinLightingWhiteRed, up = int_lights_commands.PilotCabinLightingWhiteRed, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, value_up = 0, name = _('Pilot Cabin Lighting Switch, WHITE/OFF (2-way Switch)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.PilotCabinLightingWhiteRed, up = int_lights_commands.PilotCabinLightingWhiteRed, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = -1, value_up = 0, name = _('Pilot Cabin Lighting Switch, RED/OFF (2-way Switch)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.PilotCabinLightingWhiteRed, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Pilot Cabin Lighting Switch, WHITE'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.PilotCabinLightingWhiteRed, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 0, name = _('Pilot Cabin Lighting Switch, OFF'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.PilotCabinLightingWhiteRed, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = -1, name = _('Pilot Cabin Lighting Switch, RED'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+
+		{down = int_lights_commands.CargoWhiteLightingOn_COVER_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo White Lighting Switch Cover, OPEN/CLOSED (Toggle)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn_COVER, up = int_lights_commands.CargoWhiteLightingOn_COVER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, value_up = 0, name = _('Cargo White Lighting Switch Cover, OPEN/CLOSED (2-way Switch)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn_COVER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo White Lighting Switch Cover, OPEN'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn_COVER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 0, name = _('Cargo White Lighting Switch Cover, CLOSED'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+
+		{down = int_lights_commands.CargoWhiteLightingOn_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo White Lighting Switch, ON/OFF (Toggle)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn, up = int_lights_commands.CargoWhiteLightingOn, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, value_up = 0, name = _('Cargo White Lighting Switch, ON/OFF (2-way Switch)'), category = {_('Interior Lighting'), _('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo White Lighting Switch, ON'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoWhiteLightingOn, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 0, name = _('Cargo White Lighting Switch, OFF'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+
+
+		{down = int_lights_commands.CargoLightingWhiteBlue_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo Lighting Switch, WHITE/OFF/BLUE (Up)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = -1, name = _('Cargo Lighting Switch, WHITE/OFF/BLUE (Down)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue, up = int_lights_commands.CargoLightingWhiteBlue, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, value_up = 0, name = _('Cargo Lighting Switch, WHITE/OFF (2-way Switch)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue, up = int_lights_commands.CargoLightingWhiteBlue, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = -1, value_up = 0, name = _('Cargo Lighting Switch, BLUE/OFF (2-way Switch)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Cargo Lighting Switch, WHITE'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 0, name = _('Cargo Lighting Switch, OFF'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+		{down = int_lights_commands.CargoLightingWhiteBlue, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 0, name = _('Cargo Lighting Switch, BLUE'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
+
 		-- APU
 
 		{down = engine_commands.STARTUP_APU_StartUp, up = engine_commands.STARTUP_APU_StartUp, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('APU Start'), category = {_('APU'), _('Left Side Panel'), _('Custom')}},
@@ -527,6 +603,93 @@ return {
 		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.15, name = _('Windscreen Wiper Control Switch, SPEED 1'), category = {_('Left Side Panel'), _('Custom')}},
 		{down = cockpit_mechanics_commands.Command_CPT_MECH_PILOT_MODE_WIPER, cockpit_device_id = devices.CPT_MECH, value_down = 0.25, name = _('Windscreen Wiper Control Switch, SPEED 2'), category = {_('Left Side Panel'), _('Custom')}},
 
+		-- ARC-U2
+
+		{down = ARC_U2_commands.CMD_ARC_U2_ON_OFF_EXT, cockpit_device_id = devices.ARC_U2, value_down = 1, name = _('ARC-U2 Power, ON/OFF (Toggle)'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_ON_OFF, up = ARC_U2_commands.CMD_ARC_U2_ON_OFF, cockpit_device_id = devices.ARC_U2, value_down = 1, value_up = 0, name = _('ARC-U2 Power, ON/OFF (2-way Switch)'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_ON_OFF, cockpit_device_id = devices.ARC_U2, value_down = 1, name = _('ARC-U2 Power, ON'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_ON_OFF, cockpit_device_id = devices.ARC_U2, value_down = 0, name = _('ARC-U2 Power, OFF'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+
+		{down = ARC_U2_commands.CMD_ARC_U2_COMPASS_CONNECT_EXT, cockpit_device_id = devices.ARC_U2, value_down = 1, name = _('ARC-U2 switcher COMPASS R-852–RADIOLINK–COMPASS R-828, Right'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_COMPASS_CONNECT_EXT, cockpit_device_id = devices.ARC_U2, value_down = -1, name = _('ARC-U2 switcher COMPASS R-852–RADIOLINK–COMPASS R-828, Left'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+
+		{down = ARC_U2_commands.CMD_ARC_U2_SENS_EXT, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('ARC-U2 Sensitivity Switch, MORE/LESS (Toggle)'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_SENS, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('ARC-U2 Sensitivity Switch, MORE'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+		{down = ARC_U2_commands.CMD_ARC_U2_SENS, cockpit_device_id = devices.EUCALYPT_M24, value_down = 0, name = _('ARC-U2 Sensitivity Switch, LESS'), category = {_('ARC-U2'), _('Left Side Panel'), _('Custom')}},
+
+		-- Eucalypt-M24
+
+		{down = eucalypt_commands.POWER_ON_OFF2_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('Eucalypt-M24 Power, ON/OFF (Toggle)'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.POWER_ON_OFF2, up = eucalypt_commands.POWER_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, value_up = 0, name = _('Eucalypt-M24 Power, ON/OFF (2-way Switch)'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.POWER_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('Eucalypt-M24 Power, ON'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.POWER_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 0, name = _('Eucalypt-M24 Power, OFF'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+
+		{down = eucalypt_commands.CHANNEL_CHANGE_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('Eucalypt-M24 Channel Select, Up'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.CHANNEL_CHANGE_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_down = -1, name = _('Eucalypt-M24 Channel Select, Down'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+
+		{pressed = eucalypt_commands.VOLUME_CHANGE_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_pressed = 0.05, name = _('Eucalypt-M24 Volume, Up'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{pressed = eucalypt_commands.VOLUME_CHANGE_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_pressed = -0.05, name = _('Eucalypt-M24 Volume, Down'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+
+		{down = eucalypt_commands.NOISE_REDUCTOR_ON_OFF2_ITER, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('Eucalypt-M24 Squelch, ON/OFF (Toggle)'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.NOISE_REDUCTOR_ON_OFF2, up = eucalypt_commands.NOISE_REDUCTOR_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, value_up = 0, name = _('Eucalypt-M24 Squelch, ON/OFF (2-way Switch)'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.NOISE_REDUCTOR_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, name = _('Eucalypt-M24 Squelch, ON'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+		{down = eucalypt_commands.NOISE_REDUCTOR_ON_OFF2, cockpit_device_id = devices.EUCALYPT_M24, value_down = 0, name = _('Eucalypt-M24 Squelch, OFF'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+
+		{down = eucalypt_commands.ASU, up = eucalypt_commands.ASU, cockpit_device_id = devices.EUCALYPT_M24, value_down = 1, value_up = 0, name = _('Eucalypt-M24 ASU'), category = {_('Eucalypt-M24'), _('Left Side Panel'), _('Custom')}},
+
+		-- IFF
+
+		{down = IFF_6201_commands.CMD_IFF_Mode_Sw_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Mode Selector Switch, AUTO/KD/+-15/KP, Up'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Mode_Sw_EXT, cockpit_device_id = devices.IFF, value_down = -1, name = _('IFF Transponder Mode Selector Switch, AUTO/KD/+-15/KP, Down'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Device_Sw_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Device Selector Switch, WORK/RESERVE (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Device_Sw, up = IFF_6201_commands.CMD_IFF_Device_Sw, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Device Selector Switch, WORK/RESERVE (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Device_Sw, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Device Selector Switch, WORK'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Device_Sw, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Device Selector Switch, RESERVE'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_1_2_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Device Mode Switch, 1/2 (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_1_2, up = IFF_6201_commands.CMD_IFF_1_2, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Device Mode Switch, 1/2 (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_1_2, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Device Mode Switch, 1'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_1_2, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Device Mode Switch, 2'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Erase_BtnCover_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Erase Button Cover, OPEN/CLOSE (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Erase_BtnCover, up = IFF_6201_commands.CMD_IFF_Erase_BtnCover, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Erase Button Cover, OPEN/CLOSE (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Erase_BtnCover, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Erase Button Cover, OPEN'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Erase_BtnCover, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Erase Button Cover, CLOSE'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Erase_Btn, up = IFF_6201_commands.CMD_IFF_Erase_Btn, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Erase Button - Push to Erase'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Disaster_SwCover_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Disaster Switch Cover, OPEN/CLOSE (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_SwCover, up = IFF_6201_commands.CMD_IFF_Disaster_SwCover, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Disaster Switch Cover, OPEN/CLOSE (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_SwCover, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Disaster Switch Cover, OPEN'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_SwCover, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Disaster Switch Cover, CLOSE'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Disaster_Sw_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Disaster Switch, ON/OFF (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_Sw, up = IFF_6201_commands.CMD_IFF_Disaster_Sw, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Disaster Switch, ON/OFF (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_Sw, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Disaster Switch, ON'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Disaster_Sw, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Disaster Switch, OFF'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		{down = IFF_6201_commands.CMD_IFF_Power_Sw_EXT, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Power Switch, ON/OFF (Toggle)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Power_Sw, up = IFF_6201_commands.CMD_IFF_Power_Sw, cockpit_device_id = devices.IFF, value_down = 1, value_up = 0, name = _('IFF Transponder Power Switch, ON/OFF (2-way Switch)'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Power_Sw, cockpit_device_id = devices.IFF, value_down = 1, name = _('IFF Transponder Power Switch, ON'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+		{down = IFF_6201_commands.CMD_IFF_Power_Sw, cockpit_device_id = devices.IFF, value_down = 0, name = _('IFF Transponder Power Switch, OFF'), category = {_('IFF Transponder'), _('Left Side Panel'), _('Custom')}},
+
+		-- Recorder MC-61
+
+		{down = RecorderMC61_commands.CMD_Power_EXT, cockpit_device_id = devices.Recorder_MC61, value_down = 1, name = _('Recorder MC-61 Power, ON/OFF (Toggle)'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Power, up = RecorderMC61_commands.CMD_Power, cockpit_device_id = devices.Recorder_MC61, value_down = 1, value_up = 0, name = _('Recorder MC-61 Power, ON/OFF (2-way Switch)'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Power, cockpit_device_id = devices.Recorder_MC61, value_down = 1, name = _('Recorder MC-61 Power, ON'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Power, cockpit_device_id = devices.Recorder_MC61, value_down = 0, name = _('Recorder MC-61 Power, OFF'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+
+		{down = RecorderMC61_commands.CMD_Auto_Work_EXT, cockpit_device_id = devices.Recorder_MC61, value_down = 1, name = _('Recorder MC-61, AUTO/WORK (Toggle)'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Auto_Work, up = RecorderMC61_commands.CMD_Auto_Work, cockpit_device_id = devices.Recorder_MC61, value_down = 1, value_up = 0, name = _('Recorder MC-61, AUTO/WORK (2-way Switch)'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Auto_Work, cockpit_device_id = devices.Recorder_MC61, value_down = 1, name = _('Recorder MC-61, AUTO'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Auto_Work, cockpit_device_id = devices.Recorder_MC61, value_down = 0, name = _('Recorder MC-61, WORK'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+
+		{down = RecorderMC61_commands.CMD_Laryngophone, up = RecorderMC61_commands.CMD_Laryngophone, cockpit_device_id = devices.Recorder_MC61, value_down = 1, value_up = 0, name = _('Recorder MC-61 Laryngophone Switch, ON/OFF (2-way Switch)'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Laryngophone, cockpit_device_id = devices.Recorder_MC61, value_down = 1, name = _('Recorder MC-61 Laryngophone Switch, ON'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+		{down = RecorderMC61_commands.CMD_Laryngophone, cockpit_device_id = devices.Recorder_MC61, value_down = 0, name = _('Recorder MC-61 Laryngophone Switch, OFF'), category = {_('Recorder MC-61'), _('Left Side Panel'), _('Custom')}},
+
 		-- DISS
 
 		{down = diss_commands.COORD_DEC_MAP_ANGLE, up = diss_commands.COORD_DEC_MAP_ANGLE, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS Decrease Map Angle'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
@@ -549,8 +712,15 @@ return {
 		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.3, name = _('DISS Select Mode, MEMORY'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
 		{down = diss_commands.CHECK_SWITCH, cockpit_device_id = devices.DISS_15, value_down = 0.4, name = _('DISS Select Mode, OPER'), category = {_('DISS'), _('Right Front Instrument Panel'), _('Custom')}},
 
---elements["DISS-ON-OFF-PTR"]			= default_2_position_tumb(_("DISS-15D ON/OFF"),						devices.DISS_15,	diss_commands.POWER,					371)
---elements["DVS-DISS-PTR"]			= default_2_position_tumb(_("Airspeed to DISS ON/OFF"),				devices.DISS_15,	diss_commands.DVS,						370)
+		{down = diss_commands.POWER_ITER, cockpit_device_id = devices.DISS_15, value_down = 1, name = _('DISS-15D, ON/OFF (Toggle)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.POWER, up = diss_commands.POWER, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('DISS-15D, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.POWER, cockpit_device_id = devices.DISS_15, value_down = 1, name = _('DISS-15D, ON'), category = {_('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.POWER, cockpit_device_id = devices.DISS_15, value_down = 0, name = _('DISS-15D, OFF'), category = {_('Left Side Panel'), _('Custom')}},
+
+		{down = diss_commands.DVS_ITER, cockpit_device_id = devices.DISS_15, value_down = 1, name = _('Airspeed to DISS, ON/OFF (Toggle)'), category = {_('DISS'), _('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.DVS, up = diss_commands.DVS, cockpit_device_id = devices.DISS_15, value_down = 1, value_up = 0, name = _('Airspeed to DISS, ON/OFF (2-way Switch)'), category = {_('DISS'), _('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.DVS, cockpit_device_id = devices.DISS_15, value_down = 1, name = _('Airspeed to DISS, ON'), category = {_('DISS'), _('Left Side Panel'), _('Custom')}},
+		{down = diss_commands.DVS, cockpit_device_id = devices.DISS_15, value_down = 0, name = _('Airspeed to DISS, OFF'), category = {_('DISS'), _('Left Side Panel'), _('Custom')}},
 
 		{down = ext_cargo_equipment_commands.Transformer36vDIMMainBackup, up = ext_cargo_equipment_commands.Transformer36vDIMMainBackup, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('DIM Transformer Switch, MAIN/BACKUP (2-way Switch)'), category = {_('Right Front Instrument Panel'), _('Custom')}},
 
