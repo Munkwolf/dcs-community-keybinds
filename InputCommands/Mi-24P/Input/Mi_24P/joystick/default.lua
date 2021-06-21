@@ -253,9 +253,11 @@ return {
 		{down = autopilot_commands.Lighting, up = autopilot_commands.Lighting, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('Buttons Lighting, BRIGHT/DIM (2-way Switch)'), category = {_('Autopilot'), _('Custom')}},
 		{down = autopilot_commands.Lighting, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('Buttons Lighting, DIM'), category = {_('Autopilot'), _('Custom')}},
 
-		{pressed = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_pressed = 0.1, name = _('Autopilot Route Azimuth, Up (Default)'), category = {_('Autopilot'), _('Custom')}},
-		{pressed = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_pressed = -0.1, name = _('Autopilot Route Azimuth, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_pressed = 1, name = _('Autopilot Route Azimuth, Up (Default)'), category = {_('Autopilot'), _('Custom')}},
+		{pressed = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_pressed = -1, name = _('Autopilot Route Azimuth, Down (Default)'), category = {_('Autopilot'), _('Custom')}},
 
+		{down = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('Autopilot Route Azimuth, Up (Single)'), category = {_('Autopilot'), _('Custom')}},
+		{down = autopilot_commands.RouteAngleAXIS, cockpit_device_id = devices.AUTOPILOT, value_down = -1, name = _('Autopilot Route Azimuth, Down (Single)'), category = {_('Autopilot'), _('Custom')}},
 
 		-- Fire Extinguishers
 
