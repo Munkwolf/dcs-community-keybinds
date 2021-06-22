@@ -547,6 +547,18 @@ return {
 		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_2, value_down = 1, name = _('Gyro 2 Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
 		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_2, value_down = 0, name = _('Gyro 2 Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
 
+		{down = engine_commands.LEVER_Left_Engine_Lock_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Left Engine Stop Lever, ON/OFF (Toggle)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Left_Engine_Lock, up = engine_commands.LEVER_Left_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Left Engine Stop Lever, ON/OFF (2-way Switch)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Left_Engine_Lock, up = engine_commands.LEVER_Left_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, value_up = 1, name = _('Left Engine Stop Lever, OFF/ON (2-way Switch)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Left_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Left Engine Stop Lever, ON'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Left_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Left Engine Stop Lever, OFF'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+
+		{down = engine_commands.LEVER_Right_Engine_Lock_ITER, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Right Engine Stop Lever, ON/OFF (Toggle)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Right_Engine_Lock, up = engine_commands.LEVER_Right_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = 0, name = _('Right Engine Stop Lever, ON/OFF (2-way Switch)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Right_Engine_Lock, up = engine_commands.LEVER_Right_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, value_up = 1, name = _('Right Engine Stop Lever, OFF/ON (2-way Switch)'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Right_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, name = _('Right Engine Stop Lever, ON'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+		{down = engine_commands.LEVER_Right_Engine_Lock, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, name = _('Right Engine Stop Lever, OFF'), category = {_('Engines'), _('Left Side Panel'), _('Custom')}},
+
 		-- Interior Lights
 
 		{down = int_lights_commands.CabinLightingWhiteRed_ITER, cockpit_device_id = devices.INT_LIGHTS_SYSTEM, value_down = 1, name = _('Pilot Cabin Lighting Switch, WHITE/OFF/RED (Up)'), category = {_('Interior Lighting'), _('Left Side Panel'), _('Custom')}},
