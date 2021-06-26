@@ -18,5 +18,4 @@ return {
 
 		{down = engine_commands.MaxPowerSw, up = engine_commands.MaxPowerSw, cockpit_device_id = devices.ENGINE_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('MAX POWER Switch (special)'), category = {_('Left Console'), _('ENG & JET START Control Panel'), _('Custom Binds')}},
 	}
-	}
 }
