@@ -182,8 +182,12 @@ return {
 		{down = spuu_commands.switchUp, up = spuu_commands.switchUp, cockpit_device_id = devices.SPUU_52, value_down = -1, value_up = 0, name = _('SPUU Control Switch, P/NONE (2-way Switch)'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
 		{down = spuu_commands.switchDown, cockpit_device_id = devices.SPUU_52, value_down = -1, name = _('SPUU Control Switch, P'), category = {_('SPUU'), _('Left Front Instrument Panel'), _('Custom')}},
 
-		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = 0.1, name = _('SPUU Knob, Up (Default)'), category = {_('SPUU'), _('Custom')}},
-		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = 0.1, name = _('SPUU Knob, Down (Default)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = 0.05, name = _('SPUU Adjustment Knob, Up (Slow)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = 0.1, name = _('SPUU Adjustment Knob, Up (Default)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = 0.2, name = _('SPUU Adjustment Knob, Up (Fast)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = -0.05, name = _('SPUU Adjustment Knob, Down (Slow)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = -0.1, name = _('SPUU Adjustment Knob, Down (Default)'), category = {_('SPUU'), _('Custom')}},
+		{pressed = spuu_commands.control_ITER, cockpit_device_id = devices.SPUU_52, value_pressed = -0.2, name = _('SPUU Adjustment Knob, Down (Fast)'), category = {_('SPUU'), _('Custom')}},
 
 		{down = hydraulic_commands.DisableAuxiliaryHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, name = _('Auxiliary Disable Button Cover, OPEN'), category = {_('Left Front Instrument Panel'), _('Custom')}},
 		{down = hydraulic_commands.DisableAuxiliaryHydroCover, up = hydraulic_commands.DisableAuxiliaryHydroCover, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1, value_up = 0, name = _('Auxiliary Disable Button Cover, OPEN/CLOSE (2-way Switch)'), category = {_('Left Front Instrument Panel'), _('Custom')}},
