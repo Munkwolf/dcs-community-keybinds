@@ -886,5 +886,6 @@ return {
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.5, name = _('Select Weapon Pilot 6 FXD MG-30'), category = {_('Weapon'), _('Custom')}},
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.6, name = _('Select Weapon Pilot 7 ROCKET'), category = {_('Weapon'), _('Custom')}},
 		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.7, name = _('Select Weapon Pilot 8 BOMB'), category = {_('Weapon'), _('Custom')}},
+		{down = weapon_commands.Pilot_SWITCHER_OFF_GM_URS_NPU_Ext, cockpit_device_id = devices.WEAP_SYS, value_down = 0.8, name = _('Select Weapon Pilot 9 USLP'), category = {_('Weapon'), _('Custom')}},
 	}
 }
