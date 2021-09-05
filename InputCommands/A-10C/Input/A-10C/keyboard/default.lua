@@ -1,6 +1,50 @@
 return {
 	keyCommands = {
 
+		-- Auxiliary lighting control panel
+
+		{down = 3031, cockpit_device_id = 38, value_down = 1, name = _('HARS-SAS Override'), category = {_('Custom'), _('Auxiliary lighting control panel')}},
+		{down = 3031, cockpit_device_id = 38, value_down = 0, name = _('HARS-SAS Override Normal'), category = {_('Custom'), _('Auxiliary lighting control panel')}},
+		{down = 3031, up = 3031, cockpit_device_id = 38, value_down = 1, value_up = 0, name = _('HARS-SAS Override Override else Normal (2-way Switch)'), category = {_('Custom'), _('Auxiliary lighting control panel')}},
+
+		-- Fuel System Control Panel
+
+		{down = 3001, cockpit_device_id = 36, value_down = 1, name = _('External Wing Tanks Boost Pumps On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3001, cockpit_device_id = 36, value_down = 0, name = _('External Wing Tanks Boost Pumps Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3001, up = 3001, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('External Wing Tanks Boost Pumps On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3002, cockpit_device_id = 36, value_down = 1, name = _('External Fuselage Tanks Boost Pumps On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3002, cockpit_device_id = 36, value_down = 0, name = _('External Fuselage Tanks Boost Pumps Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3002, up = 3002, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('External Fuselage Tanks Boost Pumps On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3003, cockpit_device_id = 36, value_down = 1, name = _('Tank Gate On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3003, cockpit_device_id = 36, value_down = 0, name = _('Tank Gate Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3003, up = 3003, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Tank Gate On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3004, cockpit_device_id = 36, value_down = 1, name = _('Cross Feed On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3004, cockpit_device_id = 36, value_down = 0, name = _('Cross Feed Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3004, up = 3004, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Cross Feed On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3005, cockpit_device_id = 36, value_down = 1, name = _('Boost Pumps Left Wing On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3005, cockpit_device_id = 36, value_down = 0, name = _('Boost Pumps Left Wing Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3005, up = 3005, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Boost Pumps Left Wing On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3006, cockpit_device_id = 36, value_down = 1, name = _('Boost Pumps Right Wing On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3006, cockpit_device_id = 36, value_down = 0, name = _('Boost Pumps Right Wing Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3006, up = 3006, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Boost Pumps Right Wing On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3007, cockpit_device_id = 36, value_down = 1, name = _('Boost Pumps Main Fuselage Left On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3007, cockpit_device_id = 36, value_down = 0, name = _('Boost Pumps Main Fuselage Left Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3007, up = 3007, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Boost Pumps Main Fuselage Left On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3008, cockpit_device_id = 36, value_down = 1, name = _('Boost Pumps Main Fuselage Right On'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3008, cockpit_device_id = 36, value_down = 0, name = _('Boost Pumps Main Fuselage Right Off'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3008, up = 3008, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Boost Pumps Main Fuselage Right On else Off (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
+		{down = 3009, cockpit_device_id = 36, value_down = 1, name = _('Signal Amplifier Normal'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3009, cockpit_device_id = 36, value_down = 0, name = _('Signal Amplifier Override'), category = {_('Custom'), _('Fuel system control panel')}},
+		{down = 3009, up = 3009, cockpit_device_id = 36, value_down = 1, value_up = 0, name = _('Signal Amplifier Normal else Override (2-way Switch)'), category = {_('Custom'), _('Fuel system control panel')}},
+
 		-- Systems and HOTAS
 
 		{down = 3006, cockpit_device_id = 39, value_down = 1, name = _('Canopy Open'), category = {_('Custom'), _('Systems')}},
@@ -12,10 +56,10 @@ return {
 		{down = 3011, up = 3011, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Extend boarding ladder cover Open else Closed (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 		{down = 3015, up = 3015, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Canopy Jettison Lever Unlock Button Down else Up (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
-		{down = 3010, cockpit_device_id = 39, value_down = 1, name = _('Seat Arm Handle Armed'), category = {_('Custom'), _('Systems')}},
-		{down = 3010, cockpit_device_id = 39, value_down = 0, name = _('Seat Arm Handle Off'), category = {_('Custom'), _('Systems')}},
-		{down = 3010, up = 3010, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Seat Arm Handle Armed else Off (2-way Switch)'), category = {_('Custom'), _('Systems')}},
-		{down = 3010, up = 3010, cockpit_device_id = 39, value_down = 0, value_up = 1, name = _('Seat Arm Handle Off else Armed (2-way Switch)'), category = {_('Custom'), _('Systems')}},
+		{down = 3010, cockpit_device_id = 39, value_down = 1, name = _('Seat Arm Handle Off'), category = {_('Custom'), _('Systems')}},
+		{down = 3010, cockpit_device_id = 39, value_down = 0, name = _('Seat Arm Handle Armed'), category = {_('Custom'), _('Systems')}},
+		{down = 3010, up = 3010, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Seat Arm Handle Off else Armed (2-way Switch)'), category = {_('Custom'), _('Systems')}},
+		{down = 3010, up = 3010, cockpit_device_id = 39, value_down = 0, value_up = 1, name = _('Seat Arm Handle Armed else Off (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
 		{down = 3013, cockpit_device_id = 39, value_down = 1, name = _('Internal canopy actuator disengage lever Disengaged'), category = {_('Custom'), _('Systems')}},
 		{down = 3013, cockpit_device_id = 39, value_down = 0, name = _('Internal canopy actuator disengage lever Engaged'), category = {_('Custom'), _('Systems')}},
