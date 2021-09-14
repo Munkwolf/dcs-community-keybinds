@@ -98,8 +98,6 @@ return {
 		{action = device_commands.Button_344, cockpit_device_id = devices.SYSTEMS, name = _('Standby Altimeter Baro Adjust')},
 		{action = device_commands.Button_605, cockpit_device_id = devices.SYSTEMS, name = _('Standby Altimeter Baro Adjust (Rear Cockpit)')},
 
-		{action = device_commands.Button_670, cockpit_device_id = devices.LIGHTS, name = _('Gunsight Sun Filter')},
-		{action = device_commands.Button_671, cockpit_device_id = devices.LIGHTS, name = _('Gunsight Sun Filter (Rear Cockpit)')},
 		{action = device_commands.Button_310, cockpit_device_id = devices.SYSTEMS, name = _('Gunsight Brightness')},
 		{action = device_commands.Button_654, cockpit_device_id = devices.SYSTEMS, name = _('Gunsight Brightness (Rear Cockpit)')},
 
