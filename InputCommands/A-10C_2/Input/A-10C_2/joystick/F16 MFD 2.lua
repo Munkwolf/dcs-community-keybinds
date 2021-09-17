@@ -433,14 +433,54 @@ return {
 	},
 	axisCommands = {
 		{action = 3013, cockpit_device_id = 38, name = _('Yaw Trim')},
-		{action = 3015, cockpit_device_id = 49, name = _('Refuel Status Indexer Lights')},
-		{action = 3016, cockpit_device_id = 49, name = _('Weapon Station Lights')},
-		{action = 3018, cockpit_device_id = 49, name = _('Refueling Lighting Dial')},
-		{action = 3009, cockpit_device_id = 49, name = _('Formation Lights')},
-		{action = 3001, cockpit_device_id = 49, name = _('Engine Instruments Lights')},
-		{action = 3002, cockpit_device_id = 49, name = _('Flight Instruments Lights')},
-		{action = 3003, cockpit_device_id = 49, name = _('Auxiliary Instruments Lights')},
-		{action = 3005, cockpit_device_id = 49, name = _('Flood Lights')},
-		{action = 3006, cockpit_device_id = 49, name = _('Console Lights')},
+				
+		{action = 3009, cockpit_device_id = 4, name = _('CMSP - Adjust Display Brightness')},
+		{action = 3006, cockpit_device_id = 5, name = _('CMSC - Adjust Display Brightness')},
+		{action = 3007, cockpit_device_id = 5, name = _('CMSC - Volume Knob')},
+		{action = 3006, cockpit_device_id = 37, name = _('Throttle Friction Control')},
+		{action = 3003, cockpit_device_id = 41, name = _('Environmental - Canopy Defog')},
+		{action = 3009, cockpit_device_id = 41, name = _('Environmental - Flow Level Control')},
+		{action = 3013, cockpit_device_id = 41, name = _('Environmental - Temp Level Control')},
+
+		{action = 3001, cockpit_device_id = 35, name = _('Altimeter - Set Pressure (Relative)')},
+
+		{action = 3009, cockpit_device_id = 49, name = _('Lighting Panel - Formation Lights')},
+		{action = 3001, cockpit_device_id = 49, name = _('Lighting Panel - Engine Instrument Lights')},
+		{action = 3002, cockpit_device_id = 49, name = _('Lighting Panel - Flight Instrument Lights')},
+		{action = 3003, cockpit_device_id = 49, name = _('Lighting Panel - Auxiliary Instrument Lights')},
+		{action = 3005, cockpit_device_id = 49, name = _('Lighting Panel - Flood Lights')},
+		{action = 3006, cockpit_device_id = 49, name = _('Lighting Panel - Console Lights')},
+		{action = 3015, cockpit_device_id = 49, name = _('Lighting Panel - Refuel Status Indexer Lights')},
+		{action = 3016, cockpit_device_id = 49, name = _('Lighting Panel - Weapon Station Lights. No function')},
+		{action = 3018, cockpit_device_id = 49, name = _('Lighting Panel - Refueling Lighting Dial')},
+
+		{action = 3001, cockpit_device_id = 45, name = _('HSI - Heading Set Knob (Relative)')},
+		{action = 3002, cockpit_device_id = 45, name = _('HSI - Course Set Knob (Relative)')},
+
+		{action = 3001, cockpit_device_id = 47, name = _('ADI - Pitch Trim Knob')},
+		{action = 3003, cockpit_device_id = 48, name = _('SAI - Standby ADI Knob rotary')},
+
+		{action = 3005, cockpit_device_id = 74, name = _('TACAN - Audio Volume')},
+		{action = 3001, cockpit_device_id = 52, name = _('Stall - Volume')},
+		{action = 3002, cockpit_device_id = 52, name = _('Stall - Peak Volume')},
+
+		{action = 3011, cockpit_device_id = 54, name = _('UHF Radio - Volume')},
+		{action = 3005, cockpit_device_id = 55, name = _('VHF/AM Radio - Volume')},
+		{action = 3005, cockpit_device_id = 56, name = _('VHF/FM Radio - Volume')},
+
+		{action = 3002, cockpit_device_id = 58, name = _('Intercom - INT Volume')},
+		{action = 3004, cockpit_device_id = 58, name = _('Intercom - FM Volume')},
+		{action = 3006, cockpit_device_id = 58, name = _('Intercom - VHF Volume')},
+		{action = 3008, cockpit_device_id = 58, name = _('Intercom - UHF Volume')},
+		{action = 3010, cockpit_device_id = 58, name = _('Intercom - AIM Volume')},
+		{action = 3012, cockpit_device_id = 58, name = _('Intercom - IFF Volume')},
+		{action = 3014, cockpit_device_id = 58, name = _('Intercom - ILS Volume')},
+		{action = 3016, cockpit_device_id = 58, name = _('Intercom - TCN Volume')},
+		{action = 3018, cockpit_device_id = 58, name = _('Intercom - Master Volume')},
+
+		{action = 3005, cockpit_device_id = 44, name = _('HARS - Latitude Dial')},
+		{action = 3007, cockpit_device_id = 44, name = _('HARS - Push-to-sync rotary')},
+		{action = 3001, cockpit_device_id = 29, name = _('RWR - Display Brightness')},
+		{action = 3013, cockpit_device_id = 38, name = _('SAS - Yaw Trim')},
 	}
 }
