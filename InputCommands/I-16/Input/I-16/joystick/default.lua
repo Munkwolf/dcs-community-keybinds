@@ -3,6 +3,8 @@ return {
 
 		-- Flight Control
 
+		{down = 3003, up = 3003, cockpit_device_id = devices.MOTOR_SYSTEM, value_down = 1, value_up = 1, name = _('War Emergency Power ON else OFF (2-way Switch)'), category = _('Flight Control')},
+
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3002, up = 3002, value_down = 0.5, value_up = 0.0, name = _('Engine RPM Increase (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3002, up = 3002, value_down = -0.5, value_up = 0.0, name = _('Engine RPM Decrease (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3002, up = 3002, value_down = 2, value_up = 0.0, name = _('Engine RPM Increase (Fast)'), category = {_('Flight Control'), _('Custom')}},
@@ -18,7 +20,9 @@ return {
 		{cockpit_device_id = devices.ELECTRIC_SYSTEM, down = 3025, up = 3025, value_down = 1, value_up = 0, name = _('Nav light switch ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3062, up = 3062, value_down = 1, value_up = 0, name = _('Fuel valve OPEN else CLOSED (2-way Switch)'), category = {_('Fuel System Controls'), _('Custom')}},
-		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3046, up = 3046, value_down = 1, value_up = 0, name = _('Supercharger switch HIGH else LOW (2-way Switch)'), category = {_('Engine Control'), _('Custom')}},
+		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3046, up = 3046, value_down = 1, value_up = 0.5, name = _('Supercharger switch HIGH else OFF (2-way Switch)'), category = {_('Engine Control'), _('Custom')}},
+		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3046, up = 3046, value_down = 0, value_up = 0.5, name = _('Supercharger switch LOW else OFF (2-way Switch)'), category = {_('Engine Control'), _('Custom')}},
+		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3046, value_down = 0.5, name = _('Supercharger switch OFF'), category = {_('Engine Control'), _('Custom')}},
 
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3037, up = 3037, value_down = 0, value_up = 0.5, name = _('Primary fuel Switch MOTOR else CARB (2-way Switch)'), category = {_('Fuel System Controls'), _('Custom')}},
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3037, up = 3037, value_down = 1, value_up = 0.5, name = _('Primary fuel Switch CLOSE else CARB (2-way Switch)'), category = {_('Fuel System Controls'), _('Custom')}},
@@ -28,6 +32,11 @@ return {
 
 		{cockpit_device_id = devices.COMMON_SYSTEM, down = 3069, up = 3069, value_down = 1, value_up = 0, name = _('Mech sight ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Custom')}},
 		{cockpit_device_id = devices.COMMON_SYSTEM, down = 3700, up = 3700, value_down = 1, value_up = 0, name = _('Sight filter ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Custom')}},
+
+		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, up = 3051, value_down = 1, value_up = 0, name = _('Gear direction UP else DOWN (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, up = 3051, value_down = 0, value_up = 1, name = _('Gear direction DOWN else UP (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, value_down = 0, name = _('Gear direction DOWN'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, value_down = 1, name = _('Gear direction UP'), category = {_('Systems'), _('Custom')}},
 
 		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3069, up = 3069, value_down = 1, value_up = 0, name = _('Gear lock ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3069, up = 3069, value_down = 1, value_up = 0, name = _('Gear brake spring ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
