@@ -143,9 +143,9 @@ return {
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_16, up = device_commands.Button_16, value_down = 1, value_up = 0, name = _('Gun Sight Tint Screen DRAW else HIDE (2-way Switch)'), category = {_('Gunsight'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_18, up = device_commands.Button_18, value_down = 1, value_up = 0, name = _('Gun Sight Master ON else OFF (2-way Switch)'), category = {_('Gunsight'), _('Custom')}},
 
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed = -0.5, name = _('Gun Sight Illumination DECREASE (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed =  0.5, name = _('Gun Sight Illumination INCREASE (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed = -2.0, name = _('Gun Sight Illumination DECREASE (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed =  2.0, name = _('Gun Sight Illumination INCREASE (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed = -0.5, name = _('Gun Sight Illumination DECREASE (Slow)'), category = {_('Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed =  0.5, name = _('Gun Sight Illumination INCREASE (Slow)'), category = {_('Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed = -2.0, name = _('Gun Sight Illumination DECREASE (Fast)'), category = {_('Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_21, value_pressed =  2.0, name = _('Gun Sight Illumination INCREASE (Fast)'), category = {_('Gunsight'), _('Custom')}},
 	}
 }
