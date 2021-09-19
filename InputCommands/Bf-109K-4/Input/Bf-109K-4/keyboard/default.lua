@@ -29,15 +29,15 @@ return {
 
 		-- Flight Control
 
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = -0.5, value_up = 0, name = _('Flaps RETRACT (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0.5, value_up = 0, name = _('Flaps EXTEND (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = -2.0, value_up = 0, name = _('Flaps RETRACT (Fast)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 2.0, value_up = 0, name = _('Flaps EXTEND (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = -0.5, value_up = 0, name = _('Flaps EXTEND (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0.5, value_up = 0, name = _('Flaps RETRACT (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = -2.0, value_up = 0, name = _('Flaps EXTEND (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 2.0, value_up = 0, name = _('Flaps RETRACT (Fast)'), category = {_('Flight Control'), _('Custom')}},
 
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_8, up = device_commands.Button_8, value_down = -0.5, value_up = 0, name = _('Trim Stabilizer NOSE DOWN (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 0.5, value_up = 0, name = _('Trim Stabilizer NOSE UP (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_8, up = device_commands.Button_8, value_down = -2.0, value_up = 0, name = _('Trim Stabilizer NOSE DOWN (Fast)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 2.0, value_up = 0, name = _('Trim Stabilizer NOSE UP (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_8, up = device_commands.Button_8, value_down = -0.5, value_up = 0, name = _('Trim Stabilizer NOSE UP (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 0.5, value_up = 0, name = _('Trim Stabilizer NOSE DOWN (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_8, up = device_commands.Button_8, value_down = -2.0, value_up = 0, name = _('Trim Stabilizer NOSE UP (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 2.0, value_up = 0, name = _('Trim Stabilizer NOSE DOWN (Fast)'), category = {_('Flight Control'), _('Custom')}},
 
 		-- Fuel System Controls
 
