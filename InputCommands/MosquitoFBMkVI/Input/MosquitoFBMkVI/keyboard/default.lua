@@ -109,8 +109,8 @@ return {
 
 		-- Three-Way Selector
 
-        {cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1, value_up = 0, name = _('Undercarriage gear, lever lock gate - Down else Up (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
-        {cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_6, up = device_commands.Button_6, value_down = 1, value_up = 0, name = _('Flaps lever, lock late - Unlock else Lock (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
+		{cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1, value_up = 0, name = _('Undercarriage gear, lever lock gate - Down else Up (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
+		{cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_6, up = device_commands.Button_6, value_down = 1, value_up = 0, name = _('Flaps lever, lock late - Unlock else Lock (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
 
 		-- Drop Ordinance Arming Panel
 
@@ -317,9 +317,9 @@ return {
 		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed = -2.0, name = _('Gun Sight Base - decrease (Fast)'), category = {_('Weapons'), _('Gunsight'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed =  2.0, name = _('Gun Sight Base - increase (Fast)'), category = {_('Weapons'), _('Gunsight'), _('Custom')}},
 
-		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -0.5, name = _('Gun Sight reticle, intensity - decrease (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  0.5, name = _('Gun Sight reticle, intensity - increase (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -2.0, name = _('Gun Sight reticle, intensity - decrease (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  2.0, name = _('Gun Sight reticle, intensity - increase (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -0.25, name = _('Gun Sight reticle, intensity - decrease (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  0.25, name = _('Gun Sight reticle, intensity - increase (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -1.0, name = _('Gun Sight reticle, intensity - decrease (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  1.0, name = _('Gun Sight reticle, intensity - increase (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
 	}
 }
