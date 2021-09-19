@@ -128,5 +128,8 @@ return {
 		{cockpit_device_id = devices.OXYGEN_SYSTEM, action = 3074, name = _('Oxygen adjusting valve')},
 		{cockpit_device_id = devices.OXYGEN_SYSTEM, action = 3075, name = _('Oxygen emergency valve')},
 		{cockpit_device_id = devices.OXYGEN_SYSTEM, action = 3076, name = _('Oxygen shutoff valve')},
+
+		{cockpit_device_id = devices.GEAR_SYSTEM, action = 3086, name = _('Gear handle (Relative)')},
+		{cockpit_device_id = devices.FLAPS_SYSTEM, action = 3063, name = _('Flaps handle (Relative)')},
 	}
 }
