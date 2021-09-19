@@ -37,8 +37,11 @@ return {
 		-- Switchboard
 
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_62, up = device_commands.Button_62, value_down = 1, value_up = 0, name = _('Engine water cooling flaps, left - Open else Closed (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_62, up = device_commands.Button_62, value_down = 0, value_up = 1, name = _('Engine water cooling flaps, left - Closed else Open (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_64, up = device_commands.Button_64, value_down = 1, value_up = 0, name = _('Engine water cooling flaps, right - Open else Closed (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_64, up = device_commands.Button_64, value_down = 0, value_up = 1, name = _('Engine water cooling flaps, right - Closed else Open (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_66, up = device_commands.Button_66, value_down = 1, value_up = 0, name = _('Air filter (tropical) - On else Off (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_66, up = device_commands.Button_66, value_down = 0, value_up = 1, name = _('Air filter (tropical) - Off else On (2-way Switch)'), category = {_('Engine Controls'), _('Electrical System'), _('J.B.A.'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_65, up = device_commands.Button_65, value_down = 1, value_up = 0, name = _('Fuel Pump, warning light cover - Open else Closed (2-way Switch)'), category = {_('Electrical System'), _('J.B.A.'), _('Custom')}},
 
 		-- Front Dash
@@ -60,7 +63,10 @@ return {
 		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_14, value_pressed = -2.0, name = _('Directional Gyro Course - decrease (Fast)'), category = {_('Front Dash'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_14, value_pressed =  2.0, name = _('Directional Gyro Course - increase (Fast)'), category = {_('Front Dash'), _('Custom')}},
 
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 1, value_up = -1, name = _('U/C Indicator Blind - Draw else Raise (2-way Switch)'), category = {_('Front Dash'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_19, value_pressed = 2, name = _('U/C Indicator Blind - Raise (Fast)'), category = {_('Front Dash'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_19, value_pressed = 0.5, name = _('U/C Indicator Blind - Raise (Slow)'), category = {_('Front Dash'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_19, value_pressed = -2, name = _('U/C Indicator Blind - Draw (Fast)'), category = {_('Front Dash'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, pressed = device_commands.Button_19, value_pressed = -0.5, name = _('U/C Indicator Blind - Draw (Slow)'), category = {_('Front Dash'), _('Custom')}},
 
 		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_2, value_pressed = -0.5, name = _('Clock Winding or Adjustment - decrease (Slow)'), category = {_('Front Dash'), _('Custom')}},
 		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_2, value_pressed =  0.5, name = _('Clock Winding or Adjustment - increase (Slow)'), category = {_('Front Dash'), _('Custom')}},
@@ -82,24 +88,29 @@ return {
 		{cockpit_device_id = devices.PORT_OXYGEN_REGULATOR, down = device_commands.Button_3, up = device_commands.Button_3, value_down = 1, value_up = 0, name = _('Oxygen Valve - Open else Closed (2-way Switch)'), category = {_('Systems'), _('Environment System'), _('Custom')}},
 
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_18, up = device_commands.Button_18, value_down = 1, value_up = 0, name = _('Landing Light, port side On else Off (2-way Switch)'), category = {_('Front Dash'), _('Exterior Lights'), _('Electrical System'), _('Custom')}},	
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_20, up = device_commands.Button_20, value_down = 1, value_up = 0, name = _('Landing Light, starboard side On else Off (2-way Switch)'), category = {_('Front Dash'), _('Exterior Lights'), _('Electrical System'), _('Custom')}},	
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_20, up = device_commands.Button_20, value_down = 1, value_up = 0, name = _('Landing Light, starboard side On else Off (2-way Switch)'), category = {_('Front Dash'), _('Exterior Lights'), _('Electrical System'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_1, up = device_commands.Button_1, value_down = 1, value_up = 0, name = _('Gun firing master switch, cover - Open else Closed (2-way Switch)'), category = {_('Weapons'), _('Electrical System'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_3, up = device_commands.Button_3, value_down = 1, value_up = 0, name = _('Gun firing master switch - On else Off (2-way Switch)'), category = {_('Weapons'), _('Electrical System'), _('Custom')}},
 
 		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = -0.25, value_up = 0, name = _('Trim Rudder Left (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down =  0.25, value_up = 0, name = _('Trim Rudder Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = 0.25, value_up = 0, name = _('Trim Rudder Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = -0.5, value_up = 0, name = _('Trim Rudder Left (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down =  0.5, value_up = 0, name = _('Trim Rudder Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = 0.5, value_up = 0, name = _('Trim Rudder Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = -2.0, value_up = 0, name = _('Trim Rudder Left (Fast)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down =  2.0, value_up = 0, name = _('Trim Rudder Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_53, up = device_commands.Button_53, value_down = 2.0, value_up = 0, name = _('Trim Rudder Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
 
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -0.25, value_up = 0, name = _('Trim Aileron Left (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down =  0.25, value_up = 0, name = _('Trim Aileron Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -0.5, value_up = 0, name = _('Trim Aileron Left (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down =  0.5, value_up = 0, name = _('Trim Aileron Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -2.0, value_up = 0, name = _('Trim Aileron Left (Fast)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down =  2.0, value_up = 0, name = _('Trim Aileron Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = 0.25, value_up = 0, name = _('Trim Aileron Left (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -0.25, value_up = 0, name = _('Trim Aileron Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = 0.5, value_up = 0, name = _('Trim Aileron Left (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -0.5, value_up = 0, name = _('Trim Aileron Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = 2.0, value_up = 0, name = _('Trim Aileron Left (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_51, up = device_commands.Button_51, value_down = -2.0, value_up = 0, name = _('Trim Aileron Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
+
+		-- Three-Way Selector
+
+        {cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1, value_up = 0, name = _('Undercarriage gear, lever lock gate - Down else Up (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
+        {cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_6, up = device_commands.Button_6, value_down = 1, value_up = 0, name = _('Flaps lever, lock late - Unlock else Lock (2-way Switch)'), category = {_('Systems'), _('Hydraulic System'), _('Custom')}},
 
 		-- Drop Ordinance Arming Panel
 
@@ -190,7 +201,8 @@ return {
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_13, up = device_commands.Button_12, value_down = 1, value_up = 1, name = _('Select Active Engine to control - Right else Both (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_86, up = device_commands.Button_86, value_down = 1, value_up = 0, name = _('Mixture - Lean else Rich (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
-		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_22, up = device_commands.Button_22, value_down = 1, value_up = 0, name = _('Supercharge, set mod - MOD else AUTO (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_22, up = device_commands.Button_22, value_down = 1, value_up = 0, name = _('Supercharger, set mode - AUTO else MOD (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_22, up = device_commands.Button_22, value_down = 0, value_up = 1, name = _('Supercharger, set mode - MOD else AUTO (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 
 		-- Shoulder Switch Box
 
@@ -201,7 +213,7 @@ return {
 
 		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_72, up = device_commands.Button_72, value_down = 0.2, value_up = 0.1, name = _('Canopy, Door - Open else Closed (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_55, up = device_commands.Button_55, value_down = 1, value_up = 0, name = _('Oxygen high pressure valve - Open else Closed (2-way Switch)'), category = {_('Systems'), _('Environment System'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROLS, down = device_commands.Button_55, up = device_commands.Button_55, value_down = 1, value_up = 0, name = _('Oxygen high pressure valve - Open else Closed (2-way Switch)'), category = {_('Systems'), _('Environment System'), _('Custom')}},
 		{cockpit_device_id = devices.STBD_OXYGEN_REGULATOR, down = device_commands.Button_3, up = device_commands.Button_3, value_down = 1, value_up = 0, name = _('Oxygen valve, starboard - Open else Closed (2-way Switch)'), category = {_('Systems'), _('Environment System'), _('Custom')}},
 
 		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_96, value_pressed = -0.25, name = _('Flight chart flood light, intensity - decrease (Slow)'), category = {_('Environment System'), _('Electrical System'), _('Custom')}},
@@ -222,7 +234,7 @@ return {
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_51, up = device_commands.Button_51, value_down = 1, value_up = 0, name = _('Gun Sight power - On else Off (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Weapons'), _('Custom')}},
 
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_50, up = device_commands.Button_50, value_down = 0, value_up = 0.5, name = _('ID Head Lamp, working mode - OFF else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_50, up = device_commands.Button_50, value_down = 1, value_up = 0.5, name = _('ID Head Lamp, working mode - MORSE else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_50, up = device_commands.Button_50, value_down = 1, value_up = 0.5, name = _('ID Head Lamp, working mode - SELECT else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
 
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_88, up = device_commands.Button_88, value_down = 1, value_up = 0, name = _('IFF transceiver - On else Off (2-way Switch)'), category = {_('J.B.B.'), _('ARI 5083 / ABK-1 IFF Transceiver'), _('Communications'), _('Custom')}},
 		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_36, up = device_commands.Button_36, value_down = 1, value_up = 0, name = _('Radio, detonator button cover - Open else Closed (2-way Switch)'), category = {_('J.B.B.'), _('ARI 5083 / ABK-1 IFF Transceiver'), _('Custom')}},
@@ -239,11 +251,11 @@ return {
 
 		-- Identification Lights Switchbox and Key
 
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 0, value_up = 0.5, name = _('ID Downward Lamp, mode - OFF else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 1, value_up = 0.5, name = _('ID Downward Lamp, mode - MORSE else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 0, value_up = 0.5, name = _('ID Downward Lamp, mode - STEADY else OFF (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 1, value_up = 0.5, name = _('ID Downward Lamp, mode - MORSE else OFF (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
 
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_74, up = device_commands.Button_74, value_down = 0, value_up = 0.5, name = _('ID Upward Lamp, mode - OFF else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
-		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_74, up = device_commands.Button_74, value_down = 1, value_up = 0.5, name = _('ID Upward Lamp, mode - MORSE else STEADY (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_74, up = device_commands.Button_74, value_down = 0, value_up = 0.5, name = _('ID Upward Lamp, mode - STEADY else OFF (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_74, up = device_commands.Button_74, value_down = 1, value_up = 0.5, name = _('ID Upward Lamp, mode - MORSE else OFF (2-way Switch)'), category = {_('J.B.B.'), _('Electrical System'), _('Exterior Lights'), _('Communications'), _('Custom')}},
 
 		-- Aerial Winch
 
@@ -269,8 +281,6 @@ return {
 
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_79, up = device_commands.Button_79, value_down = 1, value_up = 0, name = _('Fuel transfer line valve - Open else Closed (2-way Switch)'), category = {_('Fuel System'), _('Custom')}},
 
--- CHECK OIL DILUTION
-
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_89, up = device_commands.Button_89, value_down = 1, value_up = 0, name = _('Fuel Tank Pressure - On else Off (2-way Switch)'), category = {_('Fuel System'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_91, up = device_commands.Button_91, value_down = 1, value_up = 0, name = _('Extra oil pressure boots, left engine - On else Off (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_93, up = device_commands.Button_93, value_down = 1, value_up = 0, name = _('Extra oil pressure boots, right engine - On else Off (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
@@ -295,7 +305,6 @@ return {
 		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_93, value_pressed = -1.0, name = _('Loop antenna light, intensity - decrease (Fast)'), category = {_('Environment System'), _('Electrical System'), _('Custom')}},
 		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_93, value_pressed =  1.0, name = _('Loop antenna light, intensity - increase (Fast)'), category = {_('Environment System'), _('Electrical System'), _('Custom')}},		
 
-
 		-- Gun Sight
 
 		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_46, value_pressed = -0.5, name = _('Gun Sight Range - decrease (Slow)'), category = {_('Weapons'), _('Gunsight'), _('Custom')}},
@@ -308,12 +317,9 @@ return {
 		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed = -2.0, name = _('Gun Sight Base - decrease (Fast)'), category = {_('Weapons'), _('Gunsight'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed =  2.0, name = _('Gun Sight Base - increase (Fast)'), category = {_('Weapons'), _('Gunsight'), _('Custom')}},
 
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed = -0.5, name = _('Gun Sight reticle, intensity - decrease (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed =  0.5, name = _('Gun Sight reticle, intensity - increase (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed = -2.0, name = _('Gun Sight reticle, intensity - decrease (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, pressed = device_commands.Button_49, value_pressed =  2.0, name = _('Gun Sight reticle, intensity - increase (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
-
-
-
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -0.5, name = _('Gun Sight reticle, intensity - decrease (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  0.5, name = _('Gun Sight reticle, intensity - increase (Slow)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed = -2.0, name = _('Gun Sight reticle, intensity - decrease (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
+		{cockpit_device_id = devices.SWITCHBOARD, pressed = device_commands.Button_10, value_pressed =  2.0, name = _('Gun Sight reticle, intensity - increase (Fast)'), category = {_('Weapons'), _('Environment System'), _('Electrical System'), _('Custom')}},
 	}
 }
