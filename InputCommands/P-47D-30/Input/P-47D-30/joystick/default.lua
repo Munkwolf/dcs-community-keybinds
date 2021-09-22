@@ -19,14 +19,26 @@ return {
 
 		-- Trimmers
 
+		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = -0.25, name = _('Trim Aileron Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = 0.25,  name = _('Trim Aileron Left (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = -0.5, name = _('Trim Aileron Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = 0.5,  name = _('Trim Aileron Left (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = -2.0, name = _('Trim Aileron Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_2, cockpit_device_id = devices.CONTROLS, value_pressed = 2.0,  name = _('Trim Aileron Left (Fast)'), category = {_('Flight Control'), _('Custom')}},
 
+		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = -0.25, name = _('Trim Elevator Up (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = 0.25,  name = _('Trim Elevator Down (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = -0.5, name = _('Trim Elevator Up (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = 0.5,  name = _('Trim Elevator Down (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = -2.0, name = _('Trim Elevator Up (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_5, cockpit_device_id = devices.CONTROLS, value_pressed = 2.0,  name = _('Trim Elevator Down (Fast)'), category = {_('Flight Control'), _('Custom')}},
 
+		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = -0.25, name = _('Trim Rudder Left (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = 0.25,  name = _('Trim Rudder Right (Very Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = -0.5, name = _('Trim Rudder Left (Slow)'), category = {_('Flight Control'), _('Custom')}},
 		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = 0.5,  name = _('Trim Rudder Right (Slow)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = -2.0, name = _('Trim Rudder Left (Fast)'), category = {_('Flight Control'), _('Custom')}},
+		{pressed = device_commands.Button_8, cockpit_device_id = devices.CONTROLS, value_pressed = 2.0,  name = _('Trim Rudder Right (Fast)'), category = {_('Flight Control'), _('Custom')}},
 	},
 	axisCommands = {
 		{action = device_commands.Button_33, cockpit_device_id = devices.ENGINE_CONTROLS, name = _('Air Filter Lever')},
