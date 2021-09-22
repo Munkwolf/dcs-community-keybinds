@@ -62,6 +62,12 @@ return {
 		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.WEAPON_CONTROL, value_down = 1, value_up = 0, name = _('Bomb salvo Release else Off Right (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.WEAPON_CONTROL, value_down = 0, value_up = 1, name = _('Bomb salvo Off else Release Right (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = -0.5, name = _('Canopy Closing (Slow)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = 0.5, name = _('Canopy Opening (Slow)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = -2.0, name = _('Canopy Closing (Fast)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = 2.0, name = _('Canopy Opening (Fast)'), category = {_('Custom'), _('Systems')}},
+
+
 		{down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.CPT_MECH, value_down = 1, value_up = 0, name = _('Canopy Emergency Release (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
 		{down = device_commands.Button_3, cockpit_device_id = devices.OXYGEN_SYSTEM, value_down = 1, name = _('Oxygen Auto-Mix 100%'), category = {_('Custom'), _('Systems')}},
@@ -104,5 +110,15 @@ return {
 		{pressed = device_commands.Button_12, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.025, name = _('Trim Elevator Up (Slow)'), category = {_('Custom'), _('Flight Control')}},
 		{pressed = device_commands.Button_13, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.05, name = _('Trim Rudder Left (Slow)'), category = {_('Custom'), _('Flight Control')}},
 		{pressed = device_commands.Button_13, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = 0.05, name = _('Trim Rudder Right (Slow)'), category = {_('Custom'), _('Flight Control')}},
+	},
+	axisCommands = {
+		{cockpit_device_id = devices.DIRECTIONAL_GYRO, action = device_commands.Button_3, name = _('Heading Set/Cage')},
+		{cockpit_device_id = devices.ARTIFICIAL_HORIZON, action = device_commands.Button_2, name = _('Artificial Horizon Pitch Adjustment')},
+		{cockpit_device_id = devices.ARTIFICIAL_HORIZON, action = device_commands.Button_3, name = _('Artificial Horizon Cage')},
+		{cockpit_device_id = devices.HYDRAULIC_SYSTEM, action = device_commands.Button_1, name = _('Hydraulic Release Knob')},
+		{cockpit_device_id = devices.FUEL_SYSTEM, action = device_commands.Button_2, name = _('Fuel Shut-Off Valve')},
+		{cockpit_device_id = devices.OXYGEN_SYSTEM, action = device_commands.Button_1, name = _('Oxygen Emergency By-pass')},
+		{cockpit_device_id = devices.ENVIRONMENT_SYSTEM, action = device_commands.Button_1, name = _('Defroster')},
+		{cockpit_device_id = devices.ENGINE_SYSTEM, action = device_commands.Button_11, name = _('Mixture Control')},
 	}
 }

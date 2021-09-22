@@ -62,6 +62,12 @@ return {
 		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.WEAPON_CONTROL, value_down = 1, value_up = 0, name = _('Bomb salvo Release else Off Right (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.WEAPON_CONTROL, value_down = 0, value_up = 1, name = _('Bomb salvo Off else Release Right (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = -0.5, name = _('Canopy Closing (Slow)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = 0.5, name = _('Canopy Opening (Slow)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = -2.0, name = _('Canopy Closing (Fast)'), category = {_('Custom'), _('Systems')}},
+		{pressed = device_commands.Button_2, cockpit_device_id  = devices.CPT_MECH, value_pressed = 2.0, name = _('Canopy Opening (Fast)'), category = {_('Custom'), _('Systems')}},
+
+
 		{down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.CPT_MECH, value_down = 1, value_up = 0, name = _('Canopy Emergency Release (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
 		{down = device_commands.Button_3, cockpit_device_id = devices.OXYGEN_SYSTEM, value_down = 1, name = _('Oxygen Auto-Mix 100%'), category = {_('Custom'), _('Systems')}},
