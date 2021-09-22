@@ -8,7 +8,6 @@ return {
 		{cockpit_device_id = devices.WEAPON_SYSTEM, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 1, value_up = 0, name = _('Guns Safety Lever OFF else ON (2-way Switch)'), category = {_('Stick'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPON_SYSTEM, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0, value_up = 1, name = _('Guns Safety Lever ON else OFF (2-way Switch)'), category = {_('Stick'), _('Custom')}},
 		
-		
 		-- Flight Control
 
 		{cockpit_device_id = devices.ENGINE_SYSTEM, pressed = device_commands.Button_2, value_pressed = -0.5, name = _('Throttle DECREASE (Slow)'), category = {_('Flight Control'), _('Custom')}},
