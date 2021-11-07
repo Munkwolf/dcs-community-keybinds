@@ -739,5 +739,41 @@ return {
 		{down = 3002, cockpit_device_id = 15, value_down = 1, name = _('INU Heater Switch On'), category = {_('Ins Auxiliary Control Panel'), _('Custom')}},
 		{down = 3002, cockpit_device_id = 15, value_down = 0, name = _('INU Heater Switch Off'), category = {_('Ins Auxiliary Control Panel'), _('Custom')}},
 		{down = 3002, up = 3002, cockpit_device_id = 15, value_down = 1, value_up = 0, name = _('INU Heater Switch On else Off (2-way Switch)'), category = {_('Ins Auxiliary Control Panel'), _('Custom')}},
+	},
+	axisCommands = {
+		{cockpit_device_id = 9, action = 3008, name = _('ABRIS Brightness')},
+		{cockpit_device_id = 7, action = 3001, name = _('HUD Brightness')},
+		{cockpit_device_id = 7, action = 3002, name = _('HUD Modes Reticle/Night/Day')},
+		{cockpit_device_id = 20, action = 3029, name = _('PVI Lighting')},
+
+		{cockpit_device_id = 8, action = 3002, name = _('IT-23 display brightness')},
+		{cockpit_device_id = 8, action = 3003, name = _('IT-23 display contrast')},
+		{cockpit_device_id = 23, action = 3001, name = _('Helmet device brightness')},
+
+		{cockpit_device_id = 31, action = 3001, name = _('ADI Zero pitch trim')},
+		{cockpit_device_id = 51, action = 3006, name = _('Lighting auxiliary panel brightness knob')},
+		{cockpit_device_id = 51, action = 3008, name = _('Lighting night vision cockpit brightness knob')},
+		{cockpit_device_id = 51, action = 3002, name = _('Lighting cockpit panel brightness knob')},
+		{cockpit_device_id = 51, action = 3004, name = _('Lighting HSI and ADI brightness knob')},
+		{cockpit_device_id = 46, action = 3006, name = _('ADF Volume')},
+		{cockpit_device_id = 49, action = 3002, name = _('R-828 (VHF-1) Radio Volume')},
+
+		{cockpit_device_id = 20, action = 3026, name = _('NAV Master modes')},
+		{cockpit_device_id = 25, action = 3014, name = _('Datalink self ID')},
+		{cockpit_device_id = 25, action = 3015, name = _('Datalink Master mode')},
+
+		{cockpit_device_id = 12, action = 3007, name = _('Laser code selector')},
+		{cockpit_device_id = 8, action = 3005, name = _('SHKVAL Optics adjustment')},
+
+		{cockpit_device_id = 32, action = 3001, name = _('ATGM Temperature selector')},
+		{cockpit_device_id = 12, action = 3023, name = _('Unguided rocket and gun pods ballistics data settings selector')},
+		{cockpit_device_id = 32, action = 3003, name = _('Systems BIT selector')},
+
+		{cockpit_device_id = 12, action = 3014, name = _('Weapon system mode selector')},
+		{cockpit_device_id = 8, action = 3006, name = _('Shkval auto scan rate')},
+		{cockpit_device_id = 4, action = 3011, name = _('Rotor Brake')},
+
+		{cockpit_device_id = 50, action = 3002, name = _('SPU-9 Radio communicator selector')},
+		{cockpit_device_id = 49, action = 3001, name = _('R-828 (VHF-1) Radio channel selector')},
 	}
 }
