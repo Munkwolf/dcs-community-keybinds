@@ -38,7 +38,7 @@ return {
 		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, value_down = 0, name = _('Gear direction DOWN'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3051, value_down = 1, name = _('Gear direction UP'), category = {_('Systems'), _('Custom')}},
 
-		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3050, up = 3050, value_down = 1, value_up = 0, name = _('Gear lock ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3050, up = 3050, value_down = 1, value_up = 0, name = _('Gear lock OFF else ON (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.GEAR_SYSTEM, down = 3055, up = 3055, value_down = 1, value_up = 0, name = _('Gear brake spring ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 
 		{cockpit_device_id = devices.MOTOR_SYSTEM, down = 3006, up = 3006, value_down = 0.5, value_up = 0.0, name = _('Motor cooling flaps Increase (Slow)'), category = {_('Engine Control'), _('Custom')}},
