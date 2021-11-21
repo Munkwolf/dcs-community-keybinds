@@ -61,8 +61,19 @@ return {
 		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Inst_Panel_LtMode_SW, up = intlts_commands.Inst_Panel_LtMode_SW, value_down = 0, value_up = 1, name = _('Instruments Lamps Day/Night Mode Switch - NIGHT else DAY (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Inst_Panel_LtMode_SW, up = intlts_commands.Inst_Panel_LtMode_SW, value_down = 1, value_up = 0, name = _('Instruments Lamps Day/Night Mode Switch - DAY else NIGHT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 
--- elements["PTN_364"] = clock_two_action_knob(_("AChS-1 Chronograph Right Knob"),														devices.FLIGHT_INST,		finst_commands.Clock_Start_Switch,		finst_commands.Clock_StopWatch_start,	364, 508, 1, 1, {0, 1}, {0, 1})
--- elements["PTN_365"] = clock_three_action_knob(_("AChS-1 Chronograph Left Knob"),													devices.FLIGHT_INST,		finst_commands.Clock_Time_Mode_Switch,	finst_commands.Clock_Time_Mode_Switch,	finst_commands.Clock_Time_Set_Knob,	366, 366, 365, 0.1, true)
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Start_Switch, value_down = -1, name = _('AChS-1 Cockpit Chronograph Right Knob - LEFT'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Start_Switch, value_down = 1, name = _('AChS-1 Cockpit Chronograph Right Knob - RIGHT'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Start_Switch, up = finst_commands.Clock_Start_Switch, value_down = -1, value_up = 1, name = _('AChS-1 Cockpit Chronograph Right Knob - LEFT else RIGHT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Start_Switch, up = finst_commands.Clock_Start_Switch, value_down = 1, value_up = -1, name = _('AChS-1 Cockpit Chronograph Right Knob - RIGHT else LEFT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_StopWatch_start, up = finst_commands.Clock_StopWatch_start, value_down = 1, value_up = 0, name = _('AChS-1 Cockpit Chronograph Right Knob - PUSH'), category = {_('Instrument Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.Clock_Time_Set_Knob, value_pressed = -0.05, name = _('AChS-1 Cockpit Chronograph Left Knob - LEFT'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.Clock_Time_Set_Knob, value_pressed = 0.05, name = _('AChS-1 Cockpit Chronograph Left Knob - RIGHT'), category = {_('Instrument Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Time_Mode_Switch, value_down = 0, name = _('AChS-1 Cockpit Chronograph Left Knob - DEFAULT'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Time_Mode_Switch, value_down = 1, name = _('AChS-1 Cockpit Chronograph Left Knob - PULL'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Time_Mode_Switch, up = finst_commands.Clock_Time_Mode_Switch, value_down = 1, value_up = 0, name = _('AChS-1 Cockpit Chronograph Left Knob - PULL else DEFAULT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.Clock_Time_Mode_Switch, up = finst_commands.Clock_Time_Mode_Switch, value_down = -1, value_up = 0, name = _('AChS-1 Cockpit Chronograph Left Knob - PUSH'), category = {_('Instrument Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.FLIGHT_INST, down = finst_commands.GMeter_Reset, up = finst_commands.GMeter_Reset, value_down = 1, value_up = 0, name = _('AM-10 Accelerometer Min/Max G Reset Button'), category = {_('Instrument Panel'), _('Custom')}},
 
@@ -71,21 +82,13 @@ return {
 		{cockpit_device_id = devices.GUNSIGHTS, down = finst_commands.ASP5_Cage_Lever, up = finst_commands.ASP5_Cage_Lever, value_down = 0, value_up = 1, name = _('ASP-5 Sight Cage - UNCAGE else CAGE (2-way Switch)'), category = {_('Gunsights'), _('Custom')}},
 		{cockpit_device_id = devices.GUNSIGHTS, down = finst_commands.ASP5_Cage_Lever, up = finst_commands.ASP5_Cage_Lever, value_down = 1, value_up = 0, name = _('ASP-5 Sight Cage - CAGE else UNCAGE (2-way Switch)'), category = {_('Gunsights'), _('Custom')}},
 
--- elements["PTN_356"] = default_axis_limited(_("ASP-5 Target Wingspan Selector"),														devices.GUNSIGHTS,			gsights_commands.ASP5_Wingspan_Knob,		356, 0, -0.10, true, 0, {0, 1})
--- {pressed = iCommandPlane_R_800_1st_wheel_up,											name = _('ASP-5 Target Wingspan Increase'),					category = _('Gunsights')},
--- {pressed = iCommandPlane_R_800_1st_wheel_down,											name = _('ASP-5 Target Wingspan Decrease'),					category = _('Gunsights')},
-
--- elements["PTN_357"] = default_axis_limited(_("ASP-5 Mil Depression Setting"),														devices.GUNSIGHTS,			gsights_commands.ASP5_Bomb_Mil_Def_Knob,	357, 0, 0.10, true, 0, {0, 1})
--- {pressed = iCommandPlane_R_800_2nd_wheel_up,											name = _('ASP-5 Bombing Dive Angle Increase'),				category = _('Gunsights')},
--- {pressed = iCommandPlane_R_800_2nd_wheel_down,											name = _('ASP-5 Bombing Dive Angle Decrease'),				category = _('Gunsights')},
-
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0, name = _('ASP-5 Brightness 0%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.25, name = _('ASP-5 Brightness 25%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.33, name = _('ASP-5 Brightness 33%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.5, name = _('ASP-5 Brightness 50%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.66, name = _('ASP-5 Brightness 66%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.75, name = _('ASP-5 Brightness 75%'), category = {_('Gunsights'), _('Custom')}},
-		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 1, name = _('ASP-5 Brightness 100%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0, name = _('ASP-5 Brightness - 0%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.25, name = _('ASP-5 Brightness - 25%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.33, name = _('ASP-5 Brightness - 33%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.5, name = _('ASP-5 Brightness - 50%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.66, name = _('ASP-5 Brightness - 66%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 0.75, name = _('ASP-5 Brightness - 75%'), category = {_('Gunsights'), _('Custom')}},
+		{cockpit_device_id = devices.GUNSIGHTS, down = gsights_commands.ASP5_Brightness_Knob, value_down = 1, name = _('ASP-5 Brightness - 100%'), category = {_('Gunsights'), _('Custom')}},
 
 		-- RP-5 Izumrud
 
@@ -104,8 +107,21 @@ return {
 		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Bombs_arm_switch, up = armt_commands.Bombs_arm_switch, value_down = 0, value_up = 1, name = _('Bomb Arm - SAFE else ARM (2-way Switch)'), category = {_('Armament'), _('Custom')}},
 		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Bombs_arm_switch, up = armt_commands.Bombs_arm_switch, value_down = 1, value_up = 0, name = _('Bomb Arm - ARM else SAFE (2-way Switch)'), category = {_('Armament'), _('Custom')}},
 
--- elements["PTN_368"] = default_axis_limited(_("Left Gun Ammo Counter Reset"), 														devices.ARMNT_CONTROL,		armt_commands.Gun_L_ROF_Selector,		368, 0, 0.10, true, 0, {0, 1}, true)
--- elements["PTN_369"] = default_axis_limited(_("Right Gun Ammo Counter Reset"), 														devices.ARMNT_CONTROL,		armt_commands.Gun_R_ROF_Selector,		369, 0, 0.10, true, 0, {0, 1}, true)
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0, name = _('Left Gun Ammo Counter Reset - 0%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0.25, name = _('Left Gun Ammo Counter Reset - 25%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0.33, name = _('Left Gun Ammo Counter Reset - 33%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0.5, name = _('Left Gun Ammo Counter Reset - 50%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0.66, name = _('Left Gun Ammo Counter Reset - 66%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 0.75, name = _('Left Gun Ammo Counter Reset - 75%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_L_ROF_Selector, value_down = 1, name = _('Left Gun Ammo Counter Reset - 100%'), category = {_('Armament'), _('Custom')}},
+
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0, name = _('Right Gun Ammo Counter Reset - 0%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0.25, name = _('Right Gun Ammo Counter Reset - 25%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0.33, name = _('Right Gun Ammo Counter Reset - 33%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0.5, name = _('Right Gun Ammo Counter Reset - 50%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0.66, name = _('Right Gun Ammo Counter Reset - 66%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 0.75, name = _('Right Gun Ammo Counter Reset - 75%'), category = {_('Armament'), _('Custom')}},
+		{cockpit_device_id = devices.ARMNT_CONTROL, down = armt_commands.Gun_R_ROF_Selector, value_down = 1, name = _('Right Gun Ammo Counter Reset - 100%'), category = {_('Armament'), _('Custom')}},
 
 		-- Left
 
@@ -287,7 +303,13 @@ return {
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_mode_selector, up = sensors_commands.rdr_mode_selector, value_down = 0, value_up = 0.5, name = _('RP-5 Radar Mode Control Switch - OFF else STANDBY (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_mode_selector, up = sensors_commands.rdr_mode_selector, value_down = 1, value_up = 0.5, name = _('RP-5 Radar Mode Control Switch - ON else STANDBY (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 
--- elements["PTN_342"] = default_axis_limited(_("RP-5 Radar Electronic Horizon Elevation Adjustment Knob"), 							devices.RADAR_RP5,	sensors_commands.rdr_ant_elevation,	342, 0, 01, true, false, {-1, 1})
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 0%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0.25, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 25%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0.33, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 33%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0.5, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 50%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0.66, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 66%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 0.75, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 75%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_ant_elevation, value_down = 1, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 100%'), category = {_('Radar Commands'), _('Custom')}},
 
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_mode, value_down = 0, name = _('RP-5 Radar Screen Mode Switch - DAY'), category = {_('Radar Commands'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_mode, value_down = 1, name = _('RP-5 Radar Screen Mode Switch - NIGHT'), category = {_('Radar Commands'), _('Custom')}},
@@ -299,7 +321,13 @@ return {
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_tgt_lock, up = sensors_commands.rdr_tgt_lock, value_down = 0, value_up = 1, name = _('RP-5 Radar Target Lock Switch (AR-18-16 Tracking Antenna) - OFF else ON (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_tgt_lock, up = sensors_commands.rdr_tgt_lock, value_down = 1, value_up = 0, name = _('RP-5 Radar Target Lock Switch (AR-18-16 Tracking Antenna) - ON else OFF (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 
--- elements["PTN_486"] = default_axis_limited(_("RP-5 Radar Screen Brightness Adjustment Knob"), 										devices.RADAR_RP5,	sensors_commands.rdr_scr_brt,		486, 0, 05, true, false, {0, 1})
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 0%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.25, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 25%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.33, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 33%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.5, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 50%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.66, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 66%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.75, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 75%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 1, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 100%'), category = {_('Radar Commands'), _('Custom')}},
 
 		-- Flight Control
 
@@ -308,6 +336,7 @@ return {
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.ARU2V_Operation_Select, up = flct_commands.ARU2V_Operation_Select, value_down = 0, value_up = 1, name = _('Elevator Control (ARU-2V) Mode - MANUAL else AUTOMATIC (2-way Switch)'), category = {_('Left Wall'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.ARU2V_Operation_Select, up = flct_commands.ARU2V_Operation_Select, value_down = 1, value_up = 0, name = _('Elevator Control (ARU-2V) Mode - AUTOMATIC else MANUAL (2-way Switch)'), category = {_('Left Wall'), _('Custom')}},
 
+		-- duplicate for ARU2V_Manual_Setting based on clickabledata
 		-- {cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.ARU2V_Manual_Setting, value_down = -1, name = _('Elevator Control Manual Mode Selector - SHORT'), category = {_('Left Wall'), _('Custom')}},
 		-- {cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.ARU2V_Manual_Setting, value_down = 0, name = _('Elevator Control Manual Mode Selector - NEUTRAL'), category = {_('Left Wall'), _('Custom')}},
 		-- {cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.ARU2V_Manual_Setting, value_down = 1, name = _('Elevator Control Manual Mode Selector - LONG'), category = {_('Left Wall'), _('Custom')}},
@@ -398,8 +427,14 @@ return {
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_On_Off, up = radio_commands.Radio_On_Off, value_down = 0, value_up = 1, name = _('RSIU-4V Interference Suppression Switch - OFF else ON (2-way Switch)'), category = {_('Radios'), _('Custom')}},
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_On_Off, up = radio_commands.Radio_On_Off, value_down = 1, value_up = 0, name = _('RSIU-4V Interference Suppression Switch - ON else OFF (2-way Switch)'), category = {_('Radios'), _('Custom')}},
 		
--- elements["PTN_327"] = default_axis_limited(_("RSIU-4V Volume Control Knob"),														devices.RADIO_RSIU4V,	radio_commands.Radio_Volume,	327, 0, 0.1, true, 0, {0, 1})
-		
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0, name = _('RSIU-4V Volume Control Knob - 0%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.25, name = _('RSIU-4V Volume Control Knob - 25%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.33, name = _('RSIU-4V Volume Control Knob - 33%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.5, name = _('RSIU-4V Volume Control Knob - 50%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.66, name = _('RSIU-4V Volume Control Knob - 66%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.75, name = _('RSIU-4V Volume Control Knob - 75%'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 1, name = _('RSIU-4V Volume Control Knob - 100%'), category = {_('Radios'), _('Custom')}},
+
 		-- Right
 
 		-- Bulkhead Panel 1
@@ -504,8 +539,21 @@ return {
 
 		-- Bulkhead Panel 2
 
--- elements["PTN_226"] = default_axis_limited(_("RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob"), 							devices.INTLTS_CONTROLS,	intlts_commands.Left_panel_knob,		226, 0, 0.1, true, 0, {0, 1})
--- elements["PTN_227"] = default_axis_limited(_("RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob"),							devices.INTLTS_CONTROLS,	intlts_commands.Right_panel_knob,		227, 0, 0.1, true, 0, {0, 1})
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 0%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0.25, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 25%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0.33, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 33%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0.5, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 50%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0.66, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 66%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 0.75, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 75%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Left_panel_knob, value_down = 1, name = _('RUFO-45 Left Side ARUFOSH UV Lamp Intensity Control Knob - 100%'), category = {_('Right Wall'), _('Custom')}},
+
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 0%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0.25, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 25%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0.33, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 33%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0.5, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 50%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0.66, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 66%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 0.75, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 75%'), category = {_('Right Wall'), _('Custom')}},
+		{cockpit_device_id = devices.INTLTS_CONTROLS, down = intlts_commands.Right_panel_knob, value_down = 1, name = _('RUFO-45 Right Side ARUFOSH UV Lamp Intensity Control Knob - 100%'), category = {_('Right Wall'), _('Custom')}},
 
 		{cockpit_device_id = devices.SENSORS_CONTROL, down = sensors_commands.iff_sdst_sw_cover, value_down = 0, name = _('SRO-2 IFF Self-destruct Button Cover - CLOSED'), category = {_('SRO-2 IFF'), _('Custom')}},
 		{cockpit_device_id = devices.SENSORS_CONTROL, down = sensors_commands.iff_sdst_sw_cover, value_down = 1, name = _('SRO-2 IFF Self-destruct Button Cover - OPEN'), category = {_('SRO-2 IFF'), _('Custom')}},
@@ -546,8 +594,21 @@ return {
 		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_antenna_man_mov, up = radio_commands.ARK5_antenna_man_mov, value_down = -1, value_up = 0, name = _('ARK-5 Loop Antenna Rotation Switch LEFT else NEUTRAL (2-way Switch)'), category = {_('Radio Navigation'), _('Custom')}},
 		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_antenna_man_mov, up = radio_commands.ARK5_antenna_man_mov, value_down = 1, value_up = 0, name = _('ARK-5 Loop Antenna Rotation Switch RIGHT else NEUTRAL (2-way Switch)'), category = {_('Radio Navigation'), _('Custom')}},
 
--- elements["PTN_351"] = default_axis_limited(_("ARK-5 Frequency Scale Backlight Knob"), 												devices.ARK5_CONTROL,		radio_commands.ARK5_inst_lights,		351, 0, 0.1, true,  false, {0, 1})
--- elements["PTN_352"] = default_axis_limited(_("ARK-5 Audio Volume Knob"), 															devices.ARK5_CONTROL,		radio_commands.ARK5_vol_control,		352, 0, 0.1, true,  false, {0, 1})
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0, name = _('ARK-5 Frequency Scale Backlight Knob - 0%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0.25, name = _('ARK-5 Frequency Scale Backlight Knob - 25%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0.33, name = _('ARK-5 Frequency Scale Backlight Knob - 33%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0.5, name = _('ARK-5 Frequency Scale Backlight Knob - 50%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0.66, name = _('ARK-5 Frequency Scale Backlight Knob - 66%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 0.75, name = _('ARK-5 Frequency Scale Backlight Knob - 75%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_inst_lights, value_down = 1, name = _('ARK-5 Frequency Scale Backlight Knob - 100%'), category = {_('Radio Navigation'), _('Custom')}},
+
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0, name = _('ARK-5 Audio Volume Knob - 0%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0.25, name = _('ARK-5 Audio Volume Knob - 25%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0.33, name = _('ARK-5 Audio Volume Knob - 33%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0.5, name = _('ARK-5 Audio Volume Knob - 50%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0.66, name = _('ARK-5 Audio Volume Knob - 66%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 0.75, name = _('ARK-5 Audio Volume Knob - 75%'), category = {_('Radio Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.ARK5_CONTROL, down = radio_commands.ARK5_vol_control, value_down = 1, name = _('ARK-5 Audio Volume Knob - 100%'), category = {_('Radio Navigation'), _('Custom')}},
 
 		{cockpit_device_id = devices.ARK5_CONTROL, pressed = radio_commands.ARK5_freq_tunning, value_pressed = -0.05, name = _('ARK-5 Frequency Fine Tuning Handle Decrease'), category = {_('Radio Navigation'), _('Custom')}},
 		{cockpit_device_id = devices.ARK5_CONTROL, pressed = radio_commands.ARK5_freq_tunning, value_pressed = 0.05, name = _('ARK-5 Frequency Fine Tuning Handle Increase'), category = {_('Radio Navigation'), _('Custom')}},
