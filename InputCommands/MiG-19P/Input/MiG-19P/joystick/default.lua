@@ -3,10 +3,10 @@ return {
 
 		-- Throttle
 
-		{pressed = iCommandPlane_HOTAS_TargetManagementSwitchDown, value_pressed = -0.5, name = _('Optical Target Range Decrease (Slow)'), category = {_('Gunsights'), _('Custom')}},
-		{pressed = iCommandPlane_HOTAS_TargetManagementSwitchUp, value_pressed = 0.5, name = _('Optical Target Range Increase (Slow)'), category = {_('Gunsights'), _('Custom')}},
-		{pressed = iCommandPlane_HOTAS_TargetManagementSwitchDown, value_pressed = -2, name = _('Optical Target Range Decrease (Fast)'), category = {_('Gunsights'), _('Custom')}},
-		{pressed = iCommandPlane_HOTAS_TargetManagementSwitchUp, value_pressed = 2, name = _('Optical Target Range Increase (Fast)'), category = {_('Gunsights'), _('Custom')}},
+		-- {pressed = iCommandPlane_HOTAS_TargetManagementSwitchDown, value_pressed = -0.5, name = _('Optical Target Range Decrease (Slow)'), category = {_('Gunsights'), _('Custom')}},
+		-- {pressed = iCommandPlane_HOTAS_TargetManagementSwitchUp, value_pressed = 0.5, name = _('Optical Target Range Increase (Slow)'), category = {_('Gunsights'), _('Custom')}},
+		-- {pressed = iCommandPlane_HOTAS_TargetManagementSwitchDown, value_pressed = -2, name = _('Optical Target Range Decrease (Fast)'), category = {_('Gunsights'), _('Custom')}},
+		-- {pressed = iCommandPlane_HOTAS_TargetManagementSwitchUp, value_pressed = 2, name = _('Optical Target Range Increase (Fast)'), category = {_('Gunsights'), _('Custom')}},
 
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Transmit_Btn, up = radio_commands.Transmit_Btn, value_down = 1, value_up = 0, name = _('RSIU-4V Transmit Button - Push to Transmit'), category = {_('Throttle Quadrant'), _('Custom')}},
 
@@ -41,12 +41,12 @@ return {
 
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = finst_commands.ARU2V_Lamp_Test_Btn, up = finst_commands.ARU2V_Lamp_Test_Btn, value_down = 1, value_up = 0, name = _('ARU-2V Lamp Test Button'), category = {_('Instrument Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = -0.5, name = _('GIK-1 Course Selector Decrease (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = 0.5, name = _('GIK-1 Course Selector Increase (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = -0.5, name = _('GIK-1 Course Selector Decrease (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = 0.5, name = _('GIK-1 Course Selector Increase (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = -1, name = _('GIK-1 Course Selector Decrease'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = 1, name = _('GIK-1 Course Selector Increase'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = -2, name = _('GIK-1 Course Selector Decrease (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = 2, name = _('GIK-1 Course Selector Increase (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = -2, name = _('GIK-1 Course Selector Decrease (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.FLIGHT_INST, pressed = finst_commands.GIK_1_Course_Selector, value_pressed = 2, name = _('GIK-1 Course Selector Increase (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 -- elements["PTN_360"] = default_axis_limited(_("AGI-1 Artificial Horizon Pitch Trim Knob"),											devices.FLIGHT_INST,		finst_commands.ADI_Needle_Adjust,		360, 0, 0.1, true, 0, {-1, 1})
 
