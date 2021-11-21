@@ -142,15 +142,15 @@ return {
 
 		-- Right Cockpit
 
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = -0.5, name = _('Emergency Flaps Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = 0.5, name = _('Emergency Flaps Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = -2, name = _('Emergency Flaps Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = 2, name = _('Emergency Flaps Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = -0.5, name = _('Emergency Flaps Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = 0.5, name = _('Emergency Flaps Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = -2, name = _('Emergency Flaps Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_EXT, value_pressed = 2, name = _('Emergency Flaps Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = -0.5, name = _('Emergency Gears Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = 0.5, name = _('Emergency Gears Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = -2, name = _('Emergency Gears Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = 2, name = _('Emergency Gears Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = -0.5, name = _('Emergency Gears Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = 0.5, name = _('Emergency Gears Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = -2, name = _('Emergency Gears Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencyGearsValve_EXT, value_pressed = 2, name = _('Emergency Gears Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValveCover_EXT, value_down = 0, name = _('Emergency Flaps Valve Cover - CLOSE'), category = {_('Right Panel'), _('Custom')}},
 		{cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyFlapsValveCover_EXT, value_down = 1, name = _('Emergency Flaps Valve Cover - OPEN'), category = {_('Right Panel'), _('Custom')}},
@@ -162,20 +162,20 @@ return {
 		{cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValveCover_EXT, up = hydraulic_commands.Mig15_Command_EmergencyGearsValveCover_EXT, value_down = 0, value_up = 1, name = _('Emergency Gears Valve Cover - CLOSE else OPEN (2-way Switch)'), category = {_('Right Panel'), _('Custom')}},
 		{cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencyGearsValveCover_EXT, up = hydraulic_commands.Mig15_Command_EmergencyGearsValveCover_EXT, value_down = 1, value_up = 0, name = _('Emergency Gears Valve Cover - OPEN else CLOSE (2-way Switch)'), category = {_('Right Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = -0.5, name = _('Emergency System Filling, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = 0.5, name = _('Emergency System Filling, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = -2, name = _('Emergency System Filling, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = 2, name = _('Emergency System Filling, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = -0.5, name = _('Emergency System Filling, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = 0.5, name = _('Emergency System Filling, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = -2, name = _('Emergency System Filling, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_EmergencySystemFilling_EXT, value_pressed = 2, name = _('Emergency System Filling, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = -0.5, name = _('Air Net Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = 0.5, name = _('Air Net Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = -2, name = _('Air Net Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = 2, name = _('Air Net Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = -0.5, name = _('Air Net Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = 0.5, name = _('Air Net Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = -2, name = _('Air Net Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_AirNetValve_EXT, value_pressed = 2, name = _('Air Net Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = -0.5, name = _('Cockpit Filling Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = 0.5, name = _('Cockpit Filling Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = -2, name = _('Cockpit Filling Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.HYDROSYS_INTERFACE, down = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = 2, name = _('Cockpit Filling Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = -0.5, name = _('Cockpit Filling Valve, CCW(OPEN) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = 0.5, name = _('Cockpit Filling Valve, CW(CLOSE) (Slow)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = -2, name = _('Cockpit Filling Valve, CCW(OPEN) (Fast)'), category = {_('Right Panel'), _('Custom')}},
+		{cockpit_device_id = devices.HYDROSYS_INTERFACE, pressed = hydraulic_commands.Mig15_Command_CockpitFillingValve_EXT, value_pressed = 2, name = _('Cockpit Filling Valve, CW(CLOSE) (Fast)'), category = {_('Right Panel'), _('Custom')}},
 
 
 		-- Gear System
@@ -197,49 +197,49 @@ return {
 
 		-- Oxygen System
 
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = -0.5, name = _('Oxygen Supply Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = 0.5, name = _('Oxygen Supply Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = -2, name = _('Oxygen Supply Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = 2, name = _('Oxygen Supply Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = -0.5, name = _('Oxygen Supply Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = 0.5, name = _('Oxygen Supply Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = -2, name = _('Oxygen Supply Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenSupplyValve_EXT, value_pressed = 2, name = _('Oxygen Supply Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = -0.5, name = _('Air Diluter Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = 0.5, name = _('Air Diluter Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = -2, name = _('Air Diluter Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = 2, name = _('Air Diluter Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = -0.5, name = _('Air Diluter Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = 0.5, name = _('Air Diluter Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = -2, name = _('Air Diluter Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_AirValve_EXT, value_pressed = 2, name = _('Air Diluter Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = -0.5, name = _('Oxygen Emergency Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = 0.5, name = _('Oxygen Emergency Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = -2, name = _('Oxygen Emergency Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.OXYGEN_INTERFACE, down = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = 2, name = _('Oxygen Emergency Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = -0.5, name = _('Oxygen Emergency Valve, CCW(OPEN) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = 0.5, name = _('Oxygen Emergency Valve, CW(CLOSE) (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = -2, name = _('Oxygen Emergency Valve, CCW(OPEN) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.OXYGEN_INTERFACE, pressed = oxygen_commands.Mig15_Command_OxygenEmergencyValve_EXT, value_pressed = 2, name = _('Oxygen Emergency Valve, CW(CLOSE) (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
 
 		-- Conditioning and Heating System
 
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = -0.5, name = _('Cockpit Air Valve, CCW(OPEN) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = 0.5, name = _('Cockpit Air Valve, CW(CLOSE) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = -2, name = _('Cockpit Air Valve, CCW(OPEN) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = 2, name = _('Cockpit Air Valve, CW(CLOSE) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = -0.5, name = _('Cockpit Air Valve, CCW(OPEN) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = 0.5, name = _('Cockpit Air Valve, CW(CLOSE) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = -2, name = _('Cockpit Air Valve, CCW(OPEN) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_CockpitAirValve_EXT, value_pressed = 2, name = _('Cockpit Air Valve, CW(CLOSE) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = -0.5, name = _('Ventilation Valve, CCW(OPEN) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = 0.5, name = _('Ventilation Valve, CW(CLOSE) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = -2, name = _('Ventilation Valve, CCW(OPEN) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.AIR_INTERFACE, down = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = 2, name = _('Ventilation Valve, CW(CLOSE) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = -0.5, name = _('Ventilation Valve, CCW(OPEN) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = 0.5, name = _('Ventilation Valve, CW(CLOSE) (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = -2, name = _('Ventilation Valve, CCW(OPEN) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.AIR_INTERFACE, pressed = air_commands.Mig15_Command_VentilationValve_EXT, value_pressed = 2, name = _('Ventilation Valve, CW(CLOSE) (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
 
 		-- Internal Lights System
 
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = -0.5, name = _('Left UV Light Rheostat, CCW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = 0.5, name = _('Left UV Light Rheostat, CW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = -2, name = _('Left UV Light Rheostat, CCW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = 2, name = _('Left UV Light Rheostat, CW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = -0.5, name = _('Left UV Light Rheostat, CCW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = 0.5, name = _('Left UV Light Rheostat, CW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = -2, name = _('Left UV Light Rheostat, CCW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_LeftUVLight_Control_EXT, value_pressed = 2, name = _('Left UV Light Rheostat, CW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = -0.5, name = _('Right UV Light Rheostat, CCW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = 0.5, name = _('Right UV Light Rheostat, CW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = -2, name = _('Right UV Light Rheostat, CCW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = 2, name = _('Right UV Light Rheostat, CW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = -0.5, name = _('Right UV Light Rheostat, CCW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = 0.5, name = _('Right UV Light Rheostat, CW (Slow)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = -2, name = _('Right UV Light Rheostat, CCW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_RightUVLight_Control_EXT, value_pressed = 2, name = _('Right UV Light Rheostat, CW (Fast)'), category = {_('Right Cockpit Side'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = -0.5, name = _('Panels Light Rheostat, CCW (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = 0.5, name = _('Panels Light Rheostat, CW (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = -2, name = _('Panels Light Rheostat, CCW (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
-		-- {cockpit_device_id = devices.LIGHT_SYSTEM, down = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = 2, name = _('Panels Light Rheostat, CW (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = -0.5, name = _('Panels Light Rheostat, CCW (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = 0.5, name = _('Panels Light Rheostat, CW (Slow)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = -2, name = _('Panels Light Rheostat, CCW (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
+		{cockpit_device_id = devices.LIGHT_SYSTEM, pressed = lights_command.Mig15_Command_PanelLight_Control_EXT, value_pressed = 2, name = _('Panels Light Rheostat, CW (Fast)'), category = {_('Left Cockpit Side'), _('Custom')}},
 
 		-- Navigation Lights System
 
@@ -255,12 +255,12 @@ return {
 
 		-- Power Plant
 
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.035, name = _('Engine Stop Lever, OPEN SMOOTH (Slow)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.035, name = _('Engine Stop Lever, CLOSE SMOOTH (Slow)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.15, name = _('Engine Stop Lever, OPEN SMOOTH (Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.15, name = _('Engine Stop Lever, CLOSE SMOOTH (Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.3, name = _('Engine Stop Lever, OPEN SMOOTH (Very Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		-- {cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.3, name = _('Engine Stop Lever, CLOSE SMOOTH (Very Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.035, name = _('Engine Stop Lever, OPEN SMOOTH (Slow)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.035, name = _('Engine Stop Lever, CLOSE SMOOTH (Slow)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.15, name = _('Engine Stop Lever, OPEN SMOOTH (Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.15, name = _('Engine Stop Lever, CLOSE SMOOTH (Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = -0.3, name = _('Engine Stop Lever, OPEN SMOOTH (Very Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_INTERFACE, pressed = engine_commands.Mig15_Command_EngineStop_ITER, value_pressed = 0.3, name = _('Engine Stop Lever, CLOSE SMOOTH (Very Fast)'), category = {_('Left Control Pedestal'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_IsolatingValve, value_down = 0, name = _('Isolating Valve Switch - OFF'), category = {_('Left Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.Mig15_Command_IsolatingValve, value_down = 1, name = _('Isolating Valve Switch - ON'), category = {_('Left Panel'), _('Custom')}},
@@ -288,17 +288,17 @@ return {
 		{cockpit_device_id = devices.AGK47B, down = device_commands.Button_2, up = device_commands.Button_2, value_down = 0, value_up = 1, name = _('AGK-47B Artificial Horizon Cage - PUSH else PULL (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.AGK47B, down = device_commands.Button_2, up = device_commands.Button_2, value_down = 1, value_up = 0, name = _('AGK-47B Artificial Horizon Cage - PULL else PUSH (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.AGK47B, down = device_commands.Button_5, value_pressed = -0.5, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.AGK47B, down = device_commands.Button_5, value_pressed = 0.5, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.AGK47B, down = device_commands.Button_5, value_pressed = -2, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.AGK47B, down = device_commands.Button_5, value_pressed = 2, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AGK47B, pressed = device_commands.Button_5, value_pressed = -0.5, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AGK47B, pressed = device_commands.Button_5, value_pressed = 0.5, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AGK47B, pressed = device_commands.Button_5, value_pressed = -2, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AGK47B, pressed = device_commands.Button_5, value_pressed = 2, name = _('AGK-47B Artificial Horizon Zero Pitch Trim Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- VD-15
 
-		-- {cockpit_device_id = devices.BAR_ALTIMETER, down = device_commands.Button_1, value_pressed = -0.3, name = _('Barometric Pressure QFE Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.BAR_ALTIMETER, down = device_commands.Button_1, value_pressed = 0.3, name = _('Barometric Pressure QFE Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.BAR_ALTIMETER, down = device_commands.Button_1, value_pressed = -1.2, name = _('Barometric Pressure QFE Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.BAR_ALTIMETER, down = device_commands.Button_1, value_pressed = 1.2, name = _('Barometric Pressure QFE Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAR_ALTIMETER, pressed = device_commands.Button_1, value_pressed = -0.3, name = _('Barometric Pressure QFE Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAR_ALTIMETER, pressed = device_commands.Button_1, value_pressed = 0.3, name = _('Barometric Pressure QFE Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAR_ALTIMETER, pressed = device_commands.Button_1, value_pressed = -1.2, name = _('Barometric Pressure QFE Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAR_ALTIMETER, pressed = device_commands.Button_1, value_pressed = 1.2, name = _('Barometric Pressure QFE Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- PRV-46
 
@@ -314,19 +314,19 @@ return {
 
 		-- PDK-45
 
-		-- {cockpit_device_id = devices.REMOTE_COMPASS, down = device_commands.Button_1, value_pressed = -0.05, name = _('Heading Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.REMOTE_COMPASS, down = device_commands.Button_1, value_pressed = 0.05, name = _('Heading Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.REMOTE_COMPASS, down = device_commands.Button_1, value_pressed = -0.2, name = _('Heading Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.REMOTE_COMPASS, down = device_commands.Button_1, value_pressed = 0.2, name = _('Heading Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.REMOTE_COMPASS, pressed = device_commands.Button_1, value_pressed = -0.05, name = _('Heading Knob, CCW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.REMOTE_COMPASS, pressed = device_commands.Button_1, value_pressed = 0.05, name = _('Heading Knob, CW (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.REMOTE_COMPASS, pressed = device_commands.Button_1, value_pressed = -0.2, name = _('Heading Knob, CCW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.REMOTE_COMPASS, pressed = device_commands.Button_1, value_pressed = 0.2, name = _('Heading Knob, CW (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- Clock
 
 		-- {cockpit_device_id = devices.CLOCK, down = device_commands.Button_2, up = device_commands.Button_2, value_down = -1, value_up = 0, name = _('AChS-1 Cockpit Chronograph Left Knob - PULL else NORMAL (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.CLOCK, down = device_commands.Button_3, value_pressed = -0.04, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate left (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.CLOCK, down = device_commands.Button_3, value_pressed = 0.04, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate right (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.CLOCK, down = device_commands.Button_3, value_pressed = -0.16, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate left (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.CLOCK, down = device_commands.Button_3, value_pressed = 0.16, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate right (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_3, value_pressed = -0.04, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate left (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_3, value_pressed = 0.04, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate right (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_3, value_pressed = -0.16, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate left (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.CLOCK, pressed = device_commands.Button_3, value_pressed = 0.16, name = _('AChS-1 Cockpit Chronograph Left Knob, Rotate right (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.CLOCK, down = device_commands.Button_5, up = device_commands.Button_5, value_down = -0.15, value_up = 0.15, name = _('AChS-1 Cockpit Chronograph Right Knob - LEFT else RIGHT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.CLOCK, down = device_commands.Button_5, up = device_commands.Button_5, value_down = 0.15, value_up = -0.15, name = _('AChS-1 Cockpit Chronograph Right Knob - RIGHT else LEFT (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
@@ -358,20 +358,20 @@ return {
 		{cockpit_device_id = devices.ASP_3N, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0, value_up = 1, name = _('ASP-3N Gunsight Fixed Reticle Mask Lever - REMOVE else SET UP (2-way Switch)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 		{cockpit_device_id = devices.ASP_3N, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 1, value_up = 0, name = _('ASP-3N Gunsight Fixed Reticle Mask Lever - SET UP else REMOVE (2-way Switch)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_9, value_pressed = -0.25, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_9, value_pressed = 0.25, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_9, value_pressed = -1, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_9, value_pressed = 1, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_9, value_pressed = -0.25, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_9, value_pressed = 0.25, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_9, value_pressed = -1, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_9, value_pressed = 1, name = _('ASP-3N Gunsight Target Wingspan Adjustment Dial, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_5, value_pressed = -0.5, name = _('ASP-3N Gunsight Brightness Knob, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_5, value_pressed = 0.5, name = _('ASP-3N Gunsight Brightness Knob, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_5, value_pressed = -2, name = _('ASP-3N Gunsight Brightness Knob, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_5, value_pressed = 2, name = _('ASP-3N Gunsight Brightness Knob, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_5, value_pressed = -0.5, name = _('ASP-3N Gunsight Brightness Knob, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_5, value_pressed = 0.5, name = _('ASP-3N Gunsight Brightness Knob, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_5, value_pressed = -2, name = _('ASP-3N Gunsight Brightness Knob, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_5, value_pressed = 2, name = _('ASP-3N Gunsight Brightness Knob, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_10, value_pressed = -0.35, name = _('ASP-3N Gunsight Target Distance, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_10, value_pressed = 0.35, name = _('ASP-3N Gunsight Target Distance, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_10, value_pressed = -1.4, name = _('ASP-3N Gunsight Target Distance, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
-		-- {cockpit_device_id = devices.ASP_3N, down = device_commands.Button_10, value_pressed = 1.4, name = _('ASP-3N Gunsight Target Distance, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_10, value_pressed = -0.35, name = _('ASP-3N Gunsight Target Distance, Decrease (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_10, value_pressed = 0.35, name = _('ASP-3N Gunsight Target Distance, Increase (Slow)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_10, value_pressed = -1.4, name = _('ASP-3N Gunsight Target Distance, Decrease (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
+		{cockpit_device_id = devices.ASP_3N, pressed = device_commands.Button_10, value_pressed = 1.4, name = _('ASP-3N Gunsight Target Distance, Increase (Fast)'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 
 		{cockpit_device_id = devices.ASP_3N, down = device_commands.Button_12, value_down = 0, name = _('ASP-3N Gunsight Color Filter - OFF'), category = {_('ASP-3N Gunsight'), _('Custom')}},
 		{cockpit_device_id = devices.ASP_3N, down = device_commands.Button_12, value_down = 1, name = _('ASP-3N Gunsight Color Filter - ON'), category = {_('ASP-3N Gunsight'), _('Custom')}},
@@ -380,10 +380,10 @@ return {
 
 		-- ARK-5 Radio Compass
 
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = -0.15, name = _('ARK-5 Audio Volume Knob, DOWN (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = 0.15, name = _('ARK-5 Audio Volume Knob, UP (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = -0.6, name = _('ARK-5 Audio Volume Knob, DOWN (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = 0.6, name = _('ARK-5 Audio Volume Knob, UP (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = -0.15, name = _('ARK-5 Audio Volume Knob, DOWN (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = 0.15, name = _('ARK-5 Audio Volume Knob, UP (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = -0.6, name = _('ARK-5 Audio Volume Knob, DOWN (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_VOLUME_EXT, value_pressed = 0.6, name = _('ARK-5 Audio Volume Knob, UP (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_BAND, value_down = 0, name = _('ARK-5 Frequency Band Switch - 150-310'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_BAND, value_down = 0.1, name = _('ARK-5 Frequency Band Switch - 310-640'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
@@ -398,15 +398,15 @@ return {
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_MODE, up = ARC_5_commands.CMD_ARC_5_MODE, value_down = 0.1, value_up = 0.2, name = _('ARK-5 Function Selector Switch - COMP else ANT (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_MODE, up = ARC_5_commands.CMD_ARC_5_MODE, value_down = 0.3, value_up = 0.2, name = _('ARK-5 Function Selector Switch - LOOP else ANT (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = -0.5, name = _('ARK-5 Tuning Crank, CCW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = 0.5, name = _('ARK-5 Tuning Crank, CW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = -2, name = _('ARK-5 Tuning Crank, CCW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = 2, name = _('ARK-5 Tuning Crank, CW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = -0.5, name = _('ARK-5 Tuning Crank, CCW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = 0.5, name = _('ARK-5 Tuning Crank, CW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = -2, name = _('ARK-5 Tuning Crank, CCW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_TUNE_FREQUENCY_EXT, value_pressed = 2, name = _('ARK-5 Tuning Crank, CW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = -0.15, name = _('ARK-5 Scale Light Knob, CCW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = 0.15, name = _('ARK-5 Scale Light Knob, CW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = -0.6, name = _('ARK-5 Scale Light Knob, CCW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		-- {cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = 0.6, name = _('ARK-5 Scale Light Knob, CW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = -0.15, name = _('ARK-5 Scale Light Knob, CCW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = 0.15, name = _('ARK-5 Scale Light Knob, CW (Slow)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = -0.6, name = _('ARK-5 Scale Light Knob, CCW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, pressed = ARC_5_commands.CMD_ARC_5_LIGHT_EXT, value_pressed = 0.6, name = _('ARK-5 Scale Light Knob, CW (Fast)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TLF_TLG, value_down = 0, name = _('ARK-5 TLG-TLF Switch - TLF'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TLF_TLG, value_down = 1, name = _('ARK-5 TLG-TLF Switch - TLG'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
@@ -435,20 +435,20 @@ return {
 
 		-- RSI-6K Radio
 
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = -0.5, name = _('RSI-6K Audio Volume Knob, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = 0.5, name = _('RSI-6K Audio Volume Knob, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = -2, name = _('RSI-6K Audio Volume Knob, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = 2, name = _('RSI-6K Audio Volume Knob, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = -0.5, name = _('RSI-6K Audio Volume Knob, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = 0.5, name = _('RSI-6K Audio Volume Knob, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = -2, name = _('RSI-6K Audio Volume Knob, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_Volume_EXT, value_pressed = 2, name = _('RSI-6K Audio Volume Knob, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = -0.15, name = _('RSI-6K Wave Control Handle, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = 0.15, name = _('RSI-6K Wave Control Handle, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = -0.6, name = _('RSI-6K Wave Control Handle, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = 0.6, name = _('RSI-6K Wave Control Handle, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = -0.15, name = _('RSI-6K Wave Control Handle, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = 0.15, name = _('RSI-6K Wave Control Handle, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = -0.6, name = _('RSI-6K Wave Control Handle, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_EXT, value_pressed = 0.6, name = _('RSI-6K Wave Control Handle, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = -0.15, name = _('RSI-6K Antenna Control Handle, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = 0.15, name = _('RSI-6K Antenna Control Handle, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = -0.6, name = _('RSI-6K Antenna Control Handle, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = 0.6, name = _('RSI-6K Antenna Control Handle, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = -0.15, name = _('RSI-6K Antenna Control Handle, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = 0.15, name = _('RSI-6K Antenna Control Handle, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = -0.6, name = _('RSI-6K Antenna Control Handle, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_EXT, value_pressed = 0.6, name = _('RSI-6K Antenna Control Handle, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
 
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_TransmitterFrequencyFix, value_down = 0, name = _('RSI-6K Wave Control Handle Lock - OFF'), category = {_('RSI-6K Radio'), _('Custom')}},
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_TransmitterFrequencyFix, value_down = 1, name = _('RSI-6K Wave Control Handle Lock - ON'), category = {_('RSI-6K Radio'), _('Custom')}},
@@ -460,10 +460,10 @@ return {
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_AntennaFrequencyFix, up = RSI_6K_commands.Mig15_Command_RSI6K_AntennaFrequencyFix, value_down = 0, value_up = 1, name = _('RSI-6K Antenna Control Handle Lock - OFF else ON (2-way Switch)'), category = {_('RSI-6K Radio'), _('Custom')}},
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_AntennaFrequencyFix, up = RSI_6K_commands.Mig15_Command_RSI6K_AntennaFrequencyFix, value_down = 1, value_up = 0, name = _('RSI-6K Antenna Control Handle Lock - ON else OFF (2-way Switch)'), category = {_('RSI-6K Radio'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = -0.5, name = _('RSI-6K Receiver Tuning Knob, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = 0.5, name = _('RSI-6K Receiver Tuning Knob, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = -2, name = _('RSI-6K Receiver Tuning Knob, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
-		-- {cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = 2, name = _('RSI-6K Receiver Tuning Knob, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = -0.5, name = _('RSI-6K Receiver Tuning Knob, CCW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = 0.5, name = _('RSI-6K Receiver Tuning Knob, CW (Slow)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = -2, name = _('RSI-6K Receiver Tuning Knob, CCW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
+		{cockpit_device_id = devices.RSI_6K, pressed = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency_EXT, value_pressed = 2, name = _('RSI-6K Receiver Tuning Knob, CW (Fast)'), category = {_('RSI-6K Radio'), _('Custom')}},
 
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_ReceiveARC, value_down = 0, name = _('RSI-6K Receive/ARC Switch - RECEIVE'), category = {_('RSI-6K Radio'), _('Custom')}},
 		{cockpit_device_id = devices.RSI_6K, down = RSI_6K_commands.Mig15_Command_RSI6K_ReceiveARC, value_down = 1, name = _('RSI-6K Receive/ARC Switch - ARC'), category = {_('RSI-6K Radio'), _('Custom')}},
