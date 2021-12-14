@@ -198,18 +198,15 @@ return {
 		{cockpit_device_id = devices.ECS_INTERFACE, down = ECS_commands.SuitTemperatureRst, up = ECS_commands.SuitTemperatureRst, value_down = 0, value_up = 1, name = _('Suit Temperature Knob - COLD else HOT (2-way Switch)'), category = {_('Special For Joystick'), _('Right Console'), _('Custom')}},
 		{cockpit_device_id = devices.ECS_INTERFACE, down = ECS_commands.SuitTemperatureRst, up = ECS_commands.SuitTemperatureRst, value_down = 1, value_up = 0, name = _('Suit Temperature Knob - HOT else COLD (2-way Switch)'), category = {_('Special For Joystick'), _('Right Console'), _('Custom')}},
 
-		-- {cockpit_device_id = devices.ECS_INTERFACE, down = ECS_commands.AV_COOL_Sw, value_down = 0, name = _('AV COOL Switch - NORM'), category = {_('Right Vertical Panel'), _('Custom')}},
-		-- {cockpit_device_id = devices.ECS_INTERFACE, down = ECS_commands.AV_COOL_Sw, value_down = 1, name = _('AV COOL Switch - EMERG'), category = {_('Right Vertical Panel'), _('Custom')}},
-
 		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.LeftLouver_ITER, value_pressed = -0.25, name = _('Left Louver - Left (Slow)'), category = {_('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.LeftLouver_ITER, value_pressed = 0.25, name = _('Left Louver - Right (Slow)'), category = {_('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.LeftLouver_ITER, value_pressed = -1, name = _('Left Louver - Left (Fast)'), category = {_('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.LeftLouver_ITER, value_pressed = 1, name = _('Left Louver - Right (Fast)'), category = {_('Left Vertical Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = -0.25, name = _('Right Louver - Left (Slow)'), category = {_('Right Vertical Panel'), _('Custom')}},
-		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = 0.25, name = _('Right Louver - Right (Slow)'), category = {_('Right Vertical Panel'), _('Custom')}},
-		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = -1, name = _('Right Louver - Left (Fast)'), category = {_('Right Vertical Panel'), _('Custom')}},
-		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = 1, name = _('Right Louver - Right (Fast)'), category = {_('Right Vertical Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = -0.25, name = _('Right Louver - Right (Slow)'), category = {_('Right Vertical Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = 0.25, name = _('Right Louver - Left (Slow)'), category = {_('Right Vertical Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = -1, name = _('Right Louver - Right (Fast)'), category = {_('Right Vertical Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS_INTERFACE, pressed = ECS_commands.RightLouver_ITER, value_pressed = 1, name = _('Right Louver - Left (Fast)'), category = {_('Right Vertical Panel'), _('Custom')}},
 
 		-- HOTAS Throttle
 
