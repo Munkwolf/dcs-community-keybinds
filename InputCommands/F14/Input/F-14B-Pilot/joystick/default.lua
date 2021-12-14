@@ -106,13 +106,16 @@ return {
 
 		-- Flaps
 
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.25, name = _('Flaps - 25%'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.33, name = _('Flaps - 33%'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.25, name = _('Flaps - 75%'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.33, name = _('Flaps - 66%'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.5, name = _('Flaps - 50%'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.66, name = _('Flaps - 66%'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.75, name = _('Flaps - 75%'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 0, value_up = 0.25, name = _('Flaps - DOWN else QUARTER (3-way Switch Down)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 1, value_up = 0.25, name = _('Flaps - UP else QUARTER (3-way Switch Up)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.66, name = _('Flaps - 33%'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.75, name = _('Flaps - 25%'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.9, name = _('Flaps - 10%'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 0, value_up = 0.9, name = _('Flaps - DOWN else TENTH (3-way Switch Down)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 1, value_up = 0.9, name = _('Flaps - UP else TENTH (3-way Switch Up)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 0, value_up = 0.75, name = _('Flaps - DOWN else QUARTER (3-way Switch Down)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 1, value_up = 0.75, name = _('Flaps - UP else QUARTER (3-way Switch Up)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 0, value_up = 0.5, name = _('Flaps - DOWN else HALF (3-way Switch Down)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 1, value_up = 0.5, name = _('Flaps - UP else HALF (3-way Switch Up)'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, up = device_commands.FLAPS_Lever, value_down = 0, value_up = 1, name = _('Flaps - DOWN else UP (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
