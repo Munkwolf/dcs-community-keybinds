@@ -13,18 +13,18 @@ return {
 
 		-- Altimeter
 
-		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.ALTIMETER_Mode, value_down = -1, name = _('Altimeter Mode Switch - STANDBY'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.ALTIMETER_Mode, value_down = 0, name = _('Altimeter Mode Switch - NEUTRAL'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.ALTIMETER_Mode, value_down = 1, name = _('Altimeter Mode Switch - RESET'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, value_down = -1, value_up = 0, name = _('Altimeter Mode Switch - STANDBY else NEUTRAL (3-way Switch Up)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, value_down = 1, value_up = 0, name = _('Altimeter Mode Switch - RESET else NEUTRAL (3-way Switch Down)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.RIOALTIMETER_Mode, value_down = -1, name = _('Altimeter Mode Switch - STANDBY'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.RIOALTIMETER_Mode, value_down = 0, name = _('Altimeter Mode Switch - NEUTRAL'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.RIOALTIMETER_Mode, value_down = 1, name = _('Altimeter Mode Switch - RESET'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.RIOALTIMETER_Mode, up = device_commands.RIOALTIMETER_Mode, value_down = -1, value_up = 0, name = _('Altimeter Mode Switch - STANDBY else NEUTRAL (3-way Switch Up)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, down = device_commands.RIOALTIMETER_Mode, up = device_commands.RIOALTIMETER_Mode, value_down = 1, value_up = 0, name = _('Altimeter Mode Switch - RESET else NEUTRAL (3-way Switch Down)'), category = {_('Instrument Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = 0.05, name=_('Altimeter Knob - INCREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = -0.05, name=_('Altimeter Knob - DECREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = 0.1, name=_('Altimeter Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = -0.1, name=_('Altimeter Knob - DECREASE'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = 0.2, name=_('Altimeter Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.ALTIMETER_Knob, value_pressed = -0.2, name=_('Altimeter Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = 0.05, name=_('Altimeter Knob - INCREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = -0.05, name=_('Altimeter Knob - DECREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = 0.1, name=_('Altimeter Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = -0.1, name=_('Altimeter Knob - DECREASE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = 0.2, name=_('Altimeter Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BAROALTIMETER, pressed = device_commands.RIOALTIMETER_Knob, value_pressed = -0.2, name=_('Altimeter Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- Engine
 

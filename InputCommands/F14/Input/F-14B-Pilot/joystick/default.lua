@@ -48,13 +48,13 @@ return {
 
 		-- Radar altimeter
 
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = -0.005, name = _('Radar Altimeter Knob - DECREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = 0.005, name = _('Radar Altimeter Knob - INCREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = -0.01, name = _('Radar Altimeter Knob - DECREASE'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = 0.01, name = _('Radar Altimeter Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = -0.02, name = _('Radar Altimeter Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, pressed = device_commands.RADARALT_Knob, value_pressed = 0.02, name = _('Radar Altimeter Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.MACHANDAIRSPEED, down = device_commands.RADARALT_Test, up = device_commands.RADARALT_Test, value_down = 1, value_up = 0, name = _('Radar Altimeter Knob - PUSH'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = -0.005, name = _('Radar Altimeter Knob - DECREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = 0.005, name = _('Radar Altimeter Knob - INCREASE (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = -0.01, name = _('Radar Altimeter Knob - DECREASE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = 0.01, name = _('Radar Altimeter Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = -0.02, name = _('Radar Altimeter Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, pressed = device_commands.RADARALT_Knob, value_pressed = 0.02, name = _('Radar Altimeter Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.RADARALTIMETER, down = device_commands.RADARALT_Test, up = device_commands.RADARALT_Test, value_down = 1, value_up = 0, name = _('Radar Altimeter Knob - PUSH'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- Airspeed indicator
 
@@ -104,6 +104,10 @@ return {
 		{cockpit_device_id=devices.GEARHOOK, down = device_commands.BRAKE_ParkingBrake, up = device_commands.BRAKE_ParkingBrake, value_down = 0, value_up = 1, name = _('Parking brake - STOW else PULL (2-way Switch)'), category = {_('Gears, brakes, and hook'), _('Custom')}},
 		{cockpit_device_id=devices.GEARHOOK, down = device_commands.GEAR_DownLockOverride, up = device_commands.GEAR_DownLockOverride, value_down = 1, value_up = 0, name = _('Gear Down Lock Override'), category = {_('Gears, brakes, and hook'), _('Custom')}},
 
+		-- Autopilot
+
+--		{cockpit_device_id = devices.AFCS, down = device_commands.AP_Heading_toggle_offgt, value_down = 1, name = _('Autopilot Heading Toggle GT'), category = {_('AFCS Control Panel'), _('Custom')}},
+
 		-- Flaps
 
 		{cockpit_device_id = devices.FLAPS, down = device_commands.FLAPS_Lever, value_down = 0.25, name = _('Flaps - 75%'), category = {_('Flight Control'), _('Custom')}},
@@ -123,11 +127,11 @@ return {
 
 		-- Engine
 
-		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Left_Throttle_CutOff, up = device_commands.THROTTLE_Left_Throttle_CutOff, value_down = 0,  name = _('Left Engine Cutoff - ON'), category = {_('Engine'), _('Custom')}},
-		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Left_Throttle_CutOff, up = device_commands.THROTTLE_Left_Throttle_CutOff, value_down = 1,  name = _('Left Engine Cutoff - OFF'), category = {_('Engine'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Left_Throttle_CutOff, up = device_commands.THROTTLE_Left_Throttle_CutOff, value_down = 0,  name = _('Left Engine Cutoff - ON'), category = {_('Throttle'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Left_Throttle_CutOff, up = device_commands.THROTTLE_Left_Throttle_CutOff, value_down = 1,  name = _('Left Engine Cutoff - OFF'), category = {_('Throttle'), _('Custom')}},
 
-		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Right_Throttle_CutOff, up = device_commands.THROTTLE_Right_Throttle_CutOff, value_down = 0, name = _('Right Engine Cutoff - ON'), category = {_('Engine'), _('Custom')}},
-		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Right_Throttle_CutOff, up = device_commands.THROTTLE_Right_Throttle_CutOff, value_down = 1, name = _('Right Engine Cutoff - OFF'), category = {_('Engine'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Right_Throttle_CutOff, up = device_commands.THROTTLE_Right_Throttle_CutOff, value_down = 0, name = _('Right Engine Cutoff - ON'), category = {_('Throttle'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE, down = device_commands.THROTTLE_Right_Throttle_CutOff, up = device_commands.THROTTLE_Right_Throttle_CutOff, value_down = 1, name = _('Right Engine Cutoff - OFF'), category = {_('Throttle'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINE, down = device_commands.ENGINE_Throttle_Temp, value_down = -1, name = _('Throttle Temp - COLD'), category = {_('Throttle'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE, down = device_commands.ENGINE_Throttle_Temp, value_down = 0, name = _('Throttle Temp - NORM'), category = {_('Throttle'), _('Custom')}},
@@ -159,15 +163,15 @@ return {
 
 		-- Fuel system
 
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, value_down = 0, name = _('Fuel Shutoff - Right - PULL'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, value_down = 1, name = _('Fuel Shutoff - Right - OFF'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, up = device_commands.FUELSYSTEM_Shutoff_R, value_down = 0, value_up = 1, name = _('Fuel Shutoff - Right - PULL else OFF (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, up = device_commands.FUELSYSTEM_Shutoff_R, value_down = 1, value_up = 0, name = _('Fuel Shutoff - Right - OFF else PULL (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, value_down = 0, name = _('Fuel Shutoff - Right - OFF'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, value_down = 1, name = _('Fuel Shutoff - Right - PULL'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, up = device_commands.FUELSYSTEM_Shutoff_R, value_down = 0, value_up = 1, name = _('Fuel Shutoff - Right - OFF else PULL (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_R, up = device_commands.FUELSYSTEM_Shutoff_R, value_down = 1, value_up = 0, name = _('Fuel Shutoff - Right - PULL else OFF (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 0, name = _('Fuel Shutoff - Left - PULL'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 1, name = _('Fuel Shutoff - Left - OFF'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, up = device_commands.FUELSYSTEM_Shutoff_L, value_down = 0, value_up = 1, name = _('Fuel Shutoff - Left - PULL else OFF (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, up = device_commands.FUELSYSTEM_Shutoff_L, value_down = 1, value_up = 0, name = _('Fuel Shutoff - Left - OFF else PULL (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 0, name = _('Fuel Shutoff - Left - OFF'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id = devices.FUELSYSTEM, value_down = 1, name = _('Fuel Shutoff - Left - PULL'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, up = device_commands.FUELSYSTEM_Shutoff_L, value_down = 0, value_up = 1, name = _('Fuel Shutoff - Left - OFF else PULL (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Shutoff_L, up = device_commands.FUELSYSTEM_Shutoff_L, value_down = 1, value_up = 0, name = _('Fuel Shutoff - Left - PULL else OFF (2-way Switch)'), category = {_('ACM Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Fuel_Feed_Cover, up = device_commands.FUELSYSTEM_Fuel_Feed_Cover, value_down = 0, value_up = 1, name = _('Fuel Feed Cover - CLOSE else OPEN (2-way Switch)'), category = {_('Fuelsystem Control Panel'), _('Custom')}},
 
@@ -270,19 +274,19 @@ return {
 
 		-- BIT panel
 
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 0, name = _('Master Test Selector - OFF'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 1/11, name = _('Master Test Selector - LTS'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 2/11, name = _('Master Test Selector - FIRE DET/EXT'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 3/11, name = _('Master Test Selector - INST'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 4/11, name = _('Master Test Selector - OBC'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 5/11, name = _('Master Test Selector - EMERG GEN'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 6/11, name = _('Master Test Selector - MACHLEV'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 7/11, name = _('Master Test Selector - WG SWEEP'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 8/11, name = _('Master Test Selector - FLTGR DW'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 9/11, name = _('Master Test Selector - FLTGR UP'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 10/11, name = _('Master Test Selector - D/L RAD'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 1, name = _('Master Test Selector - STICK SW'), category = {_('Right Sidewall'), _('Custom')}},
-		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_SelectorPush, up = device_commands.BIT_SelectorPush, value_down = 1, value_up = 0, name = _('Master Test Selector - PULL'), category = {_('Right Sidewall'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 0, name = _('Master Test Selector - OFF'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 1/11, name = _('Master Test Selector - LTS'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 2/11, name = _('Master Test Selector - FIRE DET/EXT'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 3/11, name = _('Master Test Selector - INST'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 4/11, name = _('Master Test Selector - OBC'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 5/11, name = _('Master Test Selector - EMERG GEN'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 6/11, name = _('Master Test Selector - MACHLEV'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 7/11, name = _('Master Test Selector - WG SWEEP'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 8/11, name = _('Master Test Selector - FLTGR DW'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 9/11, name = _('Master Test Selector - FLTGR UP'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 10/11, name = _('Master Test Selector - D/L RAD'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_Selector, value_down = 1, name = _('Master Test Selector - STICK SW'), category = {_('BIT Panel'), _('Custom')}},
+		{cockpit_device_id = devices.BITPANEL, down = device_commands.BIT_SelectorPush, up = device_commands.BIT_SelectorPush, value_down = 1, value_up = 0, name = _('Master Test Selector - PULL'), category = {_('BIT Panel'), _('Custom')}},
 
 		-- Light Panel
 
@@ -484,13 +488,13 @@ return {
 
 		-- DISPLAY Panel
 
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.0, name = _('HUD Pitch Ladder Brightness - 0%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.25, name = _('HUD Pitch Ladder Brightness - 25%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.33, name = _('HUD Pitch Ladder Brightness - 33%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.5, name = _('HUD Pitch Ladder Brightness - 50%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.66, name = _('HUD Pitch Ladder Brightness - 66%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.75, name = _('HUD Pitch Ladder Brightness - 75%'), category = {_('PDCP'), _('Custom')}},
-		{cockpit_device_id = devices.HSD, down = device_commands.DISP_HUD_pitch_bright, value_down = 1.0, name = _('HUD Pitch Ladder Brightness - 100%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.0, name = _('HUD Pitch Ladder Brightness - 0%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.25, name = _('HUD Pitch Ladder Brightness - 25%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.33, name = _('HUD Pitch Ladder Brightness - 33%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.5, name = _('HUD Pitch Ladder Brightness - 50%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.66, name = _('HUD Pitch Ladder Brightness - 66%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.75, name = _('HUD Pitch Ladder Brightness - 75%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 1.0, name = _('HUD Pitch Ladder Brightness - 100%'), category = {_('PDCP'), _('Custom')}},
 
 		-- Standby ADI
 
@@ -543,13 +547,13 @@ return {
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.75, name = _('VDI Screen Brightness - 75%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 1.0, name = _('VDI Screen Brightness - 100%'), category = {_('VDI'), _('Custom')}},
 
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.0, name = _('HUD Brightness - 0%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.25, name = _('HUD Brightness - 25%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.33, name = _('HUD Brightness - 33%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.5, name = _('HUD Brightness - 50%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.66, name = _('HUD Brightness - 66%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 0.75, name = _('HUD Brightness - 75%'), category = {_('VDI'), _('Custom')}},
-		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_HUD_bright, value_down = 1.0, name = _('HUD Brightness - 100%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.0, name = _('HUD Brightness - 0%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.25, name = _('HUD Brightness - 25%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.33, name = _('HUD Brightness - 33%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.5, name = _('HUD Brightness - 50%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.66, name = _('HUD Brightness - 66%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.75, name = _('HUD Brightness - 75%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 1.0, name = _('HUD Brightness - 100%'), category = {_('VDI'), _('Custom')}},
 
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VDI_filter, up = device_commands.VDIG_VDI_filter, value_down = 1, name = _('VDI Filter (Toggle)'), category = _('VDI')},
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VDI_filter, up = device_commands.VDIG_VDI_filter, value_down = 1, value_up = 1, name = _('VDI Filter (2-way Switch)'), category = _('VDI')},
@@ -603,5 +607,6 @@ return {
 		{cockpit_device_id = devices.ARC159, action = device_commands.RADIO_UHF_FUNC_Pilot, name = _('UHF ARC-159 Function')},
 		{cockpit_device_id = devices.ARC159, action = device_commands.RADIO_UHF_CHAN_Pilot, name = _('UHF ARC-159 Preset Channel Selector')},
 		{cockpit_device_id = devices.AHRS, action = device_commands.AHRS_HDG_Rotate, name = _('Compass HDG Slave Knob')},
+		{action = iCommandPlaneTrimRudder, name = _('Rudder Trim')},
 	}
 }
