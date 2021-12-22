@@ -19,15 +19,20 @@ return {
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FlapsHandle, value_down = -0.5, name = _('Wing Flaps Handle - 20 DEGREES'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FlapsHandle, value_down = -1, name = _('Wing Flaps Handle - 55 DEGREES'), category = {_('Systems'), _('Custom')}},
 
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = cptmech_commands.Mig15_Command_HydroGainLever, value_down = 0, name = _('Hydro Booster Lever - OFF'), category = {_('Left Control Pedestal'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = cptmech_commands.Mig15_Command_HydroGainLever, value_down = 1, name = _('Hydro Booster Lever - ON'), category = {_('Left Control Pedestal'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = cptmech_commands.Mig15_Command_HydroGainLever, up = cptmech_commands.Mig15_Command_HydroGainLever, value_down = 0, value_up = 1, name = _('Hydro Booster Lever - OFF else ON (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = cptmech_commands.Mig15_Command_HydroGainLever, up = cptmech_commands.Mig15_Command_HydroGainLever, value_down = 1, value_up = 0, name = _('Hydro Booster Lever - ON else OFF (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_AirBrakeSwitch, value_down = 0, name = _('Airbrake Switch - CLOSE'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_AirBrakeSwitch, value_down = 1, name = _('Airbrake Switch - OPEN'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_AirBrakeSwitch, up = control_commands.Mig15_Command_AirBrakeSwitch, value_down = 0, value_up = 1, name = _('Airbrake Switch - CLOSE else OPEN (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_AirBrakeSwitch, up = control_commands.Mig15_Command_AirBrakeSwitch, value_down = 1, value_up = 0, name = _('Airbrake Switch - OPEN else CLOSE (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_HydroGainLever, value_down = 0, name = _('Hydro Booster Lever - OFF'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_HydroGainLever, value_down = 1, name = _('Hydro Booster Lever - ON'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_HydroGainLever, up = control_commands.Mig15_Command_HydroGainLever, value_down = 0, value_up = 1, name = _('Hydro Booster Lever - OFF else ON (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_HydroGainLever, up = control_commands.Mig15_Command_HydroGainLever, value_down = 1, value_up = 0, name = _('Hydro Booster Lever - ON else OFF (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
 
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, value_down = 0, name = _('Throttle Friction Lever - OFF'), category = {_('Left Control Pedestal'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, value_down = 1, name = _('Throttle Friction Lever - ON'), category = {_('Left Control Pedestal'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, up = cptmech_commands.Mig15_Command_FrictionLever, value_down = 0, value_up = 1, name = _('Throttle Friction Lever - OFF else ON (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
-		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, up = cptmech_commands.Mig15_Command_FrictionLever, value_down = 1, value_up = 0, name = _('Throttle Friction Lever - ON else OFF (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, up = control_commands.Mig15_Command_FrictionLever, value_down = 0, value_up = 1, name = _('Throttle Friction Lever - OFF else ON (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.Mig15_Command_FrictionLever, up = control_commands.Mig15_Command_FrictionLever, value_down = 1, value_up = 0, name = _('Throttle Friction Lever - ON else OFF (2-way Switch)'), category = {_('Left Control Pedestal'), _('Custom')}},
 
 		-- Electric System
 
@@ -343,8 +348,7 @@ return {
 		{cockpit_device_id = devices.WEAPON_SYSTEM, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 0, value_up = 1, name = _('Emergency Release Button Cover - CLOSE else OPEN (2-way Switch)'), category = {_('Central Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPON_SYSTEM, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 1, value_up = 0, name = _('Emergency Release Button Cover - OPEN else CLOSE (2-way Switch)'), category = {_('Central Panel'), _('Custom')}},
 
-		-- elements["pnt_196"]			= default_2_position_tumb(_("Guns Safety Cover, OPEN/CLOSE"),devices.WEAPON_SYSTEM, device_commands.Button_10, 196) -- Cover
-		-- down = device_commands.Button_10, cockpit_device_id  = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Guns Safety Cover'), category = _('Stick')},
+		{cockpit_device_id = devices.WEAPON_SYSTEM, down = device_commands.Button_10, up = device_commands.Button_10, value_down = 1, value_up = 1, name = _('Guns Safety Cover (2-way Switch)'), category = {_('Stick'), _('Custom')}},
 
 		-- ASP-3N Gunsight
 
@@ -413,10 +417,10 @@ return {
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TLF_TLG, up = ARC_5_commands.CMD_ARC_5_TLF_TLG, value_down = 0, value_up = 1, name = _('ARK-5 TLG-TLF Switch - TLF else TLG (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_TLF_TLG, up = ARC_5_commands.CMD_ARC_5_TLF_TLG, value_down = 1, value_up = 0, name = _('ARK-5 TLG-TLF Switch - TLG else TLF (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
-		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 0, name = _('ARK-5 Near/Far NDB Switch - FAR'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 1, name = _('ARK-5 Near/Far NDB Switch - NEAR'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, up = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 0, value_up = 1, name = _('ARK-5 Near/Far NDB Switch - FAR else NEAR (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
-		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, up = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 1, value_up = 0, name = _('ARK-5 Near/Far NDB Switch - NEAR else FAR (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 0, name = _('ARK-5 Near/Far NDB Switch - NEAR'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 1, name = _('ARK-5 Near/Far NDB Switch - FAR'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, up = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 0, value_up = 1, name = _('ARK-5 Near/Far NDB Switch - NEAR else FAR (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
+		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_NearOrFar, up = ARC_5_commands.CMD_ARC_5_NearOrFar, value_down = 1, value_up = 0, name = _('ARK-5 Near/Far NDB Switch - FAR else NEAR (2-way Switch)'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_Near1, value_down = 0, name = _('ARK-5 NDB 1 Switch - OFF'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_5, down = ARC_5_commands.CMD_ARC_5_Near1, value_down = 1, name = _('ARK-5 NDB 1 Switch - ON'), category = {_('ARK-5 Radio Compass'), _('Custom')}},
@@ -478,5 +482,6 @@ return {
 	axisCommands = {
 		{cockpit_device_id = devices.CONTROL_INTERFACE, action = control_commands.Mig15_Command_FlapsHandle, name = _('Wing Flaps Handle')},
 		{cockpit_device_id = devices.CONTROL_INTERFACE, action = control_commands.Mig15_Command_FrictionLever, name = _('Throttle Friction Lever')},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, action = control_commands.Mig15_Command_HydroGainLever, name = _('Hydro Booster Lever')},
 	}
 }
