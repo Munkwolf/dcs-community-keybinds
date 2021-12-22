@@ -481,6 +481,7 @@ return {
 		{cockpit_device_id = devices.UFCCONTROL, action = ufc_commands.Knob_Comm2_Vol, name = _('Comm 2 Volume Control')},
 
 		{cockpit_device_id = devices.FQIS, action = fqi_commands.FuelSelector, name = _('Fuel Totalizer Selector')},
+		{cockpit_device_id = devices.DECS, action = engine_commands.Handle_FUEL_SHUT_OFF, name = _('Fuel Shutoff Lever')},
 
 		{cockpit_device_id = devices.MPCD_LEFT, action = mpcd_l_commands.Knob_OFF_BRT, name = _('MPCD Left Off/Brightness Control')},
 		{cockpit_device_id = devices.MPCD_RIGHT, action = mpcd_r_commands.Knob_OFF_BRT, name = _('MPCD Right Off/Brightness Control')},
