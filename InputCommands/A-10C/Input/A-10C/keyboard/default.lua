@@ -1,6 +1,85 @@
 return {
 	keyCommands = {
 
+		-- Left MFCDI
+
+		{cockpit_device_id = 2, down = 3036, up = 3036, value_down = 0, value_up = 0.1, name = _('Left MFCD Power - OFF else NIGHT (3-way Switch Down)'), category = {_('Left MFCD'), _('Custom')}},
+		{cockpit_device_id = 2, down = 3036, up = 3036, value_down = 0.2, value_up = 0.1, name = _('Left MFCD Power - DAY else NIGHT (3-way Switch Up)'), category = {_('Left MFCD'), _('Custom')}},
+
+		-- Right MFCDI
+
+		{cockpit_device_id = 3, down = 3036, up = 3036, value_down = 0, value_up = 0.1, name = _('Right MFCD Power - OFF else NIGHT (3-way Switch Down)'), category = {_('Right MFCD'), _('Custom')}},
+		{cockpit_device_id = 3, down = 3036, up = 3036, value_down = 0.2, value_up = 0.1, name = _('Right MFCD Power - DAY else NIGHT (3-way Switch Up)'), category = {_('Right MFCD'), _('Custom')}},
+
+		-- CMSP
+
+		{cockpit_device_id = 4, down = 3010, value_down = 0, name = _('CMSP MWS Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, value_down = 1, name = _('CMSP MWS Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 0, value_up = 1, name = _('CMSP MWS - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 1, value_up = 0, name = _('CMSP MWS - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+
+		{cockpit_device_id = 4, down = 3012, value_down = 0, name = _('CMSP JMR Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, value_down = 1, name = _('CMSP JMR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 0, value_up = 1, name = _('CMSP JMR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 1, value_up = 0, name = _('CMSP JMR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+
+		{cockpit_device_id = 4, down = 3014, value_down = 0, name = _('CMSP RWR Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, value_down = 1, name = _('CMSP RWR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 0, value_up = 1, name = _('CMSP RWR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 1, value_up = 0, name = _('CMSP RWR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+
+		{cockpit_device_id = 4, down = 3016, value_down = 0, name = _('CMSP DISP Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, value_down = 1, name = _('CMSP DISP Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 0, value_up = 1, name = _('CMSP DISP - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 1, value_up = 0, name = _('CMSP DISP - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+
+		{cockpit_device_id = 4, down = 3008, value_down = 0, name = _('CMSP JTSN Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, value_down = 1, name = _('CMSP JTSN Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 0, value_up = 1, name = _('CMSP JTSN - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 1, value_up = 0, name = _('CMSP JTSN - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+
+		-- AHCP
+
+		{cockpit_device_id = 7, down = 3001, up = 3001, value_down = 0, value_up = 0.1, name = _('Master Switch - TRAIN else SAFE (3-way Switch Down)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3001, up = 3001, value_down = 0.2, value_up = 0.1, name = _('Master Switch - ARM else SAFE (3-way Switch Up)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3002, up = 3002, value_down = 0, value_up = 0.1, name = _('GUN/PAC Switch - GUNARM else SAFE (3-way Switch Down)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3002, up = 3002, value_down = 0.2, value_up = 0.1, name = _('GUN/PAC Switch - ARM else SAFE (3-way Switch Up)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3003, up = 3003, value_down = 0, value_up = 0.1, name = _('LASER Switch - TRAIN else SAFE (3-way Switch Down)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3003, up = 3003, value_down = 0.2, value_up = 0.1, name = _('LASER Switch - ARM else SAFE (3-way Switch Up)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3004, value_down = 0, name = _('TGP Switch - OFF'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3004, value_down = 1, name = _('TGP Switch - ON'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3004, up = 3004, value_down = 0, value_up = 1, name = _('TGP Switch - OFF else ON (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3004, up = 3004, value_down = 1, value_up = 0, name = _('TGP Switch - ON else OFF (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3005, up = 3005, value_down = 0, value_up = 0.1, name = _('ALT SCE Switch - RADAR else DELTA (3-way Switch Down)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3005, up = 3005, value_down = 0.2, value_up = 0.1, name = _('ALT SCE Switch - BARO else DELTA (3-way Switch Up)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3006, value_down = 0, name = _('HUD Mode DAY/NIGHT Switch - NIGHT'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3006, value_down = 1, name = _('HUD Mode DAY/NIGHT Switch - DAY'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3006, up = 3006, value_down = 0, value_up = 1, name = _('HUD Mode DAY/NIGHT Switch - NIGHT else DAY (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3006, up = 3006, value_down = 1, value_up = 0, name = _('HUD Mode DAY/NIGHT Switch - DAY else NIGHT (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3007, value_down = 0, name = _('HUD Mode NORM/STBY Switch - STBY'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3007, value_down = 1, name = _('HUD Mode NORM/STBY Switch - NORM'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3007, up = 3007, value_down = 0, value_up = 1, name = _('HUD Mode NORM/STBY Switch - STBY else NORM (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3007, up = 3007, value_down = 1, value_up = 0, name = _('HUD Mode NORM/STBY Switch - NORM else STBY (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3008, value_down = 0, name = _('CICU Switch - OFF'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3008, value_down = 1, name = _('CICU Switch - ON'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3008, up = 3008, value_down = 0, value_up = 1, name = _('CICU Switch - OFF else ON (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3008, up = 3008, value_down = 1, value_up = 0, name = _('CICU Switch - ON else OFF (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3009, value_down = 0, name = _('JTRS Switch - OFF'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3009, value_down = 1, name = _('JTRS Switch - ON'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3009, up = 3009, value_down = 0, value_up = 1, name = _('JTRS Switch - OFF else ON (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3009, up = 3009, value_down = 1, value_up = 0, name = _('JTRS Switch - ON else OFF (2-way Switch)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = 7, down = 3010, up = 3010, value_down = 0, value_up = 0.1, name = _('IFFCC Switch - OFF else TEST (3-way Switch Down)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+		{cockpit_device_id = 7, down = 3010, up = 3010, value_down = 0.2, value_up = 0.1, name = _('IFFCC Switch - ON else TEST (3-way Switch Up)'), category = {_('Armament HUD Control Panel'), _('Custom')}},
+
 		-- Auxiliary lighting control panel
 
 		{down = 3031, cockpit_device_id = 38, value_down = 1, name = _('HARS-SAS Override'), category = {_('Custom'), _('Auxiliary lighting control panel')}},
@@ -117,25 +196,6 @@ return {
 		{down = 3007, cockpit_device_id = 49, value_down = 1, name = _('Emergency Flood Light On'), category = {_('Custom'), _('Electrical power control panel')}},
 		{down = 3007, cockpit_device_id = 49, value_down = 0, name = _('Emergency Flood Light Off'), category = {_('Custom'), _('Electrical power control panel')}},
 		{down = 3007, up = 3007, cockpit_device_id = 49, value_down = 1, value_up = 0, name = _('Emergency Flood Light On else Off (2-way Switch)'), category = {_('Custom'), _('Electrical power control panel')}},
-
-		-- CMSP
-
-		{down = 3010, cockpit_device_id = 4, value_down = 0.1, name = _('CMSP MWS On'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3010, cockpit_device_id = 4, value_down = 0, name = _('CMSP MWS Off'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3010, up = 3010, cockpit_device_id = 4, value_down = 0.1, value_up = 0.0, name = _('CMSP MWS On else Off (2-way Switch)'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3012, cockpit_device_id = 4, value_down = 0.1, name = _('CMSP JMR On'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3012, cockpit_device_id = 4, value_down = 0, name = _('CMSP JMR Off'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3012, up = 3012, cockpit_device_id = 4, value_down = 0.1, value_up = 0.0, name = _('CMSP JMR On else Off (2-way Switch)'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3014, cockpit_device_id = 4, value_down = 0.1, name = _('CMSP RWR On'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3014, cockpit_device_id = 4, value_down = 0, name = _('CMSP RWR Off'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3014, up = 3014, cockpit_device_id = 4, value_down = 0.1, value_up = 0.0, name = _('CMSP RWR On else Off (2-way Switch)'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3016, cockpit_device_id = 4, value_down = 0.1, name = _('CMSP DISP On'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3016, cockpit_device_id = 4, value_down = 0, name = _('CMSP DISP Off'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3016, up = 3016, cockpit_device_id = 4, value_down = 0.1, value_up = 0.0, name = _('CMSP DISP On else Off (2-way Switch)'), category = {_('Custom'), _('CMSP Panel')}},
-
-		{down = 3008, cockpit_device_id = 4, value_down = 1, name = _('CMSP JTSN On'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3008, cockpit_device_id = 4, value_down = 0, name = _('CMSP JTSN Off'), category = {_('Custom'), _('CMSP Panel')}},
-		{down = 3008, up = 3008, cockpit_device_id = 4, value_down = 1, value_up = 0.0, name = _('CMSP JTSN On else Off (2-way Switch)'), category = {_('Custom'), _('CMSP Panel')}},
 
 		-- Environment System Panel
 
