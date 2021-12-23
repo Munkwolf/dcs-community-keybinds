@@ -21,21 +21,26 @@ return {
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = ldg_commands.Nose_Gear_Brake_SW, up = ldg_commands.Nose_Gear_Brake_SW, value_down = 0, value_up = 1, name = _('Nose Gear Brake System - OFF else ON (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = ldg_commands.Nose_Gear_Brake_SW, up = ldg_commands.Nose_Gear_Brake_SW, value_down = 1, value_up = 0, name = _('Nose Gear Brake System - ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 
+
+		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = ldg_commands.Gear_Emergency_Lever, value_down = 0, name = _('Landing Gear Emergency Handle - OFF'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = ldg_commands.Gear_Emergency_Lever, up = ldg_commands.Gear_Emergency_Lever, value_down = 0.2, value_up = 0, name = _('Landing Gear Emergency Handle - OFF else PULL (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = ldg_commands.Gear_Emergency_Lever, up = ldg_commands.Gear_Emergency_Lever, value_down = 0.6, value_up = 0, name = _('Landing Gear Emergency Handle - PULL else OFF (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+
 		-- Exterior Lights Panel
 
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, value_down = 0, name = _('Navigation Lights - OFF'), category = {_('Lights Commands'), _('Custom')}},
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, value_down = 0.2, name = _('Navigation Lights - 30%'), category = {_('Lights Commands'), _('Custom')}},
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, value_down = 0.6, name = _('Navigation Lights - 10%'), category = {_('Lights Commands'), _('Custom')}},
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, value_down = 1, name = _('Navigation Lights - 100%'), category = {_('Lights Commands'), _('Custom')}},
-		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 0.2, value_up = 0, name = _('Navigation Lights - 30% else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 0.6, value_up = 0, name = _('Navigation Lights - 10% else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 1, value_up = 0, name = _('Navigation Lights - 100% else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 0.2, value_up = 0, name = _('Navigation Lights - 30% else OFF (2-way Switch)'), category = {_('Lights Commands'), _('Custom')}},
+		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 0.6, value_up = 0, name = _('Navigation Lights - 10% else OFF (2-way Switch)'), category = {_('Lights Commands'), _('Custom')}},
+		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Nav_Lights_SW, up = extlts_commands.Nav_Lights_SW, value_down = 1, value_up = 0, name = _('Navigation Lights - 100% else OFF (2-way Switch)'), category = {_('Lights Commands'), _('Custom')}},
 
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, value_down = -1, name = _('Nose Lights Switch - TAXI'), category = {_('Lights Commands'), _('Custom')}},
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, value_down = 0, name = _('Nose Lights Switch - OFF'), category = {_('Lights Commands'), _('Custom')}},
 		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, value_down = 1, name = _('Nose Lights Switch - LANDING'), category = {_('Lights Commands'), _('Custom')}},
-		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, up = extlts_commands.Landing_Ligths_SW, value_down = -1, value_up = 0, name = _('Nose Lights Switch - TAXI else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, up = extlts_commands.Landing_Ligths_SW, value_down = 1, value_up = 0, name = _('Nose Lights Switch - LANDING else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, up = extlts_commands.Landing_Ligths_SW, value_down = -1, value_up = 0, name = _('Nose Lights Switch - TAXI else OFF (2-way Switch)'), category = {_('Lights Commands'), _('Custom')}},
+		{cockpit_device_id = devices.EXTLTS_CONTROLS, down = extlts_commands.Landing_Ligths_SW, up = extlts_commands.Landing_Ligths_SW, value_down = 1, value_up = 0, name = _('Nose Lights Switch - LANDING else OFF (2-way Switch)'), category = {_('Lights Commands'), _('Custom')}},
 
 		-- Flight Instruments Panel
 
@@ -321,13 +326,13 @@ return {
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_tgt_lock, up = sensors_commands.rdr_tgt_lock, value_down = 0, value_up = 1, name = _('RP-5 Radar Target Lock Switch (AR-18-16 Tracking Antenna) - OFF else ON (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_tgt_lock, up = sensors_commands.rdr_tgt_lock, value_down = 1, value_up = 0, name = _('RP-5 Radar Target Lock Switch (AR-18-16 Tracking Antenna) - ON else OFF (2-way Switch)'), category = {_('Radar Commands'), _('Custom')}},
 
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 0%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.25, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 25%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.33, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 33%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.5, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 50%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.66, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 66%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.75, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 75%'), category = {_('Radar Commands'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 1, name = _('RP-5 Radar Electronic Horizon Elevation Adjustment Knob - 100%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 0%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.25, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 25%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.33, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 33%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.5, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 50%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.66, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 66%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 0.75, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 75%'), category = {_('Radar Commands'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR_RP5, down = sensors_commands.rdr_scr_brt, value_down = 1, name = _('RP-5 Radar Screen Brightness Adjustment Knob - 100%'), category = {_('Radar Commands'), _('Custom')}},
 
 		-- Flight Control
 
@@ -434,6 +439,9 @@ return {
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.66, name = _('RSIU-4V Volume Control Knob - 66%'), category = {_('Radios'), _('Custom')}},
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 0.75, name = _('RSIU-4V Volume Control Knob - 75%'), category = {_('Radios'), _('Custom')}},
 		{cockpit_device_id = devices.RADIO_RSIU4V, down = radio_commands.Radio_Volume, value_down = 1, name = _('RSIU-4V Volume Control Knob - 100%'), category = {_('Radios'), _('Custom')}},
+
+		{pressed = iCommandPlaneUHFVolumeDec, name = _('Radio Volume Dec (Pressed)'), category = {_('Radios'), _('Custom')}},
+		{pressed = iCommandPlaneUHFVolumeInc, name = _('Radio Volume Inc (Pressed)'), category = {_('Radios'), _('Custom')}},
 
 		-- Right
 
@@ -690,10 +698,10 @@ return {
 		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Environment_Ctrl_SW, up = misc_commands.Environment_Ctrl_SW, value_down = -1, value_up = 0, name = _('Cockpit Temperature Select - HOT else AUTO (2-way Switch)'), category = {_('Systems'), _('Custom')}},
         {cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Environment_Ctrl_SW, up = misc_commands.Environment_Ctrl_SW, value_down = 1, value_up = 0, name = _('Cockpit Temperature Select - COLD else AUTO (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 
-		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.ENVMNT_CONTROL, value_down = 0, name = _('Cockpit Ventilation Switch - OFF'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.ENVMNT_CONTROL, value_down = 1, name = _('Cockpit Ventilation Switch - ON'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.ENVMNT_CONTROL, up = misc_commands.ENVMNT_CONTROL, value_down = 0, value_up = 1, name = _('Cockpit Ventilation Switch - OFF else ON (2-way Switch)'), category = {_('Systems'), _('Custom')}},
-		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.ENVMNT_CONTROL, up = misc_commands.ENVMNT_CONTROL, value_down = 1, value_up = 0, name = _('Cockpit Ventilation Switch - ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Ventilation_Switch, value_down = 0, name = _('Cockpit Ventilation Switch - OFF'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Ventilation_Switch, value_down = 1, name = _('Cockpit Ventilation Switch - ON'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Ventilation_Switch, up = misc_commands.Ventilation_Switch, value_down = 0, value_up = 1, name = _('Cockpit Ventilation Switch - OFF else ON (2-way Switch)'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.ENVMNT_CONTROL, down = misc_commands.Ventilation_Switch, up = misc_commands.Ventilation_Switch, value_down = 1, value_up = 0, name = _('Cockpit Ventilation Switch - ON else OFF (2-way Switch)'), category = {_('Systems'), _('Custom')}},
 		
 		-- Canopy
 
