@@ -151,13 +151,22 @@ return {
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNsound, value_down = 0.75, name = _('RSBN Sound - 75%'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNsound, value_down = 1.0, name = _('RSBN Sound - 100%'), category = {_('Avionics'), _('Custom')}},
 
+        {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNnav_kb, value_pressed = -0.1, name = _('RSBN Navigation Channel - DECREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNnav_kb, value_pressed = 0.1, name = _('RSBN Navigation Channel - INCREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNland_kb, value_pressed = -0.1, name = _('RSBN Landing Channel - DECREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNland_kb, value_pressed = 0.1, name = _('RSBN Landing Channel - INCREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
+
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNreset, up = device_commands.RSBNreset, value_down = 1, value_up = 0, name = _('RSBN Reset'), category = {_('Avionics'), _('Custom')}},
 
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNbearing, value_down = 0, name = _('RSBN Azimuth Correction Switch - OFF'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNbearing, value_down = 1, name = _('RSBN Azimuth Correction Switch - ON'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNbearing, up = device_commands.RSBNbearing, value_down = 0, value_up = 1, name = _('RSBN Azimuth Correction Switch - OFF else ON (2-way Switch)'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNbearing, up = device_commands.RSBNbearing, value_down = 1, value_up = 0, name = _('RSBN Azimuth Correction Switch - ON else OFF (2-way Switch)'), category = {_('Avionics'), _('Custom')}},
 
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNfar, value_down = 0, name = _('RSBN Distance Correction Switch - OFF'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNfar, value_down = 1, name = _('RSBN Distance Correction Switch - ON'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNfar, up = device_commands.RSBNfar, value_down = 0, value_up = 1, name = _('RSBN Distance Correction Switch - OFF else ON'), category = {_('Avionics'), _('Custom')}},
-        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNfar, up = device_commands.RSBNfar, value_down = 1, value_up = 0, name = _('RSBN  Distance Correction Switch - ON else OFF'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNfar, up = device_commands.RSBNfar, value_down = 1, value_up = 0, name = _('RSBN Distance Correction Switch - ON else OFF'), category = {_('Avionics'), _('Custom')}},
 
         -- SAU
 
@@ -179,7 +188,10 @@ return {
 
         -- SRZO
 
-        {cockpit_device_id = devices.SRZO, down = device_commands.SRZOvopros, up = device_commands.SRZOvopros, value_down = 1, value_up = 1, name = _('SRZO IFF Coder/Decoder On/Off (2-way Switch)'), category = {_('SRZO'), _('Custom')}},
+        {cockpit_device_id = devices.SRZO, down = device_commands.SRZOvopros, value_down = 0, name = _('SRZO IFF Coder/Decoder - OFF'), category = {_('SRZO'), _('Custom')}},
+        {cockpit_device_id = devices.SRZO, down = device_commands.SRZOvopros, value_down = 1, name = _('SRZO IFF Coder/Decoder - ON'), category = {_('SRZO'), _('Custom')}},
+        {cockpit_device_id = devices.SRZO, down = device_commands.SRZOvopros, up = device_commands.SRZOvopros, value_down = 0, value_up = 1, name = _('SRZO IFF Coder/Decoder - OFF else ON (2-way Switch)'), category = {_('SRZO'), _('Custom')}},
+        {cockpit_device_id = devices.SRZO, down = device_commands.SRZOvopros, up = device_commands.SRZOvopros, value_down = 1, value_up = 0, name = _('SRZO IFF Coder/Decoder - ON else OFF (2-way Switch)'), category = {_('SRZO'), _('Custom')}},
 
         {cockpit_device_id = devices.SRZO, down = device_commands.SRZOcodes, value_down = 0.0, name = _('SRZO Code 1'), category = {_('SRZO'), _('Custom')}},
         {cockpit_device_id = devices.SRZO, down = device_commands.SRZOcodes, value_down = 0.08, name = _('SRZO Code 2'), category = {_('SRZO'), _('Custom')}},
@@ -225,11 +237,11 @@ return {
 
         {cockpit_device_id = devices.SOD, down = device_commands.SODident, up = device_commands.SODident, value_down = 1, value_up = 0, name = _('SOD Identify'), category = {_('SOD'), _('Custom')}},
 
-        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, value_down = 0.0, name = _('SOD Wave Selector - 2'), category = {_('SOD'), _('Custom')}},
+        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, value_down = 0.0, name = _('SOD Wave Selector - 3'), category = {_('SOD'), _('Custom')}},
         {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, value_down = 0.5, name = _('SOD Wave Selector - 1'), category = {_('SOD'), _('Custom')}},
-        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, value_down = 1.0, name = _('SOD Wave Selector - 3'), category = {_('SOD'), _('Custom')}},
-        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, up = device_commands.SODvolni, value_down = 0, value_up = 0.5, name = _('SOD Wave Selector - 2 else 1 (2-way Switch)'), category = {_('SOD'), _('Custom')}},
-        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, up = device_commands.SODvolni, value_down = 1, value_up = 0.5, name = _('SOD Wave Selector - 3 else 1 (2-way Switch)'), category = {_('SOD'), _('Custom')}},
+        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, value_down = 1.0, name = _('SOD Wave Selector - 2'), category = {_('SOD'), _('Custom')}},
+        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, up = device_commands.SODvolni, value_down = 0, value_up = 0.5, name = _('SOD Wave Selector - 3 else 1 (2-way Switch)'), category = {_('SOD'), _('Custom')}},
+        {cockpit_device_id = devices.SOD, down = device_commands.SODvolni, up = device_commands.SODvolni, value_down = 1, value_up = 0.5, name = _('SOD Wave Selector - 2 else 1 (2-way Switch)'), category = {_('SOD'), _('Custom')}},
 
         {cockpit_device_id = devices.SOD, down = device_commands.SODmode, value_down = 0.0, name = _('SOD Mode - FINE'), category = {_('SOD'), _('Custom')}},
         {cockpit_device_id = devices.SOD, down = device_commands.SODmode, value_down = 0.25, name = _('SOD Mode - COARSE'), category = {_('SOD'), _('Custom')}},
@@ -274,7 +286,7 @@ return {
 
         -- SPS
 
-        {cockpit_device_id = devices.SPS, down = device_commands.SPSon, up = device_commands.SPSon, value_down = 1, value_up = 0, name = _('SPS System Off/On (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
+        {cockpit_device_id = devices.SPS, down = device_commands.SPSon, up = device_commands.SPSon, value_down = 1, value_up = 1, name = _('SPS System Off/On (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
 
         -- ARU
 
@@ -282,14 +294,14 @@ return {
 
         -- Airbrake
 
-        {cockpit_device_id = devices.AIRBRAKE, down = device_commands.Airbrakes, up = device_commands.Airbrakes, value_down = 1, value_up = 0, name = _('Airbrakes On/Off (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
+        {cockpit_device_id = devices.AIRBRAKE, down = device_commands.Airbrakes, up = device_commands.Airbrakes, value_down = 1, value_up = 1, name = _('Airbrakes On/Off (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
 
         -- Gear brakes
         
         {cockpit_device_id = devices.GEAR_BRAKES, down = device_commands.ABSon, up = device_commands.ABSon, value_down = 1, value_up = 1, name = _('ABS Off/On (2-way Switch)'), category = {_('Gears, brakes and chute'), _('Custom')}},
 
         {cockpit_device_id = devices.GEAR_BRAKES, down = device_commands.NosegearBrake, up = device_commands.NosegearBrake, value_down = 1, value_up = 1, name = _('Nosegear Brake Off/On (2-way Switch)'), category = {_('Gears, brakes and chute'), _('Custom')}},
-        {cockpit_device_id = devices.GEAR_BRAKES, down = device_commands.EmergBrakes, up = device_commands.EmergBrakes, value_down = 1, value_up = 0, name = _('Emergency Brake (2-way Switch)'), category = {_('Gears, brakes and chute'), _('Custom')}},
+        {cockpit_device_id = devices.GEAR_BRAKES, down = device_commands.EmergBrakes, up = device_commands.EmergBrakes, value_down = 1, value_up = 1, name = _('Emergency Brake (2-way Switch)'), category = {_('Gears, brakes and chute'), _('Custom')}},
 
         -- Gears
 
@@ -334,7 +346,7 @@ return {
 
         -- Hydraulics
 
-        {cockpit_device_id = devices.MAIN_HYDRO, down = device_commands.NR27on, up = device_commands.NR27on, value_down = 1, value_up = 0, name = _('Emergency Hydraulic Pump On/Off (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
+        {cockpit_device_id = devices.MAIN_HYDRO, down = device_commands.NR27on, up = device_commands.NR27on, value_down = 1, value_up = 1, name = _('Emergency Hydraulic Pump On/Off (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
         {cockpit_device_id = devices.MAIN_HYDRO, down = device_commands.AileronBoosters, up = device_commands.AileronBoosters, value_down = 1, value_up = 1, name = _('Aileron Booster - Off/On (2-way Switch)'), category = {_('Flight Controls'), _('Custom')}},
 
         -- KPP
