@@ -15,6 +15,8 @@ return {
 		{cockpit_device_id = devices.VTH, down = 3201, up = 3201, value_down = 0, value_up = 0.5, name = _('HUD - OFF else ON (3-way Switch Down)'), category = {_('HUD'), _('Custom')}},
 		{cockpit_device_id = devices.VTH, down = 3201, up = 3201, value_down = 1, value_up = 0.5, name = _('HUD - TEST else ON (3-way Switch Up)'), category = {_('HUD'), _('Custom')}},
 
+		{cockpit_device_id = devices.VTH, down = 3203, up = 3203, value_down = 1, value_up = 0, name = _('HUD Declutter (Fixed)'), category = {_('HUD'), _('Custom')}},
+
 		{cockpit_device_id = devices.RS, down = 3204, up = 3204, value_down = 0, value_up = 0.5, name = _('Radar Altimeter - ZB else H (3-way Switch Up)'), category = {_('HUD'), _('Custom')}},
 		{cockpit_device_id = devices.RS, down = 3204, up = 3204, value_down = 1, value_up = 0.5, name = _('Radar Altimeter - SELH else H (3-way Switch Down)'), category = {_('HUD'), _('Custom')}},
 
@@ -56,40 +58,46 @@ return {
 		{cockpit_device_id = devices.VTB, down = cmds.Button_223, up = cmds.Button_223, value_down = 0, value_up = 1, name = _('VTB Orientation Selector - UP else DOWN (2-way Switch)'), category = {_('HDD'), _('Custom')}},
 		{cockpit_device_id = devices.VTB, down = cmds.Button_223, up = cmds.Button_223, value_down = 1, value_up = 0, name = _('VTB Orientation Selector - DOWN else UP (2-way Switch)'), category = {_('HDD'), _('Custom')}},
 
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0, name = _('Markers Brightness - 0%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.25, name = _('Markers Brightness - 25%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.33, name = _('Markers Brightness - 33%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.5, name = _('Markers Brightness - 50%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.66, name = _('Markers Brightness - 66%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.75, name = _('Markers Brightness - 75%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 1, name = _('Markers Brightness - 100%'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0, name = _('Markers Brightness - 0'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.1, name = _('Markers Brightness - 1'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.2, name = _('Markers Brightness - 2'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.3, name = _('Markers Brightness - 3'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.4, name = _('Markers Brightness - 4'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.5, name = _('Markers Brightness - 5'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.6, name = _('Markers Brightness - 6'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_224, value_down = 0.7, name = _('Markers Brightness - 7'), category = {_('HDD'), _('Custom')}},
 
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0, name = _('Main Brightness - 0%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.25, name = _('Main Brightness - 25%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.33, name = _('Main Brightness - 33%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.5, name = _('Main Brightness - 50%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.66, name = _('Main Brightness - 66%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.75, name = _('Main Brightness - 75%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 1, name = _('Main Brightness - 100%'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0, name = _('Main Brightness - 0'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.1, name = _('Main Brightness - 1'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.2, name = _('Main Brightness - 2'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.3, name = _('Main Brightness - 3'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.4, name = _('Main Brightness - 4'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.5, name = _('Main Brightness - 5'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.6, name = _('Main Brightness - 6'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_225, value_down = 0.7, name = _('Main Brightness - 7'), category = {_('HDD'), _('Custom')}},
 
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0, name = _('Video Brightness - 0%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.25, name = _('Video Brightness - 25%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.33, name = _('Video Brightness - 33%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.5, name = _('Video Brightness - 50%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.66, name = _('Video Brightness - 66%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.75, name = _('Video Brightness - 75%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 1, name = _('Video Brightness - 100%'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0, name = _('Video Brightness - 0'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.1, name = _('Video Brightness - 1'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.2, name = _('Video Brightness - 2'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.3, name = _('Video Brightness - 3'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.4, name = _('Video Brightness - 4'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.5, name = _('Video Brightness - 5'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.6, name = _('Video Brightness - 6'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_226, value_down = 0.7, name = _('Video Brightness - 7'), category = {_('HDD'), _('Custom')}},
 
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0, name = _('Cavalier Brightness - 0%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.25, name = _('Cavalier Brightness - 25%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.33, name = _('Cavalier Brightness - 33%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.5, name = _('Cavalier Brightness - 50%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.66, name = _('Cavalier Brightness - 66%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.75, name = _('Cavalier Brightness - 75%'), category = {_('HDD'), _('Custom')}},
-		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 1, name = _('Cavalier Brightness - 100%'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0, name = _('Cavalier Brightness - 0'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.1, name = _('Cavalier Brightness - 1'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.2, name = _('Cavalier Brightness - 2'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.3, name = _('Cavalier Brightness - 3'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.4, name = _('Cavalier Brightness - 4'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.5, name = _('Cavalier Brightness - 5'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.6, name = _('Cavalier Brightness - 6'), category = {_('HDD'), _('Custom')}},
+		{cockpit_device_id = devices.VTB, down = cmds.Button_227, value_down = 0.7, name = _('Cavalier Brightness - 7'), category = {_('HDD'), _('Custom')}},
 
 		-- PCA/PPA
 
+		{cockpit_device_id = devices.PCA, down = 3463, value_down = 0, name = _('Gun - SAFE'), category = {_('PCA Weapons Management'), _('Custom')}},
+		{cockpit_device_id = devices.PCA, down = 3463, value_down = 1, name = _('Gun - ARMED'), category = {_('PCA Weapons Management'), _('Custom')}},
 		{cockpit_device_id = devices.PCA, down = 3463, up = 3463, value_down = 0, value_up = 1, name = _('Gun - SAFE else ARMED (2-way Switch)'), category = {_('PCA Weapons Management'), _('Custom')}},
 		{cockpit_device_id = devices.PCA, down = 3463, up = 3463, value_down = -1, value_up = 1, name = _('Master Arm - SAFE else ARMED (2-way Switch)'), category = {_('PCA Weapons Management'), _('Custom')}},
 
@@ -105,6 +113,10 @@ return {
 
 		-- AFCS
 
+		{cockpit_device_id = devices.AFCS, down = cmds.Button_282, up = cmds.Button_282, value_down = 1, value_up = 0, name = _('Autopilot Master Button (Fixed)'), category = {_('Autopilot'), _('Custom')}},
+		{cockpit_device_id = devices.AFCS, down = cmds.Button_285, up = cmds.Button_285, value_down = 1, value_up = 0, name = _('Altitude Hold Button (Fixed)'), category = {_('Autopilot'), _('Custom')}},
+		{cockpit_device_id = devices.AFCS, down = cmds.Button_288, up = cmds.Button_288, value_down = 1, value_up = 0, name = _('Selected Altitude Hold Button (Fixed)'), category = {_('Autopilot'), _('Custom')}},
+		{cockpit_device_id = devices.AFCS, down = cmds.Button_294, up = cmds.Button_294, value_down = 1, value_up = 0, name = _('Approach Hold Button (Fixed)'), category = {_('Autopilot'), _('Custom')}},
 		{cockpit_device_id = devices.AFCS, down = cmds.Button_302, up = cmds.Button_302, value_down = 1, value_up = 0, name = _('Autopilot Lights Test Button'), category = {_('Autopilot'), _('Custom')}},
 
 		{cockpit_device_id = devices.AFCS, down = cmds.Button_514, value_down = 0, name = _('Autopilot Test Switch Cover - CLOSED'), category = {_('Autopilot'), _('Custom')}},
@@ -155,7 +167,12 @@ return {
 		{cockpit_device_id = devices.ENGINE, down = cmds.Button_420, up = cmds.Button_420, value_down = 1, value_up = 0, name = _('FBW Gain Mode Switch Cover - OPEN else CLOSED (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINE, down = cmds.Button_421, up = cmds.Button_421, value_down = 1, value_up = 0, name = _('FBW Gain - EMER else NORM (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
+
+		{cockpit_device_id = devices.ENGINE, down = cmds.Button_422, value_down = 0, name = _('FBW G-Limiter - AA'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE, down = cmds.Button_422, value_down = 1, name = _('FBW G-Limiter - CHARGES'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE, down = cmds.Button_422, up = cmds.Button_422, value_down = 1, value_up = 0, name = _('FBW G-Limiter - CHARGES else AA (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
+
+		{cockpit_device_id = devices.AFCS, down = 3423, up = 3423, value_down = 1, value_up = 0, name = _('FBW RESET (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
 
 		-- Pelles, Souries and Becs
 
@@ -171,10 +188,10 @@ return {
 
 -- elements["PTN_396"] = default_axis_limited("Pedal Adjustment Lever",							devices.SUBSYSTEMS,	cmds.Button_396,396, 0.5, -0.1, true, 0)
 
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_395, value_down = 0, name = _('Hydraulic System Selector Switch - UP'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_395, value_down = 1, name = _('Hydraulic System Selector Switch - DOWN'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_395, up = cmds.Button_395, value_down = 0, value_up = 1, name = _('Hydraulic System Selector Switch - UP else DOWN (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_395, up = cmds.Button_395, value_down = 1, value_up = 0, name = _('Hydraulic System Selector Switch - DOWN else UP (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.HYDRAULICS, down = cmds.Button_395, value_down = 0, name = _('Hydraulic System Selector Switch - UP'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.HYDRAULICS, down = cmds.Button_395, value_down = 1, name = _('Hydraulic System Selector Switch - DOWN'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.HYDRAULICS, down = cmds.Button_395, up = cmds.Button_395, value_down = 0, value_up = 1, name = _('Hydraulic System Selector Switch - UP else DOWN (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.HYDRAULICS, down = cmds.Button_395, up = cmds.Button_395, value_down = 1, value_up = 0, name = _('Hydraulic System Selector Switch - DOWN else UP (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
 
 		-- RADAR
 
@@ -195,8 +212,12 @@ return {
 		{cockpit_device_id = devices.PCR, down = cmds.Button_488, value_down = 0.75, name = _('Radar Gain Dial - 75%'), category = {_('RDI Radar'), _('Custom')}},
 		{cockpit_device_id = devices.PCR, down = cmds.Button_488, value_down = 1, name = _('Radar Gain Dial - 100%'), category = {_('RDI Radar'), _('Custom')}},
 
-		{cockpit_device_id = devices.PCR, down = cmds.Button_489, value_down = 1, name = _('Validate channel change'), category = {_('RDI Radar'), _('Custom')}},
-		{cockpit_device_id = devices.PCR, down = cmds.Button_499, up = cmds.Button_499, value_down = 1, value_up = 0, name = _('Radar Mode - B-SCOPE else PPI (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.PCR, down = cmds.Button_489, up = cmds.Button_489, value_down = 1, value_up = 0, name = _('Validate channel change (Fixed)'), category = {_('RDI Radar'), _('Custom')}},
+		{cockpit_device_id = devices.PCR, down = cmds.Button_491, up = cmds.Button_491, value_down = 1, value_up = 0, name = _('Hardened Clutter Gate Mode (Fixed)'), category = {_('RDI Radar'), _('Custom')}},
+		{cockpit_device_id = devices.PCR, down = cmds.Button_493, up = cmds.Button_493, value_down = 1, value_up = 0, name = _('A/G Radar DEC Mode Button (Fixed)'), category = {_('RDI Radar'), _('Custom')}},
+		{cockpit_device_id = devices.PCR, down = cmds.Button_495, up = cmds.Button_495, value_down = 1, value_up = 0, name = _('A/G Radar VISU Mode Button (Fixed)'), category = {_('RDI Radar'), _('Custom')}},
+
+		{cockpit_device_id = devices.PCR, down = cmds.Button_499, up = cmds.Button_499, value_down = 1, value_up = 0, name = _('Radar Mode - B-SCOPE else PPI (2-way Switch)'), category = {_('RDI Radar'), _('Custom')}},
 
 		{cockpit_device_id = devices.PCR, down = cmds.Button_500, value_down = 0, name = _('Target Memory Time Selector Switch - OFF'), category = {_('RDI Radar'), _('Custom')}},
 		{cockpit_device_id = devices.PCR, down = cmds.Button_500, value_down = 1, name = _('Target Memory Time Selector Switch - ON'), category = {_('RDI Radar'), _('Custom')}},
@@ -206,6 +227,7 @@ return {
 		{cockpit_device_id = devices.PCR, down = cmds.Button_503, up = cmds.Button_503, value_down = -1, value_up = 0, name = _('Radar Range Selector Switch - DOWN'), category = {_('RDI Radar'), _('Custom')}},
 		{cockpit_device_id = devices.PCR, down = cmds.Button_503, up = cmds.Button_503, value_down = 1, value_up = 0, name = _('Radar Range Selector Switch - UP'), category = {_('RDI Radar'), _('Custom')}},
 
+		{cockpit_device_id = devices.PCR, down = cmds.Button_504, up = cmds.Button_504, value_down = 1, value_up = 0, name = _('PSIC/STT Mode Button (Fixed)'), category = {_('RDI Radar'), _('Custom')}},
 		{cockpit_device_id = devices.PCR, down = cmds.Button_710, up = cmds.Button_710, value_down = 1, value_up = 0, name = _('TDC Mode - Z else S (2-way Switch)'), category = {_('RDI Radar'), _('Custom')}},
 
 		-- RADAR IFF
@@ -243,6 +265,15 @@ return {
 		-- PCN
 
 -- elements["PTN_575"]	= default_axis_limited(_("Light Brightnes Control/Test"),					devices.PCN_NAV,	cmds.Button_575, 575, 10, 0.5, false, false, {-0.1, 1.0})
+
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_576, up = cmds.Button_576, value_down = 1, value_up = 0, name = _('BAD Offset Waypoint (Fixed)'), category = {_('INS'), _('Custom')}},
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_578, up = cmds.Button_578, value_down = 1, value_up = 0, name = _('INS Update (Fixed)'), category = {_('INS'), _('Custom')}},
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_580, up = cmds.Button_580, value_down = 1, value_up = 0, name = _('VAL Validate (Fixed)'), category = {_('INS'), _('Custom')}},
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_582, up = cmds.Button_582, value_down = 1, value_up = 0, name = _('MRQ Markpoint (Fixed)'), category = {_('INS'), _('Custom')}},
+
+
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_110, up = cmds.Button_110, value_down = 1, value_up = 0, name = _('Next Waypoint Button (Fixed)'), category = {_('Navigation'), _('Custom')}},
+		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_111, up = cmds.Button_111, value_down = 1, value_up = 0, name = _('Previous Waypoint Button (Fixed)'), category = {_('Navigation'), _('Custom')}},
 
 		-- EW PANEL
 
@@ -456,14 +487,14 @@ return {
 
 		{cockpit_device_id = devices.MISCPANELS, down = cmds.Button_666, up = cmds.Button_666, value_down = 0, value_up = 1, name = _('Parking Brake - OFF else ON (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
 
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_655, value_down = 1, name = _('Canopy Lock Toggle'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_655, up = cmds.Button_655, value_down = 1, value_up = 1, name = _('Canopy Lock (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_655, value_down = 1, name = _('Canopy Lock Toggle'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_655, up = cmds.Button_655, value_down = 1, value_up = 1, name = _('Canopy Lock (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
 
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_656, value_down = 0, name = _('Canopy Lock Handle - LOCK'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_656, value_down = 0.5, name = _('Canopy Lock Handle - NEUTRAL'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_656, value_down = 1, name = _('Canopy Lock Handle - LOWER'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_656, up = cmds.Button_656, value_down = 0, value_up = 1, name = _('Canopy Lock Handle - LOCK else NEUTRAL (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
-		{cockpit_device_id = devices.SUBSYSTEMS, down = cmds.Button_656, up = cmds.Button_656, value_down = 1, value_up = 0, name = _('Canopy Lock Handle - LOWER else NEUTRAL (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_656, value_down = -1, name = _('Canopy Lock Handle - LOCK'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_656, value_down = 0, name = _('Canopy Lock Handle - NEUTRAL'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_656, value_down = 1, name = _('Canopy Lock Handle - LOWER'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_656, up = cmds.Button_656, value_down = -1, value_up = 0, name = _('Canopy Lock Handle - LOCK else NEUTRAL (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
+		{cockpit_device_id = devices.CANOPY, down = cmds.Button_656, up = cmds.Button_656, value_down = 1, value_up = 0, name = _('Canopy Lock Handle - LOWER else NEUTRAL (2-way Switch)'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
 
 		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_905, value_down = 0, name = _('Emergency Compass - OFF'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
 		{cockpit_device_id = devices.PCN_NAV, down = cmds.Button_905, value_down = 1, name = _('Emergency Compass - ON'), category = {_('Hydraulic & Mechanical'), _('Custom')}},
@@ -532,14 +563,16 @@ return {
 		{cockpit_device_id = devices.FLIGHTINST, down = cmds.Button_315, up = cmds.Button_315, value_down = 0, value_up = 1, name = _('ADI Backlight Switch - OFF else ON (2-way Switch)'), category = {_('Navigation'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHTINST, down = cmds.Button_315, up = cmds.Button_315, value_down = 1, value_up = 0, name = _('ADI Backlight Switch - ON else OFF (2-way Switch)'), category = {_('Navigation'), _('Custom')}},
 
-		{down = cmds.Command_ADI_Cage_Pull, value_down = 0, name = _('Backup ADI Uncage Lock - NORMAL'), category = {_('Navigation'), _('Custom')}},
-		{down = cmds.Command_ADI_Cage_Pull, value_down = 1, name = _('Backup ADI Uncage Lock - PULL'), category = {_('Navigation'), _('Custom')}},
-		{down = cmds.Command_ADI_Cage_Pull, up = cmds.Command_ADI_Cage_Pull, value_down = 0, value_up = 1, name = _('Backup ADI Uncage Lock - NORMAL else PULL (2-way Switch)'), category = {_('Navigation'), _('Custom')}},
+		{down = cmds.ADI_Cage_Pull, value_down = 0, name = _('Backup ADI Uncage Lock - NORMAL'), category = {_('Navigation'), _('Custom')}},
+		{down = cmds.ADI_Cage_Pull, value_down = 1, name = _('Backup ADI Uncage Lock - PULL'), category = {_('Navigation'), _('Custom')}},
+		{down = cmds.ADI_Cage_Pull, up = cmds.ADI_Cage_Pull, value_down = 0, value_up = 1, name = _('Backup ADI Uncage Lock - NORMAL else PULL (2-way Switch)'), category = {_('Navigation'), _('Custom')}},
 
-		{pressed = cmds.Command_ADI_Pitch_CCW, value_pressed = 0.025, name = _('Backup ADI Pitch Adjust - CCW (Slow)'), category = {_('Navigation'), _('Custom')}},
-		{pressed = cmds.Command_ADI_Pitch_CW, value_pressed = 0.025, name = _('Backup ADI Pitch Adjust - CW (Slow)'), category = {_('Navigation'), _('Custom')}},
-		{pressed = cmds.Command_ADI_Pitch_CCW, value_pressed = 0.1, name = _('Backup ADI Pitch Adjust - CCW (Fast)'), category = {_('Navigation'), _('Custom')}},
-		{pressed = cmds.Command_ADI_Pitch_CW, value_pressed = 0.1, name = _('Backup ADI Pitch Adjust - CW (Fast)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CCW, value_pressed = 0.025, name = _('Backup ADI Pitch Adjust - CCW (Slow)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CW, value_pressed = 0.025, name = _('Backup ADI Pitch Adjust - CW (Slow)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CCW, value_pressed = 0.05, name = _('Backup ADI Pitch Adjust - CCW (Pressed)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CW, value_pressed = 0.05, name = _('Backup ADI Pitch Adjust - CW (Pressed)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CCW, value_pressed = 0.1, name = _('Backup ADI Pitch Adjust - CCW (Fast)'), category = {_('Navigation'), _('Custom')}},
+		{pressed = cmds.ADI_Pitch_CW, value_pressed = 0.1, name = _('Backup ADI Pitch Adjust - CW (Fast)'), category = {_('Navigation'), _('Custom')}},
 
 		-- ECS Panel
 
@@ -582,11 +615,32 @@ return {
 -- elements["PTN_380"] = default_multiposition_knob(_("Mode-3A Hundreds Selector"),						devices.INSTPANEL, cmds.Button_380, 380,  10, 0.1, false, 0)
 -- elements["PTN_381"] = default_multiposition_knob(_("Mode-3A Tens Selector"),							devices.INSTPANEL, cmds.Button_381, 381,  10, 0.1, false, 0)
 -- elements["PTN_382"] = default_multiposition_knob(_("Mode-3A Ones Selector"),							devices.INSTPANEL, cmds.Button_382, 382,  10, 0.1, false, 0)
--- elements["PTN_383"] = default_3_position_tumb_animated(_("Ident Power Switch"),							devices.INSTPANEL, cmds.Button_383, 383, false, false)
--- elements["PTN_384"] = default_2_position_tumb_animated(_("Mode-1 Switch"),								devices.INSTPANEL, cmds.Button_384, 384)
--- elements["PTN_385"] = default_2_position_tumb_animated(_("Mode-2 Switch"),								devices.INSTPANEL, cmds.Button_385, 385)
--- elements["PTN_386"] = default_2_position_tumb_animated(_("Mode-3A Switch"),								devices.INSTPANEL, cmds.Button_386, 386)
--- elements["PTN_387"] = default_2_position_tumb_animated(_("Mode-C Switch"),								devices.INSTPANEL, cmds.Button_387, 387)
+
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_383, value_down = 0, name = _('Ident Power Switch - MIC'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_383, value_down = 0.5, name = _('Ident Power Switch - OUT'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_383, value_down = 1, name = _('Ident Power Switch - IDENT'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_383, up = cmds.Button_383, value_down = 0, value_up = 0.5, name = _('Ident Power Switch - MIC else OUT (3-way Switch Down)'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_383, up = cmds.Button_383, value_down = 1, value_up = 0.5, name = _('Ident Power Switch - IDENT else OUT (3-way Switch Up)'), category = {_('IFF'), _('Custom')}},
+
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_384, value_down = 0, name = _('Mode-1 Switch - OFF'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_384, value_down = 1, name = _('Mode-1 Switch - ON'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_384, up = cmds.Button_384, value_down = 0, value_up = 1, name = _('Mode-1 Switch - OFF else ON (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_384, up = cmds.Button_384, value_down = 1, value_up = 0, name = _('Mode-1 Switch - ON else OFF (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_385, value_down = 0, name = _('Mode-2 Switch - OFF'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_385, value_down = 1, name = _('Mode-2 Switch - ON'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_385, up = cmds.Button_385, value_down = 0, value_up = 1, name = _('Mode-2 Switch - OFF else ON (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_385, up = cmds.Button_385, value_down = 1, value_up = 0, name = _('Mode-2 Switch - ON else OFF (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_386, value_down = 0, name = _('Mode-3A Switch - OFF'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_386, value_down = 1, name = _('Mode-3A Switch - ON'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_386, up = cmds.Button_386, value_down = 0, value_up = 1, name = _('Mode-3A Switch - OFF else ON (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_386, up = cmds.Button_386, value_down = 1, value_up = 0, name = _('Mode-3A Switch - ON else OFF (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_387, value_down = 0, name = _('Mode-C Switch - OFF'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_387, value_down = 1, name = _('Mode-C Switch - ON'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_387, up = cmds.Button_387, value_down = 0, value_up = 1, name = _('Mode-C Switch - OFF else ON (2-way Switch)'), category = {_('IFF'), _('Custom')}},
+		{cockpit_device_id = devices.INSTPANEL, down = cmds.Button_387, up = cmds.Button_387, value_down = 1, value_up = 0, name = _('Mode-C Switch - ON else OFF (2-way Switch)'), category = {_('IFF'), _('Custom')}},
 
 		-- EVF (TAF) panel
 
