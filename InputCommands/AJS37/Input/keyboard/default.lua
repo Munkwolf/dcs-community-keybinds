@@ -107,10 +107,10 @@ return {
 		{cockpit_device_id = devices.ENGINEPANEL, down = 3006, value_down = 0, name = _('Manual Afterburner Fuel Valve - CLOSED'), category = {_('Motor'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINEPANEL, down = 3006, value_down = 1, name = _('Manual Afterburner Fuel Valve - OPEN'), category = {_('Motor'), _('Custom')}},
 
-		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = -0.5, name = _('Instrument Lights Brightness - DECREASE (Slow)'), category = {_('HUD'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = 0.5, name = _('Instrument Lights Brightness - INCREASE (Slow)'), category = {_('HUD'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = -2, name = _('Instrument Lights Brightness - DECREASE (Fast)'), category = {_('HUD'), _('Custom')}},
-		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = 2, name = _('Instrument Lights Brightness - INCREASE (Fast)'), category = {_('HUD'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = -0.5, name = _('HUD Brightness - DECREASE (Slow)'), category = {_('HUD'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = 0.5, name = _('HUD Brightness - INCREASE (Slow)'), category = {_('HUD'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = -2, name = _('HUD Brightness - DECREASE (Fast)'), category = {_('HUD'), _('Custom')}},
+		{cockpit_device_id = devices.FLIGHTDATAUNIT, pressed = 3411, value_pressed = 2, name = _('HUD Brightness - INCREASE (Fast)'), category = {_('HUD'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINEPANEL, down = 3304, value_down = 0, name = _('Autopilot Autothrottle mode AFK - OFF'), category = {_('Flight Control'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINEPANEL, down = 3304, value_down = 1, name = _('Autopilot Autothrottle mode AFK - ON'), category = {_('Flight Control'), _('Custom')}},
@@ -123,6 +123,9 @@ return {
 		{cockpit_device_id = devices.FR22, down = 3014, value_down = 1, name = _('FR22 Radio AM/FM - AM'), category = {_('Radios'), _('Custom')}},
 		{cockpit_device_id = devices.FR22, down = 3014, up = 3014, value_down = 0, value_up = 1, name = _('FR22 Radio AM/FM - FM else AM (2-way Switch)'), category = {_('Radios'), _('Custom')}},
 
+		{cockpit_device_id = devices.FR22, down = 3110, value_down = -1, name = _('FR24 Mode Selector - RIGHT (Fixed)'), category = {_('Radios'), _('Custom')}},
+		{cockpit_device_id = devices.FR22, down = 3110, value_down = 1, name = _('FR24 Mode Selector - LEFT (Fixed)'), category = {_('Radios'), _('Custom')}},
+		
 		{cockpit_device_id = devices.FR22, down = 3011, up = 3011, value_down = 1.0, value_up = 0.0, name = _('Ground Intercom'), category = {_('Radios'), _('Custom')}},
 
 		{cockpit_device_id = devices.FR22, pressed = 3012, value_pressed = -0.5, name = _('Radio Volume Control - DECREASE (Slow)'), category = {_('Radios'), _('Custom')}},
@@ -216,7 +219,7 @@ return {
 
 		{cockpit_device_id = devices.RADAR, down = 3328, value_down = 0, name = _('Radar Pulse - NORMAL'), category = {_('Radar'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR, down = 3328, value_down = 1, name = _('Radar Pulse - SHORT'), category = {_('Radar'), _('Custom')}},
-		{cockpit_device_id = devices.RADAR, down = 3328, up = 3328, value_down = 0, value_up = 1, name = _('Radar Pulse - NORMAL else SHORT (2-way Switch)'), category = {_('Radar'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR, down = 3328, up = 3328, value_down = 1, value_up = 0, name = _('Radar Pulse - SHORT else NORMAL (2-way Switch)'), category = {_('Radar'), _('Custom')}},
 
 		{cockpit_device_id = devices.RADAR, down = 3350, value_down = 0, name = _('Radar Passive Recce - OFF'), category = {_('Radar'), _('Custom')}},
 		{cockpit_device_id = devices.RADAR, down = 3350, value_down = 1, name = _('Radar Passive Recce - ON'), category = {_('Radar'), _('Custom')}},
@@ -247,7 +250,10 @@ return {
 		-- {cockpit_device_id = devices.ENGINEPANEL, down = 3913, value_down = 1, name = _('Autopilot Maintenance Testing Mode - ON'), category = {_('Flight Control'), _('Custom')}},
 		-- {cockpit_device_id = devices.ENGINEPANEL, down = 3913, up = 3913, value_down = 0, value_up = 1, name = _('Autopilot Maintenance Testing Mode - OFF else ON (2-way Switch)'), category = {_('Flight Control'), _('Custom')}},
 
-		{cockpit_device_id = devices.RADAR, down = 3914, value_down = 1, value_up = 0, name = _('Radar/EL Maintenance Test'), category = {_('Radar'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR, down = 3914, value_down = 0, name = _('Radar/EL Maintenance Test - OFF'), category = {_('Radar'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR, down = 3914, value_down = 1, name = _('Radar/EL Maintenance Test - ON'), category = {_('Radar'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR, down = 3914, up = 3914, value_down = 0, value_up = 1, name = _('Radar/EL Maintenance Test - OFF else ON (2-way Switch)'), category = {_('Radar'), _('Custom')}},
+		{cockpit_device_id = devices.RADAR, down = 3914, up = 3914, value_down = 1, value_up = 0, name = _('Radar/EL Maintenance Test - ON else OFF (2-way Switch)'), category = {_('Radar'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPON_SYSTEM, pressed = 3316, value_pressed = -0.5, name = _('EP-13 Brightness - DOWN (Slow)'), category = {_('Weapons'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPON_SYSTEM, pressed = 3316, value_pressed = 0.5, name = _('EP-13 Brightness - UP (Slow)'), category = {_('Weapons'), _('Custom')}},
