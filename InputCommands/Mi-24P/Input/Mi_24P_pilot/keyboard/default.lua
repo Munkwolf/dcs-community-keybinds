@@ -541,6 +541,9 @@ return {
 		{down = SPO_commands.Command_SPO_POWER_Ext, cockpit_device_id = devices.SPO_10, value_down = 1, name = _('RWR Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
 		{down = SPO_commands.Command_SPO_POWER_Ext, cockpit_device_id = devices.SPO_10, value_down = 0, name = _('RWR Power, OFF'), category = {_('Left Side Panel'), _('Custom')}},
 
+		{down = mgv1su_commands.CAGE, up = mgv1su_commands.CAGE, cockpit_device_id = devices.MGV1SU_1, value_down = 1, value_up = 0, name = _('Cage Gyro 1'), category = {_('Front Instrument Panel'), _('Custom')}},
+		{down = mgv1su_commands.CAGE, up = mgv1su_commands.CAGE, cockpit_device_id = devices.MGV1SU_2, value_down = 1, value_up = 0, name = _('Cage Gyro 2'), category = {_('Front Instrument Panel'), _('Custom')}},
+
 		{down = mgv1su_commands.POWER_ITER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, name = _('Gyro 1 Power, ON/OFF (Toggle)'), category = {_('Left Side Panel'), _('Custom')}},
 		{down = mgv1su_commands.POWER, up = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, value_up = 0, name = _('Gyro 1 Power, ON/OFF (2-way Switch)'), category = {_('Left Side Panel'), _('Custom')}},
 		{down = mgv1su_commands.POWER, cockpit_device_id = devices.MGV1SU_1, value_down = 1, name = _('Gyro 1 Power, ON'), category = {_('Left Side Panel'), _('Custom')}},
