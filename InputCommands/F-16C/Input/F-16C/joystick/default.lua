@@ -477,6 +477,71 @@ return {
 
 		{cockpit_device_id = devices.CPT_MECH, down = cpt_commands.StickHide, up = cpt_commands.StickHide, value_down = 0, value_up = 1, name = _('Control Stick - SHOW else HIDE (2-way Switch)'), category = {_('Special For Joystick'), _('Stick'), _('HOTAS'), _('Custom')}},
 		{cockpit_device_id = devices.CPT_MECH, down = cpt_commands.StickHide, up = cpt_commands.StickHide, value_down = 1, value_up = 0, name = _('Control Stick - HIDE else SHOW (2-way Switch)'), category = {_('Special For Joystick'), _('Stick'), _('HOTAS'), _('Custom')}},
+
+		-- ECM
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.PwrSw, value_down = -1, name = _('ECM Power Switch - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.PwrSw, value_down = 0, name = _('ECM Power Switch - STBY'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.PwrSw, value_down = 1, name = _('ECM Power Switch - OPR'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.PwrSw, up = ecm_commands.PwrSw, value_down = -1, value_up = 0, name = _('ECM Power Switch - OFF else STBY (3-way Switch Down)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.PwrSw, up = ecm_commands.PwrSw, value_down = 1, value_up = 0, name = _('ECM Power Switch - OPR else STBY (3-way Switch Up)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0, name = _('ECM DIM Rotary Knob - 0%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0.25, name = _('ECM DIM Rotary Knob - 25%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0.33, name = _('ECM DIM Rotary Knob - 33%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0.5, name = _('ECM DIM Rotary Knob - 50%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0.66, name = _('ECM DIM Rotary Knob - 66%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 0.75, name = _('ECM DIM Rotary Knob - 75%'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.DimRotary, value_down = 1, name = _('ECM DIM Rotary Knob - 100%'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.XmitSw, value_down = -1, name = _('ECM XMIT Switch - 3'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.XmitSw, value_down = 0, name = _('ECM XMIT Switch - 2'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.XmitSw, value_down = 1, name = _('ECM XMIT Switch - 1'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.XmitSw, up = ecm_commands.XmitSw, value_down = -1, value_up = 0, name = _('ECM XMIT Switch - 3 else 2 (3-way Switch Down)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.XmitSw, up = ecm_commands.XmitSw, value_down = 1, value_up = 0, name = _('ECM XMIT Switch - 1 else 2 (3-way Switch Up)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.ResetBtn, up = ecm_commands.ResetBtn, value_down = 1, value_up = 0, name = _('ECM Reset Button'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.BitBtn, up = ecm_commands.BitBtn, value_down = 1, value_up = 0, name = _('ECM BIT Button'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.OneBtn, value_down = 0, name = _('ECM 1 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.OneBtn, value_down = 1, name = _('ECM 1 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.OneBtn, up = ecm_commands.OneBtn, value_down = 0, value_up = 1, name = _('ECM 1 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.OneBtn, up = ecm_commands.OneBtn, value_down = 1, value_up = 0, name = _('ECM 1 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.TwoBtn, value_down = 0, name = _('ECM 2 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.TwoBtn, value_down = 1, name = _('ECM 2 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.TwoBtn, up = ecm_commands.TwoBtn, value_down = 0, value_up = 1, name = _('ECM 2 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.TwoBtn, up = ecm_commands.TwoBtn, value_down = 1, value_up = 0, name = _('ECM 2 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.ThreeBtn, value_down = 0, name = _('ECM 3 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.ThreeBtn, value_down = 1, name = _('ECM 3 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.ThreeBtn, up = ecm_commands.ThreeBtn, value_down = 0, value_up = 1, name = _('ECM 3 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.ThreeBtn, up = ecm_commands.ThreeBtn, value_down = 1, value_up = 0, name = _('ECM 3 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FourBtn, value_down = 0, name = _('ECM 4 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FourBtn, value_down = 1, name = _('ECM 4 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FourBtn, up = ecm_commands.FourBtn, value_down = 0, value_up = 1, name = _('ECM 4 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FourBtn, up = ecm_commands.FourBtn, value_down = 1, value_up = 0, name = _('ECM 4 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FiveBtn, value_down = 0, name = _('ECM 5 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FiveBtn, value_down = 1, name = _('ECM 5 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FiveBtn, up = ecm_commands.FiveBtn, value_down = 0, value_up = 1, name = _('ECM 5 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FiveBtn, up = ecm_commands.FiveBtn, value_down = 1, value_up = 0, name = _('ECM 5 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SixBtn, value_down = 0, name = _('ECM 6 Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SixBtn, value_down = 1, name = _('ECM 6 Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SixBtn, up = ecm_commands.SixBtn, value_down = 0, value_up = 1, name = _('ECM 6 Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SixBtn, up = ecm_commands.SixBtn, value_down = 1, value_up = 0, name = _('ECM 6 Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FrmBtn, value_down = 0, name = _('ECM FRM Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FrmBtn, value_down = 1, name = _('ECM FRM Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FrmBtn, up = ecm_commands.FrmBtn, value_down = 0, value_up = 1, name = _('ECM FRM Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.FrmBtn, up = ecm_commands.FrmBtn, value_down = 1, value_up = 0, name = _('ECM FRM Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, value_down = 0, name = _('ECM SPL Button - OFF'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, value_down = 1, name = _('ECM SPL Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, up = ecm_commands.SplBtn, value_down = 0, value_up = 1, name = _('ECM SPL Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, up = ecm_commands.SplBtn, value_down = 1, value_up = 0, name = _('ECM SPL Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.EXTLIGHTS_SYSTEM, action = extlights_commands.AntiCollKn, name = _('ANTI-COLL Knob, OFF/1/2/3/4/A/B/C')},
