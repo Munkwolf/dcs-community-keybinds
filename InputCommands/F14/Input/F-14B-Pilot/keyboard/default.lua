@@ -540,6 +540,8 @@ return {
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VDI_contrast, value_down = 1.0, name = _('VDI Screen Contrast - 100%'), category = {_('VDI'), _('Custom')}},
 
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.0, name = _('VDI Screen Brightness - 0%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.05, name = _('VDI Screen Brightness - 5%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.1, name = _('VDI Screen Brightness - 10%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.25, name = _('VDI Screen Brightness - 25%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.33, name = _('VDI Screen Brightness - 33%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 0.5, name = _('VDI Screen Brightness - 50%'), category = {_('VDI'), _('Custom')}},
@@ -548,6 +550,8 @@ return {
 		{cockpit_device_id = devices.VDI, down = device_commands.VDIG_VSDI_bright, value_down = 1.0, name = _('VDI Screen Brightness - 100%'), category = {_('VDI'), _('Custom')}},
 
 		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.0, name = _('HUD Brightness - 0%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.05, name = _('HUD Brightness - 5%'), category = {_('VDI'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.1, name = _('HUD Brightness - 10%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.25, name = _('HUD Brightness - 25%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.33, name = _('HUD Brightness - 33%'), category = {_('VDI'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.VDIG_HUD_bright, value_down = 0.5, name = _('HUD Brightness - 50%'), category = {_('VDI'), _('Custom')}},
