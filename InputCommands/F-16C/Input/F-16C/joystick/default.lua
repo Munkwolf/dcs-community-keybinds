@@ -542,6 +542,11 @@ return {
 		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, value_down = 1, name = _('ECM SPL Button - ON'), category = {_('ECM Control Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, up = ecm_commands.SplBtn, value_down = 0, value_up = 1, name = _('ECM SPL Button - OFF else ON (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECM_INTERFACE, down = ecm_commands.SplBtn, up = ecm_commands.SplBtn, value_down = 1, value_up = 0, name = _('ECM SPL Button - ON else OFF (2-way Switch)'), category = {_('ECM Control Panel'), _('Custom')}},
+		
+		-- HOTAS
+		
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_UP, value_pressed =  0.1, name = _('ANT ELEV Knob - CW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN, value_pressed = -0.1, name = _('ANT ELEV Knob - CCW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.EXTLIGHTS_SYSTEM, action = extlights_commands.AntiCollKn, name = _('ANTI-COLL Knob, OFF/1/2/3/4/A/B/C')},
