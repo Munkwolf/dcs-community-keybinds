@@ -489,6 +489,8 @@ return {
 		-- DISPLAY Panel
 
 		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.0, name = _('HUD Pitch Ladder Brightness - 0%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.05, name = _('HUD Pitch Ladder Brightness - 5%'), category = {_('PDCP'), _('Custom')}},
+		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.1, name = _('HUD Pitch Ladder Brightness - 10%'), category = {_('PDCP'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.25, name = _('HUD Pitch Ladder Brightness - 25%'), category = {_('PDCP'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.33, name = _('HUD Pitch Ladder Brightness - 33%'), category = {_('PDCP'), _('Custom')}},
 		{cockpit_device_id = devices.HUD, down = device_commands.DISP_HUD_pitch_bright, value_down = 0.5, name = _('HUD Pitch Ladder Brightness - 50%'), category = {_('PDCP'), _('Custom')}},
@@ -504,7 +506,10 @@ return {
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_trim, value_pressed = 0.02, name = _('Standby ADI Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_trim, value_pressed = -0.04,  name = _('Standby ADI Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_trim, value_pressed = 0.04, name = _('Standby ADI Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_uncage, up = device_commands.STDBYADI_uncage, value_down = 1, value_up = 0, name = _('Standby ADI Knob - PULL'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_uncage, value_down = 0, name = _('Standby ADI Knob - UNCAGE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_uncage, value_down = 1, name = _('Standby ADI Knob - CAGE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_uncage, up = device_commands.STDBYADI_uncage, value_down = 0, value_up = 1, name = _('Standby ADI Knob - UNCAGE else CAGE (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_uncage, up = device_commands.STDBYADI_uncage, value_down = 1, value_up = 0, name = _('Standby ADI Knob - CAGE else UNCAGE (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.ACCELEROMETER, down = device_commands.ACCEL_Reset, up = device_commands.ACCEL_Reset, value_down = 1, value_up = 0, name = _('Accelerometer Reset'), category = {_('Instrument Panel'), _('Custom')}},
 

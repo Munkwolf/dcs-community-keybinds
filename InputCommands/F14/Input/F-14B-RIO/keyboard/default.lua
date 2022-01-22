@@ -215,7 +215,10 @@ return {
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_RIO_trim, value_pressed = 0.02, name = _('Standby ADI Knob - INCREASE'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_RIO_trim, value_pressed = -0.04,  name = _('Standby ADI Knob - DECREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.STDBYAI, pressed = device_commands.STDBYADI_RIO_trim, value_pressed = 0.04, name = _('Standby ADI Knob - INCREASE (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_RIO_uncage, up = device_commands.STDBYADI_RIO_uncage, value_down = 1, value_up = 0, name = _('Standby ADI Knob - PULL'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_RIO_uncage, value_down = 0, name = _('Standby ADI Knob - UNCAGE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_RIO_uncage, value_down = 1, name = _('Standby ADI Knob - CAGE'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_RIO_uncage, up = device_commands.STDBYADI_RIO_uncage, value_down = 0, value_up = 1, name = _('Standby ADI Knob - UNCAGE else CAGE (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.STDBYAI, down = device_commands.STDBYADI_RIO_uncage, up = device_commands.STDBYADI_RIO_uncage, value_down = 1, value_up = 0, name = _('Standby ADI Knob - CAGE else UNCAGE (2-way Switch)'), category = {_('Instrument Panel'), _('Custom')}},
 
 		-- Under HUD / Master Arm / Gun/Weapons Panel
 
