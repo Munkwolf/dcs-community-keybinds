@@ -545,7 +545,11 @@ return {
 		
 		-- HOTAS
 		
-		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_UP, value_pressed =  0.1, name = _('ANT ELEV Knob - CW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
-		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN, value_pressed = -0.1, name = _('ANT ELEV Knob - CCW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_UP, value_pressed =  0.5, name = _('ANT ELEV Knob - CW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN, value_pressed = -0.5, name = _('ANT ELEV Knob - CCW (Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_UP, value_pressed =  0.25, name = _('ANT ELEV Knob - CW (Very Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN, value_pressed = -0.25, name = _('ANT ELEV Knob - CCW (Very Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_UP, value_pressed =  0.1, name = _('ANT ELEV Knob - CW (Extremely Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
+		{cockpit_device_id = devices.HOTAS, pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN, value_pressed = -0.1, name = _('ANT ELEV Knob - CCW (Extremely Slow)'), category = {_('Throttle Grip'), _('HOTAS'), _('Custom')}},
 	}
 }
