@@ -112,6 +112,27 @@ return {
         {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioVolume_kb, value_pressed = -0.02, name = _('Radio Volume - (Fast)'), category = {_('Radio Communications'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioVolume_kb, value_pressed =  0.02, name = _('Radio Volume + (Fast)'), category = {_('Radio Communications'), _('Custom')}},
 
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.05, name = _('Radio Channel - 1'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.1, name = _('Radio Channel - 2'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.15, name = _('Radio Channel - 3'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.2, name = _('Radio Channel - 4'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.25, name = _('Radio Channel - 5'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.3, name = _('Radio Channel - 6'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.35, name = _('Radio Channel - 7'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.4, name = _('Radio Channel - 8'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.45, name = _('Radio Channel - 9'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.5, name = _('Radio Channel - 10'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.55, name = _('Radio Channel - 11'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.6, name = _('Radio Channel - 12'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.65, name = _('Radio Channel - 13'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.7, name = _('Radio Channel - 14'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.75, name = _('Radio Channel - 15'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.8, name = _('Radio Channel - 16'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.85, name = _('Radio Channel - 17'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.9, name = _('Radio Channel - 18'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 0.95, name = _('Radio Channel - 19'), category = {_('Avionics'), _('Custom')}},
+        {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioChannel, value_pressed = 1, name = _('Radio Channel - 20'), category = {_('Avionics'), _('Custom')}},
+
         -- ARK
 
         {cockpit_device_id = devices.ARK, down = device_commands.ARKon, up = device_commands.ARKon, value_down = 1, value_up = 1, name = _('ARK On/Off (2-way Switch)'), category = {_('Avionics'), _('Custom')}},
