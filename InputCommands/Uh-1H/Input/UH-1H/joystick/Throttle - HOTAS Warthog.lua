@@ -336,5 +336,6 @@ return {
 	axisCommands = {
 		{action = device_commands.Button_2, cockpit_device_id = devices.ADF_ARN_83, name = _('ADF Band')},
 		{action = device_commands.Button_3, cockpit_device_id = devices.ADF_ARN_83, name = _('ADF Frequency (Relative)')},
+		{action = device_commands.Button_8, cockpit_device_id = devices.INTERCOM, name = _('Intercom Mode')},
 	}
 }
