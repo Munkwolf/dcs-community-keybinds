@@ -77,8 +77,8 @@ return {
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_15, up = device_commands.Button_15, value_down = 1, value_up = 0, name = _('Magneto #1 - On else Off (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_17, up = device_commands.Button_17, value_down = 1, value_up = 0, name = _('Magneto #2 - On else Off (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 
-		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 1, value_up = 0, name = _('Supercharger Mode AUTO else M.S. (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
-		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 0, value_up = 1, name = _('Supercharger Mode M.S. else AUTO (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 1, value_up = 0, name = _('Supercharger Mode - M.S. else AUTO (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 0, value_up = 1, name = _('Supercharger Mode - AUTO else M.S. (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 
 		{cockpit_device_id = devices.TERTIARY_CONTROLS, pressed = device_commands.Button_2, value_pressed = -0.5, name = _('LH Dashboard Lamp Brightness DECREASE (Slow)'), category = {_('Cockpit Illumination'), _('Custom')}},
 		{cockpit_device_id = devices.TERTIARY_CONTROLS, pressed = device_commands.Button_2, value_pressed =  0.5, name = _('LH Dashboard Lamp Brightness INCREASE (Slow)'), category = {_('Cockpit Illumination'), _('Custom')}},
