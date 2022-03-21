@@ -112,6 +112,7 @@ return {
         {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioVolume_kb, value_pressed = -0.02, name = _('Radio Volume - (Fast)'), category = {_('Radio Communications'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, pressed = device_commands.RadioVolume_kb, value_pressed =  0.02, name = _('Radio Volume + (Fast)'), category = {_('Radio Communications'), _('Custom')}},
 
+        {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0, name = _('Radio Channel - 0'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.05, name = _('Radio Channel - 1'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.1, name = _('Radio Channel - 2'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.15, name = _('Radio Channel - 3'), category = {_('Avionics'), _('Custom')}},
@@ -131,7 +132,6 @@ return {
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.85, name = _('Radio Channel - 17'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.9, name = _('Radio Channel - 18'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 0.95, name = _('Radio Channel - 19'), category = {_('Avionics'), _('Custom')}},
-        {cockpit_device_id = devices.RADIO, down = device_commands.RadioChannel, value_down = 1, name = _('Radio Channel - 20'), category = {_('Avionics'), _('Custom')}},
 
         -- ARK
 
@@ -177,6 +177,7 @@ return {
         {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNland_kb, value_pressed = -0.1, name = _('RSBN Landing Channel - DECREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, pressed = device_commands.RSBNland_kb, value_pressed = 0.1, name = _('RSBN Landing Channel - INCREASE (Tens)'), category = {_('Avionics'), _('Custom')}},
 
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0, name = _('RSBN Navigation Channel - 0'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0.01, name = _('RSBN Navigation Channel - 1'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0.02, name = _('RSBN Navigation Channel - 2'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0.03, name = _('RSBN Navigation Channel - 3'), category = {_('Avionics'), _('Custom')}},
@@ -218,6 +219,7 @@ return {
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0.39, name = _('RSBN Navigation Channel - 39'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNnav, value_down = 0.4, name = _('RSBN Navigation Channel - 40'), category = {_('Avionics'), _('Custom')}},
 
+        {cockpit_device_id = devices.RSBN, down = device_commands.RSBNland, value_down = 0, name = _('RSBN Landing Channel - 0'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNland, value_down = 0.01, name = _('RSBN Landing Channel - 1'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNland, value_down = 0.02, name = _('RSBN Landing Channel - 2'), category = {_('Avionics'), _('Custom')}},
         {cockpit_device_id = devices.RSBN, down = device_commands.RSBNland, value_down = 0.03, name = _('RSBN Landing Channel - 3'), category = {_('Avionics'), _('Custom')}},
