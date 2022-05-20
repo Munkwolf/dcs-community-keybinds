@@ -168,10 +168,12 @@ return {
 
 		{cockpit_device_id = devices.FUELSYSTEM, down = device_commands.FUELSYSTEM_Fuel_Feed_Cover, up = device_commands.FUELSYSTEM_Fuel_Feed_Cover, value_down = 0, value_up = 1, name = _('Fuel Feed Cover - CLOSE else OPEN (2-way Switch)'), category = {_('Fuelsystem Control Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = -0.01,  name=_('INGO Fuel Level Knob Dec (Slow)'), category = {_('Instruments'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = -0.01,  name=_('BINGO Fuel Level Knob Dec (Slow)'), category = {_('Instruments'), _('Custom')}},
 		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = 0.01, name=_('BINGO Fuel Level Knob Inc (Slow)'), category = {_('Instruments'), _('Custom')}},
-		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = -0.04,  name=_('INGO Fuel Level Knob Dec (Fast)'), category = {_('Instruments'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = -0.04,  name=_('BINGO Fuel Level Knob Dec (Fast)'), category = {_('Instruments'), _('Custom')}},
 		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = 0.04, name=_('BINGO Fuel Level Knob Inc (Fast)'), category = {_('Instruments'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = -0.08,  name=_('BINGO Fuel Level Knob Dec (Very Fast)'), category = {_('Instruments'), _('Custom')}},
+		{cockpit_device_id = devices.FUELSYSTEM, pressed = device_commands.FUELSYSTEM_Bingo_Knob, value_pressed = 0.08, name=_('BINGO Fuel Level Knob Inc (Very Fast)'), category = {_('Instruments'), _('Custom')}},
 
 		-- Electrics
 
