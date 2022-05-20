@@ -14,29 +14,29 @@ return {
 		-- CMSP
 
 		{cockpit_device_id = 4, down = 3010, value_down = 0, name = _('CMSP MWS Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3010, value_down = 1, name = _('CMSP MWS Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 0, value_up = 1, name = _('CMSP MWS - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 1, value_up = 0, name = _('CMSP MWS - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, value_down = 0.1, name = _('CMSP MWS Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 0, value_up = 0.1, name = _('CMSP MWS - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3010, up = 3010, value_down = 0.1, value_up = 0, name = _('CMSP MWS - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
 
 		{cockpit_device_id = 4, down = 3012, value_down = 0, name = _('CMSP JMR Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3012, value_down = 1, name = _('CMSP JMR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 0, value_up = 1, name = _('CMSP JMR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 1, value_up = 0, name = _('CMSP JMR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, value_down = 0.1, name = _('CMSP JMR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 0, value_up = 0.1, name = _('CMSP JMR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3012, up = 3012, value_down = 0.1, value_up = 0, name = _('CMSP JMR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
 
 		{cockpit_device_id = 4, down = 3014, value_down = 0, name = _('CMSP RWR Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3014, value_down = 1, name = _('CMSP RWR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 0, value_up = 1, name = _('CMSP RWR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 1, value_up = 0, name = _('CMSP RWR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, value_down = 0.1, name = _('CMSP RWR Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 0, value_up = 0.1, name = _('CMSP RWR - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3014, up = 3014, value_down = 0.1, value_up = 0, name = _('CMSP RWR - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
 
 		{cockpit_device_id = 4, down = 3016, value_down = 0, name = _('CMSP DISP Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3016, value_down = 1, name = _('CMSP DISP Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 0, value_up = 1, name = _('CMSP DISP - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 1, value_up = 0, name = _('CMSP DISP - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, value_down = 0.1, name = _('CMSP DISP Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 0, value_up = 0.1, name = _('CMSP DISP - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3016, up = 3016, value_down = 0.1, value_up = 0, name = _('CMSP DISP - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
 
 		{cockpit_device_id = 4, down = 3008, value_down = 0, name = _('CMSP JTSN Switch - OFF'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3008, value_down = 1, name = _('CMSP JTSN Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 0, value_up = 1, name = _('CMSP JTSN - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
-		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 1, value_up = 0, name = _('CMSP JTSN - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, value_down = 0.1, name = _('CMSP JTSN Switch - ON'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 0, value_up = 0.1, name = _('CMSP JTSN - OFF else ON (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
+		{cockpit_device_id = 4, down = 3008, up = 3008, value_down = 0.1, value_up = 0, name = _('CMSP JTSN - ON else OFF (2-way Switch)'), category = {_('CMSP Panel'), _('Custom')}},
 
 		-- AHCP
 
