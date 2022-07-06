@@ -293,6 +293,8 @@ return {
 		
 		-- HSD
 
+		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Heading, value_pressed = -0.000375, name = _('HSD Heading Knob - DECREASE (Very Slow)'), category = {_('HSD'), _('Custom')}},
+		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Heading, value_pressed = 0.000375, name = _('HSD Heading Knob - INCREASE (Very Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Heading, value_pressed = -0.00075, name = _('HSD Heading Knob - DECREASE (Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Heading, value_pressed = 0.00075, name = _('HSD Heading Knob - INCREASE (Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Heading, value_pressed = -0.003, name = _('HSD Heading Knob - DECREASE (Fast)'), category = {_('HSD'), _('Custom')}},
@@ -300,6 +302,8 @@ return {
 		{cockpit_device_id = devices.HSD, down = device_commands.HSD_Knob_Heading, up = device_commands.HSD_Knob_Heading, value_down = -0.0028, value_up = 0.0, name = _('HSD Heading Knob - DECREASE (-1°)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, down = device_commands.HSD_Knob_Heading, up = device_commands.HSD_Knob_Heading, value_down = 0.0028, value_up = 0.0, name = _('HSD Heading Knob - INCREASE (+1°)'), category = {_('HSD'), _('Custom')}},
 		
+		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Course, value_pressed = -0.00025, name = _('HSD Course Knob - DECREASE (Very Slow)'), category = {_('HSD'), _('Custom')}},
+		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Course, value_pressed = 0.00025, name = _('HSD Course Knob - INCREASE (Very Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Course, value_pressed = -0.0005, name = _('HSD Course Knob - DECREASE (Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Course, value_pressed = 0.0005, name = _('HSD Course Knob - INCREASE (Slow)'), category = {_('HSD'), _('Custom')}},
 		{cockpit_device_id = devices.HSD, pressed = device_commands.HSD_Knob_Course, value_pressed = -0.002, name = _('HSD Course Knob - DECREASE (Fast)'), category = {_('HSD'), _('Custom')}},
@@ -533,6 +537,10 @@ return {
 		{cockpit_device_id = devices.CLOCK, pressed = device_commands.CLOCK_Wind, value_pressed = 0.6, name = _('Clock Wind - INCREASE (Fast)'), category = {_('Instruments'), _('Custom')}},
 
 		{cockpit_device_id = devices.CLOCK, down = device_commands.CLOCK_Timer, up = device_commands.CLOCK_Timer, value_down = 1, value_up = 0, name = _('Clock Push'), category = {_('Instruments'), _('Custom')}},
+
+		-- Communications
+
+		{down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A Refueling - Ready Precontact'), category = {_('Communications'), _('Custom')}},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.ECMD, action = device_commands.ECMD_Knob_Brightness, name = _('ECMD Brightness')},

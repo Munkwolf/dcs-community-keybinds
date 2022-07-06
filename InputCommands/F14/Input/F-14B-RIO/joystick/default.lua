@@ -35,6 +35,12 @@ return {
 
 		-- Cockpit Mechanics
 
+		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Open, value_down = -1, name = ('Canopy - CLOSE'), category = {('Cockpit Mechanics'), _('Custom')}},
+		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Open, value_down = 0, name = ('Canopy - HOLD'), category = {('Cockpit Mechanics'), _('Custom')}},
+		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Open, value_down = 1, name = ('Canopy - OPEN'), category = {('Cockpit Mechanics'), _('Custom')}},
+		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Open, up = device_commands.CANOPY_Open, value_down = -1, value_up = 0, name = ('Canopy - CLOSE else HOLD (2-way Switch)'), category = {('Cockpit Mechanics'), _('Custom')}},
+		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Open, up = device_commands.CANOPY_Open, value_down = 1, value_up = 0, name = ('Canopy - OPEN else HOLD (2-way Switch)'), category = {('Cockpit Mechanics'), _('Custom')}},
+
 		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Drop_RIO, value_down = 0, name = _('Canopy Jettison - OFF'), category = {_('Cockpit Mechanics'), _('Custom')}},
 		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Drop_RIO, value_down = 1, name = _('Canopy Jettison - PULL'), category = {_('Cockpit Mechanics'), _('Custom')}},
 		{cockpit_device_id = devices.COCKPITMECHANICS, down = device_commands.CANOPY_Drop_RIO, up = device_commands.CANOPY_Drop_RIO, value_down = 0, value_up = 1, name = _('Canopy Jettison - OFF else PULL (2-way Switch)'), category = {_('Cockpit Mechanics'), _('Custom')}},
@@ -682,6 +688,22 @@ return {
 
 		{cockpit_device_id = devices.LANTIRN, down = device_commands.LANTIRN_MasterMode, up = device_commands.LANTIRN_MasterMode, value_down = 0, value_up = 1, name = _('LANTIRN Mode - NAV-A/A else A/G (2-way Switch)'), category = {_('LANTIRN Control Panel'), _('Custom')}},
 		{cockpit_device_id = devices.LANTIRN, down = device_commands.LANTIRN_MasterMode, up = device_commands.LANTIRN_MasterMode, value_down = 1, value_up = 0, name = _('LANTIRN Mode - A/G else NAV-A/A (2-way Switch)'), category = {_('LANTIRN Control Panel'), _('Custom')}},
+
+		-- Communications
+
+		{down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A Refueling - Ready Precontact'), category = {_('Communications'), _('Custom')}},
+
+		{cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_CloseMenu, value_down = 1, name = ('Close Menu'), category = {_('Iceman AI'), _('Custom')}},
+
+		-- Don't select on release like pilot jester versions do.
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuHorizontal, up = device_commands.JESTER_MenuHorizontal, value_down = -1, value_up = 0, name = _('Iceman Menu Left'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuHorizontal, up = device_commands.JESTER_MenuHorizontal, value_down = 1, value_up = 0, name = _('Iceman Menu Right'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuVertical, up = device_commands.JESTER_MenuVertical, value_down = -1, value_up = 0, name = _('Iceman Menu Down'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuVertical, up = device_commands.JESTER_MenuVertical, value_down = 1, value_up = 0, name = _('Iceman Menu Up'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuDiag45, up = device_commands.JESTER_MenuDiag45, value_down = -1, value_up = 0, name = _('Iceman Menu Down Left'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuDiag45, up = device_commands.JESTER_MenuDiag45, value_down = 1, value_up = 0, name = _('Iceman Menu Up Right'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuDiag135, up = device_commands.JESTER_MenuDiag135, value_down = -1, value_up = 0, name = _('Iceman Menu Up Left'), category = {_('Iceman AI'), _('Custom')}},
+		-- {cockpit_device_id = devices.JESTERAI, down = device_commands.JESTER_MenuDiag135, up = device_commands.JESTER_MenuDiag135, value_down = 1, value_up = 0, name = _('Iceman Menu Down Right'), category = {_('Iceman AI'), _('Custom')}},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.ARC159, action = device_commands.RADIO_UHF_VOL_RIO, name = _('UHF ARC-159 Volume')},
