@@ -41,8 +41,8 @@ return {
 		{down = device_commands.Button_1, cockpit_device_id = devices.OXYGEN_SYSTEM, value_down = 0, name = _('Oxygen Emergency By-pass Off'), category = {_('Custom'), _('Systems')}},
 		{down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.OXYGEN_SYSTEM, value_down = 1, value_up = 0, name = _('Oxygen Emergency By-pass On else Off (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
-		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.1, value_down = 0.2, name = _('Landing Gear Down else Up'), category = {_('Custom'), _('Systems')}},
-		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.2, value_down = 0.1, name = _('Landing Gear Up else Down'), category = {_('Custom'), _('Systems')}},
+		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.1, value_up = 0.2, name = _('Landing Gear Down else Up'), category = {_('Custom'), _('Systems')}},
+		{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.2, value_up = 0.1, name = _('Landing Gear Up else Down'), category = {_('Custom'), _('Systems')}},
 
 		-- Fuel Control
 
