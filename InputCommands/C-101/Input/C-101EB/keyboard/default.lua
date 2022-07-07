@@ -423,10 +423,13 @@ return {
 
 		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_118, up = device_commands.Button_118, value_down = 0.5, value_up = 0, name = _('Throttle Idle Detent - Idle else Stop (2-way Switch)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Custom')}},
 
-		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_118, value_down = 0, name = _('Throttle Idle Detent - Stop (Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
-		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_118, value_down = 0.5, name = _('Throttle Idle Detent - Idle (Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
-		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_118, up = device_commands.Button_118, value_down = 0, value_up = 0.5, name = _('Throttle Idle Detent - Stop else Idle (2-way Switch, Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
-		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_118, up = device_commands.Button_118, value_down = 0.5, value_up = 0, name = _('Throttle Idle Detent - Idle else Stop (2-way Switch, Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
+		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_430, value_down = 0, name = _('Throttle Idle Detent - Stop (Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
+		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_430, value_down = 0.5, name = _('Throttle Idle Detent - Idle (Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
+		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_430, up = device_commands.Button_430, value_down = 0, value_up = 0.5, name = _('Throttle Idle Detent - Stop else Idle (2-way Switch, Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
+		{cockpit_device_id = devices.SYSTEMS, down = device_commands.Button_430, up = device_commands.Button_430, value_down = 0.5, value_up = 0, name = _('Throttle Idle Detent - Idle else Stop (2-way Switch, Rear Cockpit)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Rear Cockpit'), _('Custom')}},
+
+		{cockpit_device_id = devices.SYSTEMS, down = iCommandPlaneAirBrakeOff, up = iCommandPlaneAirBrakeOn, name = _('Air brake - Retract else Extend (2-way Switch)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Custom')}},
+		{cockpit_device_id = devices.SYSTEMS, down = iCommandPlaneAirBrakeOn, up = iCommandPlaneAirBrakeOff, name = _('Air brake - Extend else Retract (2-way Switch)'), category = {_('Left Console'), _('Throttle lever'), _('Flight Control'), _('Custom')}},
 
 		-- Clock, Front Cockpit
 
