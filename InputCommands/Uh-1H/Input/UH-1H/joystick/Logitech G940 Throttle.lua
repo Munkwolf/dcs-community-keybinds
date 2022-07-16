@@ -81,8 +81,13 @@ return {
 		{down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1, value_up = 0, name = _('Landing Light Switch On else Off (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
 		{down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0, value_up = 1, name = _('Landing Light Switch Off else On (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
 
+		{down = device_commands.Button_6, up = device_commands.Button_6, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1, value_up = 0, name = _('Search Light Switch On else Off (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
+		{down = device_commands.Button_6, up = device_commands.Button_6, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0, value_up = 1, name = _('Search Light Switch Off else On (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
+
 		{down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1, value_up = 0, name = _('Landing Light Control Switch Extend else Off (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
 		{down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1, value_up = 0, name = _('Landing Light Control Switch Retract else Off (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
+		{down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1, value_up = -1, name = _('Landing Light Control Switch Extend else Retract (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
+		{down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1, value_up = 1, name = _('Landing Light Control Switch Retract else Extend (2-way Switch)'), category = {_('Ins Collective Stick'), _('Custom')}},
 
 		-- Marker Beacon
 
