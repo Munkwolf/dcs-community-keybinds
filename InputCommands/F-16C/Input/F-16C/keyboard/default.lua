@@ -36,6 +36,9 @@ return {
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.ApRoll, up = control_commands.ApRoll, value_down = -1, value_up = 0, name = _('Autopilot ROLL Switch - STRG SEL else ATT HOLD (3-way Switch Up)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.ApRoll, up = control_commands.ApRoll, value_down = 1, value_up = 0, name = _('Autopilot ROLL Switch - HDG SEL else ATT HOLD (3-way Switch Down)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
 
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.ApPitchAlt_EXT, up = control_commands.ApPitchAlt_EXT, value_down = 1, value_up = -1, name = _('Autopilot PITCH Switch - ALT HOLD else OFF (3-way Switch Up)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
+		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.ApPitchAtt_EXT, up = control_commands.ApPitchAlt_EXT, value_down = -1, value_up = -1, name = _('Autopilot PITCH Switch - ATT HOLD else OFF (3-way Switch Down)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
+
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.AdvMode, up = control_commands.AdvMode, value_down = 0, value_up = 1, name = _('ADV MODE Switch - RELEASED else DEPRESSED (2-way Switch)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
 		{cockpit_device_id = devices.CONTROL_INTERFACE, down = control_commands.AdvMode, up = control_commands.AdvMode, value_down = 1, value_up = 0, name = _('ADV MODE Switch - DEPRESSED else RELEASED (2-way Switch)'), category = {_('Special For Joystick'), _('Instrument Panel'), _('FLCS'), _('Custom')}},
 
