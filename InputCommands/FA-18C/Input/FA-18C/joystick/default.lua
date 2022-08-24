@@ -328,8 +328,8 @@ return {
 
 		-- Standby Pressure Altimeter AAU-52/A
 
-		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = -0.1, name = _('AAU-52 Altimeter Pressure Setting Knob - CCW/Decrease (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = 0.1, name = _('AAU-52 Altimeter Pressure Setting Knob - CW/Increase (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = -0.01, name = _('AAU-52 Altimeter Pressure Setting Knob - CCW/Decrease (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = 0.01, name = _('AAU-52 Altimeter Pressure Setting Knob - CW/Increase (Slow)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = -0.4, name = _('AAU-52 Altimeter Pressure Setting Knob - CCW/Decrease (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.AAU52, pressed = aau52_commands.AAU52_ClkCmd_ZeroSetting, value_pressed = 0.4, name = _('AAU-52 Altimeter Pressure Setting Knob - CW/Increase (Fast)'), category = {_('Instrument Panel'), _('Custom')}},
 
