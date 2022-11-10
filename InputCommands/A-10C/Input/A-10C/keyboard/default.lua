@@ -126,12 +126,12 @@ return {
 
 		-- Systems and HOTAS
 
-		{down = 3006, cockpit_device_id = 39, value_down = 1, name = _('Canopy Open'), category = {_('Custom'), _('Systems')}},
-		{down = 3006, up = 3006, cockpit_device_id = 39, value_down = 1, value_up = 0.5, name = _('Canopy Open else Hold (2-way Switch)'), category = {_('Custom'), _('Systems')}},
-		{down = 3006, cockpit_device_id = 39, value_down = 0.5,    name = _('Canopy Hold'), category = {_('Custom'), _('Systems')}},
-		{down = 3006, cockpit_device_id = 39, value_down = -0.5,    name = _('Canopy Close'), category = {_('Custom'), _('Systems')}},
-		{down = 3006, up = 3006, cockpit_device_id = 39, value_down = -0.5, value_up = 0.5, name = _('Canopy Close else Hold (2-way Switch)'), category = {_('Custom'), _('Systems')}},
-
+		{down = 3006, cockpit_device_id = 39, value_down = 0.5,  name = _('Canopy Hold'), category = {_('Custom'), _('Systems')}},
+		{down = 3006, cockpit_device_id = 39, value_down = -0.5, name = _('Canopy Close'), category = {_('Custom'), _('Systems')}},
+		{down = 3007, cockpit_device_id = 39, value_down = 1.0,  name = _('Canopy Open all the way'), category = {_('Custom'), _('Systems')}},
+		{down = 3007, up = 3007, cockpit_device_id = 39, value_down = 1.0, value_up = 0.0, name = _('Canopy Open else Hold (2-way Switch) '), category = {_('Custom'), _('Systems')}},
+		{down = 3006, up = 3007, cockpit_device_id = 39, value_down = 0.0, value_up = 0.0, name = _('Canopy Close else Hold (2-way Switch)'), category = {_('Custom'), _('Systems')}},		
+		
 		{down = 3011, up = 3011, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Extend boarding ladder cover Open else Closed (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 		{down = 3015, up = 3015, cockpit_device_id = 39, value_down = 1, value_up = 0, name = _('Canopy Jettison Lever Unlock Button Down else Up (2-way Switch)'), category = {_('Custom'), _('Systems')}},
 
