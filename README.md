@@ -10,4 +10,6 @@ In this repository are two folders. You'll only need one of them.
   
 * __InputCommands_Skeleton__ is a blank structure covering all modules for you to put your own keybinds in. Rename it to _InputCommands_ (remove the _Skeleton part) and place it in your _\<User\>\Saved Games\DCS_ folder.
   
-__If you are interested in contributing...__ thank you. If you'd like to follow the patterns in place, that's great, if not, that's okay too. Right now the main objective is get better coverage.
+__If you are interested in contributing...__ thank you. If you'd like to follow the patterns in place, that's great, if not, that's okay too.
+
+January 2023 Update: After a bit of a break from this project and DCS in general, I'm getting back to it. Next things up are working through issue reports (thank you), overdue updates for the Mirage F1, keybinds for MB-339, and keybinds for BS3.
