@@ -258,8 +258,8 @@ return {
 
 		-- Left Handgrip (LHG)
 
-		{cockpit_device_id = devices.TEDAC_INPUT, down = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_FLIR, up = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_TV, value_down = 1, value_up = 1, name = _('LHG TADS Sensor Select Switch - FLIR else TV (3-way Switch Down)'), category = {_('TEDAC'), _('Left Handgrip'), _('Custom')}},
-		{cockpit_device_id = devices.TEDAC_INPUT, down = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_DVO, up = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_TV, value_down = 1, value_up = 1, name = _('LHG TADS Sensor Select Switch - DVO else TV (3-way Switch Up)'), category = {_('TEDAC'), _('Left Handgrip'), _('Custom')}},
+		{cockpit_device_id = devices.TEDAC_INPUT, down = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_FLIR, up = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_TV, value_down = 1, value_up = 0, name = _('LHG TADS Sensor Select Switch - FLIR else TV (3-way Switch Up)'), category = {_('TEDAC'), _('Left Handgrip'), _('Custom')}},
+		{cockpit_device_id = devices.TEDAC_INPUT, down = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_DVO, up = tedac_commands.LHG_TADS_SENSOR_SELECT_SW_TV, value_down = -1, value_up = 0, name = _('LHG TADS Sensor Select Switch - DVO else TV (3-way Switch Down)'), category = {_('TEDAC'), _('Left Handgrip'), _('Custom')}},
 
 		-- Right Handgrip (RHG)
 
