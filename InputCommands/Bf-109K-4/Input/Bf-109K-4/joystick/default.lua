@@ -10,8 +10,8 @@ return {
 
 		-- Engine Controls
 
-		{cockpit_device_id = devices.FUSEBOX, down = device_commands.Button_58, up = device_commands.Button_58, value_down = 1, value_up = 0, name = _('Governor Automation OFF else ON (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
-		{cockpit_device_id = devices.FUSEBOX, down = device_commands.Button_58, up = device_commands.Button_58, value_down = 0, value_up = 1, name = _('Governor Automation ON else OFF (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.FUSEBOX, down = device_commands.Button_58, up = device_commands.Button_58, value_down = 1, value_up = 0, name = _('Governor Automation ON else OFF (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
+		{cockpit_device_id = devices.FUSEBOX, down = device_commands.Button_58, up = device_commands.Button_58, value_down = 0, value_up = 1, name = _('Governor Automation OFF else ON (2-way Switch)'), category = {_('Engine Controls'), _('Custom')}},
 
 		{cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_4, value_pressed = -0.5, name = _('Throttle DECREASE (Slow)'), category = {_('Engine Controls'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_4, value_pressed =  0.5, name = _('Throttle INCREASE (Slow)'), category = {_('Engine Controls'), _('Custom')}},
