@@ -81,8 +81,6 @@ return {
 		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.EmergParkHandleOnOff, up = gear_commands.EmergParkHandleOnOff, value_down = -1, value_up = 1, name = _('Emergency/Parking Brake Handle - PULL else STOW (2-way Switch)'), category = {_('Special For Joystick'), _('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.EmergParkHandleOnOff, up = gear_commands.EmergParkHandleOnOff, value_down = 1, value_up = -1, name = _('Emergency/Parking Brake Handle - STOW else PULL (2-way Switch)'), category = {_('Special For Joystick'), _('Left Vertical Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.LaunchBarSw, value_down = 0, name = _('Launch Bar Control Switch - RETRACT'), category = {_('Left Vertical Panel'), _('Custom')}},
-		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.LaunchBarSw, value_down = 1, name = _('Launch Bar Control Switch (Toggle)'), category = {_('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.LaunchBarSw, up = gear_commands.LaunchBarSw, value_down = 0, value_up = 1, name = _('Launch Bar Control Switch - RETRACT else EXTEND (2-way Switch)'), category = {_('Special For Joystick'), _('Left Vertical Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.GEAR_INTERFACE, down = gear_commands.HookHandle, up = gear_commands.HookHandle, value_down = 0, value_up = 1, name = _('Arresting Hook Handle - DOWN else UP (2-way Switch)'), category = {_('Special For Joystick'), _('Right Vertical Panel'), _('Custom')}},
@@ -160,8 +158,6 @@ return {
 		{cockpit_device_id = devices.CPT_LIGHTS, down = cptlights_commands.WarnCaution, up = cptlights_commands.WarnCaution, value_down = 0, value_up = 1, name = _('WARN/CAUTION Dimmer Control - 0% else 100% (2-way Switch)'), category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel'), _('Custom')}},
 		{cockpit_device_id = devices.CPT_LIGHTS, down = cptlights_commands.WarnCaution, up = cptlights_commands.WarnCaution, value_down = 1, value_up = 0, name = _('WARN/CAUTION Dimmer Control - 100% else 0% (2-way Switch)'), category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.CPT_LIGHTS, down = cptlights_commands.HookBypass, value_down = 0, name = _('HOOK BYPASS Switch - CARRIER'), category = {_('Left Vertical Panel'), _('Custom')}},
-		{cockpit_device_id = devices.CPT_LIGHTS, down = cptlights_commands.HookBypass, value_down = 1, name = _('HOOK BYPASS Switch (Toggle)'), category = {_('Left Vertical Panel'), _('Custom')}},
 		{cockpit_device_id = devices.CPT_LIGHTS, down = cptlights_commands.HookBypass, up = cptlights_commands.HookBypass, value_down = 0, value_up = 1, name = _('HOOK BYPASS Switch - CARRIER else FIELD (2-way Switch)'), category = {_('Special For Joystick'), _('Left Vertical Panel'), _('Custom')}},
 
 		-- Oxygen System
