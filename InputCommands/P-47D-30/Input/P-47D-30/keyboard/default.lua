@@ -3,8 +3,8 @@ return {
 
         -- Main Pit
 
-        {cockpit_device_id = devices.CONTROLS, down = device_commands.Button_59, value_down = 0, name = _('Stick Hide'), category = {_('General'), _('CustomTEST')}},
-        {cockpit_device_id = devices.CONTROLS, down = device_commands.Button_59, value_down = 1, name = _('Stick Show'), category = {_('General'), _('CustomTEST')}},
+        {cockpit_device_id = devices.CONTROLS, down = device_commands.Button_59, value_down = 0, name = _('Stick Hide'), category = {_('General'), _('Custom')}},
+        {cockpit_device_id = devices.CONTROLS, down = device_commands.Button_59, value_down = 1, name = _('Stick Show'), category = {_('General'), _('Custom')}},
 
         -- Canopy Controls
 
@@ -77,7 +77,7 @@ return {
         -- LH Wing Bomb Switch
 
         {cockpit_device_id = devices.WEAPONS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0, value_up = 1, name = _('Left Wing Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 1, value_up = 0, name = _('Left Wing Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 1, value_up = 0, name = _('Left Wing Bomb Arming Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_13, up = device_commands.Button_13, value_down = 0, value_up = 1, name = _('Left Wing Bomb Arming OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_13, up = device_commands.Button_13, value_down = 1, value_up = 0, name = _('Left Wing Bomb Arming ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
@@ -85,7 +85,7 @@ return {
         -- RH Wing Bomb Switch
 
         {cockpit_device_id = devices.WEAPONS, down = device_commands.Button_15, up = device_commands.Button_15, value_down = 0, value_up = 1, name = _('Right Wing Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_15, up = device_commands.Button_15, value_down = 1, value_up = 0, name = _('Right Wing Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_15, up = device_commands.Button_15, value_down = 1, value_up = 0, name = _('Right Wing Bomb Arming Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_17, up = device_commands.Button_17, value_down = 0, value_up = 1, name = _('Right Wing Bomb Arming OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_17, up = device_commands.Button_17, value_down = 1, value_up = 0, name = _('Right Wing Bomb Arming ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
@@ -93,7 +93,7 @@ return {
         -- Belly Bomb Switch
 
         {cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 0, value_up = 1, name = _('Belly Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 1, value_up = 0, name = _('Belly Bomb Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, up = device_commands.Button_19, value_down = 1, value_up = 0, name = _('Belly Bomb Arming Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_21, up = device_commands.Button_21, value_down = 0, value_up = 1, name = _('Belly Bomb Arming OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_21, up = device_commands.Button_21, value_down = 1, value_up = 0, name = _('Belly Bomb Arming ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
@@ -101,7 +101,7 @@ return {
         -- LH Chemical Switch
 
         {cockpit_device_id = devices.WEAPONS, down = device_commands.Button_23, up = device_commands.Button_23, value_down = 0, value_up = 1, name = _('Left Chemical Tank Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_23, up = device_commands.Button_23, value_down = 1, value_up = 0, name = _('Left Chemical Tank Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_23, up = device_commands.Button_23, value_down = 1, value_up = 0, name = _('Left Chemical Tank Arming Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_25, up = device_commands.Button_25, value_down = 0, value_up = 1, name = _('Left Chemical Tank Arming OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_25, up = device_commands.Button_25, value_down = 1, value_up = 0, name = _('Left Chemical Tank Arming ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
@@ -109,7 +109,7 @@ return {
         -- RH Chemical Switch
 
         {cockpit_device_id = devices.WEAPONS, down = device_commands.Button_27, up = device_commands.Button_27, value_down = 0, value_up = 1, name = _('Right Chemical Tank Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_27, up = device_commands.Button_27, value_down = 1, value_up = 0, name = _('Right Chemical Tank Arming Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_27, up = device_commands.Button_27, value_down = 1, value_up = 0, name = _('Right Chemical Tank Arming Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_29, up = device_commands.Button_29, value_down = 0, value_up = 1, name = _('Right Chemical Tank Arming OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_29, up = device_commands.Button_29, value_down = 1, value_up = 0, name = _('Right Chemical Tank Arming ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-30 Specific'), _('D-40 Specific'), _('Custom')}},
@@ -117,7 +117,7 @@ return {
         -- Ready Switch
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_37, up = device_commands.Button_37, value_down = 0, value_up = 1, name = _('Weapon Ready Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-40 Specific'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_37, up = device_commands.Button_37, value_down = 1, value_up = 0, name = _('Weapon Ready Switch Cover CLOSE else OPEN (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-40 Specific'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_37, up = device_commands.Button_37, value_down = 1, value_up = 0, name = _('Weapon Ready Switch Cover OPEN else CLOSE (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-40 Specific'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_39, up = device_commands.Button_39, value_down = 0, value_up = 1, name = _('Weapon Ready Switch OFF else ON (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-40 Specific'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_39, up = device_commands.Button_39, value_down = 1, value_up = 0, name = _('Weapon Ready Switch ON else OFF (2-way Switch)'), category = {_('Weapons'), _('Input.Generic.drop_ordnance_arming_panel'), _('D-40 Specific'), _('Custom')}},
@@ -236,9 +236,9 @@ return {
     	-- Booster Pump(s) Control Rheostat
 
     	{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = -0.35, name = _('Fuel Booster Pump Rheostat DECREASE (Slow)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
-		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = 0.35,  name = _('Fuel Booster Pump Rheostat (Slow)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
-		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = -1.4, name = _('Fuel Booster Pump Rheostat (Fast)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
-		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = 1.4,  name = _('Fuel Booster Pump Rheostat (Fast)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
+		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = 0.35,  name = _('Fuel Booster Pump Rheostat INCREASE (Slow)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
+		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = -1.4, name = _('Fuel Booster Pump Rheostat DECREASE (Fast)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
+		{cockpit_device_id = devices.MAIN_SWITCH_BOX, pressed = device_commands.Button_11, value_pressed = 1.4,  name = _('Fuel Booster Pump Rheostat INCREASE (Fast)'), category = {_('Main Switch Box'), _('Fuel System'), _('Custom')}},
 
     	-- Wing Tips Nav. Lights Switch
 

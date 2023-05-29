@@ -210,8 +210,6 @@ return {
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.BrakeParachute_Exp_Cover, up = flct_commands.BrakeParachute_Exp_Cover, value_down = 1, value_up = 0, name = _('TP-19 Braking Parachute Jettison Button Cover - OPEN else CLOSE (2-way Switch)'), category = {_('Left Wall'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHT_CONTROLS, down = flct_commands.BrakeParachute_Exp_Btn, up = flct_commands.BrakeParachute_Exp_Btn, value_down = 1, value_up = 0, name = _('TP-19 Braking Parachute Jettison Button'), category = {_('Left Wall'), _('Custom')}},
 
-		{cockpit_device_id = devices.FLIGHT_INST, down = misc_commands.Warning_Btn, up = misc_commands.Warning_Btn, value_down = 1, value_up = 0, name = _('Warning Button'), category = {_('Left Wall'), _('Custom')}},
-
 		-- Bulkhead Panel 4
 
 		{cockpit_device_id = devices.ENGDEV_CONTROLS, down = eng_commands.Fuel_Warning_Lamp_Test, up = eng_commands.Fuel_Warning_Lamp_Test, value_down = 1, value_up = 0, name = _('Fuel Tanks 2,3,4 Warning Lamps Test Button'), category = {_('Left Console'), _('Custom')}},

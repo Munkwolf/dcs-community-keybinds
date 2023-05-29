@@ -532,15 +532,11 @@ return {
 
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = -0.005, name = _('Target Size - (Slow)'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = 0.005, name = _('Target Size + (Slow)'), category = {_('Weapons / ASP'), _('Custom')}},
-        {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = -0.01, name = _('Target Size -'), category = {_('Weapons / ASP'), _('Custom')}},
-        {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = 0.01, name = _('Target Size +'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = -0.02, name = _('Target Size - (Fast)'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPtargetSize_kb, value_pressed = 0.02, name = _('Target Size + (Fast)'), category = {_('Weapons / ASP'), _('Custom')}},
 
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = -0.005, name = _('Intercept Angle - (Slow)'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = 0.005, name = _('Intercept Angle + (Slow)'), category = {_('Weapons / ASP'), _('Custom')}},
-        {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = -0.01, name = _('Intercept Angle -'), category = {_('Weapons / ASP'), _('Custom')}},
-        {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = 0.01, name = _('Intercept Angle +'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = -0.02, name = _('Intercept Angle - (Fast)'), category = {_('Weapons / ASP'), _('Custom')}},
         {cockpit_device_id = devices.ASP, pressed = device_commands.ASPinterceptAngle_kb, value_pressed = 0.02, name = _('Intercept Angle + (Fast)'), category = {_('Weapons / ASP'), _('Custom')}},
 

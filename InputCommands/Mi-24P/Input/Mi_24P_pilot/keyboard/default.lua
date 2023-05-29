@@ -1211,8 +1211,6 @@ return {
 		{cockpit_device_id = devices.ARC_15_PANEL_P, down = arc15_commands.DIAL_SELECT, up = arc15_commands.DIAL_SELECT, value_down = 0, value_up = 1, name = _('ARC-15 Dial Select - 1 else 2 (2-way Switch)'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ARC_15_PANEL_P, down = arc15_commands.DIAL_SELECT, up = arc15_commands.DIAL_SELECT, value_down = 1, value_up = 0, name = _('ARC-15 Dial Select - 2 else 1 (2-way Switch)'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
 		
-		{cockpit_device_id = devices.ARC_15_PANEL_P, down = arc15_commands.CONTROL, up = arc15_commands.CONTROL, value_down = 1, value_up = 0, name = _('ARC-15 Control Button'), category = {_('ARC-15'), _('Left Side Panel'), _('Custom')}},
-
 		-- R-863 Radio
 
 		{cockpit_device_id = devices.R_863, down = r863_commands.POWER, value_down = 0, name = _('R-863 Power - OFF'), category = {_('R-863'), _('Left Front Instrument Panel'), _('Custom')}},
@@ -1401,8 +1399,6 @@ return {
 		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_MODE_ITER, value_down = -1, name = _('SPU-8 Radio Source Select Rotary - CCW/Left (Fixed)'), category = {_('SPU-8 Intercom Panels'), _('Left Front Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_MODE_ITER, value_down = 1, name = _('SPU-8 Radio Source Select Rotary - CW/Right (Fixed)'), category = {_('SPU-8 Intercom Panels'), _('Left Front Instrument Panel'), _('Custom')}},
 
-		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, value_down = 0, name = _('SPU-8 Mode Switch - RADIO'), category = {_('SPU-8 Intercom Panels'), _('Left Front Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, value_down = 1, name = _('SPU-8 Mode Switch - ICS'), category = {_('SPU-8 Intercom Panels'), _('Left Front Instrument Panel'), _('Custom')}},
 		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, up = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, value_down = 0, value_up = 1, name = _('SPU-8 Mode Switch - RADIO else ICS (2-way Switch)'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
 		{cockpit_device_id = devices.SPU_8, down = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, up = SPU_8_Mi24_commands.CMD_SPU8_P_ICS_RADIO, value_down = 1, value_up = 0, name = _('SPU-8 Mode Switch - ICS else RADIO (2-way Switch)'), category = {_('SPU-8 Intercom Panels'), _('Left Side Panel'), _('Custom')}},
 

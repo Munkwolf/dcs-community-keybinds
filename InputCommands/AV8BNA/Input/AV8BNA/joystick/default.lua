@@ -445,7 +445,7 @@ return {
 		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_AFT_Front, value_down = 1.0, name = _('Flood Lamp Position, Left Bulkhead Aft Front - 100%'), category = {_('Flood Lamps'), _('Custom')}},
 
 		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.0, name = _('Flood Lamp Position, Left Bulkhead Forward - 0%'), category = {_('Flood Lamps'), _('Custom')}},
-		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.25, name = _('Flood Lamp Position, Right Bulkhead Forward - 25%'), category = {_('Flood Lamps'), _('Custom')}},
+		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.25, name = _('Flood Lamp Position, Left Bulkhead Forward - 25%'), category = {_('Flood Lamps'), _('Custom')}},
 		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.33, name = _('Flood Lamp Position, Left Bulkhead Forward - 33%'), category = {_('Flood Lamps'), _('Custom')}},
 		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.5, name = _('Flood Lamp Position, Left Bulkhead Forward - 50%'), category = {_('Flood Lamps'), _('Custom')}},
 		{cockpit_device_id = devices.LTINT, down = int_light_commands.Flood_Left_BH_FWD, value_down = 0.66, name = _('Flood Lamp Position, Left Bulkhead Forward - 66%'), category = {_('Flood Lamps'), _('Custom')}},
