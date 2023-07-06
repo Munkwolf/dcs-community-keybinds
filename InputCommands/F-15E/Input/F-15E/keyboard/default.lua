@@ -78,8 +78,8 @@ return {
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = 0.005, name = _('HUD Video Brightness CW (Very Slow)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = -0.01, name = _('HUD Video Brightness CCW (Slow)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = 0.01, name = _('HUD Video Brightness CW (Slow)'), category = {_('HUD Control'), _('Custom')}},
-		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = -0.02, name = _('HUD Video Brightness CCW'), category = {_('HUD Control'), _('Custom')}},
-		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = 0.02, name = _('HUD Video Brightness CW'), category = {_('HUD Control'), _('Custom')}},
+		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = -0.02, name = _('HUD Video Brightness CCW (Pressed)'), category = {_('HUD Control'), _('Custom')}},
+		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = 0.02, name = _('HUD Video Brightness CW (Pressed)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = -0.04, name = _('HUD Video Brightness CCW (Fast)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = 0.04, name = _('HUD Video Brightness CW (Fast)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_BRT_Knob_KB, value_pressed = -0.08, name = _('HUD Video Brightness CCW (Very Fast)'), category = {_('HUD Control'), _('Custom')}},
@@ -89,8 +89,8 @@ return {
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = 0.005, name = _('HUD Video Contrast CW (Very Slow)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = -0.01, name = _('HUD Video Contrast CCW (Slow)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = 0.01, name = _('HUD Video Contrast CW (Slow)'), category = {_('HUD Control'), _('Custom')}},
-		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = -0.02, name = _('HUD Video Contrast CCW'), category = {_('HUD Control'), _('Custom')}},
-		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = 0.02, name = _('HUD Video Contrast CW'), category = {_('HUD Control'), _('Custom')}},
+		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = -0.02, name = _('HUD Video Contrast CCW (Pressed)'), category = {_('HUD Control'), _('Custom')}},
+		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = 0.02, name = _('HUD Video Contrast CW (Pressed)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = -0.04, name = _('HUD Video Contrast CCW (Fast)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = 0.04, name = _('HUD Video Contrast CW (Fast)'), category = {_('HUD Control'), _('Custom')}},
 		{cockpit_device_id = devices.HUDCTRL, pressed = hudctrl_commands.HUD_VIDEO_CONT_Knob_KB, value_pressed = -0.08, name = _('HUD Video Contrast CCW (Very Fast)'), category = {_('HUD Control'), _('Custom')}},
@@ -658,6 +658,55 @@ return {
 		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, value_down = 1, name = _('Canopy Handle LOCKED'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, up = cnp_commands.cnpy_lever, value_down = -0.5, value_up = 0, name = _('Canopy Handle UP else HOLD'), category = {_('Systems'), _('Custom')}},
 		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, up = cnp_commands.cnpy_lever, value_down = 0.5, value_up = 0, name = _('Canopy Handle DOWN else HOLD'), category = {_('Systems'), _('Custom')}},
+
+		-- Rear Cockpit: TEWS Panel
+
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_disp_sel_sw, up = tews_commands.cmd_disp_sel_sw, value_down = 0, value_up = 0.5, name = _('CMD Dispenser Selection Switch FLARE else BOTH'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_disp_sel_sw, up = tews_commands.cmd_disp_sel_sw, value_down = 1, value_up = 0.5, name = _('CMD Dispenser Selection Switch CHAFF else BOTH'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_jett_cover, up = tews_commands.cmd_jett_cover, value_down = 0, value_up = 1, name = _('Flare Jettison Switch Cover CLOSED else OPEN'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_jett_cover, up = tews_commands.cmd_jett_cover, value_down = 1, value_up = 0, name = _('Flare Jettison Switch Cover OPEN else CLOSED'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_jett_sw, up = tews_commands.cmd_jett_sw, value_down = 0, value_up = 1, name = _('Flare Jettison Switch NORM else JETT'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_jett_sw, up = tews_commands.cmd_jett_sw, value_down = 1, value_up = 0, name = _('Flare Jettison Switch JETT else NORM'), category = {_('Rear Cockpit'), _('Rear Cockpit: Electronic Warfare'), _('Custom')}},
+
+		-- Rear Cockpit: TGP Panel
+
+		{cockpit_device_id = devices.TGPCTRL, down = snsrctrl_commands.tpod_pwr_sw, up = snsrctrl_commands.tpod_pwr_sw, value_down = 0, value_up = 0.5, name = _('TGP Power Switch OFF else STBY'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, down = snsrctrl_commands.tpod_pwr_sw, up = snsrctrl_commands.tpod_pwr_sw, value_down = 1, value_up = 0.5, name = _('TGP Power Switch ON else STBY'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = -0.005, name = _('TGP Power Gain CCW (Very Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = 0.005, name = _('TGP Power Gain CW (Very Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = -0.01, name = _('TGP Power Gain CCW (Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = 0.01, name = _('TGP Power Gain CW (Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = -0.02, name = _('TGP Power Gain CCW (Pressed)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = 0.02, name = _('TGP Power Gain CW (Pressed)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = -0.04, name = _('TGP Power Gain CCW (Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = 0.04, name = _('TGP Power Gain CW (Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = -0.08, name = _('TGP Power Gain CCW (Very Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_gain_kb, value_pressed = 0.08, name = _('TGP Power Gain CW (Very Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = -0.005, name = _('TGP Power Level CCW (Very Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = 0.005, name = _('TGP Power Level CW (Very Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = -0.01, name = _('TGP Power Level CCW (Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = 0.01, name = _('TGP Power Level CW (Slow)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = -0.02, name = _('TGP Power Level CCW (Pressed)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = 0.02, name = _('TGP Power Level CW (Pressed)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = -0.04, name = _('TGP Power Level CCW (Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = 0.04, name = _('TGP Power Level CW (Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = -0.08, name = _('TGP Power Level CCW (Very Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, pressed = snsrctrl_commands.tpod_flir_level_kb, value_pressed = 0.08, name = _('TGP Power Level CW (Very Fast)'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TGPCTRL, down = snsrctrl_commands.tpod_laser_sw, up = snsrctrl_commands.tpod_laser_sw, value_down = 0, value_up = 1, name = _('TGP Laser Switch: SAFE else ARM'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TGPCTRL, down = snsrctrl_commands.tpod_laser_sw, up = snsrctrl_commands.tpod_laser_sw, value_down = 1, value_up = 0, name = _('TGP Laser Switch: ARM else SAFE'), category = {_('Rear Cockpit'), _('Rear Cockpit: TGP Panel'), _('Custom')}},
+
+		-- MISC CONTROLS
+
+		-- elements["PTN_1010"] = Mirror_Adjust_Control(_("(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle"),	devices.CNPYSYST, misc_commands.mirror_center, misc_commands.mirror_center_adjust, nil, 10)
+		-- elements["PTN_1011"] = Mirror_Adjust_Control(_("(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle"),	devices.CNPYSYST, misc_commands.mirror_left, misc_commands.mirror_left_adjust, nil, 11)
+		-- elements["PTN_1012"] = Mirror_Adjust_Control(_("(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle"),	devices.CNPYSYST, misc_commands.mirror_right, misc_commands.mirror_right_adjust, nil, 12)
+
+		-- Joystick Abstractions
 
 		{down = armtctrl_commands.JETT_Selector_Knob,												cockpit_device_id = devices.PACS,		value_down = -0.9,					name = _('Armament Jettison Selector - MAN FF'),	category = {_('Armament Control'), _('Joystick Switch Abstractions'), _('Custom')}},
 		{down = armtctrl_commands.JETT_Selector_Knob,												cockpit_device_id = devices.PACS,		value_down = -0.6,					name = _('Armament Jettison Selector - MAN RET'),	category = {_('Armament Control'), _('Joystick Switch Abstractions'), _('Custom')}},
