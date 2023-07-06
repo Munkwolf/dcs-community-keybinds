@@ -260,8 +260,6 @@ return {
 		{cockpit_device_id = devices.EWS_CMD, down = tews_commands.cmd_jett_sw, up = tews_commands.cmd_jett_sw, value_down = 1, value_up = 0, name = _('Flare Jettison Switch JETT else NORM'), category = {_('Right Console'), _('CMD Panel'), _('Custom')}},
 	},
 	axisCommands = {
-		{cockpit_device_id = devices.RWR, action = rwr_commands.DisType, name = _('ALR-67 DIS TYPE Switch, N/I/A/U/F')},
-
 		{cockpit_device_id = devices.FLINST, action = fltinst_commands.rc_art_hor_adj, name = _('Backup ADI Cage/Pitch Adjust Knob')},
 		{cockpit_device_id = devices.FLINST, action = fltinst_commands.rc_clk_adj_knob, name = _('Clock Adjust')},
 
