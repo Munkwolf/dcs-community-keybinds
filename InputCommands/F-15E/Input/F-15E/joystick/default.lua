@@ -1,6 +1,5 @@
 return {
 	keyCommands = {
-
 		-- MAIN INSTRUMENTS PANEL
 
 		-- UFC Panel
@@ -121,13 +120,13 @@ return {
 
 		-- Fuel Monitor Panel
 
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, up = fltinst_commands.fuelqty_totalizer, value_down = 0, value_up = 0.1, name = _('Fuel Totalizer Selector BIT'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.1, name = _('Fuel Totalizer Selector FEED'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.2, name = _('Fuel Totalizer Selector INTL WING'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.3, name = _('Fuel Totalizer Selector TANK 1'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.4, name = _('Fuel Totalizer Selector EXT WING'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.5, name = _('Fuel Totalizer Selector EXT CTR'), category = {_('Instrument Panel'), _('Custom')}},
-		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.6, name = _('Fuel Totalizer Selector CONF TANK'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, up = fltinst_commands.fuelqty_totalizer, value_down = -0.1, value_up = 0, name = _('Fuel Totalizer Selector BIT'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0, name = _('Fuel Totalizer Selector FEED'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.1, name = _('Fuel Totalizer Selector INTL WING'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.2, name = _('Fuel Totalizer Selector TANK 1'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.3, name = _('Fuel Totalizer Selector EXT WING'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.4, name = _('Fuel Totalizer Selector EXT CTR'), category = {_('Instrument Panel'), _('Custom')}},
+		{cockpit_device_id = devices.FLINST, down = fltinst_commands.fuelqty_totalizer, value_down = 0.5, name = _('Fuel Totalizer Selector CONF TANK'), category = {_('Instrument Panel'), _('Custom')}},
 
 -- elements["PTN_385"]	= default_axis_limited(_("Bingo Selection"),							devices.FLINST,			fltinst_commands.bingo_sel_knob,		385, 0, 0.1, false, true, {0, 1.0}, true)
 
@@ -241,6 +240,8 @@ return {
 
 		-- VOL
 
+		-- BUG: VOLUME RELATIVE COMMANDS NOT WORKING
+
 -- elements["PTN_502"] = default_axis_limited(_("Caution Volume"),								devices.TEWS,		volctrl_commands.caution_vol,				502, 0, 0.1)
 -- {pressed = volctrl_commands.caution_vol,	up = volctrl_commands.caution_vol,	cockpit_device_id = devices.WCAS,	value_down =  1.0,	value_up = 0.0,	name = _('TEWS Caution Warning Volume INCR'),	category = {_('Left Console'), _('Volume Control Panel')}},
 -- {pressed = volctrl_commands.caution_vol,	up = volctrl_commands.caution_vol,	cockpit_device_id = devices.WCAS,	value_down = -1.0,	value_up = 0.0,	name = _('TEWS Caution Warning Volume DECR'),	category = {_('Left Console'), _('Volume Control Panel')}},
@@ -264,6 +265,65 @@ return {
 -- elements["PTN_507"] = default_axis_limited(_("TACAN Volume"),								devices.TACAN,		volctrl_commands.tacan_vol,					507, 0, 0.1)
 -- {pressed = volctrl_commands.tacan_vol,		up = volctrl_commands.tacan_vol,	cockpit_device_id = devices.ICS,	value_down =  1.0,	value_up = 0.0,	name = _('TACAN Tone Volume INCR'),				category = {_('Left Console'), _('Volume Control Panel')}},
 -- {pressed = volctrl_commands.tacan_vol,		up = volctrl_commands.tacan_vol,	cockpit_device_id = devices.ICS,	value_down = -1.0,	value_up = 0.0,	name = _('TACAN Tone Volume DECR'),				category = {_('Left Console'), _('Volume Control Panel')}},
+
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = -0.25, name = _('TEWS Caution Warning Volume DECR (Very Slow)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = 0.25, name = _('TEWS Caution Warning Volume INCR (Very Slow)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = -0.5, name = _('TEWS Caution Warning Volume DECR (Slow)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = 0.5, name = _('TEWS Caution Warning Volume INCR (Slow)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = -1, name = _('TEWS Caution Warning Volume DECR (Pressed)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = 1, name = _('TEWS Caution Warning Volume INCR (Pressed)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = -2, name = _('TEWS Caution Warning Volume DECR (Fast)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = 2, name = _('TEWS Caution Warning Volume INCR (Fast)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = -4, name = _('TEWS Caution Warning Volume DECR (Very Fast)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.TEWS, pressed = volctrl_commands.caution_keyb_vol, value_pressed = 4, name = _('TEWS Caution Warning Volume INCR (Very Fast)'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0, name = _('TEWS Caution Warning Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0.25, name = _('TEWS Caution Warning Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0.33, name = _('TEWS Caution Warning Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0.5, name = _('TEWS Caution Warning Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0.66, name = _('TEWS Caution Warning Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 0.75, name = _('TEWS Caution Warning Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.caution_vol, value_down = 1, name = _('TEWS Caution Warning Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0, name = _('TEWS Launch Warning Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0.25, name = _('TEWS Launch Warning Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0.33, name = _('TEWS Launch Warning Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0.5, name = _('TEWS Launch Warning Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0.66, name = _('TEWS Launch Warning Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 0.75, name = _('TEWS Launch Warning Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TEWS, down = volctrl_commands.launch_vol, value_down = 1, name = _('TEWS Launch Warning Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0, name = _('Intercom Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0.25, name = _('Intercom Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0.33, name = _('Intercom Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0.5, name = _('Intercom Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0.66, name = _('Intercom Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 0.75, name = _('Intercom Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ICS, down = volctrl_commands.ics_vol, value_down = 1, name = _('Intercom Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0, name = _('Weapons Tone Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0.25, name = _('Weapons Tone Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0.33, name = _('Weapons Tone Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0.5, name = _('Weapons Tone Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0.66, name = _('Weapons Tone Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 0.75, name = _('Weapons Tone Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.PACS, down = volctrl_commands.wpn_vol, value_down = 1, name = _('Weapons Tone Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0, name = _('ILS Tone Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0.25, name = _('ILS Tone Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0.33, name = _('ILS Tone Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0.5, name = _('ILS Tone Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0.66, name = _('ILS Tone Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 0.75, name = _('ILS Tone Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ILS, down = volctrl_commands.ils_vol, value_down = 1, name = _('ILS Tone Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0, name = _('TACAN Tone Volume 0%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0.25, name = _('TACAN Tone Volume 25%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0.33, name = _('TACAN Tone Volume 33%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0.5, name = _('TACAN Tone Volume 50%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0.66, name = _('TACAN Tone Volume 66%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 0.75, name = _('TACAN Tone Volume 75%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.TACAN, down = volctrl_commands.tacan_vol, value_down = 1, name = _('TACAN Tone Volume 100%'), category = {_('Left Console'), _('Volume Control Panel'), _('Custom')}},
 
 		-- MICS
 
@@ -319,6 +379,8 @@ return {
 		{cockpit_device_id = devices.ADC, down = snsrctrl_commands.rdr_alt_sw, up = snsrctrl_commands.rdr_alt_sw, value_down = 0, value_up = 0.5, name = _('Radar Altimeter: OFF else ON'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ADC, down = snsrctrl_commands.rdr_alt_sw, up = snsrctrl_commands.rdr_alt_sw, value_down = 1, value_up = 0.5, name = _('Radar Altimeter: OVERRIDE else ON'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
 
+		-- BUG: NAV FLIR RELATIVE COMMANDS NOT WORKING
+
 -- elements["PTN_473"] = default_axis_limited(_("Nav FLIR Gain"),								devices.NAVPOD,		snsrctrl_commands.nav_flir_gain_knob,		473, 0, 0.05)
 -- {down = snsrctrl_commands.nav_flir_gain_kb,										cockpit_device_id = devices.NAVPOD,		value_down =  0.05,					name = _('NAV FLIR GAIN INCREASE'),					category = {_('Left Console'), _('Sensors Panel')}},
 -- {down = snsrctrl_commands.nav_flir_gain_kb,										cockpit_device_id = devices.NAVPOD,		value_down = -0.05,					name = _('NAV FLIR GAIN DECREASE'),					category = {_('Left Console'), _('Sensors Panel')}},
@@ -326,6 +388,40 @@ return {
 -- elements["PTN_474"] = default_axis_limited(_("Nav FLIR Level"),              				devices.NAVPOD,		snsrctrl_commands.nav_flir_gain_level, 		474, 0, 0.05)
 -- {down = snsrctrl_commands.nav_flir_level_kb,									cockpit_device_id = devices.NAVPOD,		value_down =  0.05,					name = _('NAV FLIR LEVEL INCREASE'),				category = {_('Left Console'), _('Sensors Panel')}},
 -- {down = snsrctrl_commands.nav_flir_level_kb,									cockpit_device_id = devices.NAVPOD,		value_down = -0.05,					name = _('NAV FLIR LEVEL DECREASE'),				category = {_('Left Console'), _('Sensors Panel')}},
+
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.0125, name = _('NAV FLIR GAIN DECREASE (Very Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.0125, name = _('NAV FLIR GAIN INCREASE (Very Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.025, name = _('NAV FLIR GAIN DECREASE (Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.025, name = _('NAV FLIR GAIN INCREASE (Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.1, name = _('NAV FLIR GAIN DECREASE (Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.1, name = _('NAV FLIR GAIN INCREASE (Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -2, name = _('NAV FLIR GAIN DECREASE (Very Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 2, name = _('NAV FLIR GAIN INCREASE (Very Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.0125, name = _('NAV FLIR GAIN DECREASE (Very Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.0125, name = _('NAV FLIR GAIN INCREASE (Very Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.025, name = _('NAV FLIR GAIN DECREASE (Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.025, name = _('NAV FLIR GAIN INCREASE (Slow)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -0.1, name = _('NAV FLIR GAIN DECREASE (Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 0.1, name = _('NAV FLIR GAIN INCREASE (Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = -2, name = _('NAV FLIR GAIN DECREASE (Very Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		-- {cockpit_device_id = devices.NAVPOD, pressed = snsrctrl_commands.nav_flir_gain_kb, value_pressed = 2, name = _('NAV FLIR GAIN INCREASE (Very Fast)'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0, name = _('NAV FLIR GAIN 0%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0.25, name = _('NAV FLIR GAIN 25%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0.33, name = _('NAV FLIR GAIN 33%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0.5, name = _('NAV FLIR GAIN 50%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0.66, name = _('NAV FLIR GAIN 66%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 0.75, name = _('NAV FLIR GAIN 75%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_knob, value_down = 1, name = _('NAV FLIR GAIN 100%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0, name = _('NAV FLIR LEVEL 0%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0.25, name = _('NAV FLIR LEVEL 25%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0.33, name = _('NAV FLIR LEVEL 33%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0.50, name = _('NAV FLIR LEVEL 50%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0.66, name = _('NAV FLIR LEVEL 66%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 0.75, name = _('NAV FLIR LEVEL 75%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
+		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_gain_level, value_down = 1, name = _('NAV FLIR LEVEL 100%'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_sw, up = snsrctrl_commands.nav_flir_sw, value_down = 0, value_up = 0.5, name = _('NAV FLIR: OFF else STBY'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
 		{cockpit_device_id = devices.NAVPOD, down = snsrctrl_commands.nav_flir_sw, up = snsrctrl_commands.nav_flir_sw, value_down = 1, value_up = 0.5, name = _('NAV FLIR: ON else STBY'), category = {_('Left Console'), _('Sensors Panel'), _('Custom')}},
@@ -458,23 +554,51 @@ return {
 		{cockpit_device_id = devices.ECS, down = aircoctrl_commands.airco_max_norm_min_sw, up = aircoctrl_commands.airco_max_norm_min_sw, value_down = 0, value_up = 0.5, name = _('Air Conditioning Gain MIN else NORM'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
 		{cockpit_device_id = devices.ECS, down = aircoctrl_commands.airco_max_norm_min_sw, up = aircoctrl_commands.airco_max_norm_min_sw, value_down = 1, value_up = 0.5, name = _('Air Conditioning Gain MAX else NORM'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
 
--- elements["PTN_564"] = default_axis_limited(_("Air Conditiong Cold/Hot"),					devices.ECS,		aircoctrl_commands.airco_cold_hot_knob,     564, 0, 0.1)
--- {down = aircoctrl_commands.airco_cold_hot_knob_kb,	cockpit_device_id = devices.ECS,	value_down =  0.05,	name = _('Air Conditioning Temp Increase'),	category = {_('Right Console'), _('ECS Panel')}},
--- {down = aircoctrl_commands.airco_cold_hot_knob_kb,	cockpit_device_id = devices.ECS,	value_down = -0.05,	name = _('Air Conditioning Temp Decrease'),	category = {_('Right Console'), _('ECS Panel')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = -0.005, name = _('Air Conditioning Temp Decrease (Very Slow)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = 0.005, name = _('Air Conditioning Temp Increase (Very Slow)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = -0.01, name = _('Air Conditioning Temp Decrease (Slow)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = 0.01, name = _('Air Conditioning Temp Increase (Slow)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = -0.02, name = _('Air Conditioning Temp Decrease (Pressed)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = 0.02, name = _('Air Conditioning Temp Increase (Pressed)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = -0.04, name = _('Air Conditioning Temp Decrease (Fast)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = 0.04, name = _('Air Conditioning Temp Increase (Fast)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = -0.08, name = _('Air Conditioning Temp Decrease (Very Fast)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
+		{cockpit_device_id = devices.ECS, pressed = aircoctrl_commands.airco_cold_hot_knob_kb, value_pressed = 0.08, name = _('Air Conditioning Temp Increase (Very Fast)'), category = {_('Right Console'), _('ECS Panel'), _('Custom')}},
 
 		-- INT LT
 
--- elements["PTN_566"] = default_axis_limited(_("Console Lights"), 						devices.INTLT,		intlt_commands.console_lt_knob,		566, 0.0, 0.05, true, false, {0.0, 0.75})
--- {down = intlt_commands.console_lt_kb,		cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Console Lights BRT Increase'),				category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.console_lt_kb,		cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Console Lights BRT Decrease'),				category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = -0.005, name = _('Console Lights BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = 0.005, name = _('Console Lights BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = -0.01, name = _('Console Lights BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = 0.01, name = _('Console Lights BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = -0.02, name = _('Console Lights BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = 0.02, name = _('Console Lights BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = -0.04, name = _('Console Lights BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = 0.04, name = _('Console Lights BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = -0.08, name = _('Console Lights BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.console_lt_kb, value_pressed = 0.08, name = _('Console Lights BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_567"] = default_axis_limited(_("Instruments Panel Lights"), 				devices.INTLT,		intlt_commands.inst_pnl_lt_knob,	567, 0.0, 0.05, true, false, {0.0, 0.75})
--- {down = intlt_commands.inst_pnl_lt_kb,		cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Instruments Panel Lights BRT Increase'),		category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.inst_pnl_lt_kb,		cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Instruments Panel Lights BRT Decrease'),		category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = -0.005, name = _('Instruments Panel Lights BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = 0.005, name = _('Instruments Panel Lights BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = -0.01, name = _('Instruments Panel Lights BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = 0.01, name = _('Instruments Panel Lights BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = -0.02, name = _('Instruments Panel Lights BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = 0.02, name = _('Instruments Panel Lights BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = -0.04, name = _('Instruments Panel Lights BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = 0.04, name = _('Instruments Panel Lights BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = -0.08, name = _('Instruments Panel Lights BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_pnl_lt_kb, value_pressed = 0.08, name = _('Instruments Panel Lights BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_568"] = default_axis_limited(_("Gauges/UFC Backlights"), 					devices.INTLT,		intlt_commands.ufc_bcklt_br_knob,	568, 0.0, 0.05, true, false, {0.0, 0.75})
--- {down = intlt_commands.inst_bklt_kb,		cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Gauges/UFC Backlights BRT Increase'),			category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.inst_bklt_kb,		cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Gauges/UFC Backlights BRT Decrease'),			category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = -0.005, name = _('Gauges/UFC Backlights BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = 0.005, name = _('Gauges/UFC Backlights BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = -0.01, name = _('Gauges/UFC Backlights BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = 0.01, name = _('Gauges/UFC Backlights BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = -0.02, name = _('Gauges/UFC Backlights BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = 0.02, name = _('Gauges/UFC Backlights BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = -0.04, name = _('Gauges/UFC Backlights BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = 0.04, name = _('Gauges/UFC Backlights BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = -0.08, name = _('Gauges/UFC Backlights BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.inst_bklt_kb, value_pressed = 0.08, name = _('Gauges/UFC Backlights BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
 		{cockpit_device_id = devices.INTLT, down = intlt_commands.compass_lt_sw, up = intlt_commands.compass_lt_sw, value_down = 0, value_up = 1, name = _('Compass Lights OFF else ON'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 		{cockpit_device_id = devices.INTLT, down = intlt_commands.compass_lt_sw, up = intlt_commands.compass_lt_sw, value_down = 1, value_up = 0, name = _('Compass Lights ON else OFF'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
@@ -482,30 +606,58 @@ return {
 		{cockpit_device_id = devices.INTLT, down = intlt_commands.daynite_mode_sw, up = intlt_commands.daynite_mode_sw, value_down = 0, value_up = 1, name = _('Display Mode NIGHT else DAY'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 		{cockpit_device_id = devices.INTLT, down = intlt_commands.daynite_mode_sw, up = intlt_commands.daynite_mode_sw, value_down = 1, value_up = 0, name = _('Display Mode DAY else NIGHT'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_572"] = default_axis_limited(_("Charts Spot Light"), 						devices.INTLT,		intlt_commands.chart_lt_knob,		572, 0.0, 0.05, true, false, {0.0, 0.75})
--- {down = intlt_commands.chart_lt_kb,			cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Charts Spot Light BRT Increase'),				category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.chart_lt_kb,			cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Charts Spot Light BRT Decrease'),				category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = -0.005, name = _('Charts Spot Light BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = 0.005, name = _('Charts Spot Light BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = -0.01, name = _('Charts Spot Light BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = 0.01, name = _('Charts Spot Light BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = -0.02, name = _('Charts Spot Light BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = 0.02, name = _('Charts Spot Light BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = -0.04, name = _('Charts Spot Light BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = 0.04, name = _('Charts Spot Light BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = -0.08, name = _('Charts Spot Light BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_kb, value_pressed = 0.08, name = _('Charts Spot Light BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_573"]	= wca_knob(_("Warning/Caution Lights (RMB to RESET when BRT)"),  	devices.INTLT,		intlt_commands.wac_bklt_knob, 573, intlt_commands.wac_bklt_knob_reset, 573)
--- {down = intlt_commands.wac_bklt_kb,			cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Warning/Caution Lights BRT Increase'),		category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.wac_bklt_kb,			cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Warning/Caution Lights BRT Decrease'),		category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = -0.005, name = _('Warning/Caution Lights BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = 0.005, name = _('Warning/Caution Lights BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = -0.01, name = _('Warning/Caution Lights BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = 0.01, name = _('Warning/Caution Lights BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = -0.02, name = _('Warning/Caution Lights BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = 0.02, name = _('Warning/Caution Lights BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = -0.04, name = _('Warning/Caution Lights BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = 0.04, name = _('Warning/Caution Lights BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = -0.08, name = _('Warning/Caution Lights BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.wac_bklt_kb, value_pressed = 0.08, name = _('Warning/Caution Lights BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_574"] = default_axis_limited(_("Storm FLood Lights"),						devices.INTLT,		intlt_commands.flood_lt_knob,		574, 0.0, 0.05, true, false, {0.0, 0.75})
--- {down = intlt_commands.flood_lt_kb,			cockpit_device_id = devices.INTLT,	value_down =  0.05,	name = _('Storm Flood Lights BRT Increase'),			category = {_('Right Console'), _('Lights: Interior')}},
--- {down = intlt_commands.flood_lt_kb,			cockpit_device_id = devices.INTLT,	value_down = -0.05,	name = _('Storm Flood Lights BRT Decrease'),			category = {_('Right Console'), _('Lights: Interior')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = -0.005, name = _('Storm Flood Lights BRT Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = 0.005, name = _('Storm Flood Lights BRT Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = -0.01, name = _('Storm Flood Lights BRT Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = 0.01, name = _('Storm Flood Lights BRT Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = -0.02, name = _('Storm Flood Lights BRT Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = 0.02, name = _('Storm Flood Lights BRT Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = -0.04, name = _('Storm Flood Lights BRT Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = 0.04, name = _('Storm Flood Lights BRT Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = -0.08, name = _('Storm Flood Lights BRT Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.flood_lt_kb, value_pressed = 0.08, name = _('Storm Flood Lights BRT Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
--- elements["PTN_186"] = default_axis_limited(_("Chart Spot Lamp"),						devices.INTLT,		intlt_commands.chart_lt_lamp,		186, 0.0, 0.05, true, false, {-1.0, 1.0})
-
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = -0.005, name = _('Chart Spot Lamp Position Decrease (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = 0.005, name = _('Chart Spot Lamp Position Increase (Very Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = -0.01, name = _('Chart Spot Lamp Position Decrease (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = 0.01, name = _('Chart Spot Lamp Position Increase (Slow)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = -0.02, name = _('Chart Spot Lamp Position Decrease (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = 0.02, name = _('Chart Spot Lamp Position Increase (Pressed)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = -0.04, name = _('Chart Spot Lamp Position Decrease (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = 0.04, name = _('Chart Spot Lamp Position Increase (Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = -0.08, name = _('Chart Spot Lamp Position Decrease (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
+		{cockpit_device_id = devices.INTLT, pressed = intlt_commands.chart_lt_lamp_kb, value_pressed = 0.08, name = _('Chart Spot Lamp Position Increase (Very Fast)'), category = {_('Right Console'), _('Lights: Interior'), _('Custom')}},
 
 		-- CANOPY
 
--- elements["PTN_599"] = multiposition_switch_limited_animated(_("Canopy Handle"),		    devices.CNPYSYST,	cnp_commands.cnpy_lever,			599, 4, 0.5, false, -0.5)
--- {down = cnp_commands.cnpy_lever,			up = cnp_commands.cnpy_lever,			cockpit_device_id = devices.CNPYSYST,	value_down = 1.0,	value_up = 0.0,	name = _('Canopy_Handle'),				category = _('Systems')},
-
--- elements["PTN_1479"] = multiposition_switch_limited_animated(_("Canopy Handle"),		devices.CNPYSYST,	cnp_commands.rear_cnpy_lever,		1479, 4, 0.5, false, -0.5)
-
--- elements["PTN_428"] = default_animated_lever(_("Emergency Canopy Jettison"),			devices.CNPYSYST,	cnp_commands.em_cnpy_jett_lever,	428, 2.0)
--- {down = cnp_commands.em_cnpy_jett_lever,	up = cnp_commands.em_cnpy_jett_lever,	cockpit_device_id = devices.CNPYSYST,	value_down = 1.0,	value_up = 0.0,	name = _('Emergency Canopy Jettison'),	category = _('Systems')},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, value_down = -0.5, name = _('Canopy Handle UP'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, value_down = 0, name = _('Canopy Handle HOLD'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, value_down = 0.5, name = _('Canopy Handle DOWN'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, value_down = 1, name = _('Canopy Handle LOCKED'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, up = cnp_commands.cnpy_lever, value_down = -0.5, value_up = 0, name = _('Canopy Handle UP else HOLD'), category = {_('Systems'), _('Custom')}},
+		{cockpit_device_id = devices.CNPYSYST, down = cnp_commands.cnpy_lever, up = cnp_commands.cnpy_lever, value_down = 0.5, value_up = 0, name = _('Canopy Handle DOWN else HOLD'), category = {_('Systems'), _('Custom')}},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.UFCCTRL_FRONT, action = ufc_commands.UFC_VOL_R1, name = _('UHF Radio 1 Volume')},
@@ -534,18 +686,20 @@ return {
 		{cockpit_device_id = devices.EXTLT, action = extlt_commands.formation_lt_knob, name = _('Formation Lights Knob')},
 		{cockpit_device_id = devices.EXTLT, action = extlt_commands.pos_lt_knob, name = _('Position Lights Knob')},
 
+		{cockpit_device_id = devices.AN_APG70, action = snsrctrl_commands.rdr_power_sw, name = _('Radar Mode Selector')},
 		{cockpit_device_id = devices.INS, action = snsrctrl_commands.ins_knob, name = _('INS Knob')},
 		{cockpit_device_id = devices.NAVPOD, action = snsrctrl_commands.nav_flir_gain_knob, name = _('Nav FLIR Gain')},
 		{cockpit_device_id = devices.NAVPOD, action = snsrctrl_commands.nav_flir_gain_level, name = _('Nav FLIR Level')},
 		{cockpit_device_id = devices.RDRCTRL_AA, action = snsrctrl_commands.jtids_knob, name = _('JTIDS Knob')},
-		{cockpit_device_id = devices.ECS, action = aircoctrl_commands.airco_cold_hot_knob, name = _('Air Conditiong Cold/Hot')},
+		{cockpit_device_id = devices.ECS, action = aircoctrl_commands.airco_cold_hot_knob, name = _('Air Conditioning Cold/Hot')},
+		{cockpit_device_id = devices.ECS, action = aircoctrl_commands.airco_eng_knob, name = _('Air Conditioning Source')},
 
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.console_lt_knob, name = _('Console Lights')},
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.inst_pnl_lt_knob, name = _('Instruments Panel Lights')},
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.ufc_bcklt_br_knob, name = _('Gauges/UFC Backlights')},
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.chart_lt_knob, name = _('Charts Spot Light')},
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.wac_bklt_knob, name = _('Warning/Caution Lights')},
-		{cockpit_device_id = devices.INTLT, action = intlt_commands.flood_lt_knob, name = _('Storm FLood Lights')},
+		{cockpit_device_id = devices.INTLT, action = intlt_commands.flood_lt_knob, name = _('Storm Flood Lights')},
 		{cockpit_device_id = devices.INTLT, action = intlt_commands.chart_lt_lamp, name = _('Chart Spot Lamp')},
 
 		{cockpit_device_id = devices.CNPYSYST, action = cnp_commands.cnpy_lever, name = _('Canopy Handle')},
