@@ -1,5 +1,34 @@
+local keyCommandsRadio = {}
+local axisCommandsRadio = {}
+
+if ARC_210_ENABLED then
+	keyCommandsRadio = join(keyCommandsRadio, {
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_43, value_down = 0.3, name = _('VHF AM Master Knob: ADF'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_43, value_down = 0.5, name = _('VHF AM Master Knob: TEST'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_43, value_down = 0.6, name = _('VHF AM Master Knob: ZERO'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_44, value_down = 0.0, name = _('VHF AM Secondary Knob: ECCM MASTER'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_44, value_down = 0.1, name = _('VHF AM Secondary Knob: ECCM'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_44, value_down = 0.4, name = _('VHF AM Secondary Knob: MAR'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_14, up = device_commands.Button_14, value_down = 1, value_up = 0, name = _('VHF AM Enter Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_12, up = device_commands.Button_12, value_down = 1, value_up = 0, name = _('VHF AM XMIT/RCV Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_15, up = device_commands.Button_15, value_down = 1, value_up = 0, name = _('VHF AM Squelch On else Off'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1, value_up = 0, name = _('VHF AM RT SELECT Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_3, up = device_commands.Button_3, value_down = 1, value_up = 0, name = _('VHF AM GPS Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_2, up = device_commands.Button_2, value_down = 1, value_up = 0, name = _('VHF AM TOD RCV Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+		{cockpit_device_id = devices.VHF_AM_RADIO, down = device_commands.Button_1, up = device_commands.Button_1, value_down = 1, value_up = 0, name = _('VHF AM TOD SND Button'), category = {_('VHF AM Radio (ARC-210) Control Panel'), _('Custom')}},
+	})
+else
+	axisCommandsRadio = join(axisCommandsRadio, {
+		{cockpit_device_id = 55, action = 3005, name = _('VHF FM Radio (ARC-186) - Volume')},
+	}
+end
+
 return {
-	keyCommands = {
+	keyCommands = join(keyCommandsRadio, {
 
 		-- Left MFCDI
 
@@ -484,9 +513,9 @@ return {
 
 		-- UHF Radio
 
-		{down = 3010, cockpit_device_id = 54, value_down = 1, name = _('UHF Squelch On'), category = {_('Custom'), _('UHF Radio')}},
-		{down = 3010, cockpit_device_id = 54, value_down = 0, name = _('UHF Squelch Off'), category = {_('Custom'), _('UHF Radio')}},
-		{down = 3010, up = 3010, cockpit_device_id = 54, value_down = 1, value_up = 0, name = _('UHF Squelch On else Off (2-way Switch)'), category = {_('Custom'), _('UHF Radio')}},
+		{down = 3010, cockpit_device_id = 54, value_down = 1, name = _('UHF Squelch On'), category = {_('Custom'), _('UHF Radio (ARC-164) Control Panel')}},
+		{down = 3010, cockpit_device_id = 54, value_down = 0, name = _('UHF Squelch Off'), category = {_('Custom'), _('UHF Radio (ARC-164) Control Panel')}},
+		{down = 3010, up = 3010, cockpit_device_id = 54, value_down = 1, value_up = 0, name = _('UHF Squelch On else Off (2-way Switch)'), category = {_('Custom'), _('UHF Radio (ARC-164) Control Panel')}},
 
 		{down = 3020, up = 3020, cockpit_device_id = 58, value_down = 1, value_up = 0, name = _('Call Button'), category = {_('Custom'), _('Intercom control panel')}},
 
@@ -506,8 +535,8 @@ return {
 		{	down = iCommandPlaneKneeboardJumpBookmark,								value_down = 8,							name = _('Kneeboard Jump To Shortcut  9'),			category = _('Kneeboard')},
 		{	down = iCommandPlaneKneeboardJumpBookmark,								value_down = 9,							name = _('Kneeboard Jump To Shortcut 10'),			category = _('Kneeboard')},
 
-	},
-	axisCommands = {
+	}),
+	axisCommands = join(axisCommandsRadio, {
 		{action = 3013, cockpit_device_id = 38, name = _('Yaw Trim')},
 				
 		{action = 3009, cockpit_device_id = 4, name = _('CMSP - Adjust Display Brightness')},
@@ -540,9 +569,8 @@ return {
 		{action = 3001, cockpit_device_id = 52, name = _('Stall - Volume')},
 		{action = 3002, cockpit_device_id = 52, name = _('Stall - Peak Volume')},
 
-		{action = 3011, cockpit_device_id = 54, name = _('UHF Radio - Volume')},
-		{action = 3005, cockpit_device_id = 55, name = _('VHF/AM Radio - Volume')},
-		{action = 3005, cockpit_device_id = 56, name = _('VHF/FM Radio - Volume')},
+		{action = 3011, cockpit_device_id = 54, name = _('UHF Radio (ARC-164) - Volume')},
+		{action = 3005, cockpit_device_id = 56, name = _('VHF AM Radio (ARC-186) - Volume')},
 
 		{action = 3002, cockpit_device_id = 58, name = _('Intercom - INT Volume')},
 		{action = 3004, cockpit_device_id = 58, name = _('Intercom - FM Volume')},
@@ -558,5 +586,5 @@ return {
 		{action = 3007, cockpit_device_id = 44, name = _('HARS - Push-to-sync rotary')},
 		{action = 3001, cockpit_device_id = 29, name = _('RWR - Display Brightness')},
 		{action = 3013, cockpit_device_id = 38, name = _('SAS - Yaw Trim')},
-	}
+	})
 }
