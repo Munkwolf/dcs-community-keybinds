@@ -24,7 +24,7 @@ if ARC_210_ENABLED then
 else
 	axisCommandsRadio = join(axisCommandsRadio, {
 		{cockpit_device_id = 55, action = 3005, name = _('VHF FM Radio (ARC-186) - Volume')},
-	}
+	})
 end
 
 return {
