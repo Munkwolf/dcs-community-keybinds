@@ -66,6 +66,7 @@ return {
 		{down = device_commands.Button_19, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, name = _('Main generator Switch Cover Open'), category = {_('Ins Overhead panel'), _('Custom')}},
 		{down = device_commands.Button_19, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0, name = _('Main generator Switch Cover Closed'), category = {_('Ins Overhead panel'), _('Custom')}},
 		{down = device_commands.Button_19, up = device_commands.Button_19, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Main generator Switch Cover Open else Closed (2-way Switch)'), category = {_('Ins Overhead panel'), _('Custom')}},
+		{down = device_commands.Button_19, up = device_commands.Button_19, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0, value_up = 1, name = _('Main generator Switch Cover Closed else Open (2-way Switch)'), category = {_('Ins Overhead panel'), _('Custom')}},
 
 		{down = device_commands.Button_3, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, name = _('Cargo Safety Switch Off'), category = {_('Ins Overhead panel'), _('Custom')}},
 		{down = device_commands.Button_3, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 0, name = _('Cargo Safety Switch Armed'), category = {_('Ins Overhead panel'), _('Custom')}},
