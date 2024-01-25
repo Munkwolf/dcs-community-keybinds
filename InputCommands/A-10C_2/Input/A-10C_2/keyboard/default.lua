@@ -529,6 +529,8 @@ return {
 		{	down = iCommandPlaneKneeboardJumpBookmark,								value_down = 7,							name = _('Kneeboard Jump To Shortcut  8'),			category = _('Kneeboard')},
 		{	down = iCommandPlaneKneeboardJumpBookmark,								value_down = 8,							name = _('Kneeboard Jump To Shortcut  9'),			category = _('Kneeboard')},
 		{	down = iCommandPlaneKneeboardJumpBookmark,								value_down = 9,							name = _('Kneeboard Jump To Shortcut 10'),			category = _('Kneeboard')},
-
+		
+		-- View
+		{down = iCommandToggleMirrors, name = _('Toggle Mirrors'), category = _('View Cockpit')},
 	})
 }
