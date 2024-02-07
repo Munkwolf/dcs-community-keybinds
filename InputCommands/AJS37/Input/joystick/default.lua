@@ -332,6 +332,9 @@ return {
 
 		{cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3715, value_down = 0, name = _('Altimeter Setting Pull-out - NORMAL'), category = {_('Flight Data'), _('Custom')}},
 		{cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3715, value_down = 1, name = _('Altimeter Setting Pull-out - PULL'), category = {_('Flight Data'), _('Custom')}},
+
+		-- View Cockpit
+		{down = iCommandCockpitShowPilotOnOff, name = _('Toggle Pilot'), category = _('View Cockpit')},
 	},
 	axisCommands = {
 		{cockpit_device_id = devices.ENGINEPANEL, action = 3304, name = _('AFK Lever')},
