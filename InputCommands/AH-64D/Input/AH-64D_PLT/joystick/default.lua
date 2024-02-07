@@ -340,6 +340,7 @@ return {
 
 		{cockpit_device_id = devices.ELEC_INTERFACE, down = electric_commands.MIK_EXT, up = electric_commands.MIK_EXT, value_down = 1, value_up = 0.5, name = _('Master Ignition Switch - EXT PWR else BATT (3-way Switch Down)'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
 		{cockpit_device_id = devices.ELEC_INTERFACE, down = electric_commands.MIK_EXT, up = electric_commands.MIK_EXT, value_down = 0, value_up = 0.5, name = _('Master Ignition Switch - OFF else BATT (3-way Switch Up)'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
+		{cockpit_device_id = devices.ELEC_INTERFACE, down = electric_commands.MIK_EXT, up = electric_commands.MIK_EXT, value_down = 0.5, value_up = 0, name = _('Master Ignition Switch - BATT else OFF (2-way Switch)'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
 
 		-- PLT Left Console
 
@@ -348,6 +349,10 @@ return {
 
 		{cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.APU_StartBtnCover_EXT, up = engine_commands.APU_StartBtnCover_EXT, value_down = 0, value_up = 1, name = _('APU Pushbutton Cover - CLOSE else OPEN (2-way Switch)'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
 		{cockpit_device_id = devices.ENGINE_INTERFACE, down = engine_commands.APU_StartBtnCover_EXT, up = engine_commands.APU_StartBtnCover_EXT, value_down = 1, value_up = 0, name = _('APU Pushbutton Cover - OPEN else CLOSE (2-way Switch)'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
+
+		{cockpit_device_id = devices.ENGINE_INTERFACE, 	down = iCommandLeftEngineStart,	up = iCommandLeftEngineStop, value_down =  1.0, value_up = 1.0, name = _('Power Lever (Left) - IDLE else OFF'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
+        	{cockpit_device_id = devices.ENGINE_INTERFACE, 	down = iCommandRightEngineStart, up = iCommandRightEngineStop, value_down =  1.0, value_up = 1.0, name = _('Power Lever (Right) - IDLE else OFF'), category = {_('Left Console'), _('Power Lever Quadrant'), _('Custom')}},
+
 
 		-- FIRE DET / EXTG Control Panel
 
