@@ -822,7 +822,7 @@ return {
 
         -- General
         {down = iCommandViewBriefing,name=_('View briefing on/off'),category = _('General')},
-		{down = iCommandPlane_ShowControls, name=_('Show controls indicator'),category=_('General')},
+        {down = iCommandPlane_ShowControls, name=_('Show controls indicator'),category=_('General')},
     },
     axisCommands = {
         {cockpit_device_id = devices.FUEL_SYSTEM, action = device_commands.FuelQt, name = _('Fuel Quantity Set')},
