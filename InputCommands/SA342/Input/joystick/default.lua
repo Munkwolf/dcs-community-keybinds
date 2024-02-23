@@ -3,8 +3,8 @@ return {
 
 		-- Weapons Panel 1
 
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_18, value_down = 1, name = _('Weapons Panel Power Switch ON'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, value_down = 0, name = _('Weapons Panel Power Switch OFF'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_18, value_down = 1, name = _('Weapons Panel Power Switch OFF'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, value_down = 0, name = _('Weapons Panel Power Switch ON'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_20, value_down = 1, name = _('Weapons Panel Power Switch STDBY'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
 		-- Weapons Panel 2
