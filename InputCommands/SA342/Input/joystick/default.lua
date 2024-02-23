@@ -10,7 +10,7 @@ return {
 		-- Weapons Panel 2
 		
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 1, name = _('Left Pylon Arming Switch ARMED'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 0, name = _('Left Pylon Arming Switch Cover SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 0, name = _('Left Pylon Arming Switch SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = 1, value_up = 0, name = _('Left Pylon Arming Switch Cover ARMED else SAFE (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = 0, value_up = 1, name = _('Left Pylon Arming Switch Cover SAFE else ARMED (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
@@ -20,7 +20,7 @@ return {
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0, value_up = 1, name = _('Left Pylon Arming Switch Cover CLOSED else OPEN (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 1, name = _('Right Pylon Arming Switch ARMED'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 0, name = _('Right Pylon Arming Switch Cover SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 0, name = _('Right Pylon Arming Switch SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, up = device_commands.Button_12, value_down = 1, value_up = 0, name = _('Right Pylon Arming Switch Cover ARMED else SAFE (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, up = device_commands.Button_12, value_down = 0, value_up = 1, name = _('Right Pylon Arming Switch Cover SAFE else ARMED (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
