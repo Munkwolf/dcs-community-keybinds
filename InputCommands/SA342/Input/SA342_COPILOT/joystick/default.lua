@@ -3,14 +3,14 @@ return {
 
 		-- Weapons Panel 1
 
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_18, value_down = 1, name = _('Weapons Panel Power Switch ON'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, value_down = 0, name = _('Weapons Panel Power Switch OFF'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_18, value_down = 1, name = _('Weapons Panel Power Switch OFF'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_19, value_down = 0, name = _('Weapons Panel Power Switch ON'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_20, value_down = 1, name = _('Weapons Panel Power Switch STDBY'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
 		-- Weapons Panel 2
 		
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 1, name = _('Left Pylon Arming Switch ARMED'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 0, name = _('Left Pylon Arming Switch Cover SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, value_down = 0, name = _('Left Pylon Arming Switch SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = 1, value_up = 0, name = _('Left Pylon Arming Switch Cover ARMED else SAFE (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_10, up = device_commands.Button_10, value_down = 0, value_up = 1, name = _('Left Pylon Arming Switch Cover SAFE else ARMED (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
@@ -20,7 +20,7 @@ return {
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_11, up = device_commands.Button_11, value_down = 0, value_up = 1, name = _('Left Pylon Arming Switch Cover CLOSED else OPEN (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 1, name = _('Right Pylon Arming Switch ARMED'), category = {_('SA342 Weapons Panel'), _('Custom')}},
-		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 0, name = _('Right Pylon Arming Switch Cover SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
+		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, value_down = 0, name = _('Right Pylon Arming Switch SAFE'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, up = device_commands.Button_12, value_down = 1, value_up = 0, name = _('Right Pylon Arming Switch Cover ARMED else SAFE (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 		{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_12, up = device_commands.Button_12, value_down = 0, value_up = 1, name = _('Right Pylon Arming Switch Cover SAFE else ARMED (2-way Switch)'), category = {_('SA342 Weapons Panel'), _('Custom')}},
 
@@ -540,5 +540,8 @@ return {
 		{cockpit_device_id = devices.UHF_RADIO, down = device_commands.Button_1, value_down = 0.668, name = _('UHF Mode DL'), category = {_('SA342 UHF RADIO'), _('Custom')}},
 		{cockpit_device_id = devices.UHF_RADIO, down = device_commands.Button_1, value_down = 0.835, name = _('UHF Mode G'), category = {_('SA342 UHF RADIO'), _('Custom')}},
 		{cockpit_device_id = devices.UHF_RADIO, down = device_commands.Button_1, value_down = 1, name = _('UHF Mode EN'), category = {_('SA342 UHF RADIO'), _('Custom')}},
+	},
+	axisCommands = {
+		{cockpit_device_id = devices.TV, action = device_commands.Button_4, name = _('SA342 TV Cover')},
 	}
 }
