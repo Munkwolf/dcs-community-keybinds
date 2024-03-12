@@ -153,7 +153,6 @@ return {
 		{cockpit_device_id = devices.MAIN, pressed = devCmds.Cmd127, value_pressed = -2,  name=_('TAC potentiometer - Decrease (Fast)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, pressed = devCmds.Cmd127, value_pressed = 2,  name=_('TAC potentiometer - Increase (Fast)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 
-
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd130, up = devCmds.Cmd130, value_down = 0, value_up = 1, name = _('AMPLI 2-1" selector switch - 2 else 1 (2-way Switch)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd130, up = devCmds.Cmd130, value_down = 1, value_up = 0, name = _('AMPLI 2-1" selector switch - 1 else 2 (2-way Switch)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 
@@ -728,6 +727,7 @@ return {
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 0, value_up = 0.5, name = _('Armament master switch - OFF else ON (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 1, value_up = 0.5, name = _('Armament master switch - TEST else ON (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 0.5, value_up = 0, name = _('Armament master switch - ON else OFF (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
+
 		-- ANTENNA-GYRO switch
 
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd453, up = devCmds.Cmd453, value_down = 0, value_up = 1, name = _('ANTENNA-GYRO switch - ANTENNA else GYRO (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
@@ -842,51 +842,5 @@ return {
 
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd550, up = devCmds.Cmd550, value_down = 0, value_up = 1, name = _('M-4 mode switch - OFF else ON (2-way Switch)'), category = {_('Central front panel'), _('IFF'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd550, up = devCmds.Cmd550, value_down = 1, value_up = 0, name = _('M-4 mode switch - ON else OFF (2-way Switch)'), category = {_('Central front panel'), _('IFF'), _('Custom')}},
-	},
-	axisCommands = {
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd41, name = _('Autopilot intensity control')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd101, name = _('Radar control stick scale selection')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd103, name = _('Radar control stick scan selection')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd122, name = _('Slat/Flap lever')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd123, name = _('High-lift device selector switch')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd124, name = _('MISS potentiometer')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd126, name = _('TAC potentiometer')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd166, name = _('Emergency regulation light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd171, name = _('Brake chute control')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd173, name = _('Canopy embrittle control')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd175, name = _('Canopy seal valve control lever')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd176, name = _('Mirrors')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd191, name = _('U/C control lever')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd193, name = _('Emergency/Parking brake handle')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd200, name = _('Emergency U/C handle')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd213, name = _('Incidence indicator lighting rheostat')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd218, name = _('Mach/Airspeed indicator reference airspeed knob')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd220, name = _('Slaved altimeter barometric pressure setting knob')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd222, name = _('Standby altimeter barometric pressure setting knob')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd267, name = _('Combat flaps light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd271, name = _('Nose wheel steering light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd274, name = _('Airbrake light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd282, name = _('Standby receptacle light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd295, name = _('(C + M or SW) R light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd298, name = _('Cannons too hot light')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd315, name = _('Map light rheostat')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd317, name = _('Miscellaneous instrument integral lighting rheostat')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd320, name = _('Light and panel lighting rheosta')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd322, name = _('Ultraviolet lighting rheostat')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd324, name = _('Dual instrument panel lighting rheostat (Floodlights)')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd326, name = _('Dual instrument panel lighting rheostat (Integral)')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd328, name = _('Dual console and pedestal lighting rheostat (Floodlights)')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd330, name = _('Dual console and pedestal lighting rheostat (Integral)')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd341, name = _('VOR/ILS control unit MHz frequency selector')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd344, name = _('VOR/ILS control unit kHz frequency selector')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd345, name = _('Omnibearing selector')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd346, name = _('VOR-ILS/OFF/TACAN selector')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd348, name = _('Heading selection knob')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd377, name = _('Temperature control rheostat')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd650, name = _('Ejection handle safety pin')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd438, name = _('Chaff and Flares Program selector switch')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd508, name = _('Radar function selection')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd535, name = _('IFF Mode 4 selector switch')},
-		{cockpit_device_id = devices.MAIN, action = devCmds.Cmd540, name = _('IFF Function selector switch')},
 	}
 }

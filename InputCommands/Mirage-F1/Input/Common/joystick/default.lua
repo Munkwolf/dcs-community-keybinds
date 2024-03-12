@@ -152,8 +152,7 @@ return {
 		{cockpit_device_id = devices.MAIN, pressed = devCmds.Cmd127, value_pressed = 0.5,  name=_('TAC potentiometer - Increase (Slow)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, pressed = devCmds.Cmd127, value_pressed = -2,  name=_('TAC potentiometer - Decrease (Fast)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, pressed = devCmds.Cmd127, value_pressed = 2,  name=_('TAC potentiometer - Increase (Fast)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
-
-
+		
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd130, up = devCmds.Cmd130, value_down = 0, value_up = 1, name = _('AMPLI 2-1" selector switch - 2 else 1 (2-way Switch)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd130, up = devCmds.Cmd130, value_down = 1, value_up = 0, name = _('AMPLI 2-1" selector switch - 1 else 2 (2-way Switch)'), category = {_('Left console'), _('Radio system'), _('Radio selector unit'), _('Custom')}},
 
@@ -728,6 +727,7 @@ return {
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 0, value_up = 0.5, name = _('Armament master switch - OFF else ON (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 1, value_up = 0.5, name = _('Armament master switch - TEST else ON (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd129, up = devCmds.Cmd129, value_down = 0.5, value_up = 0, name = _('Armament master switch - ON else OFF (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
+
 		-- ANTENNA-GYRO switch
 
 		{cockpit_device_id = devices.MAIN, down = devCmds.Cmd453, up = devCmds.Cmd453, value_down = 0, value_up = 1, name = _('ANTENNA-GYRO switch - ANTENNA else GYRO (2-way Switch)'), category = {_('Left console'), _('Armament system'), _('Custom')}},
